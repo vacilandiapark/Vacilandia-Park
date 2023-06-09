@@ -11,4 +11,3 @@ navLinks.forEach(navLink => {
       navLink.classList.remove('bounce');
     });
   });
-  

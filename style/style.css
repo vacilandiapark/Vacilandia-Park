@@ -63,3 +63,9 @@ body {
     margin: 5px;
   }
 }
+
+#contact-title{
+  text-align: center;
+  font-weight: bold;
+  padding: 30px;
+}
