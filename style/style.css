@@ -22,7 +22,7 @@ body {
 .navbar-custom{
   position: sticky;
   top: 0;
-  z-index: 0;
+  z-index: 1;
   box-shadow: 0px 0px 10px 10px rgba(8, 8, 8, 0.322)
 }
 
