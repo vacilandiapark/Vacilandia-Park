@@ -10,21 +10,33 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 #map-image {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+
+  #map-container{
+    overflow-x: scroll;
+  }
+
+  #map-image{
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 .navbar-custom{
   position: sticky;
   top: 0;
   z-index: 1;
-  box-shadow: 0px 0px 10px 10px rgba(8, 8, 8, 0.322)
+  box-shadow: 0px 0px 10px 10px rgba(8, 8, 8, 0.322);
 }
 
 .navbar-custom .navbar-brand img {
@@ -62,17 +74,6 @@ body {
 @media (max-width: 768px) {
   .navbar-custom .navbar-nav .nav-link {
     margin: 5px;
-  }
-
-  #map-container {
-    overflow: auto;
-  }
-
-  #map-image {
-    width: 100vw;
-    height: 100%;
-    object-fit: cover;
-    max-width: none;
   }
 }
 

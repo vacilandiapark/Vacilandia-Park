@@ -19,3 +19,14 @@ navLinks.forEach(navLink => {
     navLink.classList.remove('bounce');
   });
 });
+
+// Obtén una referencia al contenedor de la imagen
+const mapContainer = document.getElementById('map-container');
+
+// Agrega un evento scroll al contenedor de la imagen
+mapContainer.addEventListener('scroll', () => {
+  const scrollLeft = mapContainer.scrollLeft;
+  const navbar = document.querySelector('.navbar-custom');
+  navbar.style.transform = `translateX(${scrollLeft}px)`;
+});
+
