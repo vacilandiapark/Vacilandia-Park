@@ -65,7 +65,14 @@ body {
   }
 
   #map-container {
-    overflow: hidden;
+    overflow: auto;
+  }
+
+  #map-image {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    max-width: none;
   }
 }
 
