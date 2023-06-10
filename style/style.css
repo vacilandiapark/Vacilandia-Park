@@ -10,13 +10,14 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 #map-image {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .navbar-custom{
@@ -61,6 +62,10 @@ body {
 @media (max-width: 768px) {
   .navbar-custom .navbar-nav .nav-link {
     margin: 5px;
+  }
+
+  #map-container {
+    overflow: hidden;
   }
 }
 

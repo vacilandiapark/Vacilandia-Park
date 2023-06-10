@@ -19,23 +19,3 @@ navLinks.forEach(navLink => {
     navLink.classList.remove('bounce');
   });
 });
-
-
-const areas = document.querySelectorAll('map[name="mapa"] area');
-
-areas.forEach(area => {
-  area.addEventListener('mouseenter', () => {
-    document.body.style.cursor = 'pointer';
-  });
-
-  area.addEventListener('mouseleave', () => {
-    document.body.style.cursor = 'default';
-  });
-
-  area.addEventListener('click', () => {
-    const href = area.getAttribute('href');
-    if (href) {
-      window.location.href = href;
-    }
-  });
-});
