@@ -29,4 +29,3 @@ mapContainer.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar-custom');
   navbar.style.transform = `translateX(${scrollLeft}px)`;
 });
-
