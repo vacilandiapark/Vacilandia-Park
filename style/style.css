@@ -4,6 +4,7 @@ body {
   padding: 0;
   height: 100%;
   overflow: hidden;
+  background-color: #18401E ;
 }
 
 #map-container {
@@ -13,10 +14,16 @@ body {
   overflow-y: scroll;
 }
 
-#map-image {
+.map-image {
   width: 100%;
   height: auto;
   object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.map-image.active{
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
@@ -25,7 +32,7 @@ body {
     overflow-x: scroll;
   }
 
-  #map-image{
+  .map-image{
     width: auto;
     height: 100%;
     object-fit: contain;
@@ -36,6 +43,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1;
+  backdrop-filter: blur(20px);
   box-shadow: 0px 0px 10px 10px rgba(8, 8, 8, 0.322);
 }
 
@@ -81,4 +89,36 @@ body {
   text-align: center;
   font-weight: bold;
   padding: 30px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+  z-index: 99;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.whatsapp-float i {
+  line-height: 60px;
+}
+
+.whatsapp-float.active {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
