@@ -99,3 +99,22 @@ function performBounce() {
 
 // Inicia la animación de rebote cada 2 segundos
 setTimeout(performBounce, 2000);
+
+$(document).ready(function() {
+  $('img').mapster({
+    fillOpacity: 1,
+    mapKey: 'data-key',
+    onClick: function(data) {
+      var key = data.key;
+      var area = $('area[data-key="' + key + '"]');
+      var href = area.attr('href');
+      if (href) {
+        window.location.href = href;
+      }
+    }
+  });
+});
+
+
+
+
