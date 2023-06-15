@@ -3,8 +3,20 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow: hidden;
-  background-color: #18401E ;
+  background: linear-gradient(to right, #EC2127, #FFD200, 
+  #77C043, #F58220, #2BABE2, #724C9F, #EA0B8B, #724C9F, #2BABE2, #F58220,#77C043, #FFD200, #EC2127);
+  background-size: 200% auto;
+  animation: rainbow-scroll 7s linear infinite;
+}
+
+@keyframes rainbow-scroll {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 100% center;
+  }
 }
 
 #map-container {
@@ -14,18 +26,9 @@ body {
   overflow-y: scroll;
 }
 
-.map-container img{
+.map-container img {
   width: 100%;
   height: auto;
-}
-
-.map-container canvas{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
 }
 
 .map-image {
@@ -36,24 +39,26 @@ body {
   object-fit: cover;
 }
 
-.map-image.active{
+.map-image.active {
   opacity: 1;
 }
 
+/* Ajuste para dispositivos móviles */
+
 @media (max-width: 768px) {
 
-  #map-container{
+  #map-container {
     overflow-x: scroll;
   }
 
-  .map-image{
+  .map-image {
     width: auto;
     height: 100%;
     object-fit: contain;
   }
 }
 
-.navbar-custom{
+.navbar-custom {
   position: sticky;
   top: 0;
   z-index: 1;
@@ -69,9 +74,11 @@ body {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
@@ -99,7 +106,7 @@ body {
   }
 }
 
-#contact-title{
+#contact-title {
   text-align: center;
   font-weight: bold;
   padding: 30px;
@@ -112,6 +119,7 @@ body {
   width: 60px;
   height: 60px;
   background-color: #25d366;
+  box-shadow: 0px 0px 20px 0px #25d366;
   color: #fff;
   border-radius: 50%;
   text-align: center;
@@ -129,9 +137,12 @@ body {
 }
 
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
