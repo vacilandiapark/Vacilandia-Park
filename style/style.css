@@ -3,20 +3,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: linear-gradient(to right, #EC2127, #FFD200, 
-  #77C043, #F58220, #2BABE2, #724C9F, #EA0B8B, #724C9F, #2BABE2, #F58220,#77C043, #FFD200, #EC2127);
-  background-size: 200% auto;
-  animation: rainbow-scroll 7s linear infinite;
-}
-
-@keyframes rainbow-scroll {
-  0% {
-    background-position: 0% center;
-  }
-
-  100% {
-    background-position: 100% center;
-  }
+  background-color: #25d366;
 }
 
 #map-container {
