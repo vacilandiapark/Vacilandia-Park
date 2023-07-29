@@ -7,8 +7,8 @@
     --max-width: 1200px;
     --color-borde: #cdcfcf;
     --color-fondo: #f8f8f8;
-    --size-title: 20px;
-    --size-subtitle: 17px;
+    --size-title: 130%;
+    --size-subtitle: 100%;
 }
 
 .btn,
@@ -640,7 +640,7 @@ footer .columna-1 ul {
     list-style: none;
     margin: 0;
     color: var(--color-blanco);
-    font-size: 15px;
+    font-size: var(--size-subtitle);
     font-family: var(--font-primario);
 }
 
@@ -661,7 +661,7 @@ footer .columna-2 {
 footer .columna-2 h3 {
     margin-bottom: 20px;
     color: var(--color-blanco);
-    font-size: 25px;
+    font-size: var(--size-title);
     font-family: var(--font-primario);
     font-weight: lighter;
 }
@@ -809,7 +809,7 @@ footer .logo img {
 
 .banner .banner-overlay h1 {
     color: var(--color-blanco);
-    font-size: 250%;
+    font-size: var(--size-title);
     font-family: var(--font-primario);
     font-weight: 400;
     text-align: center;
@@ -821,7 +821,7 @@ footer .logo img {
     color: var(--color-blanco);
     font-family: var(--font-terciario);
     font-weight: bold;
-    font-size: 120%;
+    font-size: var(--size-subtitle);
     text-align: center;
     margin-top: 10px;
     padding: 0;
@@ -1131,21 +1131,21 @@ footer .logo img {
 
 .introduccion .columna-1 .contenido {
     margin: 0;
-    padding-top: 50px;
+    padding-top: 20px;
     padding-left: 30px;
     padding-right: 30px;
 }
 
 .introduccion .columna-1 h2 {
     color: var(--color-title);
-    font-size: 20px;
+    font-size: var(--size-title);
     font-family: var(--font-primario);
     font-weight: lighter;
 }
 
 .introduccion .columna-1 p {
     color: var(--color-subtitle);
-    font-size: 15px;
+    font-size: var(--size-subtitle);
     font-weight: lighter;
     font-family: var(--font-terciario);
 }
@@ -1401,7 +1401,7 @@ body#restaurante .explorar img {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: var(--sombra);
-    transition: background 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .pollo-vacilon .container:hover {
@@ -1440,7 +1440,7 @@ body#restaurante .explorar img {
 
 .pollo-vacilon .content h2 {
     color: var(--color-blanco);
-    font-size: 30px;
+    font-size: var(--size-title);
     font-family: var(--font-primario);
     font-style: normal;
     font-weight: 400;
@@ -1449,7 +1449,7 @@ body#restaurante .explorar img {
 
 .pollo-vacilon .content p {
     color: var(--color-blanco);
-    font-size: 20px;
+    font-size: var(--size-subtitle);
     font-family: var(--font-terciario);
     font-style: normal;
     font-weight: 400;
@@ -1720,15 +1720,15 @@ body#restaurante .explorar img {
 
 .mapa .rectangulo h2 {
     color: var(--color-title);
-    font-size: 20px;
+    font-size: var(--size-title);
     font-family: var(--font-primario);
     line-height: .3;
     font-weight: lighter;
 }
 
 .mapa .rectangulo p {
-    color: var(--color-gris);
-    font-size: 18px;
+    color: var(--color-subtitle);
+    font-size: var(--size-subtitle);
     font-family: var(--font-terciario);
     line-height: 1;
 }
