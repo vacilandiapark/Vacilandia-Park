@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Somos el parque campestre mas grande de todo Lima, contamos con piscinas y toboganes, áreas verdes, juegos, conciertos, restaurante, divertidos juegos en familia y sobre todo un espacio de más de 90000m2 para que nos podamos divertir a lo grande!.">
+    <meta name="author" content="ZeyN">
+    <meta name="keywords"
+        content="piscinas, restaurante, campestre, conciertos, toboganes, pollo, canchas, parque acuatico, parque de diversiones, eventos corporativos, promociones de colegio, reserva de espacios">
+    <title>Celebra tu cumpleaños - Vacilandia Park 💚</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="materials/Logos/logo-campestrewsewewe.png">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" />
+    <link rel="canonical" href="https://vacilandia.com.pe/">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="inicio">
+    <!-- Contenedor del botón de WhatsApp -->
+    <div id="whatsapp-button">
+        <div id="whatsapp-chat">
+            <div id="whatsapp-header">
+                <div id="whatsapp-avatar">
+                    <img decoding="async" src="materials/Logos/274996682_108713358421596_5386262468476296445_n.jpg"
+                        alt="Avatar">
+                </div>
+                <div id="whatsapp-title">Vacilandia Park <i class="fa-solid fa-circle-check"
+                        style="color: #00ff33;"></i></div>
+                <button id="whatsapp-close">&times;</button>
+            </div>
+            <div id="whatsapp-messages">
+                <div class="message received">
+                    <span class="bubble">Hola, ¿en qué puedo ayudarte?</span>
+                </div>
+                <div class="message sent">
+                    <span class="bubble">Hola, tengo una pregunta sobre...</span>
+                </div>
+            </div>
+            <div id="whatsapp-input">
+                <input type="text" id="whatsapp-message-input" placeholder="Escribe tu mensaje...">
+                <button id="whatsapp-send">Enviar</button>
+            </div>
+        </div>
+        <div id="whatsapp-icon">
+            <img decoding="async" src="materials/Redes/124034.png" alt="WhatsApp">
+        </div>
+    </div>
+    <!-- SUBNAVBAR -->
+    <nav class="subnavbar">
+        <a href="Inicio.html" title="Inicio"><i class="fa-solid fa-home"></i></a>
+        <a href="#" title="Contacto" onclick="toggleInfo('telefono')"><i class="fa-solid fa-phone"></i></a>
+        <a href="#" title="Calendario y Horario" onclick="toggleInfo('calendario')"><i
+                class="fa-solid fa-calendar"></i></a>
+        <a href="Page-Not-Found.html" target="_blank" title="Mapa"><i class="fa-solid fa-map"></i></a>
+        <a href="https://vaope.com/parque-acuatico/vacilandia-park" target="_blank" title="Tickets"><i
+                class="fa-solid fa-ticket"></i></a>
+        <a href="https://vecarena.com.pe/" target="_blank"><img src="materials/Logos/venconcierto.png"
+                alt="logo-concert"></a>
+        <!-- Agrega más elementos según tus necesidades -->
+    </nav>
+    <!-- CONTENEDOR DE INFORMACIÓN -->
+    <div class="info-container" id="info-telefono">
+        <div class="text">
+            <i class="fa-solid fa-phone"></i>
+            <h1>ESTAMOS PARA TUS DUDAS</h1>
+            <h2>CONTACTO</h2>
+            <h1>Para informes</h1>
+            <a target="_blank" href="http://wa.me/+51913479416">
+                <p>+51 913 479 416</p>
+            </a>
+            <a href="mailto:informes@vacilandia.com.pe">
+                <p>informes@vacilandia.com.pe</p>
+            </a>
+            <h1>Para colegios e instituciones</h1>
+            <a target="_blank" href="http://wa.me/+51934105670">
+                <p>+51 934 105 670</p>
+            </a>
+            <a href="mailto:sharonm.vacilandia@outlook.com">
+                <p>sharonm.vacilandia@outlook.com</p>
+            </a>
+            <h1>Para corporativos:</h1>
+            <a target="_blank" href="http://wa.me/+51913480124">
+                <p>+51 913 480 124</p>
+            </a>
+            <a href="mailto:rossioc.vacilandia@outlook.com">
+                <p>rossioc.vacilandia@outlook.com</p>
+            </a>
+            <h1>Para cumpleaños y espacios:</h1>
+            <a target="_blank" href="http://wa.me/+51934394266">
+                <p>+51 934 394 266</p>
+            </a>
+            <a href="mailto:ventas@vacilandia.com.pe">
+                <p>ventas@vacilandia.com.pe</p>
+            </a>
+            <h1>Para alquileres de cancha:</h1>
+            <a target="_blank" href="http://wa.me/+51913481168">
+                <p>+51 913 481 168</p>
+            </a>
+            <a href="mailto:reservadecanchas@vacilandia.com.pe">
+                <p>reservadecanchas@vacilandia.com.pe</p>
+            </a>
+            <h1 style="margin-top: 40px;">Puedes usar el formulario:</h1>
+        </div>
+        <div class="buttons">
+            <a target="_blank" href="https://forms.gle/gnun7mWJXhSzbwF58"><button>IR AL FORMULARIO</button></a>
+        </div>
+    </div>
+    <div class="info-container" id="info-calendario">
+        <div class="text">
+            <i class="fa-solid fa-calendar"></i>
+            <h1>CONOCE NUESTRO HORARIO</h1>
+            <h2>HORARIOS DISPONIBLES</h2>
+            <h1>Lunes a viernes - Restaurante</h1>
+            <p>12:00am hasta las 05:00pm</p>
+            <h1>Sábado, domingo y feriados - Vacilandia</h1>
+            <p>09:00am hasta las 05:00pm</p>
+        </div>
+    </div>
+    <div class="main">
+        <!-- NAVBAR VACILANDIA -->
+        <div class="navbar" id="myNavbar" style="position: sticky;">
+            <div class="background"></div>
+            <div class="row-1">
+                <div class="container">
+                    <div class="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://www.tiktok.com/@vacilandiapark/"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/vacilandiapark/?hl=es"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/vacilandiapark/"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/watch?v=59Royw9A1rM"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <a href="Inicio.html"><img decoding="async" src="materials/Logos/logo-campestrewsewewe.png" id="logo"
+                            alt="Logo" class="logo animate__animated animate__rubberBand" loading="lazy"></a>
+                    <a href="https://vaope.com/parque-acuatico/vacilandia-park" target="_blank"><button
+                            class="btn">COMPRAR
+                            TICKETS</button></a>
+                </div>
+            </div>
+            <div class="row-2">
+                <div class="container">
+                    <ul class="navigation">
+                        <li><a href="Inicio.html">Inicio</a></li>
+                        <li><a href="Inicio.html#planificar">Planifica</a>
+                            <ul class="sub-menu">
+                                <li><a href="Cumpleaños y Espacios.html">Cumpleaños</a></li>
+                                <li><a href="Eventos y Reservas.html">Reservas</a></li>
+                                <li><a href="Alquiler y Campeonatos.html">Campeonatos</a></li>
+                                <li><a href="Colegios e Instituciones.html">Colegios</a></li>
+                                <li><a href="Corporativos y Empresas.html">Corporativos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Inicio.html#explorar">Explorar</a>
+                            <ul class="sub-menu">
+                                <li><a href="zona-gamer.html">Zona Gamer</a></li>
+                                <li><a href="Barcilón.html">Barcilón</a></li>
+                                <li><a href="Restaurante.html">Restaurante</a></li>
+                                <li><a href="Canchas.html">Canchas</a></li>
+                                <li><a href="Granja.html">VaciGranja</a></li>
+                                <li><a href="Page-Not-Found.html">Recorrido Vacilón</a></li>
+                                <li><a href="Piscinas.html">Piscinas</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Restaurante.html">Restaurante</a>
+                            <ul class="sub-menu">
+                                <li><a href="Restaurante.html#carta">Carta Gastronómica</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Inicio.html#ubicacion">¿Cómo llegar?</a></li>
+                        <li><a href="https://www.google.com/maps/uv?pb=!1s0x9105c53e19fb34df%3A0x1ce4a11a75be7f3c!3m1!7e131!4s!5sVacilandia%20Park!15sCgIgAQ&hl=es-419&imagekey=!1e10!2sAF1QipPSh0yER94lkwxkNDNDRwgnKv83yc46Fnv8CSZT"
+                                target="_blank">Galería</a>
+                        </li>
+                        <li><a href="#" onclick="toggleInfo('telefono')">Contactános</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="menuPanel">
+            <ul class="panel-navigation">
+                <li><a href="Inicio.html#introduccion">Introducción</a></li>
+                <li><a href="Inicio.html#explorepark">Explorar</a></li>
+                <li><a href="Inicio.html#restaurante">Restaurante</a></li>
+                <li><a href="Inicio.html#planificar">Planificar</a></li>
+                <li><a href="Inicio.html#ubicacion">Ubicación</a></li>
+            </ul>
+        </div>
+        <!-- BANNER -->
+        <header class="banner" style="height: 50vh">
+            <div class="banner-video">
+                <img decoding="async" loading="lazy" src="materials/Planificar-Park/FOTO CORPO.png" alt="">
+            </div>
+            <div class="banner-overlay" style="display: none;">
+                <div class="container">
+                    <h1 class="scroll-reveal">VACILANDIA PARK CAMPESTRE</h1>
+                    <p class="scroll-reveal">¡EL GIGANTE DE LA DIVERSIÓN!</p>
+                    <button class="scroll-reveal">Botón</button>
+                </div>
+            </div>
+        </header>
+        <!-- SECCIÓN DE PREGUNTA CON BOTON DE COMPRAR -->
+        <section class="boton-comprar">
+            <div class="container">
+                <div class="columna-1">
+                    <h2>¿NO CUENTAS CON TUS ENTRADAS?</h2>
+                    <p>Compra tu entrada y disfruta de un día lleno de diversión.</p>
+                </div>
+                <div class="columna-2">
+                    <a href="https://vaope.com/parque-acuatico/vacilandia-park" target="_blank"
+                        class="btn-comprar">COMPRAR
+                        TICKETS</a>
+                </div>
+            </div>
+        </section>
+        <!-- IMÁGENES -->
+        <section class="imagenes">
+            <div class="container">
+                <div class="title">
+                    <h1>DISFRUTA UN DÍA DE INTEGRACIÓN CON TU EMPRESA</h1>
+                    <p>¡Disfruta un día de integración con tu empresa en Vacilandia Park! Ofrecemos actividades
+                        emocionantes, espacios para reuniones, y opciones de entretenimiento para fortalecer el trabajo
+                        en equipo y la camaradería. Desde competiciones deportivas hasta desafíos de team building,
+                        nuestro equipo está listo para hacer de tu día una experiencia memorable. ¡Ven y crea lazos más
+                        fuertes con tus colegas en Vacilandia Park!
+                    </p>
+                </div>
+                <div class="gradient-left"></div>
+                <div class="gradient-right"></div>
+                <div class="carousel-imagenes">
+                    <div class="card">
+                        <div class="image">
+                            <img src="materials/Eventos y Reservas/20220723_160333892_iOS-min.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="materials/Eventos y Reservas/ewrretrtrere-min.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <img src="materials/Eventos y Reservas/FOTO CORPO-min.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PISCINAS -->
+        <section class="piscinas">
+            <div class="text">
+                <h1>¿QUE TENEMOS PARA TI?</h1>
+                <p>En Vacilandia Park para corporativos y empresas, tenemos todo lo necesario para fortalecer el trabajo
+                    en equipo y la integración. Desde competiciones deportivas hasta dinámicas de team building, te
+                    ofrecemos una experiencia única y divertida. ¡Ven y descubre todo lo que tenemos para ti!
+                </p>
+            </div>
+            <div class="container">
+                <div class="column1">
+                    <h2>OFRECEMOS:</h2>
+                    <p>Emocionantes actividades de
+                        integración, espacios para reuniones y eventos, competiciones deportivas y dinámicas de team
+                        building diseñadas para fortalecer el trabajo en equipo. Nuestro objetivo es brindarte una
+                        experiencia única y divertida que fortalezca los lazos entre tus colaboradores. ¡Descubre todas
+                        nuestras opciones y crea un día inolvidable para tu empresa!</p>
+                    <a
+                        href="https://api.whatsapp.com/send/?phone=%2B51913480124&text&type=phone_number&app_absent=0"><button>CONTACTÁNOS</button></a>
+                </div>
+                <div class="column2">
+                    <img src="materials/Corporativos/WhatsApp Image 2022-06-26 at 12.26.33 PM (10).jpeg" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- QUE OFRECEMOS -->
+        <section class="ofrecer">
+            <div class="container">
+                <div class="title">
+                </div>
+                <div class="gradient-left"></div>
+                <div class="gradient-right"></div>
+                <div class="carousel-ofrecer">
+                    <div class="card">
+                        <div class="image">
+                            <div class="overlay"></div> <!-- Div para el gradiente -->
+                            <img src="https://th.bing.com/th/id/OIG.QK1Hqcttg8pn2o_o_VZy?w=270&h=270&c=6&r=0&o=5&pid=ImgGn"
+                                alt="">
+                            <div class="text">CARPAS Y TOLDOS</div> <!-- Div para el texto centrado -->
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <div class="overlay"></div> <!-- Div para el gradiente -->
+                            <img src="materials/restaurante/pollo.jpg" alt="">
+                            <div class="text">COMIDAS Y BEBIDAS</div> <!-- Div para el texto centrado -->
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <div class="overlay"></div> <!-- Div para el gradiente -->
+                            <img src="materials/Canchas/img (4).JPG" alt="">
+                            <div class="text">CANCHAS DEPORTIVAS</div> <!-- Div para el texto centrado -->
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <div class="overlay"></div> <!-- Div para el gradiente -->
+                            <img src="materials/Colegio e Instituciones/Gimcanas/g (5).jpeg" alt="">
+                            <div class="text">GIMCANAS</div> <!-- Div para el texto centrado -->
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <div class="overlay"></div> <!-- Div para el gradiente -->
+                            <img src="materials/piscinas/Medusa.jpg" alt="">
+                            <div class="text">PISCINAS</div> <!-- Div para el texto centrado -->
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image">
+                            <div class="overlay"></div> <!-- Div para el gradiente -->
+                            <img src="materials/bg/P1100622.JPG" alt="">
+                            <div class="text">JUEGOS PARA NIÑOS</div> <!-- Div para el texto centrado -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACTO -->
+        <section class="contacto">
+            <div class="contacto-container" id="contactanos">
+                <h1 style="color: var(--color-negro);">¡ADQUIERE TU PAQUETE! 🤠</h1>
+                <div class="form-container">
+                    <div class="col-1">
+                        <form action="https://formspree.io/f/mrgwgzgz" method="POST">
+                            <div class="form-row">
+                                <input type="text" id="name" class="form-input" name="name" placeholder="Nombre">
+                            </div>
+
+                            <div class="form-row">
+                                <input type="text" id="apellido" class="form-input" name="apellido"
+                                    placeholder="Apellido">
+                            </div>
+
+                            <div class="form-row">
+                                <input type="email" id="email" class="form-input" name="_replyto"
+                                    placeholder="Correo electrónico">
+                            </div>
+
+                            <div class="form-row">
+                                <input type="tel" id="phone" class="form-input" name="phone"
+                                    placeholder="Número de celular">
+                            </div>
+
+                            <div class="form-row">
+                                <input type="number" class="form-input" id="quantity" name="quantity" min="1" max="100"
+                                    placeholder="Número de personas">
+                            </div>
+
+                            <div class="form-row">
+                                <textarea id="message" class="form-textarea" name="message"
+                                    placeholder="Agrega una descripción"></textarea>
+                            </div>
+
+                            <button type="submit" class="form-submit">ENVIAR</button>
+                        </form>
+                    </div>
+
+                    <div class="col-2">
+                        <h2>TAMBIÉN PUEDES CONTACTARTE PARA MÁS INFORMACIÓN</h2>
+                        <p>ESCRIBÉNOS POR CORREO ELECTRÓNICO</p>
+                        <a href="mailto:rossioc.vacilandia@outlook.com"><button>ENVIAR CORREO</button></a>
+                        <p>ESCRIBÉNOS POR WHATSAPP</p>
+                        <a
+                            href="https://api.whatsapp.com/send/?phone=%2B51913480124&text&type=phone_number&app_absent=0"><button>ENVIAR
+                                WHATSAPP</button></a>
+                        <p>¡Y EN BREVE TE CONTESTAREMOS! 😉</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+                d="M0,64L120,80C240,96,480,128,720,128C960,128,1200,96,1320,80L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+            </path>
+        </svg>
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <div class="columna-1">
+                    <ul>
+                        <li><a href="#introduccion">INTRODUCCIÓN</a></li>
+                        <li><a href="#explorepark">EXPLORA EL PARQUE</a></li>
+                        <li><a href="#restaurante">RESTAURANTE</a></li>
+                        <li><a href="#planificar">PLANIFICA TU VISITA</a></li>
+                        <li><a href="#ubicacion">UBICACIÓN</a></li>
+                        <li><a href="#contactanos">CONTÁCTANOS</a></li>
+                    </ul>
+                </div>
+                <div class="columna-2">
+                    <h3>CONTÁCTANOS</h3>
+                    <div class="botones">
+                        <a href="mailto:informes@vacilandia.com.pe"><button>CORREO</button></a>
+                        <a
+                            href="https://api.whatsapp.com/send/?phone=%2B51913479416&text&type=phone_number&app_absent=0"><button>WHATSAPP</button></a>
+                    </div>
+                    <div class="redes-sociales">
+                        <a href="https://www.tiktok.com/@vacilandiapark/"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/vacilandiapark/?hl=es"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/vacilandiapark/"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/watch?v=59Royw9A1rM"><i class="fab fa-youtube"></i></a>
+                        <a
+                            href="https://api.whatsapp.com/send/?phone=%2B51913479416&text&type=phone_number&app_absent=0"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="columna-3">
+                    <div class="logo">
+                        <a href="Inicio.html"><img decoding="async" src="materials/Logos/logo-campestrewsewewe.png"
+                                class="animate__animated animate__rubberBand" id="logo" alt="Logo" loading="lazy"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="terms">
+                <div class="text">
+                    <h1>Desarrollado por <a class="rainbow-text" target="_blank"
+                            href="https://pe.linkedin.com/in/michael-de-la-cruz-2a35a8248">ZeyN</a> | <a
+                            href="">Términos y
+                            condiciones</a> | <a href="">Libro de reclamaciones <i class="fa-solid fa-book-open"
+                                style="color: #ffffff;"></i></a>
+                        | © 2023 Vacilandia Park. Todos los derechos reservados.</h1>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="https://kit.fontawesome.com/f8eb9b1ffa.js" crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBGSZKJ2VC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MBGSZKJ2VC');
+    </script>
+</body>
+
+</html>
