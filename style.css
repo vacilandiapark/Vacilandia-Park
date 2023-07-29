@@ -328,16 +328,6 @@ a {
     border: 1px solid var(--color-primario);
 }
 
-@media only screen and (max-width: 768px) {
-    .subnavbar {
-        display: none;
-    }
-
-    .main {
-        margin: 0;
-    }
-}
-
 /* NAV */
 .navbar {
     width: 100%;
@@ -530,32 +520,6 @@ a {
     color: var(--color-blanco);
 }
 
-@media only screen and (max-width: 768px) {
-    .navbar .hamburger {
-        display: flex;
-    }
-
-    .navbar .btn {
-        margin-right: 20px;
-    }
-
-    .navbar .social-icons {
-        display: none;
-    }
-
-    .navbar .row-2 {
-        display: none;
-    }
-
-    .navbar .navigation {
-        display: none;
-    }
-
-    #menuPanel {
-        display: block;
-    }
-}
-
 /* FOOTER */
 
 footer {
@@ -640,7 +604,7 @@ footer .columna-1 ul {
     list-style: none;
     margin: 0;
     color: var(--color-blanco);
-    font-size: var(--size-subtitle);
+    font-size: var(--size-title);
     font-family: var(--font-primario);
 }
 
@@ -703,54 +667,6 @@ footer .columna-3 {
 footer .logo img {
     max-width: 300px;
     max-height: 100%;
-}
-
-/* Media queries para pantallas menores a 768px */
-@media (max-width: 767px) {
-    footer {
-        height: 600px;
-        /* Ajustar la altura del footer según sea necesario */
-    }
-
-    footer .container {
-        flex-wrap: wrap;
-    }
-
-    footer .columna-1 {
-        display: none;
-    }
-
-    footer .columna-2 {
-        order: 2;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 0;
-    }
-
-    footer .columna-3 {
-        order: 1;
-        margin-top: 20px;
-        height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-    }
-
-    footer .columna-3 .logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-
-    footer .columna-3 .logo img {
-        max-height: 110px;
-        max-width: 100%;
-    }
 }
 
 /* PAGINA INICIO PRINCIPAL */
@@ -840,26 +756,6 @@ footer .logo img {
     transition: all 0.2s ease-in-out;
 }
 
-/* Estilos para dispositivos pequeños */
-@media only screen and (max-width: 767px) {
-    .banner .banner-video {
-        height: 30vh;
-    }
-
-    .banner-overlay h1,
-    .banner-overlay p {
-        font-size: 2rem;
-    }
-
-    .banner .banner-overlay button {
-        font-size: 1.4rem;
-    }
-
-    .banner .banner-overlay .container {
-        align-items: center;
-    }
-}
-
 /* BOTON COMPRAR */
 
 .boton-comprar {
@@ -921,24 +817,6 @@ footer .logo img {
 
 .boton-comprar .btn-comprar:hover {
     filter: brightness(110%);
-}
-
-@media only screen and (max-width: 767px) {
-
-    .boton-comprar {
-        height: 170px;
-        padding-bottom: 25px;
-    }
-
-    .boton-comprar .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .boton-comprar .columna-2 {
-        text-align: center;
-        margin-left: 0;
-    }
 }
 
 /* OFERTAS CARRUSEL */
@@ -1201,31 +1079,6 @@ footer .logo img {
     right: 10px;
 }
 
-@media screen and (max-width: 767px) {
-
-    .introduccion {
-        margin: 0;
-        padding-top: 0;
-        margin-bottom: 30%;
-    }
-
-    .introduccion .container {
-        flex-direction: column;
-    }
-
-    .introduccion .columna-1 {
-        order: 2;
-        width: 100%;
-        height: auto;
-    }
-
-    .introduccion .columna-2 {
-        order: 1;
-        width: 100%;
-        height: auto;
-    }
-}
-
 /* CARRUSEL EXPLORA EL PARQUE */
 
 .explorar {
@@ -1420,7 +1273,7 @@ body#restaurante .explorar img {
     transition: all 0.3s;
 }
 
-.pollo-vacilon .container:hover .gradient-left{
+.pollo-vacilon .container:hover .gradient-left {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0));
 }
 
@@ -1479,48 +1332,6 @@ body#restaurante .explorar img {
 
 .pollo-vacilon .buttons button:hover {
     filter: brightness(120%);
-}
-
-@media screen and (max-width: 767px) {
-
-    .pollo-vacilon {
-        padding: 0;
-    }
-
-    .pollo-vacilon .container img {
-        height: 100%;
-        width: auto;
-    }
-
-    .pollo-vacilon .content {
-        text-align: center;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding-left: 0;
-    }
-
-    .pollo-vacilon .content h2 {
-        font-size: 5vw;
-        line-height: 1;
-    }
-
-    .pollo-vacilon .content p {
-        font-size: 4vw;
-    }
-
-    .pollo-vacilon .buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-    .pollo-vacilon .buttons button {
-        width: 200px;
-        height: 50px;
-        margin-bottom: 10px;
-    }
 }
 
 /* EXPLORAR NUESTRO PARQUE */
@@ -1621,40 +1432,6 @@ body#restaurante .explorar img {
     margin-top: 10px;
 }
 
-/* Estilos para pantallas pequeñas (hasta 768px) */
-@media (max-width: 768px) {
-
-    .planificar .container-planificar {
-        margin: 0;
-    }
-
-    .planificar .container-planificar .row {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .planificar .container-planificar .card {
-        width: calc(100% - 30px);
-        max-width: 380px;
-        margin: 10px;
-        position: relative;
-        /* Añadido */
-        overflow: hidden;
-    }
-
-    .planificar .container-planificar .card img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        /* Añadido */
-    }
-
-    .planificar .container-planificar h1 {
-        text-align: center;
-    }
-}
-
 /* MAPA GOOGLE MAPS */
 
 .mapa {
@@ -1731,14 +1508,6 @@ body#restaurante .explorar img {
     font-size: var(--size-subtitle);
     font-family: var(--font-terciario);
     line-height: 1;
-}
-
-/* Estilos específicos para dispositivos móviles */
-@media (max-width: 767px) {
-
-    .mapa h1 {
-        text-align: center;
-    }
 }
 
 /* WHATSAPP */
@@ -1970,35 +1739,6 @@ body#restaurante .explorar img {
     font-family: var(--font-secundario);
 }
 
-@media (max-width: 768px) {
-
-    .contacto {
-        padding: 0;
-        text-align: center;
-    }
-
-    .contacto .contacto-container {
-        margin-bottom: 600px;
-    }
-
-    .contacto .form-container {
-        flex-wrap: wrap;
-    }
-
-    .contacto .form-container .col-1 {
-        width: 100%;
-        margin-bottom: 0;
-        /* Eliminado margen inferior */
-    }
-
-    .contacto .form-container .col-2 {
-        width: 100%;
-        flex: 1;
-        margin-bottom: 0;
-        /* Eliminado margen inferior */
-    }
-}
-
 .contacto .form-container .form-row {
     margin-bottom: 20px;
     font-family: var(--font-secundario);
@@ -2223,38 +1963,6 @@ body#restaurante .explorar img {
     cursor: pointer;
 }
 
-@media screen and (max-width: 767px) {
-
-    /* Ocultar .thumbnails en pantallas móviles */
-    #paquetes-cumpleañeros .thumbnails {
-        display: none;
-    }
-
-    /* Ajustar estilos de .columna1 para ocupar todo el ancho */
-    #paquetes-cumpleañeros .columna1 {
-        width: 100%;
-    }
-
-    /* Ajustar estilos del carrusel en pantallas móviles */
-    #paquetes-cumpleañeros .columna1 .carousel {
-        width: 100%;
-        height: auto;
-        max-height: 540px;
-        padding: 15px;
-    }
-
-    #paquetes-cumpleañeros .columna1 .carousel img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    #paquetes-cumpleañeros .arrow-up,
-    #paquetes-cumpleañeros .arrow-down {
-        display: none;
-    }
-}
-
 /* CARACTERISTICAS */
 
 #caracteristicas {
@@ -2302,19 +2010,6 @@ body#restaurante .explorar img {
 #caracteristicas .rectangulo p {
     font-family: var(--font-terciario);
     margin: 0;
-}
-
-@media screen and (max-width: 767px) {
-
-    #caracteristicas {
-        margin-top: -5cm;
-    }
-
-    #caracteristicas .container {
-        max-width: 100%;
-        height: auto;
-        padding: 15px;
-    }
 }
 
 /* PRODUCTOS DEL PAQUETE CUMPLEAÑERO */
@@ -2381,30 +2076,6 @@ body#restaurante .explorar img {
 
 #productos-paq-cumple .cuadrado img:hover {
     transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-    #productos-paq-cumple .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #productos-paq-cumple .card {
-        margin-bottom: 30px;
-    }
-
-    #productos-paq-cumple .cuadrado {
-        width: 100%;
-        height: auto;
-    }
-
-    #productos-paq-cumple .cuadrado img {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 }
 
 /* PÁGINA ZONA GAMER */
@@ -2490,38 +2161,6 @@ body#restaurante .explorar img {
 
 .atracciones-section .column2 img:hover {
     transform: scale(1.1);
-}
-
-@media only screen and (max-width: 767px) {
-
-    .atracciones-section .text {
-        text-align: center;
-    }
-
-    .atracciones-section .container {
-        flex-direction: column;
-        height: auto;
-        margin: 25px;
-        text-align: center;
-    }
-
-    .atracciones-section .column1,
-    .atracciones-section .column2 {
-        width: 100%;
-        padding: 0 20px;
-        order: initial;
-        /* Volvemos al orden original en versión desktop */
-    }
-
-    .atracciones-section .column2 {
-        order: 1;
-        /* Aseguramos que el iframe esté arriba en versión responsive */
-    }
-
-    .atracciones-section .column2 iframe {
-        height: 200px;
-        /* Ajusta la altura del video según tus necesidades */
-    }
 }
 
 /* OPCIONES GAMER */
@@ -2613,40 +2252,6 @@ body#restaurante .explorar img {
     color: var(--color-subtitle);
     font-size: var(--size-subtitle);
     margin-top: 10px;
-}
-
-/* Estilos para pantallas pequeñas (hasta 768px) */
-@media (max-width: 768px) {
-
-    .opciones .container-planificar {
-        margin: 0;
-    }
-
-    .opciones .container-planificar .row {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .opciones .container-planificar .card {
-        width: calc(100% - 30px);
-        max-width: 380px;
-        margin: 10px;
-        position: relative;
-        /* Añadido */
-        overflow: hidden;
-    }
-
-    .opciones .container-planificar .card img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        /* Añadido */
-    }
-
-    .opciones .container-planificar h1 {
-        text-align: center;
-    }
 }
 
 /* PÁGINA RESTAURANTE */
@@ -2752,38 +2357,6 @@ body#restaurante .explorar img {
     width: 430px;
     height: auto;
     margin: 0 auto;
-}
-
-@media only screen and (max-width: 767px) {
-
-    .didi-food .text {
-        text-align: center;
-    }
-
-    .didi-food .container {
-        flex-direction: column;
-        height: auto;
-        margin: 25px;
-        text-align: center;
-    }
-
-    .didi-food .column1,
-    .didi-food .column2 {
-        width: 100%;
-        padding: 0 20px;
-        order: initial;
-        /* Volvemos al orden original en versión desktop */
-    }
-
-    .didi-food .column2 {
-        order: 1;
-        /* Aseguramos que el iframe esté arriba en versión responsive */
-    }
-
-    .didi-food .column2 iframe {
-        height: 200px;
-        /* Ajusta la altura del video según tus necesidades */
-    }
 }
 
 /* PLATOS */
@@ -2959,19 +2532,6 @@ body#restaurante .explorar img {
     object-fit: cover;
 }
 
-@media screen and (max-width: 768px) {
-    .animales-container {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .animales-container .columna-1,
-    .animales-container .columna-2 {
-        width: 100%;
-        height: auto;
-    }
-}
-
 /* PÁGINA 404 */
 
 .full-screen-section {
@@ -3034,18 +2594,6 @@ body#restaurante .explorar img {
 .full-screen-section .column-1 img {
     height: 100%;
     object-fit: cover;
-}
-
-@media screen and (max-width: 600px) {
-    .full-screen-section {
-        flex-direction: column;
-    }
-
-    /* Reiniciamos el ancho de las columnas para que ocupen el 100% del ancho en móviles */
-    .full-screen-section .column-1,
-    .full-screen-section .column-2 {
-        flex-basis: 100%;
-    }
 }
 
 /* PÁGINA PISCINAS */
@@ -3152,38 +2700,6 @@ body#restaurante .explorar img {
 
 .piscinas .column2 img:hover {
     transform: scale(1.1);
-}
-
-@media only screen and (max-width: 767px) {
-
-    .piscinas .text {
-        text-align: center;
-    }
-
-    .piscinas .container {
-        flex-direction: column;
-        height: auto;
-        margin: 25px;
-        text-align: center;
-    }
-
-    .piscinas .column1,
-    .piscinas .column2 {
-        width: 100%;
-        padding: 0 20px;
-        order: initial;
-        /* Volvemos al orden original en versión desktop */
-    }
-
-    .piscinas .column2 {
-        order: 1;
-        /* Aseguramos que el iframe esté arriba en versión responsive */
-    }
-
-    .piscinas .column2 iframe {
-        height: 200px;
-        /* Ajusta la altura del video según tus necesidades */
-    }
 }
 
 /* PÁGINA CANCHAS */
@@ -3554,7 +3070,7 @@ body#restaurante .explorar img {
     transition: all 0.3s ease-in-out;
 }
 
-.ofrecer .card img:hover{
+.ofrecer .card img:hover {
     transform: scale(1.1);
 }
 
@@ -3578,4 +3094,512 @@ body#restaurante .explorar img {
 
 .ofrecer .slick-next {
     right: 0;
+}
+
+
+/* Media queries para pantallas menores a 1024px */
+@media (max-width: 1023px) {
+
+    /* BOTÓN COMPRAR */
+
+    .boton-comprar .container {
+        text-align: center;
+    }
+
+    .boton-comprar .columna-2 {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    /* INTRODUCCIÓN */
+    
+    .introduccion {
+        margin: 0;
+        padding-top: 0;
+        margin-bottom: 30%;
+    }
+
+    .introduccion .container {
+        flex-direction: column;
+    }
+
+    .introduccion .columna-1 {
+        order: 2;
+        width: 100%;
+        height: auto;
+    }
+
+    .introduccion .columna-2 {
+        order: 1;
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+/* Media queries para pantallas menores a 768px */
+@media (max-width: 767px) {
+    footer {
+        height: 600px;
+        /* Ajustar la altura del footer según sea necesario */
+    }
+
+    footer .container {
+        flex-wrap: wrap;
+    }
+
+    footer .columna-1 {
+        display: none;
+    }
+
+    footer .columna-2 {
+        order: 2;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+
+    footer .columna-3 {
+        order: 1;
+        margin-top: 20px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    footer .columna-3 .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    footer .columna-3 .logo img {
+        max-height: 110px;
+        max-width: 100%;
+    }
+
+    /* SUBNAVBAR */
+
+    .subnavbar {
+        display: none;
+    }
+
+    .main {
+        margin: 0;
+    }
+
+    /* NAVBAR */
+
+    .navbar .hamburger {
+        display: flex;
+    }
+
+    .navbar .btn {
+        margin-right: 20px;
+    }
+
+    .navbar .social-icons {
+        display: none;
+    }
+
+    .navbar .row-2 {
+        display: none;
+    }
+
+    .navbar .navigation {
+        display: none;
+    }
+
+    #menuPanel {
+        display: block;
+    }
+
+    /* BANNER */
+
+    .banner .banner-video {
+        height: 30vh;
+    }
+
+    .banner-overlay h1,
+    .banner-overlay p {
+        font-size: 2rem;
+    }
+
+    .banner .banner-overlay button {
+        font-size: 1.4rem;
+    }
+
+    .banner .banner-overlay .container {
+        align-items: center;
+    }
+
+    /* BOTÓN COMPRAR */
+
+    .boton-comprar {
+        height: 170px;
+        padding-bottom: 25px;
+    }
+
+    .boton-comprar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .boton-comprar .columna-2 {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    /* INTRODUCCIÓN */
+
+    .introduccion {
+        margin: 0;
+        padding-top: 0;
+        margin-bottom: 30%;
+    }
+
+    .introduccion .container {
+        flex-direction: column;
+    }
+
+    .introduccion .columna-1 {
+        order: 2;
+        width: 100%;
+        height: auto;
+    }
+
+    .introduccion .columna-2 {
+        order: 1;
+        width: 100%;
+        height: auto;
+    }
+
+    /* RESTAURANTE */
+
+    .pollo-vacilon {
+        padding: 0;
+    }
+
+    .pollo-vacilon .container img {
+        height: 100%;
+        width: auto;
+    }
+
+    .pollo-vacilon .content {
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 0;
+    }
+
+    .pollo-vacilon .content h2 {
+        font-size: 5vw;
+        line-height: 1;
+    }
+
+    .pollo-vacilon .content p {
+        font-size: 4vw;
+    }
+
+    .pollo-vacilon .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .pollo-vacilon .buttons button {
+        width: 200px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    /* PLANIFICAR */
+
+    .planificar .container-planificar {
+        margin: 0;
+    }
+
+    .planificar .container-planificar .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .planificar .container-planificar .card {
+        width: calc(100% - 30px);
+        max-width: 380px;
+        margin: 10px;
+        position: relative;
+        /* Añadido */
+        overflow: hidden;
+    }
+
+    .planificar .container-planificar .card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        /* Añadido */
+    }
+
+    .planificar .container-planificar h1 {
+        text-align: center;
+    }
+
+    /* MAPA */
+
+    .mapa h1 {
+        text-align: center;
+    }
+
+    /* CONTACTO */
+
+    .contacto {
+        padding: 0;
+        text-align: center;
+    }
+
+    .contacto .contacto-container {
+        margin-bottom: 600px;
+    }
+
+    .contacto .form-container {
+        flex-wrap: wrap;
+    }
+
+    .contacto .form-container .col-1 {
+        width: 100%;
+        margin-bottom: 0;
+        /* Eliminado margen inferior */
+    }
+
+    .contacto .form-container .col-2 {
+        width: 100%;
+        flex: 1;
+        margin-bottom: 0;
+        /* Eliminado margen inferior */
+    }
+
+    /* CUMPLEAÑOS Y RESERVAS */
+
+    #paquetes-cumpleañeros .thumbnails {
+        display: none;
+    }
+
+    /* Ajustar estilos de .columna1 para ocupar todo el ancho */
+    #paquetes-cumpleañeros .columna1 {
+        width: 100%;
+    }
+
+    /* Ajustar estilos del carrusel en pantallas móviles */
+    #paquetes-cumpleañeros .columna1 .carousel {
+        width: 100%;
+        height: auto;
+        max-height: 540px;
+        padding: 15px;
+    }
+
+    #paquetes-cumpleañeros .columna1 .carousel img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    #paquetes-cumpleañeros .arrow-up,
+    #paquetes-cumpleañeros .arrow-down {
+        display: none;
+    }
+
+    /* CARACTERÍSTICAS */
+
+    #caracteristicas {
+        margin-top: -5cm;
+    }
+
+    #caracteristicas .container {
+        max-width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    /* PRODUCTOS PAQ CUMPLEAÑEROS */
+
+    #productos-paq-cumple .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #productos-paq-cumple .card {
+        margin-bottom: 30px;
+    }
+
+    #productos-paq-cumple .cuadrado {
+        width: 100%;
+        height: auto;
+    }
+
+    #productos-paq-cumple .cuadrado img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* ATRACCIONES */
+
+    .atracciones-section .text {
+        text-align: center;
+    }
+
+    .atracciones-section .container {
+        flex-direction: column;
+        height: auto;
+        margin: 25px;
+        text-align: center;
+    }
+
+    .atracciones-section .column1,
+    .atracciones-section .column2 {
+        width: 100%;
+        padding: 0 20px;
+        order: initial;
+        /* Volvemos al orden original en versión desktop */
+    }
+
+    .atracciones-section .column2 {
+        order: 1;
+        /* Aseguramos que el iframe esté arriba en versión responsive */
+    }
+
+    .atracciones-section .column2 iframe {
+        height: 200px;
+        /* Ajusta la altura del video según tus necesidades */
+    }
+
+    /* MÁS OPCIONES */
+
+    .opciones .container-planificar {
+        margin: 0;
+    }
+
+    .opciones .container-planificar .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .opciones .container-planificar .card {
+        width: calc(100% - 30px);
+        max-width: 380px;
+        margin: 10px;
+        position: relative;
+        /* Añadido */
+        overflow: hidden;
+    }
+
+    .opciones .container-planificar .card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        /* Añadido */
+    }
+
+    .opciones .container-planificar h1 {
+        text-align: center;
+    }
+
+    /* DIDI FOOD */
+
+    .didi-food .text {
+        text-align: center;
+    }
+
+    .didi-food .container {
+        flex-direction: column;
+        height: auto;
+        margin: 25px;
+        text-align: center;
+    }
+
+    .didi-food .column1,
+    .didi-food .column2 {
+        width: 100%;
+        padding: 0 20px;
+        order: initial;
+        /* Volvemos al orden original en versión desktop */
+    }
+
+    .didi-food .column2 {
+        order: 1;
+        /* Aseguramos que el iframe esté arriba en versión responsive */
+    }
+
+    .didi-food .column2 iframe {
+        height: 200px;
+        /* Ajusta la altura del video según tus necesidades */
+    }
+
+    /* ANIMALES */
+
+    .animales-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .animales-container .columna-1,
+    .animales-container .columna-2 {
+        width: 100%;
+        height: auto;
+    }
+
+    /* ?? */
+
+    .full-screen-section {
+        flex-direction: column;
+    }
+
+    /* Reiniciamos el ancho de las columnas para que ocupen el 100% del ancho en móviles */
+    .full-screen-section .column-1,
+    .full-screen-section .column-2 {
+        flex-basis: 100%;
+    }
+
+    /* PISCINAS */
+
+    .piscinas .text {
+        text-align: center;
+    }
+
+    .piscinas .container {
+        flex-direction: column;
+        height: auto;
+        margin: 25px;
+        text-align: center;
+    }
+
+    .piscinas .column1,
+    .piscinas .column2 {
+        width: 100%;
+        padding: 0 20px;
+        order: initial;
+        /* Volvemos al orden original en versión desktop */
+    }
+
+    .piscinas .column2 {
+        order: 1;
+        /* Aseguramos que el iframe esté arriba en versión responsive */
+    }
+
+    .piscinas .column2 iframe {
+        height: 200px;
+        /* Ajusta la altura del video según tus necesidades */
+    }
 }
