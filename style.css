@@ -2564,7 +2564,6 @@ body#restaurante .explorar img {
 }
 
 .opciones .card {
-    cursor: pointer;
     width: 400px;
     /* Make each card occupy 25% of the container width with a gap of 20px */
     text-align: center;
