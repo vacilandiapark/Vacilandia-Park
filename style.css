@@ -168,6 +168,10 @@ svg {
     margin-bottom: -10px;
 }
 
+.main-content{
+    overflow: hidden;
+}
+
 img {
     filter: saturate(150%);
 }
@@ -1805,7 +1809,6 @@ body#restaurante .explorar img {
 
 #paquetes-cumpleañeros .container {
     max-width: var(--max-width);
-    height: 685px;
     margin: 0 auto;
     text-align: left;
 }
@@ -1829,19 +1832,18 @@ body#restaurante .explorar img {
 
 #paquetes-cumpleañeros .columnas {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
 }
 
 #paquetes-cumpleañeros .columna1 {
     margin: 0 auto;
-    position: relative;
+    width: 53.125rem;
 }
 
 #paquetes-cumpleañeros .columna1 .carousel {
-    width: 830px;
+    width: auto;
     margin-right: 20px;
-    height: 500px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -3096,7 +3098,7 @@ body#restaurante .explorar img {
 
 
 /* Media queries para pantallas menores a 1024px */
-@media (max-width: 1023px) {
+@media (max-width: 1200px) {
 
     /* MAIN CONTENT */
 
@@ -3162,6 +3164,12 @@ body#restaurante .explorar img {
 
     .planificar .container-planificar {
         text-align: center;
+    }
+
+    /* PAQ CUMPLEAÑEROS */
+
+    #paquetes-cumpleañeros .columna1 {
+        width: 22rem;
     }
 
 }
