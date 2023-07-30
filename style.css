@@ -168,7 +168,7 @@ svg {
     margin-bottom: -10px;
 }
 
-.main-content{
+.main-content {
     overflow: hidden;
 }
 
@@ -442,12 +442,12 @@ a {
 
 .navbar .hamburger {
     display: none;
-    color: var(--color-blanco);
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
     height: 20px;
-    padding-left: 20px;
+    padding-left: 160px;
+    background-color: var(--color-blanco);
     cursor: pointer;
 }
 
@@ -2044,9 +2044,22 @@ body#restaurante .explorar img {
 #productos-paq-cumple .container {
     max-width: var(--max-width);
     margin: 0 auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
+}
+
+#productos-paq-cumple .container .card {
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
 }
 
 #productos-paq-cumple .cuadrado {
@@ -2197,23 +2210,24 @@ body#restaurante .explorar img {
 }
 
 .opciones .container-planificar .row {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     /* Alineación inferior */
     margin-bottom: 25px;
     gap: 20px;
 }
 
 .opciones .card {
-    width: 400px;
-    /* Make each card occupy 25% of the container width with a gap of 20px */
+    cursor: pointer;
     text-align: center;
     overflow: hidden;
+    transition: all 0.3s ease-in-out;
     height: auto;
     border-radius: 10px;
+    background-color: var(--color-blanco);
     box-shadow: var(--sombra);
-    transition: all 0.3s ease-in-out;
-    background: var(--color-blanco);
+    display: flex;
+    flex-direction: column;
 }
 
 .opciones .card:hover {
@@ -2919,8 +2933,8 @@ body#restaurante .explorar img {
 }
 
 .imagenes .card img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -3100,9 +3114,21 @@ body#restaurante .explorar img {
 /* Media queries para pantallas menores a 1024px */
 @media (max-width: 1200px) {
 
+    .gradient-left,
+    .gradient-right {
+        display: none;
+    }
+
+
     /* MAIN CONTENT */
 
-    .main-content{
+    .main-content {
+        padding: 20px;
+    }
+
+    /* BANNER */
+
+    .banner .banner-overlay .container {
         padding: 20px;
     }
 
@@ -3154,24 +3180,17 @@ body#restaurante .explorar img {
         height: auto;
     }
 
-    /* EXPLORAR EL PARQUE */
-
-    .explorar .container .title {
-        text-align: center;
-    }
-
-    /* PLANIFICAR */
-
-    .planificar .container-planificar {
-        text-align: center;
-    }
-
     /* PAQ CUMPLEAÑEROS */
 
     #paquetes-cumpleañeros .columna1 {
         width: 22rem;
     }
 
+    /* CARACTERÍSTICAS */
+
+    #caracteristicas {
+        margin-top: 2.7rem;
+    }
 }
 
 /* Media queries para pantallas menores a 768px */
@@ -3452,16 +3471,14 @@ body#restaurante .explorar img {
         display: none;
     }
 
-    /* CARACTERÍSTICAS */
-
-    #caracteristicas {
-        margin-top: -5cm;
-    }
 
     #caracteristicas .container {
         max-width: 100%;
         height: auto;
+        gap: 190px;
     }
+
+    #caracteristicas .rectangulo {}
 
     /* PRODUCTOS PAQ CUMPLEAÑEROS */
 

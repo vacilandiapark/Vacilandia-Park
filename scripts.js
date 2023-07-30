@@ -357,7 +357,7 @@ $(document).ready(function () {
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 1,
                     centerPadding: '150px' // Adjust the padding as needed for the responsive view
                 }
             },
