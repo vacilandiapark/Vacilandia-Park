@@ -551,8 +551,9 @@ footer .terms .text {
     margin: 0 auto;
     color: var(--color-blanco);
     font-family: var(--font-terciario);
-    font-size: 8px;
+    font-size: 0.4rem;
     text-align: center;
+    padding: 20px;
 }
 
 /* Estilo base para el enlace */
@@ -1083,7 +1084,6 @@ footer .logo img {
 
 .explorar {
     position: relative;
-    padding: 20px;
 }
 
 .explorar .gradient-left,
@@ -1278,8 +1278,8 @@ body#restaurante .explorar img {
 }
 
 .pollo-vacilon .container img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
 }
 
 .pollo-vacilon .content {
@@ -1366,24 +1366,24 @@ body#restaurante .explorar img {
 }
 
 .planificar .container-planificar .row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: center;
-    /* Alineación inferior */
-    margin-bottom: 25px;
     gap: 20px;
 }
 
 .planificar .card {
     cursor: pointer;
-    width: 400px;
-    /* Make each card occupy 25% of the container width with a gap of 20px */
     text-align: center;
     overflow: hidden;
+    margin-bottom: 20px;
     transition: all 0.3s ease-in-out;
     height: auto;
     border-radius: 10px;
     background-color: var(--color-blanco);
     box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
 }
 
 .planificar .card:hover {
@@ -2900,7 +2900,6 @@ body#restaurante .explorar img {
     height: 300px;
     /* Make each card occupy 25% of the container width with a gap of 20px */
     text-align: center;
-    margin: 8px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     border-radius: 10px;
@@ -3015,7 +3014,6 @@ body#restaurante .explorar img {
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin: 8px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     border-radius: 10px;
@@ -3100,6 +3098,25 @@ body#restaurante .explorar img {
 /* Media queries para pantallas menores a 1024px */
 @media (max-width: 1023px) {
 
+    /* MAIN CONTENT */
+
+    .main-content{
+        padding: 20px;
+    }
+
+    /* NAVBAR */
+
+    .navbar .container {
+        justify-content: center;
+        gap: 100px;
+    }
+
+    /* INTRODUCCIÓN */
+
+    .introduccion .columna-1 .contenido {
+        text-align: center;
+    }
+
     /* BOTÓN COMPRAR */
 
     .boton-comprar .container {
@@ -3112,7 +3129,7 @@ body#restaurante .explorar img {
     }
 
     /* INTRODUCCIÓN */
-    
+
     .introduccion {
         margin: 0;
         padding-top: 0;
@@ -3133,6 +3150,18 @@ body#restaurante .explorar img {
         order: 1;
         width: 100%;
         height: auto;
+    }
+
+    /* EXPLORAR EL PARQUE */
+
+    .explorar .container .title {
+        text-align: center;
+    }
+
+    /* PLANIFICAR */
+
+    .planificar .container-planificar {
+        text-align: center;
     }
 
 }
@@ -3336,7 +3365,6 @@ body#restaurante .explorar img {
     .planificar .container-planificar .card {
         width: calc(100% - 30px);
         max-width: 380px;
-        margin: 10px;
         position: relative;
         /* Añadido */
         overflow: hidden;
@@ -3403,7 +3431,6 @@ body#restaurante .explorar img {
         width: 100%;
         height: auto;
         max-height: 540px;
-        padding: 15px;
     }
 
     #paquetes-cumpleañeros .columna1 .carousel img {
@@ -3426,7 +3453,6 @@ body#restaurante .explorar img {
     #caracteristicas .container {
         max-width: 100%;
         height: auto;
-        padding: 15px;
     }
 
     /* PRODUCTOS PAQ CUMPLEAÑEROS */
@@ -3434,10 +3460,6 @@ body#restaurante .explorar img {
     #productos-paq-cumple .container {
         flex-direction: column;
         align-items: center;
-    }
-
-    #productos-paq-cumple .card {
-        margin-bottom: 30px;
     }
 
     #productos-paq-cumple .cuadrado {
@@ -3462,14 +3484,12 @@ body#restaurante .explorar img {
     .atracciones-section .container {
         flex-direction: column;
         height: auto;
-        margin: 25px;
         text-align: center;
     }
 
     .atracciones-section .column1,
     .atracciones-section .column2 {
         width: 100%;
-        padding: 0 20px;
         order: initial;
         /* Volvemos al orden original en versión desktop */
     }
@@ -3499,7 +3519,6 @@ body#restaurante .explorar img {
     .opciones .container-planificar .card {
         width: calc(100% - 30px);
         max-width: 380px;
-        margin: 10px;
         position: relative;
         /* Añadido */
         overflow: hidden;
@@ -3525,14 +3544,12 @@ body#restaurante .explorar img {
     .didi-food .container {
         flex-direction: column;
         height: auto;
-        margin: 25px;
         text-align: center;
     }
 
     .didi-food .column1,
     .didi-food .column2 {
         width: 100%;
-        padding: 0 20px;
         order: initial;
         /* Volvemos al orden original en versión desktop */
     }
@@ -3581,7 +3598,6 @@ body#restaurante .explorar img {
     .piscinas .container {
         flex-direction: column;
         height: auto;
-        margin: 25px;
         text-align: center;
     }
 
