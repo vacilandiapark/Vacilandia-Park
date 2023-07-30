@@ -8,6 +8,7 @@
     --color-borde: #cdcfcf;
     --color-fondo: #f8f8f8;
     --size-title: 130%;
+    --color-subtitle: #333333;
     --size-subtitle: 100%;
 }
 
@@ -33,7 +34,6 @@ body#zona-gamer {
     --color-cuaternario: #9B4917;
     --color-blanco: #fff;
     --color-title: #EC2127;
-    --color-subtitle: #373e41;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
@@ -49,7 +49,6 @@ body#canchas {
     --color-cuaternario: #9B4917;
     --color-blanco: #fff;
     --color-title: #77C043;
-    --color-subtitle: #373e41;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
@@ -65,7 +64,6 @@ body#recorrido {
     --color-cuaternario: #9B4917;
     --color-blanco: #fff;
     --color-title: #724C9F;
-    --color-subtitle: #373e41;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
@@ -81,7 +79,6 @@ body#granja {
     --color-cuaternario: #9B4917;
     --color-blanco: #fff;
     --color-title: #683A10;
-    --color-subtitle: #373e41;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
@@ -97,7 +94,6 @@ body#piscinas {
     --color-cuaternario: #9B4917;
     --color-blanco: #fff;
     --color-title: #2BABE2;
-    --color-subtitle: #373e41;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
@@ -113,7 +109,6 @@ body#barcilon {
     --color-cuaternario: #9B4917;
     --color-blanco: #fff;
     --color-title: #EA0B8B;
-    --color-subtitle: #373e41;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
@@ -129,7 +124,6 @@ body#restaurante {
     --color-cuaternario: #9B4917;
     --color-blanco: #fff;
     --color-title: #F58220;
-    --color-subtitle: #373e41;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
@@ -145,7 +139,6 @@ body#inicio {
     --color-cuaternario: #9B4917;
     --color-blanco: #fff;
     --color-title: #18401E;
-    --color-subtitle: #373e41;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
@@ -180,6 +173,10 @@ a {
     text-decoration: none !important;
     list-style: none;
     color: var(--color-title);
+}
+
+p {
+    font-weight: lighter !important;
 }
 
 /* CONTENIDO*/
@@ -1090,6 +1087,10 @@ footer .logo img {
     position: relative;
 }
 
+body#barcilon .explorar {
+    padding-top: 40px;
+}
+
 .explorar .gradient-left,
 .explorar .gradient-right {
     position: absolute;
@@ -1210,12 +1211,10 @@ body#restaurante .explorar img {
 }
 
 .explorar .text p {
-    font-family: var(--font-terciario);
     color: var(--color-subtitle);
     font-size: var(--size-subtitle);
-    margin: 0;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    font-weight: lighter;
+    font-family: var(--font-terciario);
 }
 
 .explorar .slick-prev,
@@ -1696,10 +1695,19 @@ body#restaurante .explorar img {
     text-align: left;
 }
 
+.contacto .contacto-container P {
+    color: var(--color-subtitle);
+    font-size: var(--size-subtitle);
+    font-family: var(--font-terciario);
+    font-weight: 400;
+    text-align: left;
+}
+
 .contacto .contacto-container h2 {
     line-height: 1.2;
     font-weight: lighter;
     color: var(--color-title);
+    font-family: var(--font-primario);
 }
 
 .contacto .form-container button {
@@ -1963,55 +1971,6 @@ body#restaurante .explorar img {
     color: #ccc;
     text-decoration: none;
     cursor: pointer;
-}
-
-/* CARACTERISTICAS */
-
-#caracteristicas {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-#caracteristicas .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    max-width: var(--max-width);
-    height: 100px;
-    margin: 0 auto;
-}
-
-#caracteristicas .rectangulo {
-    width: 120px;
-    border-radius: 10px;
-    height: 65px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: var(--font-secundario);
-    transition: all 0.3s ease-in-out;
-}
-
-#caracteristicas .rectangulo i {
-    font-size: 50px;
-    margin-bottom: 20px;
-    color: var(--color-primario);
-}
-
-#caracteristicas .rectangulo span {
-    font-size: 25px;
-    font-family: var(--font-primario);
-    margin-top: 8px;
-    color: var(--color-primario);
-    margin-bottom: 8px;
-}
-
-#caracteristicas .rectangulo p {
-    font-family: var(--font-terciario);
-    margin: 0;
 }
 
 /* PRODUCTOS DEL PAQUETE CUMPLEAÑERO */
@@ -2478,6 +2437,7 @@ body#restaurante .explorar img {
 
 .animales {
     padding-bottom: 70px;
+    padding-top: 40px;
 }
 
 .animales-container {
@@ -2618,6 +2578,10 @@ body#restaurante .explorar img {
     padding-top: 30px;
 }
 
+body#piscinas .explorar {
+    padding-top: 40px;
+}
+
 .piscinas button {
     background-color: var(--color-botones);
     color: var(--color-blanco);
@@ -2695,7 +2659,7 @@ body#restaurante .explorar img {
 }
 
 .piscinas .column1 p {
-    font-size: 20px;
+    font-size: var(--size-subtitle);
     font-family: var(--font-terciario);
     color: var(--color-subtitle);
 }
@@ -2776,7 +2740,7 @@ body#restaurante .explorar img {
     height: 450px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 .canchas-container .content {
@@ -2814,19 +2778,20 @@ body#restaurante .explorar img {
 .canchas-container .content h1 {
     padding: 0;
     margin: 0;
+    line-height: 1;
     padding-left: 20px;
     color: var(--color-primario);
     padding-right: 20px;
     font-family: var(--font-terciario);
-    font-size: 15px;
+    font-size: var(--size-subtitle);
 }
 
 .canchas-container .content p {
     padding-left: 20px;
     padding-right: 20px;
     font-family: var(--font-terciario);
-    color: var(--color-gris);
-    font-size: 15px;
+    color: var(--color-subtitle);
+    font-size: var(--size-subtitle);
     margin: 0;
 }
 
@@ -2919,6 +2884,7 @@ body#restaurante .explorar img {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     border-radius: 10px;
+    margin: 5px;
 }
 
 .imagenes .card:hover {
@@ -2933,7 +2899,7 @@ body#restaurante .explorar img {
 }
 
 .imagenes .card img {
-    width: auto;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -3033,6 +2999,7 @@ body#restaurante .explorar img {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     border-radius: 10px;
+    margin: 5px;
 }
 
 .ofrecer .card:hover {
@@ -3119,7 +3086,6 @@ body#restaurante .explorar img {
         display: none;
     }
 
-
     /* MAIN CONTENT */
 
     .main-content {
@@ -3186,10 +3152,10 @@ body#restaurante .explorar img {
         width: 22rem;
     }
 
-    /* CARACTERÍSTICAS */
+    /* ANIMALES */
 
-    #caracteristicas {
-        margin-top: 2.7rem;
+    .animales-container {
+        height: 300px;
     }
 }
 
@@ -3471,15 +3437,6 @@ body#restaurante .explorar img {
         display: none;
     }
 
-
-    #caracteristicas .container {
-        max-width: 100%;
-        height: auto;
-        gap: 190px;
-    }
-
-    #caracteristicas .rectangulo {}
-
     /* PRODUCTOS PAQ CUMPLEAÑEROS */
 
     #productos-paq-cumple .container {
@@ -3612,6 +3569,12 @@ body#restaurante .explorar img {
     .full-screen-section .column-1,
     .full-screen-section .column-2 {
         flex-basis: 100%;
+    }
+
+    /* CANCHAS*/
+
+    .canchas-container {
+        gap: 0px;
     }
 
     /* PISCINAS */
