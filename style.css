@@ -1204,10 +1204,6 @@ body#restaurante .explorar img {
     transition: all 0.3s ease-in-out;
 }
 
-.explorar .card img:hover {
-    transform: scale(1.1);
-}
-
 .explorar .card:hover .text {
     transform: translateY(-10%);
 }
@@ -1426,10 +1422,6 @@ body#restaurante .explorar img {
     width: 100%;
     height: auto;
     transition: all 0.3s ease-in-out;
-}
-
-.planificar .card img:hover {
-    transform: scale(1.1);
 }
 
 .planificar .text {

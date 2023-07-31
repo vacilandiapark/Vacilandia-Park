@@ -161,9 +161,6 @@ closeButton.addEventListener('click', toggleChat);
 // Evento click en el botón de enviar
 sendButton.addEventListener('click', sendMessage);
 
-// Abrir el chat automáticamente al cargar la página
-toggleChat();
-
 
 // PÁGINA PAQUETE CUMPLEAÑERO //
 
