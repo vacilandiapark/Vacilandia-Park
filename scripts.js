@@ -294,12 +294,21 @@ function toggleInfo(type) {
             prevInfoContainer.style.pointerEvents = 'none';
         }
 
-        // Mostrar el contenedor actual
-        infoContainer.style.transform = 'translateX(80px)';
+        // Obtener el ancho de la ventana
+        const windowWidth = window.innerWidth;
+
+        // Mostrar el contenedor actual con el valor adecuado de translateX
+        if (windowWidth < 769) {
+            infoContainer.style.transform = 'translateX(0px)';
+        } else {
+            infoContainer.style.transform = 'translateX(80px)';
+        }
+
         infoContainer.style.pointerEvents = 'auto';
         currentType = type;
     }
 }
+
 
 // CARRUSEL IMAGENES //
 

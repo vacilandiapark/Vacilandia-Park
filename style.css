@@ -321,6 +321,8 @@ p {
     display: flex;
     justify-content: center;
     padding: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .info-container .buttons button {
@@ -329,6 +331,7 @@ p {
     border: none;
     width: 500px;
     border-radius: 0;
+    text-align: center;
     padding-top: 20px;
     font-family: var(--font-terciario);
     font-weight: bold;
@@ -458,8 +461,7 @@ p {
     justify-content: space-between;
     width: 30px;
     height: 20px;
-    padding-left: 160px;
-    background-color: var(--color-blanco);
+    color: var(--color-blanco);
     cursor: pointer;
 }
 
@@ -3222,6 +3224,27 @@ body#piscinas .explorar {
 
 /* Media queries para pantallas menores a 768px */
 @media (max-width: 767px) {
+
+    .subnavbar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        /* Agregamos un padding para espaciar los elementos en pantallas móviles */
+        top: auto;
+        /* Eliminamos la propiedad 'top' para ubicar el subnavbar abajo */
+    }
+
+    .subnavbar a {
+        width: auto;
+        padding: 5px;
+        /* Ajustamos el padding para una apariencia más compacta en pantallas móviles */
+    }
+
     footer {
         height: 600px;
         /* Ajustar la altura del footer según sea necesario */
@@ -3267,12 +3290,6 @@ body#piscinas .explorar {
         max-width: 100%;
     }
 
-    /* SUBNAVBAR */
-
-    .subnavbar {
-        display: none;
-    }
-
     .main {
         margin: 0;
     }
@@ -3281,6 +3298,11 @@ body#piscinas .explorar {
 
     .navbar .hamburger {
         display: flex;
+    }
+
+    .navbar .container {
+        justify-content: space-between;
+        gap: 0px;
     }
 
     .navbar .btn {
@@ -3664,7 +3686,20 @@ body#piscinas .explorar {
     }
 
     .piscinas .column2 iframe {
-        height: 200px;
+        height: 100%;
         /* Ajusta la altura del video según tus necesidades */
+    }
+
+    #whatsapp-button {
+        display: none;
+    }
+
+    .info-container {
+        width: 100%;
+        /* Evita que el contenedor sea interactivo antes de mostrarse */
+    }
+
+    .info-container .text {
+        padding: 0px 30px;
     }
 }
