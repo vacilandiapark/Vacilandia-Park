@@ -1693,9 +1693,34 @@ body#restaurante .explorar img {
     animation: AnimationName 5s ease infinite;
 }
 
+.contacto .iframe-container {
+    width: 100%;
+    height: 700px;
+    /* Altura del iframe ajustada para recortar el contenido */
+    overflow: hidden;
+    /* Ocultamos el scroll del contenedor */
+    position: relative;
+    /* Establecemos position: relative para que el iframe se posicione correctamente */
+}
+
+/* Estilos para el iframe */
+.contacto iframe {
+    width: 100%;
+    height: 100%;
+    /* Altura del iframe ajustada para recortar el contenido */
+    /* Quitamos el borde para una apariencia más limpia */
+    border: none;
+    /* Establecemos position: absolute para que el iframe se ajuste al contenedor */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Ocultamos el scroll del iframe */
+    overflow: hidden;
+}
+
 .contacto .contacto-container {
     max-width: var(--max-width);
-    height: 700px;
+    height: 100%;
     margin: 0 auto;
     /* Agregado margen a los costados */
 }
@@ -1751,7 +1776,7 @@ body#restaurante .explorar img {
 }
 
 .contacto .form-container .col-1 {
-    width: 400px;
+    width: 600px;
     height: auto;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -3705,7 +3730,7 @@ body#piscinas .explorar {
         text-align: center;
     }
 
-    .piscinas .column1{
+    .piscinas .column1 {
         padding: 30px;
         width: 100%;
     }
