@@ -6,7 +6,7 @@
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1200px;
     --color-borde: #cdcfcf;
-    --color-fondo: #f8f8f8;
+    --color-fondo: #f8f6f6;
     --size-title: 130%;
     --color-subtitle: #333333;
     --size-subtitle: 100%;
@@ -2412,7 +2412,7 @@ body#restaurante .explorar img {
     font-size: var(--size-subtitle);
     font-family: var(--font-terciario);
     padding: 10px 20px;
-    color: #333;
+    color: var(--color-subtitle);
     border: none;
     border-radius: 10px 10px 0 0;
     cursor: pointer;
@@ -3078,8 +3078,8 @@ body#piscinas .explorar {
 }
 
 
-/* Media queries para pantallas menores a 1024px */
-@media (max-width: 1200px) {
+/* Media queries para pantallas menores a 1250px */
+@media (max-width: 1250px) {
 
     .gradient-left,
     .gradient-right {
