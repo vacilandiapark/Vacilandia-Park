@@ -211,6 +211,7 @@ p {
     position: fixed;
     top: 0;
     left: 0;
+    box-shadow: var(--sombra);
     display: flex;
     padding-top: 5px;
     flex-direction: column;
@@ -2347,7 +2348,7 @@ body#restaurante .explorar img {
 
 .didi-food .column2 iframe,
 .didi-food .column2 img {
-    width: 430px;
+    width: 80%;
     height: auto;
     margin: 0 auto;
 }
@@ -3252,6 +3253,7 @@ body#piscinas .explorar {
 
     footer .container {
         flex-wrap: wrap;
+        padding-bottom: 30px;
     }
 
     footer .columna-1 {
@@ -3342,6 +3344,7 @@ body#piscinas .explorar {
 
     .banner .banner-overlay .container {
         align-items: center;
+        padding: 0;
     }
 
     /* BOTÓN COMPRAR */
@@ -3427,6 +3430,10 @@ body#piscinas .explorar {
     }
 
     /* PLANIFICAR */
+
+    .planificar {
+        padding-top: 40px;
+    }
 
     .planificar .container-planificar {
         margin: 0;
@@ -3569,6 +3576,13 @@ body#piscinas .explorar {
         /* Ajusta la altura del video según tus necesidades */
     }
 
+    /* EXPLORAR */
+
+    .explorar {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+
     /* MÁS OPCIONES */
 
     .opciones .container-planificar {
@@ -3606,10 +3620,15 @@ body#piscinas .explorar {
         text-align: center;
     }
 
+    .didi-food .buttons {
+        justify-content: center;
+    }
+
     .didi-food .container {
         flex-direction: column;
         height: auto;
         text-align: center;
+        padding: 30px;
     }
 
     .didi-food .column1,
@@ -3624,9 +3643,9 @@ body#piscinas .explorar {
         /* Aseguramos que el iframe esté arriba en versión responsive */
     }
 
-    .didi-food .column2 iframe {
-        height: 200px;
-        /* Ajusta la altura del video según tus necesidades */
+    .didi-food .column2 iframe,
+    .didi-food .column2 img {
+        padding-top: 20px;
     }
 
     /* ANIMALES */
@@ -3638,8 +3657,14 @@ body#piscinas .explorar {
 
     .animales-container .columna-1,
     .animales-container .columna-2 {
-        width: 100%;
         height: auto;
+    }
+
+    .animales-container .columna-2 {
+        flex: 1;
+        padding: 0;
+        width: auto;
+        padding: 30px 20px;
     }
 
     /* ?? */
@@ -3660,6 +3685,14 @@ body#piscinas .explorar {
         gap: 0px;
     }
 
+    .canchas-container .columna1 img {
+        display: none;
+    }
+
+    .canchas-container .content {
+        width: 380px;
+    }
+
     /* PISCINAS */
 
     .piscinas .text {
@@ -3672,7 +3705,11 @@ body#piscinas .explorar {
         text-align: center;
     }
 
-    .piscinas .column1,
+    .piscinas .column1{
+        padding: 30px;
+        width: 100%;
+    }
+
     .piscinas .column2 {
         width: 100%;
         padding: 0 20px;
