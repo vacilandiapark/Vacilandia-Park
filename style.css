@@ -2,7 +2,7 @@
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
-    --sombra: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+    --sombra: 0 4px 10px rgba(0, 0, 0, 0.1);
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1200px;
     --color-borde: #cdcfcf;
@@ -128,6 +128,21 @@ body#restaurante {
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
     --color-botones: #f09c54;
+    --bg-rectangulos: #18401E;
+}
+
+body#gracias {
+    --color-primario: #724C9F;
+    --color-subnavbar: #aa5811;
+    --color-secundario: #EA0B8B;
+    --color-terciario: #683A10;
+    --color-cuaternario: #9B4917;
+    --color-blanco: #fff;
+    --color-title: #724C9F;
+    --color-gris: #a1a1a1;
+    --color-amarillo: #FBB916;
+    --color-amarillo-claro: #FFE74D;
+    --color-botones: #a972ec;
     --bg-rectangulos: #18401E;
 }
 
@@ -529,6 +544,7 @@ footer {
     background-size: cover;
     height: 300px;
     width: 100%;
+    margin-top: 80px;
 }
 
 footer a {
@@ -606,7 +622,7 @@ footer .columna-1 ul {
     list-style: none;
     margin: 0;
     color: var(--color-blanco);
-    font-size: var(--size-title);
+    font-size: 15px;
     font-family: var(--font-primario);
 }
 
@@ -620,7 +636,7 @@ footer .columna-2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding-left: 20px;
 }
 
@@ -3077,6 +3093,51 @@ body#piscinas .explorar {
     right: 0;
 }
 
+/* GRACIAS */
+
+.gracias-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+.gracias-section .gracias-container {
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+}
+
+.gracias-section .check-icon {
+    color: #32cd32;
+    /* Color verde para el ícono de check */
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.gracias-section .gracias-message {
+    font-size: var(--size-subtitle);
+    color: var(--color-subtitle);
+    margin-bottom: 30px;
+    font-family: var(--font-terciario);
+}
+
+.gracias-section .return-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-botones);
+    color: var(--color-blanco);
+    font-family: var(--font-primario);
+    font-weight: lighter;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: var(--size-subtitle);
+    transition: all 0.2s ease;
+}
 
 /* Media queries para pantallas menores a 1250px */
 @media (max-width: 1250px) {
