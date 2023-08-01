@@ -2,22 +2,25 @@
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
-    --sombra: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --sombra: 0 0px 10px rgb(0, 0, 0, 0.2);
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1200px;
     --color-borde: #cdcfcf;
-    --color-fondo: #f8f6f6;
-    --size-title: 130%;
-    --color-subtitle: #333333;
-    --size-subtitle: 100%;
+    --color-fondo: #f0f0f0;
+    --size-title: 120%;
+    --color-blanco: #fff;
+    --color-negro: #000;
+    --color-subtitle: #000000;
+    --size-subtitle: 85%;
 }
 
 .btn,
 button,
 .btn-comprar {
-    border-radius: 10px;
-    box-shadow: none !important;
+    border-radius: 40px;
     transition: all 0.3s ease-in-out;
+    color: var(--color-negro) !important;
+    box-shadow: var(--sombra) !important;
 }
 
 .btn:hover,
@@ -32,12 +35,11 @@ body#zona-gamer {
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
-    --color-blanco: #fff;
     --color-title: #EC2127;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
-    --color-botones: #f1484d;
+    --color-botones: #ff7673;
     --bg-rectangulos: #18401E;
 }
 
@@ -47,7 +49,6 @@ body#canchas {
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
-    --color-blanco: #fff;
     --color-title: #77C043;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
@@ -62,7 +63,6 @@ body#recorrido {
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
-    --color-blanco: #fff;
     --color-title: #724C9F;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
@@ -77,7 +77,6 @@ body#granja {
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
-    --color-blanco: #fff;
     --color-title: #683A10;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
@@ -92,7 +91,6 @@ body#piscinas {
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
-    --color-blanco: #fff;
     --color-title: #2BABE2;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
@@ -107,7 +105,6 @@ body#barcilon {
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
-    --color-blanco: #fff;
     --color-title: #EA0B8B;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
@@ -122,7 +119,6 @@ body#restaurante {
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
-    --color-blanco: #fff;
     --color-title: #F58220;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
@@ -137,7 +133,6 @@ body#gracias {
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
-    --color-blanco: #fff;
     --color-title: #724C9F;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
@@ -152,12 +147,11 @@ body#inicio {
     --color-secundario: #D2D90B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
-    --color-blanco: #fff;
     --color-title: #18401E;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
-    --color-botones: #D2D90B;
+    --color-botones: #BDFF00;
     --bg-rectangulos: #18401E;
 }
 
@@ -359,16 +353,15 @@ p {
 
 .sub-menu {
     position: absolute;
-    top: 120%;
+    top: 160%;
     left: 0;
     width: 200%;
     background-color: var(--color-primario);
-    z-index: -5;
     padding: 0;
     font-size: var(--size-subtitle);
     line-height: 0;
+    margin: 0;
     opacity: 0;
-    pointer-events: none;
     /* Ignore pointer events so it doesn't interfere with hover */
 
     /* New CSS for the sliding effect */
@@ -391,7 +384,6 @@ p {
 
 .navbar .sub-menu li a {
     color: var(--color-blanco);
-    padding: 10px;
 }
 
 .navbar.scrolled .row-1 {
@@ -440,7 +432,7 @@ p {
 
 .navbar .btn {
     background-color: var(--color-botones);
-    color: var(--color-blanco);
+    color: var(--color-negro);
     padding: 10px 20px;
     border: none;
     box-shadow: var(--sombra);
@@ -480,16 +472,13 @@ p {
     align-items: center;
     list-style: none;
     font-family: var(--font-primario);
-    font-weight: lighter;
 }
 
 .navbar .navigation a {
     font-size: var(--size-subtitle);
+    font-weight: lighter;
     text-transform: uppercase;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 15.1px;
-    padding-bottom: 15.1px;
+    padding: 16px 15px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -785,11 +774,12 @@ footer .logo img {
 /* BOTON COMPRAR */
 
 .boton-comprar {
-    background-color: var(--color-primario);
+    background-color: var(--color-blanco);
     width: 100%;
     height: 90px;
     box-shadow: var(--inset);
     padding: 10px 0px 0px 0px;
+    box-shadow: var(--sombra);
 }
 
 .boton-comprar .container {
@@ -806,7 +796,7 @@ footer .logo img {
 }
 
 .boton-comprar h2 {
-    color: var(--color-blanco);
+    color: var(--color-primario);
     font-size: var(--size-title);
     font-family: var(--font-primario);
     font-style: normal;
@@ -816,7 +806,7 @@ footer .logo img {
 }
 
 .boton-comprar p {
-    color: var(--color-blanco);
+    color: var(--color-subtitle);
     font-size: var(--size-subtitle);
     font-family: var(--font-terciario);
     font-style: normal;
@@ -865,8 +855,8 @@ footer .logo img {
 }
 
 .ofertas .ofertas-carousel img {
-    width: auto;
-    height: 80vh;
+    width: 100%;
+    height: auto;
 }
 
 .ofertas .slick-prev,
@@ -1280,10 +1270,6 @@ body#restaurante .explorar img {
     transition: all 0.3s ease-in-out;
 }
 
-.pollo-vacilon .container:hover {
-    box-shadow: var(--sombra);
-}
-
 .pollo-vacilon .gradient-left {
     position: absolute;
     top: 0;
@@ -1294,10 +1280,6 @@ body#restaurante .explorar img {
     pointer-events: none;
     z-index: 1;
     transition: all 0.3s;
-}
-
-.pollo-vacilon .container:hover .gradient-left {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0));
 }
 
 .pollo-vacilon .container img {
