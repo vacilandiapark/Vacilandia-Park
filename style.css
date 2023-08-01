@@ -3089,6 +3089,20 @@ body#piscinas .explorar {
     transition: all 0.2s ease;
 }
 
+@media (max-width:900px){
+
+    .navbar .row-1{
+        background: var(--color-primario);
+    }
+
+    .navbar .row-2 {
+        background-color: var(--color-blanco);
+        margin: 0;
+        border-radius: 0;
+        margin-right: 70px;
+    }
+}
+
 /* Media queries para pantallas menores a 1250px */
 @media (max-width: 1250px) {
 
