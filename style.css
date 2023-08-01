@@ -157,7 +157,7 @@ body#inicio {
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
-    --color-botones: #5a8d62;
+    --color-botones: #D2D90B;
     --bg-rectangulos: #18401E;
 }
 
@@ -351,7 +351,7 @@ p {
 /* NAV */
 .navbar {
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 9999;
     transition: all 0.3s ease;
@@ -365,7 +365,7 @@ p {
     background-color: var(--color-primario);
     z-index: -5;
     padding: 0;
-    font-size: 18px;
+    font-size: var(--size-subtitle);
     line-height: 0;
     opacity: 0;
     pointer-events: none;
@@ -379,8 +379,8 @@ p {
 
 .navbar .sub-menu li {
     margin: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     width: 100%;
     list-style-type: none;
 }
@@ -400,19 +400,27 @@ p {
 
 .navbar.scrolled .row-2 {
     background-color: var(--color-blanco);
+    margin: 0;
+    border-radius: 0;
+    margin-right: 70px;
 }
 
 .navbar .row-1 {
     height: 80px;
-    background: var(--color-primario);
+    transition: all 0.3s ease-in-out;
+    background: transparent;
 }
 
 .navbar .row-2 {
     box-shadow: var(--sombra);
     display: flex;
     justify-content: center;
+    margin-right: 120px;
+    margin-left: 50px;
+    border-radius: 40px;
     align-items: center;
-    height: 40px;
+    transition: all 0.3s ease-in-out;
+    height: 50px;
     background-color: var(--color-blanco);
 }
 
@@ -471,26 +479,23 @@ p {
     justify-content: center;
     align-items: center;
     list-style: none;
-    font-family: var(--font-secundario);
+    font-family: var(--font-primario);
     font-weight: lighter;
 }
 
 .navbar .navigation a {
-    font-size: 20px;
+    font-size: var(--size-subtitle);
+    text-transform: uppercase;
     padding-left: 10px;
     padding-right: 10px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: 15.1px;
+    padding-bottom: 15.1px;
     transition: all 0.3s ease-in-out;
 }
 
 .navbar .navigation li a:hover {
     background-color: var(--color-primario);
     color: white;
-}
-
-.navbar a:hover {
-    text-shadow: 10px 10px 10px 10px #075e54;
 }
 
 .navbar .navigation li {
@@ -697,7 +702,7 @@ footer .logo img {
 
 .banner {
     position: sticky;
-    height: 50vh;
+    height: 80vh;
     overflow: hidden;
 }
 
@@ -723,7 +728,7 @@ footer .logo img {
 /* Estilos para la superposición del banner */
 .banner .banner-overlay {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 0;
     transform: translateY(-50%);
     width: 100%;
@@ -843,8 +848,9 @@ footer .logo img {
 /* OFERTAS CARRUSEL */
 
 .ofertas {
+    position: relative;
     width: 100%;
-    height: auto;
+    height: 80vh;
     overflow: hidden;
 }
 
@@ -859,9 +865,8 @@ footer .logo img {
 }
 
 .ofertas .ofertas-carousel img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: auto;
+    height: 80vh;
 }
 
 .ofertas .slick-prev,
@@ -3112,13 +3117,13 @@ body#piscinas .explorar {
     /* MAIN CONTENT */
 
     .main-content {
-        padding: 20px;
+        padding: 40px;
     }
 
     /* BANNER */
 
     .banner .banner-overlay .container {
-        padding: 20px;
+        padding: 40px;
     }
 
     /* NAVBAR */
