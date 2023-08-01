@@ -7,11 +7,11 @@
     --max-width: 1200px;
     --color-borde: #cdcfcf;
     --color-fondo: #f0f0f0;
-    --size-title: 120%;
+    --size-title: 1rem;
     --color-blanco: #fff;
     --color-negro: #000;
     --color-subtitle: #000000;
-    --size-subtitle: 85%;
+    --size-subtitle: 0.9rem;
 }
 
 .btn,
@@ -856,7 +856,8 @@ footer .logo img {
 
 .ofertas .ofertas-carousel img {
     width: 100%;
-    height: auto;
+    height: 100vh;
+    object-fit: cover;
 }
 
 .ofertas .slick-prev,
@@ -3115,6 +3116,10 @@ body#piscinas .explorar {
         gap: 100px;
     }
 
+    .navbar .navigation a {
+        padding: 16px 5px;
+    }
+
     /* INTRODUCCIÓN */
 
     .introduccion .columna-1 .contenido {
@@ -3274,10 +3279,6 @@ body#piscinas .explorar {
     }
 
     /* BANNER */
-
-    .banner .banner-video {
-        height: 30vh;
-    }
 
     .banner-overlay h1,
     .banner-overlay p {
