@@ -3196,6 +3196,10 @@ body#piscinas .explorar {
 /* Media queries para pantallas menores a 768px */
 @media (max-width: 767px) {
 
+    :root {
+        --sombra: none;
+    }
+
     .subnavbar {
         width: 100%;
         height: auto;
