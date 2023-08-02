@@ -27,6 +27,7 @@ button,
 button:hover,
 .btn-comprar:hover {
     box-shadow: var(--sombra) !important;
+    transform: scale(1.05) !important;
 }
 
 body#zona-gamer {
@@ -355,6 +356,7 @@ p {
     position: absolute;
     top: 160%;
     left: 0;
+    pointer-events: none;
     width: 200%;
     background-color: var(--color-primario);
     padding: 0;
@@ -833,10 +835,6 @@ footer .logo img {
     font-size: 14px;
     box-shadow: var(--sombra);
     transition: all 0.2s ease-in-out;
-}
-
-.boton-comprar .btn-comprar:hover {
-    filter: brightness(110%);
 }
 
 /* OFERTAS CARRUSEL */
