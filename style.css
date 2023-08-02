@@ -19,7 +19,7 @@ button,
 .btn-comprar {
     border-radius: 40px;
     transition: all 0.3s ease-in-out;
-    color: var(--color-negro) !important;
+    color: var(--color-blanco) !important;
     box-shadow: var(--sombra) !important;
 }
 
@@ -152,7 +152,7 @@ body#inicio {
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
-    --color-botones: #BDFF00;
+    --color-botones: #307e3c;
     --bg-rectangulos: #18401E;
 }
 
