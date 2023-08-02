@@ -3097,6 +3097,8 @@ body#piscinas .explorar {
 
     .navbar .row-1{
         background: var(--color-primario);
+        margin: 0;
+        margin-right: 70px;
     }
 
     .navbar .row-2 {
@@ -3286,6 +3288,11 @@ body#piscinas .explorar {
 
     .navbar .row-2 {
         display: none;
+    }
+
+    .navbar .row-1{
+        margin: 0;
+        margin-right: 30px;
     }
 
     .navbar .navigation {
