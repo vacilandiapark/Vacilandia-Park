@@ -388,6 +388,8 @@ p {
 
 .navbar.scrolled .row-1 {
     background-color: var(--color-primario);
+    margin: 0;
+    margin-right: 70px;
 }
 
 .navbar.scrolled .row-2 {
@@ -399,8 +401,10 @@ p {
 
 .navbar .row-1 {
     height: 80px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     background: transparent;
+    margin-right: 120px;
+    margin-left: 50px;
 }
 
 .navbar .row-2 {
