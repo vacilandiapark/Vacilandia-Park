@@ -3292,6 +3292,10 @@ body#piscinas .explorar {
         margin: 0;
     }
 
+    .navbar.scrolled .row-1{
+        margin: 0;
+    }
+
     .navbar .navigation {
         display: none;
     }
