@@ -14,6 +14,11 @@
     --size-subtitle: 0.85rem;
 }
 
+.animate__animated {
+    margin: 0;
+    padding: 0;
+}
+
 .btn,
 button,
 .btn-comprar {
@@ -154,7 +159,7 @@ body#inicio {
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
-    --color-botones: #307e3c;
+    --color-botones: #a3df00;
     --bg-rectangulos: #18401E;
 }
 
@@ -463,6 +468,15 @@ p {
     color: var(--color-blanco);
 }
 
+.navbar .social-icons i {
+    font-size: 150%;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .social-icons i:hover {
+    color: var(--color-botones);
+}
+
 .navbar .hamburger {
     display: none;
     flex-direction: column;
@@ -490,7 +504,7 @@ p {
     transition: all 0.3s ease-in-out;
 }
 
-.navbar .navigation li > a:first-child:hover{
+.navbar .navigation li>a:first-child:hover {
     background: var(--color-primario);
     color: var(--color-blanco);
 }
@@ -1520,16 +1534,85 @@ body#restaurante .explorar img {
 
 #whatsapp-button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
     z-index: 9999;
 }
 
-#whatsapp-icon img {
-    width: 50px;
-    height: 50px;
+#whatsapp-icon {
+    position: relative;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+}
+
+#whatsapp-icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Añade los pseudo-elementos ::before para las ondas de colores */
+#whatsapp-icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* Añade el box-shadow para la primera onda */
+    box-shadow: 0 0 0 0 rgba(0, 255, 51, 0.8);
+    /* Inicia la animación */
+    animation: colorWaveAnimation1 1.5s infinite;
+    /* Asegura que el pseudo-elemento esté detrás del icono */
+    z-index: -1;
+}
+
+#whatsapp-icon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* Añade el box-shadow para la segunda onda */
+    box-shadow: 0 0 0 0 rgba(0, 255, 51, 0.8);
+    /* Inicia la animación con un retraso para que no se sincronicen */
+    animation: colorWaveAnimation2 1.5s infinite;
+    animation-delay: 0.5s;
+    /* Asegura que el pseudo-elemento esté detrás del icono */
+    z-index: -1;
+}
+
+@keyframes colorWaveAnimation1 {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 51, 0.8);
+        opacity: 1;
+    }
+
+    100% {
+        box-shadow: 0 0 0 50px rgba(0, 255, 51, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes colorWaveAnimation2 {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 51, 0.8);
+        opacity: 0.7;
+    }
+
+    100% {
+        box-shadow: 0 0 0 50px rgba(0, 255, 51, 0);
+        opacity: 0;
+    }
 }
 
 #whatsapp-icon img:hover {
