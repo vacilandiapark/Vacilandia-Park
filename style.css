@@ -2342,6 +2342,7 @@ body#restaurante .explorar img {
     border-radius: 10px;
     box-shadow: var(--sombra);
     padding: 20px;
+    height: 100px;
 }
 
 .platos .plato .image {
@@ -3135,11 +3136,11 @@ body#piscinas .explorar {
 
     .navbar .container {
         justify-content: center;
-        gap: 100px;
+        gap: 150px;
     }
 
     .navbar .navigation a {
-        padding: 16px 5px;
+        padding: 16px 10px;
     }
 
     /* INTRODUCCIÓN */
