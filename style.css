@@ -479,13 +479,14 @@ p {
     justify-content: center;
     align-items: center;
     list-style: none;
-    font-family: var(--font-primario);
 }
 
 .navbar .navigation a {
     font-size: var(--size-subtitle);
     font-weight: lighter;
+    font-family: var(--font-terciario);
     text-transform: uppercase;
+    font-weight: bold;
     padding: 16px 15px;
     transition: all 0.3s ease-in-out;
 }
@@ -2466,7 +2467,6 @@ body#restaurante .explorar img {
 
 .animales-container .columna-2 p {
     font-size: var(--size-subtitle);
-    font-size: 20px;
     font-family: var(--font-terciario);
     color: var(--color-subtitle);
 }
