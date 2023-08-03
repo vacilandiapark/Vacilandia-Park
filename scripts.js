@@ -120,7 +120,7 @@ $(document).ready(function () {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    centerPadding: '20px' // Adjust the padding as needed for the responsive view
+                    centerPadding: '10px' // Adjust the padding as needed for the responsive view
                 }
             }
         ]

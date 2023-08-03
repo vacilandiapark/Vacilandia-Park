@@ -6,7 +6,7 @@
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1200px;
     --color-borde: #cdcfcf;
-    --color-fondo: #f0f0f0;
+    --color-fondo: #fff;
     --size-title: 1rem;
     --color-blanco: #fff;
     --color-negro: #000;
@@ -3342,6 +3342,23 @@ body#piscinas .explorar {
         margin-left: 0;
     }
 
+    .boton-comprar p {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .explorar .card{
+        margin: 0;
+    }
+
+    .explorar .card .text{
+        text-align: center;
+    }
+
+    .explorar{
+        text-align: center;
+    }
+
     /* INTRODUCCIÓN */
 
     .introduccion {
@@ -3415,6 +3432,7 @@ body#piscinas .explorar {
 
     .planificar .container-planificar {
         margin: 0;
+        text-align: center;
     }
 
     .planificar .container-planificar .row {
@@ -3424,7 +3442,6 @@ body#piscinas .explorar {
     }
 
     .planificar .container-planificar .card {
-        width: calc(100% - 30px);
         max-width: 380px;
         position: relative;
         /* Añadido */
@@ -3438,13 +3455,17 @@ body#piscinas .explorar {
         /* Añadido */
     }
 
-    .planificar .container-planificar h1 {
+    .planificar .container-planificar .text {
         text-align: center;
     }
 
     /* MAPA */
 
     .mapa h1 {
+        text-align: center;
+    }
+
+    .mapa .rectangulo{
         text-align: center;
     }
 
