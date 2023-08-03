@@ -1672,6 +1672,7 @@ body#restaurante .explorar img {
 /* FORMULARIO DE CONTACTO */
 
 .contacto {
+    padding-top: 50px;
     padding-bottom: 60px;
     -webkit-animation: AnimationName 5s ease infinite;
     -moz-animation: AnimationName 5s ease infinite;
@@ -1817,8 +1818,7 @@ body#restaurante .explorar img {
 
 #paquetes-cumpleañeros .columna1 {
     margin: 0 auto;
-    width: 50vw;
-    /*width: 53.125rem;*/
+    width: 53.125rem;
 }
 
 #paquetes-cumpleañeros .columna1 .carousel {
@@ -3185,7 +3185,9 @@ body#piscinas .explorar {
     }
 
     /* PAQ CUMPLEAÑEROS */
-
+    #paquetes-cumpleañeros .columna1 {
+        width: 50vw;
+    }
 
     /* ANIMALES */
 
@@ -3348,15 +3350,15 @@ body#piscinas .explorar {
         padding-right: 15px;
     }
 
-    .explorar .card{
+    .explorar .card {
         margin: 0;
     }
 
-    .explorar .card .text{
+    .explorar .card .text {
         text-align: center;
     }
 
-    .explorar{
+    .explorar {
         text-align: center;
     }
 
@@ -3466,7 +3468,7 @@ body#piscinas .explorar {
         text-align: center;
     }
 
-    .mapa .rectangulo{
+    .mapa .rectangulo {
         text-align: center;
     }
 
