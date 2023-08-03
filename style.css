@@ -3111,7 +3111,7 @@ body#piscinas .explorar {
 }
 
 /* Media queries para pantallas menores a 1250px */
-@media (max-width: 1250px) {
+@media (max-width: 1280px) {
 
     .gradient-left,
     .gradient-right {
