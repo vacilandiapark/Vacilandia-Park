@@ -27,8 +27,10 @@ button,
 button:hover,
 .btn-comprar:hover {
     box-shadow: var(--sombra) !important;
-    transform: scale(1.05) !important;
+    background: var(--color-blanco) !important;
+    color: var(--color-primario) !important;
 }
+
 
 body#zona-gamer {
     --color-primario: #EC2127;
