@@ -11,7 +11,7 @@
     --color-blanco: #fff;
     --color-negro: #000;
     --color-subtitle: #000000;
-    --size-subtitle: 0.85rem;
+    --size-subtitle: 0.75rem;
 }
 
 .animate__animated {
@@ -861,11 +861,11 @@ footer .logo img {
     height: 90vh;
     overflow: hidden;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: end;
 }
 
-.ofertas .container{
+.ofertas .container {
     width: 60vh;
     height: auto;
     background: black;
@@ -878,7 +878,7 @@ footer .logo img {
     border-radius: 10px;
 }
 
-.ofertas .container img{
+.ofertas .container img {
     border-radius: 10px;
 }
 
@@ -3201,14 +3201,16 @@ body#piscinas .explorar {
 
 @media (max-width:900px) {
 
-    .ofertas{
-        height: 50vh;
+    .ofertas {
+        height: 47vh;
     }
 
     .ofertas .container{
-        right: 0;
         width: 30vh;
-    }    }
+        right: 0;
+        margin-right: 40px;
+
+    }
 
     .navbar .row-1 {
         background: var(--color-primario);
@@ -3438,6 +3440,17 @@ body#piscinas .explorar {
     .banner .banner-overlay .container {
         align-items: center;
         padding: 0;
+    }
+
+    .ofertas {
+        height: 80vh;
+    }
+
+    .ofertas .container {
+        width: 35vh;
+        right: 14.5vw;
+        margin: 0;
+
     }
 
     /* BOTÓN COMPRAR */
@@ -3854,4 +3867,15 @@ body#piscinas .explorar {
     .info-container .text {
         padding: 0px 30px;
     }
+}
+
+@media (max-width: 450px) {
+
+    .ofertas .container {
+        width: 35vh;
+        right: 10.5vw;
+        margin: 0;
+
+    }
+
 }
