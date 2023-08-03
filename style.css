@@ -1817,7 +1817,8 @@ body#restaurante .explorar img {
 
 #paquetes-cumpleañeros .columna1 {
     margin: 0 auto;
-    width: 53.125rem;
+    width: 50vw;
+    /*width: 53.125rem;*/
 }
 
 #paquetes-cumpleañeros .columna1 .carousel {
@@ -3184,9 +3185,6 @@ body#piscinas .explorar {
 
     /* PAQ CUMPLEAÑEROS */
 
-    #paquetes-cumpleañeros .columna1 {
-        width: 22rem;
-    }
 
     /* ANIMALES */
 
