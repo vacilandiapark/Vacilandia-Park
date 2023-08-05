@@ -396,20 +396,28 @@ function actualizarHora() {
     document.getElementById('hora').textContent = hora;
     document.getElementById('minutos').textContent = minutos;
     document.getElementById('segundos').textContent = segundos;
-
-    const rectangulo = document.getElementById('rectangulo');
-    const estadoTexto = document.getElementById('estadoTexto');
-
-    if (fecha.getHours() >= 9 && fecha.getHours() < 16) {
-        rectangulo.classList.add('abierto');
-        rectangulo.classList.remove('cerrado');
-        estadoTexto.textContent = 'ABIERTO';
-    } else {
-        rectangulo.classList.add('cerrado');
-        rectangulo.classList.remove('abierto');
-        estadoTexto.textContent = 'CERRADO';
-    }
 }
 
-actualizarHora();
-setInterval(actualizarHora, 1000); // Actualizar la hora cada segundo
+function verificarEstadoHorario(horaApertura, horaCierre, diasPermitidos) {
+    setInterval(() => {
+        actualizarHora();
+        const rectangulo = document.getElementById('rectangulo');
+        const estadoTexto = document.getElementById('estadoTexto');
+
+        const horaActual = new Date().getHours();
+        const diaSemana = new Date().getDay();
+
+        // Verificar si el día actual está dentro de los días permitidos
+        const diaPermitido = diasPermitidos.includes(diaSemana);
+
+        if (diaPermitido && horaActual >= horaApertura && horaActual < horaCierre) {
+            rectangulo.classList.add('abierto');
+            rectangulo.classList.remove('cerrado');
+            estadoTexto.textContent = 'ABIERTO';
+        } else {
+            rectangulo.classList.add('cerrado');
+            rectangulo.classList.remove('abierto');
+            estadoTexto.textContent = 'CERRADO';
+        }
+    }, 1000);
+}
