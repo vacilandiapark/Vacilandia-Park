@@ -3230,6 +3230,75 @@ body#piscinas .explorar {
     height: 100%;
 }
 
+/* HORA */
+
+.horario {
+    /* Centra horizontalmente el contenido */
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.horario p{
+    margin: 0;
+    text-align: center;
+    padding: 0px 40px 10px 40px;
+    color: var(--size-subtitle);
+    font-size: var(--size-subtitle);
+    font-family: var(--font-terciario);
+    line-height: 1.1;
+}
+
+.hora-container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hora-container .hora {
+    font-size: var(--size-title);
+    font-family: var(--font-primario);
+    font-weight: lighter;
+    margin-right: 10px;
+    color: var(--color-blanco);
+    /* Agrega un espacio entre la hora y el estado */
+}
+
+.hora-container .hora span {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 3px 8px;
+    /* Ajusta el espacio alrededor del texto */
+    border-radius: 5px;
+}
+
+.hora-container .estado {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-primario);
+    font-size: var(--size-title);
+    font-weight: lighter;
+    color: var(--color-negro);
+}
+
+.hora-container #rectangulo {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    /* Agrega un espacio entre el rectángulo y el texto del estado */
+    border-radius: 3px;
+}
+
+.hora-container .abierto {
+    background-color: #4caf50;
+}
+
+.hora-container .cerrado {
+    background-color: #f44336;
+}
+
 
 @media (max-width:900px) {
 
@@ -3250,7 +3319,7 @@ body#piscinas .explorar {
 /* Media queries para pantallas menores a 1250px */
 @media (max-width: 1280px) {
 
-    .ofertas{
+    .ofertas {
         height: 80vh;
     }
 

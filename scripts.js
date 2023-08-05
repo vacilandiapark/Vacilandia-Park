@@ -384,3 +384,32 @@ $(document).ready(function () {
         ]
     });
 });
+
+// HORA DINÁMICA //
+
+function actualizarHora() {
+    const fecha = new Date();
+    const hora = String(fecha.getHours()).padStart(2, '0');
+    const minutos = String(fecha.getMinutes()).padStart(2, '0');
+    const segundos = String(fecha.getSeconds()).padStart(2, '0');
+
+    document.getElementById('hora').textContent = hora;
+    document.getElementById('minutos').textContent = minutos;
+    document.getElementById('segundos').textContent = segundos;
+
+    const rectangulo = document.getElementById('rectangulo');
+    const estadoTexto = document.getElementById('estadoTexto');
+
+    if (fecha.getHours() >= 9 && fecha.getHours() < 16) {
+        rectangulo.classList.add('abierto');
+        rectangulo.classList.remove('cerrado');
+        estadoTexto.textContent = 'ABIERTO';
+    } else {
+        rectangulo.classList.add('cerrado');
+        rectangulo.classList.remove('abierto');
+        estadoTexto.textContent = 'CERRADO';
+    }
+}
+
+actualizarHora();
+setInterval(actualizarHora, 1000); // Actualizar la hora cada segundo

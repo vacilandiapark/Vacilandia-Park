@@ -6,51 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo de iframe de una página externa</title>
     <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Estilos para el contenedor del iframe */
-        .iframe-container {
-            width: 600px;
-            height: 700px;
-            /* Altura del iframe ajustada para recortar el contenido */
-            overflow: hidden;
-            /* Ocultamos el scroll del contenedor */
-            position: relative;
-            /* Establecemos position: relative para que el iframe se posicione correctamente */
-        }
-
-        /* Estilos para el iframe */
-        iframe {
+        .hora-container {
             width: 100%;
-            height: 100%;
-            /* Altura del iframe ajustada para recortar el contenido */
-            /* Quitamos el borde para una apariencia más limpia */
-            border: none;
-            /* Establecemos position: absolute para que el iframe se ajuste al contenedor */
-            position: absolute;
-            top: 0;
-            left: 0;
-            /* Ocultamos el scroll del iframe */
-            overflow: hidden;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Centra horizontalmente el contenido */
+            background-color: #f0f0f0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .hora {
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            margin-right: 10px;
+            /* Agrega un espacio entre la hora y el estado */
+        }
+
+        .hora span {
+            background-color: black;
+            color: white;
+            padding: 3px 8px;
+            /* Ajusta el espacio alrededor del texto */
+            border-radius: 5px;
+        }
+
+        .estado {
+            display: flex;
+            align-items: center;
+        }
+
+        #rectangulo {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            /* Agrega un espacio entre el rectángulo y el texto del estado */
+            border-radius: 3px;
+        }
+
+        .abierto {
+            background-color: #4caf50;
+        }
+
+        .cerrado {
+            background-color: #f44336;
         }
     </style>
 </head>
 
 <body>
-    <h1>¡Bienvenido a mi sitio web!</h1>
-    <p>A continuación, verás un iframe con la página de contacto de Vacilandia Park:</p>
+    <section class="hora-container">
+        <div class="hora">
+            <span id="hora">--</span>:<span id="minutos">--</span>:<span id="segundos">--</span>
+        </div>
+        <div class="estado">
+            <div id="rectangulo"></div>
+            <span id="estadoTexto">--</span>
+        </div>
+    </section>
+    <script>
+        function actualizarHora() {
+            const fecha = new Date();
+            const hora = String(fecha.getHours()).padStart(2, '0');
+            const minutos = String(fecha.getMinutes()).padStart(2, '0');
+            const segundos = String(fecha.getSeconds()).padStart(2, '0');
 
-    <!-- Aquí se envuelve el iframe en un contenedor para ocultar el scroll -->
-    <div class="iframe-container">
-        <iframe src="https://vacilandia-park.odoo.com/cumpleanos-y-espacios" scrolling="no"></iframe>
-    </div>
+            document.getElementById('hora').textContent = hora;
+            document.getElementById('minutos').textContent = minutos;
+            document.getElementById('segundos').textContent = segundos;
 
-    <p>Este es un ejemplo de cómo puedes mostrar una página externa dentro de tu sitio web utilizando un iframe.</p>
+            const rectangulo = document.getElementById('rectangulo');
+            const estadoTexto = document.getElementById('estadoTexto');
+
+            if (fecha.getHours() >= 9 && fecha.getHours() < 16) {
+                rectangulo.classList.add('abierto');
+                rectangulo.classList.remove('cerrado');
+                estadoTexto.textContent = 'Abierto';
+            } else {
+                rectangulo.classList.add('cerrado');
+                rectangulo.classList.remove('abierto');
+                estadoTexto.textContent = 'Cerrado';
+            }
+        }
+
+        actualizarHora();
+        setInterval(actualizarHora, 1000); // Actualizar la hora cada segundo
+
+    </script>
 </body>
 
 </html>
