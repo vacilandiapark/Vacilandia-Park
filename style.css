@@ -858,12 +858,33 @@ footer .logo img {
 .ofertas {
     position: relative;
     width: 100%;
-    height: 70vh;
+    height: auto;
     overflow: hidden;
     display: flex;
     justify-content: center;
-    /* Centra horizontalmente el contenido */
     align-items: center;
+}
+
+.ofertas .container {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    /* Cambiamos el ancho fijo por el 100% */
+    max-width: 1200px;
+    /* Establecemos un ancho máximo para el contenedor */
+    height: auto;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: right;
+}
+
+.ofertas .container .rectangulo {
+    width: 25em;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
 }
 
 .ofertas .ofertas-carousel {
@@ -3202,6 +3223,11 @@ body#piscinas .explorar {
 /* Media queries para pantallas menores a 1250px */
 @media (max-width: 1280px) {
 
+    .ofertas .container {
+        width: 90%;
+        /* Reduce el ancho del contenedor en pantallas más pequeñas */
+    }
+
     .gradient-left,
     .gradient-right {
         display: none;
@@ -3288,6 +3314,11 @@ body#piscinas .explorar {
 
     :root {
         --sombra: none;
+    }
+
+    .ofertas .container {
+        justify-content: center;
+        /* Centra verticalmente el contenedor */
     }
 
     .subnavbar {
