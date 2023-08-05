@@ -300,6 +300,7 @@ p {
     font-family: var(--font-terciario);
     font-size: var(--size-subtitle);
     margin: 0;
+    text-transform: uppercase;
     margin-top: 20px;
 }
 
@@ -313,11 +314,10 @@ p {
 }
 
 .info-container p {
-    color: #7b682d;
-    font-weight: bold;
+    color: #221212;
+    font-weight: bolder;
     margin: 0;
     font-family: var(--font-terciario);
-    text-decoration: underline;
 }
 
 .info-container .buttons {
