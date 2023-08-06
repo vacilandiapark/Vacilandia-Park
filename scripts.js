@@ -423,14 +423,16 @@ function verificarEstadoHorario(horaApertura, horaCierre, diasPermitidos) {
 }
 
 
-// JavaScript para el efecto Parallax al hacer scroll
-const bannerVideo = document.querySelector(".banner-video img");
-const bannerHeight = document.querySelector(".banner").clientHeight;
+// JavaScript para el efecto Parallax al hacer scroll //
+document.addEventListener('DOMContentLoaded', function () {
+    const bannerVideo = document.querySelector(".banner-video img");
+    const bannerHeight = document.querySelector(".banner").clientHeight;
 
-window.addEventListener("scroll", function () {
-    const scrollPosition = window.pageYOffset;
-    const parallax = -scrollPosition / 3; // Ajusta la velocidad de parallax (mayor valor = movimiento más lento)
-    bannerVideo.style.transform = `translateY(${parallax}px)`;
+    window.addEventListener("scroll", function () {
+        const scrollPosition = window.pageYOffset;
+        const parallax = -scrollPosition / 3;
+        bannerVideo.style.transform = `translateY(${parallax}px)`;
+    });
 });
 
 // PREGUNTAS Y RESPUESTAS //
