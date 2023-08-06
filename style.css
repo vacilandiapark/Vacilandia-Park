@@ -730,9 +730,72 @@ footer .logo img {
 /* BANNER SUBPÁGINAS*/
 
 .banner {
-    position: sticky;
     height: 80vh;
+    position: relative;
     overflow: hidden;
+}
+
+body#zona-gamer .banner {
+    background: url(https://www.techies.es/wp-content/uploads/2020/10/switch-multiplayer2.jpg);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body#granja .banner {
+    background: url(materials/Granja/IMG_1542\ \(1\).jpg);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body#barcilon .banner {
+    background: url(materials/Barcilon/IMG_1812-min.jpg);
+    overflow: hidden;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+body#canchas .banner {
+    background: url(materials/Canchas/DSC_8253.JPG);
+    overflow: hidden;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+body#restaurante .banner {
+    background: url(materials/bg/P1060676.JPG);
+    overflow: hidden;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+body#piscinas .banner {
+    background: url(materials/piscinas/VCLNDIA_IMG_2606.jpg);
+    overflow: hidden;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    /* Ajusta los valores según tu preferencia */
+    filter: saturate(150%);
+    /* Ajusta el valor de saturación según lo desees */
+    z-index: 1;
+    /* Enviamos el pseudo-elemento detrás del contenido */
 }
 
 .banner .banner-video {
@@ -759,6 +822,7 @@ footer .logo img {
     position: absolute;
     top: 60%;
     left: 0;
+    z-index: 2;
     transform: translateY(-50%);
     width: 100%;
 }
@@ -3340,15 +3404,15 @@ body#piscinas .explorar {
     margin-bottom: 30px;
 }
 
-.terminos .container .row:nth-child(1){
+.terminos .container .row:nth-child(1) {
     background: #432F87;
 }
 
-.terminos .container .row:nth-child(2){
+.terminos .container .row:nth-child(2) {
     background: #EC2127;
 }
 
-.terminos .container .row:nth-child(3){
+.terminos .container .row:nth-child(3) {
     background: #18401E;
 }
 
@@ -3422,7 +3486,7 @@ body#piscinas .explorar {
 /* Media queries para pantallas menores a 1250px */
 @media (max-width: 1280px) {
 
-    .terminos{
+    .terminos {
         padding-top: 80px;
     }
 
@@ -3433,7 +3497,7 @@ body#piscinas .explorar {
         padding: 30px 0px;
     }
 
-    .terminos .container .row .col{
+    .terminos .container .row .col {
         width: 80%;
         padding-bottom: 0;
         padding-top: 0;
