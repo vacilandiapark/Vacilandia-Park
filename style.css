@@ -518,7 +518,7 @@ body#terms .main-content {
     font-family: var(--font-terciario);
     text-transform: uppercase;
     font-weight: bold;
-    padding: 16px 15px;
+    padding: 17.5px 15px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -730,72 +730,9 @@ footer .logo img {
 /* BANNER SUBPÁGINAS*/
 
 .banner {
-    height: 80vh;
     position: relative;
+    height: 80vh;
     overflow: hidden;
-}
-
-body#zona-gamer .banner {
-    background: url(https://www.techies.es/wp-content/uploads/2020/10/switch-multiplayer2.jpg);
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-body#granja .banner {
-    background: url(materials/Granja/IMG_1542\ \(1\).jpg);
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-body#barcilon .banner {
-    background: url(materials/Barcilon/IMG_1812-min.jpg);
-    overflow: hidden;
-    background-size: cover;
-    background-position: bottom;
-    background-attachment: fixed;
-}
-
-body#canchas .banner {
-    background: url(materials/Canchas/DSC_8253.JPG);
-    overflow: hidden;
-    background-size: cover;
-    background-position: bottom;
-    background-attachment: fixed;
-}
-
-body#restaurante .banner {
-    background: url(materials/bg/P1060676.JPG);
-    overflow: hidden;
-    background-size: cover;
-    background-position: bottom;
-    background-attachment: fixed;
-}
-
-body#piscinas .banner {
-    background: url(materials/piscinas/VCLNDIA_IMG_2606.jpg);
-    overflow: hidden;
-    background-size: cover;
-    background-position: bottom;
-    background-attachment: fixed;
-}
-
-.banner::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-    /* Ajusta los valores según tu preferencia */
-    filter: saturate(150%);
-    /* Ajusta el valor de saturación según lo desees */
-    z-index: 1;
-    /* Enviamos el pseudo-elemento detrás del contenido */
 }
 
 .banner .banner-video {
@@ -811,18 +748,18 @@ body#piscinas .banner {
 .banner .banner-video img,
 .banner .banner-video video {
     width: 100%;
-    height: 100vh;
+    height: 125%;
     object-fit: cover;
     transform: translateY(-20%);
     filter: saturate(150%) brightness(70%);
 }
+
 
 /* Estilos para la superposición del banner */
 .banner .banner-overlay {
     position: absolute;
     top: 60%;
     left: 0;
-    z-index: 2;
     transform: translateY(-50%);
     width: 100%;
 }
