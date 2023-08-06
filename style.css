@@ -2,7 +2,7 @@
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
-    --sombra: 0 0px 10px rgb(0, 0, 0, 0.2);
+    --sombra:0 4px 8px rgba(0, 0, 0, 0.1);
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1200px;
     --color-borde: #cdcfcf;
@@ -11,7 +11,7 @@
     --color-blanco: #fff;
     --color-negro: #000;
     --color-subtitle: #000000;
-    --size-subtitle: 0.75rem;
+    --size-subtitle: .95rem;
 }
 
 .animate__animated {
@@ -150,16 +150,16 @@ body#gracias {
 }
 
 body#terms {
-    --color-primario: #18401E;
-    --color-subnavbar: #0e2511;
-    --color-secundario: #D2D90B;
+    --color-primario: #724C9F;
+    --color-subnavbar: #432F87;
+    --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
-    --color-title: #18401E;
+    --color-title: #724C9F;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
-    --color-botones: #a3df00;
+    --color-botones: #846ca1;
     --bg-rectangulos: #18401E;
 }
 
@@ -513,7 +513,7 @@ body#terms .main-content {
 }
 
 .navbar .navigation li a {
-    font-size: var(--size-subtitle);
+    font-size: 13px;
     font-weight: lighter;
     font-family: var(--font-terciario);
     text-transform: uppercase;
@@ -3391,8 +3391,8 @@ body#piscinas .explorar {
 }
 
 .terminos .container .row .col i {
-    background: var(--color-secundario);
-    color: var(--color-primario);
+    background: #D2D90B;
+    color: #18401E;
     padding: 15px;
     margin-right: 20px;
     font-size: 25px;
@@ -3401,6 +3401,91 @@ body#piscinas .explorar {
     display: flex;
     justify-content: center;
     border-radius: 50%;
+}
+
+/* ESTILOS PREGUNTAS Y RESPUESTAS */
+.faq-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.faq-section i{
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.faq-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-section h2 {
+    font-size: var(--size-title);
+    font-family: var(--font-primario);
+    color: var(--color-title);
+    font-weight: lighter;
+}
+
+.faq-section .faq-list {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-section .faq-item {
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--color-borde);
+    box-shadow: var(--sombra);
+    background-color: var(--color-fondo);
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.faq-section .faq-item.active {
+    background-color: var(--color-fondo);
+    /* Color de fondo cuando la pregunta está abierta */
+}
+
+.faq-section .faq-item .question {
+    font-size: var(--size-title);
+    font-family: var(--font-terciario);
+    font-weight: bolder;
+    color: var(--color-title);
+    padding: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.faq-section .faq-item.active .question {
+    color: var(--color-blanco);
+    background: var(--color-primario);
+    /* Color de texto cuando la pregunta está abierta */
+}
+
+.faq-section .faq-item .answer-wrapper {
+    overflow: hidden;
+    max-height: 0;
+    /* Agregamos esta propiedad aquí */
+    transition: max-height 0.3s ease;
+}
+
+.faq-section .faq-item.active .answer-wrapper {
+    max-height: 500px;
+    /* Ajusta la altura máxima deseada para el answer abierto */
+}
+
+.faq-section .faq-item .answer {
+    font-size: var(--size-subtitle);
+    font-family: var(--font-terciario);
+    color: var(--size-subtitle);
+    font-weight: bolder;
+    padding: 20px;
+    background-color: var(--color-borde);
+    /* Fondo blanco del answer */
 }
 
 

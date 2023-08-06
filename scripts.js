@@ -424,11 +424,39 @@ function verificarEstadoHorario(horaApertura, horaCierre, diasPermitidos) {
 
 
 // JavaScript para el efecto Parallax al hacer scroll
-const bannerVideo = document.querySelector(".banner-video img");
-const bannerHeight = document.querySelector(".banner").clientHeight;
+document.addEventListener('DOMContentLoaded', function () {
+    const faqItems = document.querySelectorAll('.faq-item');
 
-window.addEventListener("scroll", function () {
-    const scrollPosition = window.pageYOffset;
-    const parallax = -scrollPosition / 3; // Ajusta la velocidad de parallax (mayor valor = movimiento más lento)
-    bannerVideo.style.transform = `translateY(${parallax}px)`;
+    faqItems.forEach(item => {
+        const question = item.querySelector('.question');
+        const answerWrapper = item.querySelector('.answer-wrapper');
+
+        item.classList.add('closed'); // Agregamos la clase "closed" por defecto
+
+        question.addEventListener('click', () => {
+            if (!item.classList.contains('active')) {
+                // Abrir la pregunta
+                closeAllQuestions();
+                item.classList.add('active');
+                item.classList.remove('closed');
+                answerWrapper.style.maxHeight = answerWrapper.scrollHeight + 'px';
+            } else {
+                // Cerrar la pregunta
+                item.classList.remove('active');
+                item.classList.add('closed');
+                answerWrapper.style.maxHeight = '0';
+            }
+        });
+    });
+
+    function closeAllQuestions() {
+        faqItems.forEach(item => {
+            const answerWrapper = item.querySelector('.answer-wrapper');
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
+                item.classList.add('closed');
+                answerWrapper.style.maxHeight = '0';
+            }
+        });
+    }
 });
