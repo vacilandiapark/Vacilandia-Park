@@ -3327,10 +3327,7 @@ body#piscinas .explorar {
 }
 
 .terminos .container {
-    max-width: 1500px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+    max-width: var(--max-width);
 }
 
 .terminos .container .row {
@@ -3338,28 +3335,71 @@ body#piscinas .explorar {
     justify-content: center;
     border-radius: 10px;
     box-shadow: var(--sombra);
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
 }
 
 .terminos .container .row:nth-child(1){
-    background-color: #724C9F;
+    background: #432F87;
 }
 
 .terminos .container .row:nth-child(2){
-    background-color: #EC2127;
+    background: #EC2127;
 }
 
 .terminos .container .row:nth-child(3){
-    background-color: #77C043;
+    background: #18401E;
 }
 
 .terminos .container .row .col {
     color: var(--color-blanco);
     font-family: var(--font-terciario);
     line-height: 1.1;
-    font-size: var(--size-subtitle);
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    width: 500px;
+    padding: 40px;
+    font-size: 15px;
+}
+
+.terminos .container .row .col ul {
+    padding: 0;
+}
+
+.terminos .container .row .col h1 {
+    font-family: var(--font-primario);
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+.terminos .recom {
+    display: flex;
+    padding: 10px 0px;
+    align-items: center;
+}
+
+.terminos .col img {
+    width: 100%;
+    height: auto;
+}
+
+.terminos .image {}
+
+.terminos .image img {
+    width: 300px;
+    height: auto;
+}
+
+.terminos .container .row .col i {
+    background: var(--color-secundario);
+    color: var(--color-primario);
+    padding: 15px;
+    margin-right: 20px;
+    font-size: 25px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
 }
 
 
@@ -3381,6 +3421,27 @@ body#piscinas .explorar {
 
 /* Media queries para pantallas menores a 1250px */
 @media (max-width: 1280px) {
+
+    .terminos{
+        padding-top: 80px;
+    }
+
+    .terminos .container .row {
+        flex-direction: column;
+        width: 100%;
+        font-size: 14px;
+        padding: 30px 0px;
+    }
+
+    .terminos .container .row .col{
+        width: 80%;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .terminos .image img {
+        width: 100%;
+    }
 
     .ofertas {
         height: 80vh;
