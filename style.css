@@ -47,7 +47,7 @@ body#zona-gamer {
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
-    --color-botones: #fd1532;
+    --color-botones: #ff495e;
     --bg-rectangulos: #18401E;
 }
 
@@ -286,7 +286,7 @@ body#terms .main-content {
     left: -10px;
     /* Alineamos el contenedor con el subnavbar */
     display: flex;
-    z-index: 99999999;
+    z-index: 9999999999999999;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -505,7 +505,7 @@ body#terms .main-content {
 }
 
 .navbar .social-icons i {
-    font-size: 150%;
+    font-size: var(--size-title);
     transition: all 0.3s ease-in-out;
 }
 
@@ -2539,15 +2539,16 @@ body#restaurante .explorar img {
     font-size: var(--size-subtitle);
     font-family: var(--font-terciario);
     padding: 10px 20px;
-    color: var(--color-subtitle);
+    background: var(--color-botones);
+    color: var(--color-blanco);
     border: none;
-    border-radius: 10px 10px 0 0;
+    border-radius: 0 0;
     cursor: pointer;
 }
 
 .platos .tab-btn.active {
     background-color: var(--color-primario);
-    color: #fff;
+    color: negro;
 }
 
 /* Estilos para las categorías */
@@ -3512,6 +3513,95 @@ body#piscinas .explorar {
     /* Fondo blanco del answer */
 }
 
+/* SUB PANEL */
+
+
+/* ESTILOS PREGUNTAS Y RESPUESTAS */
+.sub-section {
+    text-align: center;
+}
+
+.sub-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sub-section .sub-list {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub-section .sub-item {
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    background-color: var(--color-botones);
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.sub-section .sub-item.active {
+    background-color: var(--color-fondo);
+    /* Color de fondo cuando la pregunta está abierta */
+}
+
+.sub-section .sub-item .sub-question {
+    font-size: var(--size-title);
+    font-family: var(--font-primario);
+    font-weight: lighter;
+    color: var(--color-blanco);
+    padding: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.sub-section .sub-item.active .sub-question {
+    color: var(--color-blanco);
+    background: var(--color-botones);
+    /* Color de texto cuando la pregunta está abierta */
+}
+
+.sub-section .sub-item .sub-answer-wrapper {
+    overflow: hidden;
+    max-height: 0;
+    /* Agregamos esta propiedad aquí */
+    transition: max-height 0.3s ease;
+}
+
+.sub-faq-section .sub-item.active .sub-answer-wrapper {
+    max-height: 500px;
+    /* Ajusta la altura máxima deseada para el answer abierto */
+}
+
+.sub-section .sub-item .sub-answer {
+    font-size: var(--size-subtitle);
+    font-family: var(--font-terciario);
+    color: var(--size-subtitle);
+    font-weight: bolder;
+    padding: 10px;
+    background-color: var(--color-borde);
+    /* Fondo blanco del answer */
+}
+
+.sub-section .sub-item .sub-answer ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.sub-section .sub-item .sub-answer li{
+    background: var(--color-blanco);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.sub-section .sub-item .sub-answer ul a{
+    color: var(--color-primario);
+}
+
 
 @media (max-width:900px) {
 
@@ -3954,6 +4044,7 @@ body#piscinas .explorar {
     }
 
     /* CUMPLEAÑOS Y RESERVAS */
+
 
     #paquetes-cumpleañeros .thumbnails {
         display: none;

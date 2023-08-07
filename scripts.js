@@ -480,3 +480,41 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+// SUB PANEL //
+document.addEventListener('DOMContentLoaded', function () {
+    const faqItems = document.querySelectorAll('.sub-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.sub-question');
+        const answerWrapper = item.querySelector('.sub-answer-wrapper');
+
+        item.classList.add('closed'); // Agregamos la clase "closed" por defecto
+
+        question.addEventListener('click', () => {
+            if (!item.classList.contains('active')) {
+                // Abrir la pregunta
+                closeAllQuestions();
+                item.classList.add('active');
+                item.classList.remove('closed');
+                answerWrapper.style.maxHeight = answerWrapper.scrollHeight + 'px';
+            } else {
+                // Cerrar la pregunta
+                item.classList.remove('active');
+                item.classList.add('closed');
+                answerWrapper.style.maxHeight = '0';
+            }
+        });
+    });
+
+    function closeAllQuestions() {
+        faqItems.forEach(item => {
+            const answerWrapper = item.querySelector('.sub-answer-wrapper');
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
+                item.classList.add('closed');
+                answerWrapper.style.maxHeight = '0';
+            }
+        });
+    }
+});
