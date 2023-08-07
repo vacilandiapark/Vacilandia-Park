@@ -1531,6 +1531,10 @@ body#restaurante .explorar img {
     padding-bottom: 10px;
 }
 
+body#canchas .mapa {
+    padding-top: 40px;
+}
+
 .mapa h1 {
     color: var(--color-title);
     font-size: var(--size-title);
@@ -3587,18 +3591,18 @@ body#piscinas .explorar {
     /* Fondo blanco del answer */
 }
 
-.sub-section .sub-item .sub-answer ul{
+.sub-section .sub-item .sub-answer ul {
     list-style-type: none;
     padding: 0;
 }
 
-.sub-section .sub-item .sub-answer li{
+.sub-section .sub-item .sub-answer li {
     background: var(--color-blanco);
     padding: 10px;
     border-radius: 10px;
 }
 
-.sub-section .sub-item .sub-answer ul a{
+.sub-section .sub-item .sub-answer ul a {
     color: var(--color-primario);
 }
 
