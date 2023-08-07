@@ -3509,7 +3509,7 @@ body#piscinas .explorar {
     color: var(--size-subtitle);
     font-weight: bolder;
     padding: 20px;
-    background-color: var(--color-borde);
+    background-color: var(--color-botones);
     /* Fondo blanco del answer */
 }
 
