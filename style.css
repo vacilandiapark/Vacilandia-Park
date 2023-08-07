@@ -286,7 +286,7 @@ body#terms .main-content {
     left: -10px;
     /* Alineamos el contenedor con el subnavbar */
     display: flex;
-    z-index: 9999999999999999;
+    z-index: 99999;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
