@@ -307,6 +307,13 @@ function toggleInfo(type) {
     }
 }
 
+function closeInfoContainer(type) {
+    const infoContainer = document.getElementById(`info-${type}`);
+    infoContainer.style.transform = 'translateX(-100%)';
+    infoContainer.style.pointerEvents = 'none';
+    currentType = null;
+}
+
 
 // CARRUSEL IMAGENES //
 

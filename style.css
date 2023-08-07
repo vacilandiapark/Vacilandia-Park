@@ -2,7 +2,7 @@
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
-    --sombra:0 4px 8px rgba(0, 0, 0, 0.1);
+    --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1200px;
     --color-borde: #cdcfcf;
@@ -368,6 +368,24 @@ body#terms .main-content {
     border: 1px solid var(--color-primario);
 }
 
+/* Estilo para el botón "x" de cerrar */
+.info-container .close-btn {
+    position: absolute;
+    top: 10px;
+    box-shadow: var(--sombra);
+    right: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: var(--color-primario);
+    padding: 7px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.info-container .close-btn:hover {
+    background-color: var(--color-secundario);
+}
+
+
 /* NAV */
 .navbar {
     width: 100%;
@@ -500,9 +518,15 @@ body#terms .main-content {
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
+    z-index: 999999999999999;
     height: 20px;
     color: var(--color-blanco);
     cursor: pointer;
+    margin-left: 30px;
+}
+
+.navbar .hamburger .line {
+    border-top: 3px solid white;
 }
 
 .navbar .navigation {
@@ -3409,7 +3433,7 @@ body#piscinas .explorar {
     text-align: center;
 }
 
-.faq-section i{
+.faq-section i {
     margin-right: 20px;
     font-size: 20px;
 }
