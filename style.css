@@ -4116,12 +4116,12 @@ body#piscinas .explorar {
         gap: 0px;
     }
 
-    .canchas-container .columna1 img {
+    .canchas-container .columna1 {
         display: none;
     }
 
     .canchas-container .content {
-        width: 380px;
+        width: 100%;
     }
 
     /* PISCINAS */
