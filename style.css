@@ -575,7 +575,7 @@ body#terms .main-content {
     height: 100%;
     width: 250px;
     padding: 20px;
-    z-index: 99999999999999999;
+    z-index: 9999;
     transition: right 0.3s ease;
 }
 
