@@ -237,7 +237,7 @@ $(document).ready(function () {
         $modal.show();
 
         // Establecer una escala más grande para la imagen ampliada en el modal
-        $modalImage.css('transform', 'scale(1.8)');
+        $modalImage.css('transform', 'scale(1.2)');
     });
 
     // Desplazamiento del carrusel de thumbnails con la rueda del mouse
