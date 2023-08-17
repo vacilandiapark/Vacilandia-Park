@@ -444,7 +444,7 @@ body#terms .main-content {
 }
 
 .navbar .row-1 {
-    height: 130px;
+    height: 110px;
     transition: all 0.2s ease-in-out;
     background: transparent;
     margin-right: 120px;
@@ -474,7 +474,7 @@ body#terms .main-content {
 }
 
 .navbar .logo {
-    height: 100px;
+    height: 90px;
     width: auto;
 }
 
