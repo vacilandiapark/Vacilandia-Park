@@ -5,96 +5,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo de iframe de una página externa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <style>
-        .hora-container {
-            width: 100%;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /* Centra horizontalmente el contenido */
-            background-color: #f0f0f0;
-            padding: 10px;
+        body {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
+            background: black;
         }
 
-        .hora {
-            font-size: 24px;
-            font-family: Arial, sans-serif;
-            margin-right: 10px;
-            /* Agrega un espacio entre la hora y el estado */
-        }
-
-        .hora span {
-            background-color: black;
-            color: white;
-            padding: 3px 8px;
-            /* Ajusta el espacio alrededor del texto */
-            border-radius: 5px;
-        }
-
-        .estado {
+        nav {
+            width: 100%;
+            height: auto;
+            background-color: #18401E;
             display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+        }
+
+        nav .container {
+            display: flex;
+            width: 100%;
+            justify-content: center;
             align-items: center;
         }
 
-        #rectangulo {
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
-            /* Agrega un espacio entre el rectángulo y el texto del estado */
-            border-radius: 3px;
+        nav .logo img {
+            width: 90px;
+            height: auto;
         }
 
-        .abierto {
-            background-color: #4caf50;
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            font-size: 0.7rem;
+            transition: all 0.3s ease-in-out;
         }
 
-        .cerrado {
-            background-color: #f44336;
+        nav button {
+            border: none;
+            margin: 0;
+            padding: 0;
+            background: none;
+            background-color: #D2D90B;
+            color: black;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            border-radius: 10px;
+            text-transform: uppercase;
+            box-shadow: 0px 0px 10px 3px rgba(97, 97, 97, 0.432);
+            padding: 10px 20px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            background: white;
+        }
+
+        nav .col {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        nav .col:nth-child(1) {
+            justify-content: left;
+            padding-left: 100px;
+            width: 20%;
+        }
+
+        nav .col:nth-child(3) {
+            width: 30%;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav .menu-item {
+            position: relative;
+            padding: 20px 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav .menu-item:hover{
+            color: #D2D90B;
+        }
+
+        nav .sub-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 100%;
+            transform: translateX(-50%);
+            background-color: #18401E;
+            z-index: 1;
+        }
+
+        nav .menu-item:hover .sub-menu {
+            display: block;
+        }
+
+        nav .sub-menu ul {
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        nav .sub-menu li {
+            width: 300px;
+            padding: 20px 20px;
+            font-size: 0.7rem;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        nav .sub-menu li:hover{
+            background-color: #D2D90B;
+            color: black;
         }
     </style>
 </head>
 
 <body>
-    <section class="hora-container">
-        <div class="hora">
-            <span id="hora">--</span>:<span id="minutos">--</span>:<span id="segundos">--</span>
+    <nav id="navbar">
+        <div class="container">
+            <div class="col">
+                <div class="logo">
+                    <img src="materials/Logos/logo-campestrewsewewe.png" alt="">
+                </div>
+            </div>
+            <div class="col">
+                <div class="navigation">
+                    <ul>
+                        <li class="menu-item"><a href="#">INICIO</a></li>
+                        <li class="menu-item">
+                            <a href="#">EXPLORAR <i class="fas fa-angle-down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Opción 1</a></li>
+                                <li><a href="#">Opción 2</a></li>
+                                <li><a href="#">Opción 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">PLANIFICAR <i class="fas fa-angle-down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="#">Opción 1</a></li>
+                                <li><a href="#">Opción 2</a></li>
+                                <li><a href="#">Opción 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="#">RESTAURANTE</a></li>
+                        <li class="menu-item"><a href="#">CANCHAS</a></li>
+                        <li class="menu-item"><a href="#">PREGUNTAS FRECUENTES</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="social">
+                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="button">
+                    <a href=""><button>Comprar Tickets</button></a>
+                </div>
+            </div>
         </div>
-        <div class="estado">
-            <div id="rectangulo"></div>
-            <span id="estadoTexto">--</span>
-        </div>
-    </section>
-    <script>
-        function actualizarHora() {
-            const fecha = new Date();
-            const hora = String(fecha.getHours()).padStart(2, '0');
-            const minutos = String(fecha.getMinutes()).padStart(2, '0');
-            const segundos = String(fecha.getSeconds()).padStart(2, '0');
-
-            document.getElementById('hora').textContent = hora;
-            document.getElementById('minutos').textContent = minutos;
-            document.getElementById('segundos').textContent = segundos;
-
-            const rectangulo = document.getElementById('rectangulo');
-            const estadoTexto = document.getElementById('estadoTexto');
-
-            if (fecha.getHours() >= 9 && fecha.getHours() < 16) {
-                rectangulo.classList.add('abierto');
-                rectangulo.classList.remove('cerrado');
-                estadoTexto.textContent = 'Abierto';
-            } else {
-                rectangulo.classList.add('cerrado');
-                rectangulo.classList.remove('abierto');
-                estadoTexto.textContent = 'Cerrado';
-            }
-        }
-
-        actualizarHora();
-        setInterval(actualizarHora, 1000); // Actualizar la hora cada segundo
-
-    </script>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/f8eb9b1ffa.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

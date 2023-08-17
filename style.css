@@ -444,7 +444,7 @@ body#terms .main-content {
 }
 
 .navbar .row-1 {
-    height: 80px;
+    height: 130px;
     transition: all 0.2s ease-in-out;
     background: transparent;
     margin-right: 120px;
@@ -474,7 +474,7 @@ body#terms .main-content {
 }
 
 .navbar .logo {
-    height: 60px;
+    height: 100px;
     width: auto;
 }
 
@@ -500,12 +500,12 @@ body#terms .main-content {
 }
 
 .navbar .social-icons a {
-    margin-right: 5px;
+    margin-right: 7px;
     color: var(--color-blanco);
 }
 
 .navbar .social-icons i {
-    font-size: var(--size-title);
+    font-size: 1.3rem;
     transition: all 0.3s ease-in-out;
 }
 
@@ -901,7 +901,7 @@ footer .logo img {
 .ofertas {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -942,7 +942,7 @@ footer .logo img {
 
 .ofertas .ofertas-carousel img {
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     object-fit: cover;
     filter: saturate(150%) brightness(70%);
 }
@@ -3587,7 +3587,8 @@ body#piscinas .explorar {
     color: var(--size-subtitle);
     font-weight: bolder;
     padding: 10px;
-    background-color: var(--color-botones);
+    background-color: var(--color-primario);
+    border: 1px solid var(--color-botones);
     /* Fondo blanco del answer */
 }
 
@@ -3597,13 +3598,13 @@ body#piscinas .explorar {
 }
 
 .sub-section .sub-item .sub-answer li {
-    background: var(--color-blanco);
+    background: var(--color-botones);
     padding: 10px;
     border-radius: 10px;
 }
 
 .sub-section .sub-item .sub-answer ul a {
-    color: var(--color-primario);
+    color: var(--color-blanco);
 }
 
 
