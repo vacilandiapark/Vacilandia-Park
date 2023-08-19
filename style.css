@@ -6,12 +6,12 @@
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1200px;
     --color-borde: #cdcfcf;
-    --color-fondo: #fff;
-    --size-title: 1rem;
+    --color-fondo: #fcfcfc;
+    --size-title: 1.2rem;
     --color-blanco: #fff;
     --color-negro: #000;
     --color-subtitle: #000000;
-    --size-subtitle: .95rem;
+    --size-subtitle: .90rem;
 }
 
 .animate__animated {
@@ -39,6 +39,7 @@ button:hover,
 
 body#zona-gamer {
     --color-primario: #EC2127;
+    --rgba-primario: 236, 33, 39;
     --color-subnavbar: #96151a;
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
@@ -53,6 +54,7 @@ body#zona-gamer {
 
 body#canchas {
     --color-primario: #77C043;
+    --rgba-primario: 119, 192, 67;
     --color-subnavbar: #446e26;
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
@@ -67,6 +69,7 @@ body#canchas {
 
 body#recorrido {
     --color-primario: #724C9F;
+    --rgba-primario: 114, 76, 159;
     --color-subnavbar: #432F87;
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
@@ -81,6 +84,7 @@ body#recorrido {
 
 body#granja {
     --color-primario: #683A10;
+    --rgba-primario: 104, 58, 16;
     --color-subnavbar: #3a2109;
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
@@ -95,6 +99,7 @@ body#granja {
 
 body#piscinas {
     --color-primario: #2BABE2;
+    --rgba-primario: 43, 171, 226;
     --color-subnavbar: #196e92;
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
@@ -109,6 +114,7 @@ body#piscinas {
 
 body#barcilon {
     --color-primario: #EA0B8B;
+    --rgba-primario: 234, 11, 139;
     --color-subnavbar: #970b5a;
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
@@ -123,6 +129,7 @@ body#barcilon {
 
 body#restaurante {
     --color-primario: #F58220;
+    --rgba-primario: 245, 130, 32;
     --color-subnavbar: #aa5811;
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
@@ -137,6 +144,7 @@ body#restaurante {
 
 body#gracias {
     --color-primario: #724C9F;
+    --rgba-primario: 114, 76, 159;
     --color-subnavbar: #aa5811;
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
@@ -151,6 +159,7 @@ body#gracias {
 
 body#terms {
     --color-primario: #724C9F;
+    --rgba-primario: 114, 76, 159;
     --color-subnavbar: #432F87;
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
@@ -165,6 +174,7 @@ body#terms {
 
 body#inicio {
     --color-primario: #18401E;
+    --rgba-primario: 24, 64, 30;
     --color-subnavbar: #0e2511;
     --color-secundario: #D2D90B;
     --color-terciario: #683A10;
@@ -173,7 +183,7 @@ body#inicio {
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
-    --color-botones: #a3df00;
+    --color-botones: #46a754;
     --bg-rectangulos: #18401E;
 }
 
@@ -213,7 +223,7 @@ p {
 /* CONTENIDO*/
 
 .main {
-    margin-left: 70px;
+    margin-left: 90px;
     /* Ancho del subnavbar + espacio deseado */
 }
 
@@ -226,42 +236,41 @@ body#terms .main-content {
 .subnavbar {
     background-color: var(--color-primario);
     color: #fff;
-    width: 70px;
+    width: 90px;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    box-shadow: var(--sombra);
     display: flex;
-    padding-top: 5px;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
     overflow-y: auto;
     z-index: 999999999;
+    align-items: center;
 }
 
 .subnavbar a {
-    display: flex;
-    /* Utilizamos flexbox para alinear verticalmente los elementos */
-    align-items: center;
+    text-align: center;
     /* Alineamos los elementos verticalmente al centro */
     font-family: var(--font-terciario);
     color: var(--color-blanco);
     text-decoration: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
     width: 100%;
-    gap: 10px;
     transition: 0.2s ease-in-out;
+    font-size: var(--size-subtitle);
+    padding: 10px 0px;
 }
 
 .subnavbar a:hover {
-    background: var(--color-primario);
+    background: var(--color-botones);
 }
 
-.subnavbar a:hover {
-    filter: brightness(150%);
+.subnavbar .logo {
+    display: flex;
+    height: auto;
+    margin: 0 auto;
+    width: 80px;
+    margin-top: 10px;
 }
 
 .subnavbar img {
@@ -272,7 +281,6 @@ body#terms .main-content {
 
 .subnavbar i {
     margin: 0 auto;
-    font-size: 25px;
     /* Establecemos un tamaño fijo para el icono */
 }
 
@@ -389,15 +397,18 @@ body#terms .main-content {
 /* NAV */
 .navbar {
     width: 100%;
+    height: 60px;
     position: fixed;
     top: 0;
     z-index: 9999;
     transition: all 0.3s ease;
+    box-shadow: var(--sombra);
+    background: var(--color-primario);
 }
 
 .sub-menu {
     position: absolute;
-    top: 180%;
+    top: 40px;
     left: 0;
     pointer-events: none;
     padding: 0;
@@ -418,8 +429,9 @@ body#terms .main-content {
     padding-top: 25px;
     padding-bottom: 25px;
     list-style-type: none;
-    background-color: var(--color-primario);
+    background-color: var(--color-botones);
     width: 250%;
+    z-index: -22222222;
 }
 
 .navbar ul {
@@ -430,52 +442,23 @@ body#terms .main-content {
     color: var(--color-blanco);
 }
 
-.navbar.scrolled .row-1 {
-    background-color: var(--color-primario);
-    margin: 0;
-    margin-right: 70px;
-}
-
-.navbar.scrolled .row-2 {
-    background-color: var(--color-blanco);
-    margin: 0;
-    border-radius: 0;
-    margin-right: 70px;
-}
-
 .navbar .row-1 {
-    height: 110px;
     transition: all 0.2s ease-in-out;
-    background: transparent;
-    margin-right: 120px;
-    margin-left: 50px;
-}
-
-.navbar .row-2 {
-    box-shadow: var(--sombra);
-    display: flex;
-    justify-content: center;
-    margin-right: 120px;
-    margin-left: 50px;
-    border-radius: 40px;
-    align-items: center;
-    transition: all 0.3s ease-in-out;
-    height: 50px;
-    background-color: var(--color-blanco);
+    backdrop-filter: blur(105px) opacity(20%);
+    margin-right: 100px;
+    height: 100%;
 }
 
 .navbar .container {
-    max-width: var(--max-width);
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
 }
 
-.navbar .logo {
-    height: 90px;
-    width: auto;
+.navbar .navigation-container {
+    display: flex;
+    align-items: center;
 }
 
 .navbar .btn {
@@ -488,7 +471,26 @@ body#terms .main-content {
     cursor: pointer;
     font-family: var(--font-primario);
     transition: all 0.2s ease-in-out;
+    margin-left: auto;
 }
+
+.navbar .logo {
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 7em;
+    background: var(--color-primario);
+    padding: 20px;
+    border-bottom-right-radius: 50%;
+    box-shadow: 0px 0px 20px 0px var(--color-primario);
+    filter: saturate(100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .logo:hover {
+    background: var(--color-botones);
+}
+
 
 .navbar .btn:hover {
     filter: brightness(110%);
@@ -497,6 +499,8 @@ body#terms .main-content {
 .navbar .social-icons {
     color: var(--color-blanco);
     display: flex;
+    gap: 5px;
+    margin-left: 30px;
 }
 
 .navbar .social-icons a {
@@ -534,21 +538,18 @@ body#terms .main-content {
     justify-content: center;
     align-items: center;
     list-style: none;
+    padding-left: 20px;
 }
 
 .navbar .navigation li a {
-    font-size: 13px;
+    font-size: var(--size-subtitle);
     font-weight: lighter;
     font-family: var(--font-terciario);
     text-transform: uppercase;
-    font-weight: bold;
-    padding: 17.5px 15px;
-    transition: all 0.3s ease-in-out;
-}
-
-.navbar .navigation li>a:first-child:hover {
-    background: var(--color-primario);
     color: var(--color-blanco);
+    font-weight: bold;
+    padding: 17.5px 10px;
+    transition: all 0.3s ease-in-out;
 }
 
 .navbar .navigation li {
@@ -754,7 +755,6 @@ footer .logo img {
 /* BANNER SUBPÁGINAS*/
 
 .banner {
-    position: relative;
     height: 80vh;
     overflow: hidden;
 }
@@ -762,7 +762,6 @@ footer .logo img {
 .banner .banner-video {
     height: 100%;
     width: 100%;
-    position: absolute;
     top: 0;
     left: 0;
     margin: 0;
@@ -782,7 +781,7 @@ footer .logo img {
 /* Estilos para la superposición del banner */
 .banner .banner-overlay {
     position: absolute;
-    top: 60%;
+    top: 45%;
     left: 0;
     transform: translateY(-50%);
     width: 100%;
@@ -898,10 +897,17 @@ footer .logo img {
 
 /* OFERTAS CARRUSEL */
 
+svg {
+    position: absolute;
+    fill: var(--color-blanco);
+    bottom: 0;
+    z-index: 2;
+}
+
 .ofertas {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -916,15 +922,13 @@ footer .logo img {
     max-width: 1200px;
     /* Establecemos un ancho máximo para el contenedor */
     height: auto;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
-    justify-content: right;
+    align-items: center;
+    justify-content: center;
 }
 
 .ofertas .container .rectangulo {
-    width: 25em;
+    width: 20rem;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--sombra);
@@ -934,18 +938,78 @@ footer .logo img {
     width: 100%;
     height: 100%;
     display: flex;
+    position: sticky;
+    bottom: 0;
+}
+
+.ofertas .overlay img {
+    width: 150px;
+}
+
+.ofertas .overlay h1 {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primario);
+    color: var(--color-blanco);
+    font-size: var(--size-subtitle);
+    font-weight: lighter;
+    margin-top: 10px;
+}
+
+.ofertas .overlay h2 {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primario);
+    color: var(--color-blanco);
+    font-size: var(--size-title);
+    font-weight: lighter;
+    padding-right: 50px;
+    margin-bottom: 25px;
+}
+
+.ofertas .btn-comprar {
+    background-color: var(--color-botones);
+    color: var(--color-blanco);
+    padding: 10px 20px;
+    border: none;
+    font-style: 16px;
+    cursor: pointer;
+    font-family: var(--font-primario);
+    font-size: 14px;
+    box-shadow: var(--sombra);
+    transition: all 0.2s ease-in-out;
+}
+
+.ofertas .ofertas-carousel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(var(--rgba-primario), 0.5);
+    /* Desired color and opacity */
+    z-index: 1;
 }
 
 .ofertas .ofertas-carousel div {
     flex: 0 0 100%;
+    position: relative;
 }
 
+.scrolling-iframe,
 .ofertas .ofertas-carousel img {
-    width: 100%;
-    height: 200vh;
-    object-fit: cover;
-    filter: saturate(150%) brightness(70%);
+    bottom: 0;
+    left: 50%;
+    filter: saturate(150%);
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.77vh;
+    pointer-events: none;
+    /* Evitar interacción con el iframe durante el scroll */
 }
+
 
 .ofertas .slick-prev,
 .ofertas .slick-next {
@@ -3616,16 +3680,78 @@ body#piscinas .explorar {
         margin-right: 70px;
     }
 
-    .navbar .row-2 {
-        background-color: var(--color-blanco);
-        margin: 0;
-        border-radius: 0;
-        margin-right: 70px;
+    .ofertas .overlay h2 {
+        padding: 0;
+    }
+
+    .ofertas .container .rectangulo {
+        margin-top: 50px;
+    }
+
+    .ofertas .container {
+        width: 80%;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        /* Reduce el ancho del contenedor en pantallas más pequeñas */
     }
 }
 
 /* Media queries para pantallas menores a 1250px */
 @media (max-width: 1280px) {
+
+    /* NAVBAR */
+
+    .navbar .hamburger {
+        display: flex;
+    }
+
+    .navbar .container {
+        justify-content: space-between;
+        gap: 0px;
+    }
+
+    .navbar .btn {
+        margin-right: 20px;
+    }
+
+    .navbar .social-icons {
+        display: none;
+    }
+
+    .navbar .row-1 {
+        margin: 0;
+    }
+
+    .navbar.scrolled .row-1 {
+        margin: 0;
+    }
+
+    .navbar .navigation {
+        display: none;
+    }
+
+    #menuPanel {
+        display: block;
+    }
+
+    .main {
+        margin: 0;
+    }
+
+    .subnavbar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        /* Agregamos un padding para espaciar los elementos en pantallas móviles */
+        top: auto;
+        gap: 0;
+        /* Eliminamos la propiedad 'top' para ubicar el subnavbar abajo */
+    }
 
     .terminos {
         padding-top: 80px;
@@ -3649,12 +3775,7 @@ body#piscinas .explorar {
     }
 
     .ofertas {
-        height: 80vh;
-    }
-
-    .ofertas .container {
-        width: 90%;
-        /* Reduce el ancho del contenedor en pantallas más pequeñas */
+        height: 100vh;
     }
 
     .gradient-left,
@@ -3675,11 +3796,6 @@ body#piscinas .explorar {
     }
 
     /* NAVBAR */
-
-    .navbar .container {
-        justify-content: center;
-        gap: 150px;
-    }
 
     .navbar .navigation a {
         padding: 16px 10px;
@@ -3747,27 +3863,8 @@ body#piscinas .explorar {
 
     .ofertas .container {
         justify-content: center;
+        margin-top: 20px;
         /* Centra verticalmente el contenedor */
-    }
-
-    .subnavbar {
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-around;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        padding: 10px;
-        /* Agregamos un padding para espaciar los elementos en pantallas móviles */
-        top: auto;
-        /* Eliminamos la propiedad 'top' para ubicar el subnavbar abajo */
-    }
-
-    .subnavbar a {
-        width: auto;
-        padding: 5px;
-        /* Ajustamos el padding para una apariencia más compacta en pantallas móviles */
     }
 
     footer {
@@ -3818,45 +3915,6 @@ body#piscinas .explorar {
 
     .main {
         margin: 0;
-    }
-
-    /* NAVBAR */
-
-    .navbar .hamburger {
-        display: flex;
-    }
-
-    .navbar .container {
-        justify-content: space-between;
-        gap: 0px;
-    }
-
-    .navbar .btn {
-        margin-right: 20px;
-    }
-
-    .navbar .social-icons {
-        display: none;
-    }
-
-    .navbar .row-2 {
-        display: none;
-    }
-
-    .navbar .row-1 {
-        margin: 0;
-    }
-
-    .navbar.scrolled .row-1 {
-        margin: 0;
-    }
-
-    .navbar .navigation {
-        display: none;
-    }
-
-    #menuPanel {
-        display: block;
     }
 
     /* BANNER */

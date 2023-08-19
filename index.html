@@ -73,17 +73,24 @@
   </div>
   <!-- SUBNAVBAR -->
   <nav class="subnavbar">
-    <a href="/" title="inicio"><i class="fa-solid fa-home"></i></a>
-    <a href="#" title="Contacto" onclick="toggleInfo('telefono')"><i class="fa-solid fa-phone"></i></a>
-    <a href="#" title="Calendario y Horario" onclick="toggleInfo('calendario')"><i class="fa-solid fa-calendar"></i></a>
-    <a href="Page-Not-Found.html" target="_blank" title="Mapa"><i class="fa-solid fa-map"></i></a>
+    <a href="#" title="Contacto" onclick="toggleInfo('telefono')"><i class="fa-solid fa-phone"></i><br>Contacto</a>
+    <a href="#" title="Calendario y Horario" onclick="toggleInfo('calendario')"><i
+        class="fa-solid fa-calendar"></i><br>Horario</a>
+    <a href="Page-Not-Found.html" target="_blank" title="Mapa"><i class="fa-solid fa-map"></i><br>Mapa</a>
     <a href="https://vaope.com/parque-acuatico/vacilandia-park" target="_blank" title="Tickets"><i
-        class="fa-solid fa-ticket"></i></a>
-    <a href="https://vecarena.com.pe/" target="_blank"><img src="materials/Logos/venconcierto.png"
-        alt="logo-concert"></a>
+        class="fa-solid fa-ticket"></i><br>Tickets</a>
+    <a href="https://vecarena.com.pe/" target="_blank"><img decoding="async" loading="lazy"
+        src="materials/Logos/venconcierto.png" alt="logo-concert"></a>
     <!-- Agrega más elementos según tus necesidades -->
   </nav>
   <!-- CONTENEDOR DE INFORMACIÓN -->
+  <div class="info-container" id="info-buscar">
+    <span class="close-btn" onclick="closeInfoContainer('buscar')"><i class="fa-solid fa-x"></i></span>
+    <div class="text">
+      <i class="fa-solid fa-search"></i>
+      <div class="gcse-search"></div>
+    </div>
+  </div>
   <div class="info-container" id="info-telefono">
     <span class="close-btn" onclick="closeInfoContainer('telefono')"><i class="fa-solid fa-x"></i></span>
     <div class="text">
@@ -150,63 +157,64 @@
   <div class="main">
     <!-- NAVBAR VACILANDIA -->
     <div class="navbar" id="myNavbar">
-      <div class="background"></div>
       <div class="row-1">
         <div class="container">
-          <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+          <div class="navigation-container">
+            <a href="/"><img decoding="async" src="materials/Logos/logo-campestrewsewewe.png" id="logo" alt="Logo"
+                class="logo" loading="lazy"></a>
+            <ul class="navigation">
+              <li><a href="#">EXPLORAR <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="sub-menu">
+                  <li><a href="zona-gamer.html">Zona Gamer</a></li>
+                  <li><a href="Barcilón.html">Barcilón</a></li>
+                  <li><a href="Restaurante.html">Restaurante</a></li>
+                  <li><a href="Canchas.html">Canchas</a></li>
+                  <li><a href="Granja.html">VaciGranja</a></li>
+                  <li><a href="Page-Not-Found.html">Recorrido Vacilón</a></li>
+                  <li><a href="Piscinas.html">Piscinas</a></li>
+                </ul>
+              </li>
+              <li><a href="#">PLANIFICA <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="sub-menu">
+                  <li><a href="Cumpleaños y Espacios.html">Cumpleaños y Espacios</a></li>
+                  <li><a href="Eventos y Reservas.html">Eventos y Reservas</a></li>
+                  <li><a href="Alquiler y Campeonatos.html">Alquiler y Campeonatos</a></li>
+                  <li><a href="Colegios e Instituciones.html">Colegios e Instituciones</a></li>
+                  <li><a href="Corporativos y Empresas.html">Corporativos y Empresas</a></li>
+                </ul>
+              </li>
+              <li><a href="Restaurante.html">RESTAURANTE <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="sub-menu">
+                  <li><a href="Restaurante.html#restaurante">Carta Gastronómica</a></li>
+                </ul>
+              </li>
+              <li><a href="/#ubicacion">¿Cómo llegar?</a></li>
+              <li><a
+                  href="https://www.google.com/maps/uv?pb=!1s0x9105c53e19fb34df%3A0x1ce4a11a75be7f3c!3m1!7e131!4s!5sVacilandia%20Park!15sCgIgAQ&hl=es-419&imagekey=!1e10!2sAF1QipPSh0yER94lkwxkNDNDRwgnKv83yc46Fnv8CSZT"
+                  target="_blank">Galería</a>
+              </li>
+              <li><a href="#" onclick="toggleInfo('telefono')">Contáctanos</a></li>
+            </ul>
+            <div class="hamburger">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <div class="social-icons">
+              <a target="_blank" href="https://www.tiktok.com/@vacilandiapark/"><i class="fa-brands fa-tiktok"></i></a>
+              <a target="_blank" href="https://www.instagram.com/vacilandiapark/?hl=es"><i
+                  class="fa-brands fa-instagram"></i></a>
+              <a target="_blank" href="https://www.facebook.com/vacilandiapark/"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <a target="_blank" href="https://www.youtube.com/watch?v=59Royw9A1rM"><i
+                  class="fa-brands fa-youtube"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/company/vacilandia-park/mycompany/"><i
+                  class="fa-brands fa-linkedin-in"></i></a>
+            </div>
           </div>
-          <div class="social-icons">
-            <a href="https://www.tiktok.com/@vacilandiapark/"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://www.instagram.com/vacilandiapark/?hl=es"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.facebook.com/vacilandiapark/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.youtube.com/watch?v=59Royw9A1rM"><i class="fa-brands fa-youtube"></i></a>
-          </div>
-          <a href="/"><img decoding="async" src="materials/Logos/logo-campestrewsewewe.png" id="logo" alt="Logo"
-              class="logo animate__animated animate__rubberBand" loading="lazy"></a>
           <a href="https://vaope.com/parque-acuatico/vacilandia-park" target="_blank"><button
               class="btn animate__animated animate__headShake animate__infinite">COMPRAR
               TICKETS</button></a>
-        </div>
-      </div>
-      <div class="row-2">
-        <div class="container">
-          <ul class="navigation">
-            <li><a href="/">INICIO</a></li>
-            <li><a href="#">EXPLORAR <i class="fa-solid fa-caret-down"></i></a>
-              <ul class="sub-menu">
-                <li><a href="zona-gamer.html">Zona Gamer</a></li>
-                <li><a href="Barcilón.html">Barcilón</a></li>
-                <li><a href="Restaurante.html">Restaurante</a></li>
-                <li><a href="Canchas.html">Canchas</a></li>
-                <li><a href="Granja.html">VaciGranja</a></li>
-                <li><a href="Page-Not-Found.html">Recorrido Vacilón</a></li>
-                <li><a href="Piscinas.html">Piscinas</a></li>
-              </ul>
-            </li>
-            <li><a href="#">PLANIFICA <i class="fa-solid fa-caret-down"></i></a>
-              <ul class="sub-menu">
-                <li><a href="Cumpleaños y Espacios.html">Cumpleaños y Espacios</a></li>
-                <li><a href="Eventos y Reservas.html">Eventos y Reservas</a></li>
-                <li><a href="Alquiler y Campeonatos.html">Alquiler y Campeonatos</a></li>
-                <li><a href="Colegios e Instituciones.html">Colegios e Instituciones</a></li>
-                <li><a href="Corporativos y Empresas.html">Corporativos y Empresas</a></li>
-              </ul>
-            </li>
-            <li><a href="Restaurante.html">RESTAURANTE <i class="fa-solid fa-caret-down"></i></a>
-              <ul class="sub-menu">
-                <li><a href="Restaurante.html#restaurante">Carta Gastronómica</a></li>
-              </ul>
-            </li>
-            <li><a href="/#ubicacion">¿Cómo llegar?</a></li>
-            <li><a
-                href="https://www.google.com/maps/uv?pb=!1s0x9105c53e19fb34df%3A0x1ce4a11a75be7f3c!3m1!7e131!4s!5sVacilandia%20Park!15sCgIgAQ&hl=es-419&imagekey=!1e10!2sAF1QipPSh0yER94lkwxkNDNDRwgnKv83yc46Fnv8CSZT"
-                target="_blank">Galería</a>
-            </li>
-            <li><a href="#" onclick="toggleInfo('telefono')">Contáctanos</a></li>
-          </ul>
         </div>
       </div>
     </div>
@@ -216,8 +224,10 @@
           <div class="container">
             <div class="sub-list">
               <div class="sub-item closed">
-                <a href="/"><div class="sub-question">INICIO
-                </div></a>
+                <a href="/">
+                  <div class="sub-question">INICIO
+                  </div>
+                </a>
               </div>
               <div class="sub-item closed">
                 <div class="sub-question">EXPLORAR
@@ -297,6 +307,13 @@
     <!-- OFERTAS -->
     <section class="ofertas">
       <div class="container">
+        <div class="overlay">
+          <img decoding="async" loading="lazy" src="materials/Logos/LOGO VACILANDIA FINAL.png" alt="Logo">
+          <h1>Te esperamos en</h1>
+          <h2>¡EL PARQUE CAMPESTRE MAS GRANDE DE TODO LIMA!</h2>
+          <a href="https://vaope.com/parque-acuatico/vacilandia-park" target="_blank" class="btn-comprar">COMPRAR
+            TICKETS</a>
+        </div>
         <div class="rectangulo">
           <div class="carrusel">
             <img decoding="async" src="materials/Promociones/Combo Kids 1.jpg" alt="Imagen 1" loading="lazy" />
@@ -309,9 +326,15 @@
         </div>
       </div>
       <div class="ofertas-carousel banner">
-        <div class="banner-video"><img src="materials/bg/P1100622.JPG" alt="Oferta 2"></div>
-        <div class="banner-video"><img src="materials/bg/P1060676.JPG" alt="Oferta 2"></div>
+        <iframe class="scrolling-iframe"
+          src="https://www.youtube.com/embed/csUM6Y16lbs?background=1&autoplay=1&loop=1&byline=0&start=5&end=60&title=0&mute=1&playlist=csUM6Y16lbs"
+          frameborder="0"></iframe>
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          d="M0,192L60,192C120,192,240,192,360,213.3C480,235,600,277,720,272C840,267,960,213,1080,192C1200,171,1320,181,1380,186.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+        </path>
+      </svg>
     </section>
     <!-- SECCIÓN DE PREGUNTA CON BOTON DE COMPRAR -->
     <section class="boton-comprar">
@@ -377,7 +400,8 @@
             <div class="card">
               <a href="Granja.html">
                 <div class="image">
-                  <img src="materials/Explore-Park/350X 400  VACIGRANJA.jpg" alt="Image 1">
+                  <img decoding="async" loading="lazy" src="materials/Explore-Park/350X 400  VACIGRANJA.jpg"
+                    alt="Image 1">
                 </div>
                 <div class="text">
                   <h1 style="color: #683A10;">VACIGRANJA</h1>
@@ -389,7 +413,8 @@
             <div class="card">
               <a href="Restaurante.html">
                 <div class="image">
-                  <img src="materials/Explore-Park/350X 400 - POLLO VACILON.jpg" alt="Image 1">
+                  <img decoding="async" loading="lazy" src="materials/Explore-Park/350X 400 - POLLO VACILON.jpg"
+                    alt="Image 1">
                 </div>
                 <div class="text">
                   <h1 style="color: #F58220;">RESTAURANTE</h1>
@@ -402,7 +427,8 @@
             <div class="card">
               <a href="Page-Not-Found.html">
                 <div class="image">
-                  <img src="materials/Explore-Park/350X 400 - RECORRIDO.jpg" alt="Image 1">
+                  <img decoding="async" loading="lazy" src="materials/Explore-Park/350X 400 - RECORRIDO.jpg"
+                    alt="Image 1">
                 </div>
                 <div class="text">
                   <h1 style="color: #724C9F;">RECORRIDO VACILÓN</h1>
@@ -413,7 +439,8 @@
             </div>
             <div class="card">
               <a href="Barcilón.html">
-                <div class="image"><img src="materials/Explore-Park/350X 400 BARCILON.jpg" alt="Image 1">
+                <div class="image"><img decoding="async" loading="lazy"
+                    src="materials/Explore-Park/350X 400 BARCILON.jpg" alt="Image 1">
                 </div>
                 <div class="text">
                   <h1 style="color:#EA0B8B;">BARCILÓN</h1>
@@ -425,7 +452,8 @@
             </div>
             <div class="card">
               <a href="Piscinas.html">
-                <div class="image"><img src="materials/Explore-Park/350X 400 PICSINAS.jpg" alt="Image 1">
+                <div class="image"><img decoding="async" loading="lazy"
+                    src="materials/Explore-Park/350X 400 PICSINAS.jpg" alt="Image 1">
                 </div>
                 <div class="text">
                   <h1 style="color:#2BABE2;">PISCINAS Y TOBOGANES</h1>
@@ -438,7 +466,8 @@
             </div>
             <div class="card">
               <a href="zona-gamer.html">
-                <div class="image"><img src="materials/Explore-Park/350X 400 ZONA GAMER.jpg" alt="Image 1">
+                <div class="image"><img decoding="async" loading="lazy"
+                    src="materials/Explore-Park/350X 400 ZONA GAMER.jpg" alt="Image 1">
                 </div>
                 <div class="text">
                   <h1 style="color: #EC2127">ZONA GAMER</h1>
@@ -449,7 +478,8 @@
             </div>
             <div class="card">
               <a href="Canchas.html">
-                <div class="image"><img src="materials/Planificar-Park/380 X 300 Canchas.jpg" alt="Image 1">
+                <div class="image"><img decoding="async" loading="lazy"
+                    src="materials/Planificar-Park/380 X 300 Canchas.jpg" alt="Image 1">
                 </div>
                 <div class="text">
                   <h1 style="color: #77C043">CANCHAS DEPORTIVAS</h1>
@@ -462,7 +492,7 @@
           </div>
         </div>
       </section>
-      <!-- YouTube -->
+      <!-- YouTube 
       <section class="youtube">
         <div class="youtube-container">
           <iframe width="100%" height="315" src="https://www.youtube.com/embed/csUM6Y16lbs" title="YouTube video player"
@@ -471,6 +501,7 @@
             allowfullscreen></iframe>
         </div>
       </section>
+      -->
       <!-- PLANIFICA TU VISITA -->
       <section class="planificar">
         <div class="container-planificar" id="planificar">
@@ -480,7 +511,8 @@
           <div class="row">
             <div class="card">
               <a href="Cumpleaños y Espacios.html">
-                <div class="image"><img src="materials/Planificar-Park/380 X 300   CUMPLEAÑOS.jpg" alt="Image 1">
+                <div class="image"><img decoding="async" loading="lazy"
+                    src="materials/Planificar-Park/380 X 300   CUMPLEAÑOS.jpg" alt="Image 1">
                 </div>
                 <div class="text">
                   <h1>CUMPLEAÑOS Y ESPACIOS</h1>
@@ -490,7 +522,8 @@
             </div>
             <div class="card">
               <a href="Eventos y Reservas.html">
-                <div class="image"><img src="materials/Planificar-Park/380 X 300  EVENTO.jpg" alt="Image 1">
+                <div class="image"><img decoding="async" loading="lazy"
+                    src="materials/Planificar-Park/380 X 300  EVENTO.jpg" alt="Image 1">
                 </div>
                 <div class="text">
                   <h1>EVENTOS Y RESERVAS</h1>
@@ -500,7 +533,8 @@
             </div>
             <div class="card">
               <a href="Alquiler y Campeonatos.html">
-                <div class="image"><img src="materials/Planificar-Park/380 X 300 Canchas.jpg" alt="Image 1">
+                <div class="image"><img decoding="async" loading="lazy"
+                    src="materials/Planificar-Park/380 X 300 Canchas.jpg" alt="Image 1">
                 </div>
                 <div class="text">
                   <h1>ALQUILER Y CAMPEONATOS</h1>
@@ -512,7 +546,8 @@
           <div class="row">
             <div class="card">
               <a href="Colegios e Instituciones.html">
-                <div class="image"><img src="materials/Planificar-Park/380 X 300 colegio.jpg" alt="Image 1">
+                <div class="image"><img decoding="async" loading="lazy"
+                    src="materials/Planificar-Park/380 X 300 colegio.jpg" alt="Image 1">
                 </div>
                 <div class="text">
                   <h1>COLEGIOS E INSTITUCIONES</h1>
@@ -522,7 +557,8 @@
             </div>
             <div class="card">
               <a href="Corporativos y Empresas.html">
-                <div class="image"><img src="materials/Planificar-Park/FOTO CORPO.png" alt="Image 1">
+                <div class="image"><img decoding="async" loading="lazy" src="materials/Planificar-Park/FOTO CORPO.png"
+                    alt="Image 1">
                 </div>
                 <div class="text">
                   <h1>CORPORATIVOS Y EMPRESAS</h1>
@@ -532,7 +568,8 @@
             </div>
             <div class="card">
               <a href="https://vecarena.com.pe/" target="_blank">
-                <div class="image"><img src="materials/Planificar-Park/380 X 300 VEC.jpg" alt="Image 1">
+                <div class="image"><img decoding="async" loading="lazy"
+                    src="materials/Planificar-Park/380 X 300 VEC.jpg" alt="Image 1">
                 </div>
                 <div class="text">
                   <h1>SHOWS Y CONCIERTOS</h1>
@@ -693,6 +730,8 @@
   <script src="https://kit.fontawesome.com/f8eb9b1ffa.js" crossorigin="anonymous"></script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBGSZKJ2VC"></script>
+  <script async src="https://cse.google.com/cse.js?cx=80a4c0cc5b3294b74">
+  </script>
   <script src="scripts.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];

@@ -61,20 +61,6 @@ $(document).ready(function () {
     });
 });
 
-// CARRUSEL DE OFERTAS //
-
-$(document).ready(function () {
-    $(".ofertas-carousel").slick({
-        arrows: true,
-        prevArrow: '<button class="slick-prev rec" type="button"><i class="fas fa-chevron-circle-left fa-2xl"></i></button>',
-        nextArrow: '<button class="slick-next rec" type="button"><i class="fas fa-chevron-circle-right fa-2xl"></i></button>',
-        autoplay: true,
-        autoplaySpeed: 2000,
-        fade: true,
-        cssEase: 'linear'
-    });
-});
-
 // CARRUSEL INTRODUCCION //
 
 $(document).ready(function () {
@@ -299,7 +285,7 @@ function toggleInfo(type) {
         if (windowWidth < 769) {
             infoContainer.style.transform = 'translateX(0px)';
         } else {
-            infoContainer.style.transform = 'translateX(80px)';
+            infoContainer.style.transform = 'translateX(90px)';
         }
 
         infoContainer.style.pointerEvents = 'auto';
@@ -433,7 +419,7 @@ function verificarEstadoHorario(horaApertura, horaCierre, diasPermitidos) {
 
 // JavaScript para el efecto Parallax al hacer scroll //
 document.addEventListener('DOMContentLoaded', function () {
-    const bannerVideo = document.querySelector(".banner-video img");
+    const bannerVideo = document.querySelector(".ofertas-carousel img");
     const bannerHeight = document.querySelector(".banner").clientHeight;
 
     window.addEventListener("scroll", function () {
@@ -518,3 +504,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
+const iframe = document.querySelector('.scrolling-iframe');
+const initialPosition = iframe.getBoundingClientRect().top + window.scrollY;
+
+function updateIframePosition() {
+    const currentScrollY = window.scrollY;
+    const offsetY = currentScrollY - initialPosition;
+
+    iframe.style.transform = `translateY(${offsetY}px)`;
+}
+
+window.addEventListener('scroll', updateIframePosition);
