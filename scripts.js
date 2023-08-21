@@ -505,9 +505,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-
 const iframe = document.querySelector('.scrolling-iframe');
-const initialPosition = iframe.getBoundingClientRect().top + window.scrollY;
+const iframeStyles = window.getComputedStyle(iframe);
+const initialPosition = iframe.getBoundingClientRect().top + window.scrollY - parseFloat(iframeStyles.marginTop);
 
 function updateIframePosition() {
     const currentScrollY = window.scrollY;
