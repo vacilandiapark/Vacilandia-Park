@@ -197,9 +197,12 @@ body {
 }
 
 svg {
-    fill: var(--color-primario);
     fill-opacity: 1;
     margin-bottom: -10px;
+}
+
+svg path{
+    fill: var(--color-primario);
 }
 
 .main-content {
@@ -234,7 +237,7 @@ body#terms .main-content {
 /* SUBNAVBAR*/
 
 .subnavbar {
-    background-color: var(--color-primario);
+    background: var(--color-primario);
     color: #fff;
     width: 90px;
     height: 100vh;
@@ -404,7 +407,11 @@ body#terms .main-content {
     transition: all 0.3s ease;
 }
 
-.navbar.scrolled{
+.navbar.scrolled {
+    background: var(--color-primario);
+}
+
+.navbar.scrolled .logo {
     background: var(--color-primario);
 }
 
@@ -480,12 +487,10 @@ body#terms .main-content {
     margin: 0 auto;
     margin-top: 50px;
     width: 7em;
-    background: var(--color-primario);
     padding: 20px;
     border-bottom-right-radius: 50%;
-    box-shadow: 0px 0px 20px 0px var(--color-primario);
     filter: saturate(100%);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 .navbar .logo:hover {
@@ -841,7 +846,7 @@ footer .logo img {
 /* BOTON COMPRAR */
 
 .boton-comprar {
-    background-color: var(--color-blanco);
+    background-color: var(--color-primario);
     width: 100%;
     height: 90px;
     box-shadow: var(--inset);
@@ -863,7 +868,7 @@ footer .logo img {
 }
 
 .boton-comprar h2 {
-    color: var(--color-primario);
+    color: var(--color-blanco);
     font-size: var(--size-title);
     font-family: var(--font-primario);
     font-style: normal;
@@ -873,7 +878,7 @@ footer .logo img {
 }
 
 .boton-comprar p {
-    color: var(--color-subtitle);
+    color: var(--color-blanco);
     font-size: var(--size-subtitle);
     font-family: var(--font-terciario);
     font-style: normal;
@@ -1047,40 +1052,18 @@ svg {
 /* PROMOCIONES CARRUSEL */
 
 .promociones {
-    position: relative;
     padding-top: 20px;
-}
-
-.promociones .gradient-left,
-.promociones .gradient-right {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 50px;
-    /* Adjust the width of the gradient as needed */
-    pointer-events: none;
-    z-index: 2;
-}
-
-.promociones .gradient-left {
-    left: 0;
-    background: linear-gradient(to right, var(--color-fondo), rgba(255, 255, 255, 0));
-}
-
-.promociones .gradient-right {
-    right: 0;
-    background: linear-gradient(to left, var(--color-fondo), rgba(255, 255, 255, 0));
 }
 
 .promociones .container {
     max-width: 1390px;
     margin: 0 auto;
-    position: relative;
-    overflow: hidden;
+    background: var(--color-blanco);
 }
 
 .promociones .container .title {
-    max-width: 1200px;
+    width: var(--max-width);
+    padding: 20px;
     margin: 0 auto;
 }
 
@@ -1100,7 +1083,6 @@ svg {
 }
 
 .promociones .carousel-explorar {
-    display: flex;
     margin: 0 -10px;
     overflow: hidden;
 }
@@ -1177,7 +1159,6 @@ svg {
     align-items: center;
     width: 400px;
     height: 350px;
-    background: var(--color-blanco);
     z-index: 99;
 }
 
@@ -1261,27 +1242,6 @@ svg {
 
 body#barcilon .explorar {
     padding-top: 40px;
-}
-
-.explorar .gradient-left,
-.explorar .gradient-right {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 50px;
-    /* Adjust the width of the gradient as needed */
-    pointer-events: none;
-    z-index: 2;
-}
-
-.explorar .gradient-left {
-    left: 0;
-    background: linear-gradient(to right, var(--color-fondo), rgba(255, 255, 255, 0));
-}
-
-.explorar .gradient-right {
-    right: 0;
-    background: linear-gradient(to left, var(--color-fondo), rgba(255, 255, 255, 0));
 }
 
 .explorar .container {
@@ -1426,18 +1386,6 @@ body#restaurante .explorar img {
     border-radius: 10px;
     box-shadow: var(--sombra);
     transition: all 0.3s ease-in-out;
-}
-
-.pollo-vacilon .gradient-left {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 70%;
-    /* Adjust the width of the gradient as needed */
-    pointer-events: none;
-    z-index: 1;
-    transition: all 0.3s;
 }
 
 .pollo-vacilon .container img {
@@ -3020,27 +2968,6 @@ body#piscinas .explorar {
     padding: 20px;
 }
 
-.imagenes .gradient-left,
-.imagenes .gradient-right {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 50px;
-    /* Adjust the width of the gradient as needed */
-    pointer-events: none;
-    z-index: 2;
-}
-
-.imagenes .gradient-left {
-    left: 0;
-    background: linear-gradient(to right, var(--color-fondo), rgba(255, 255, 255, 0));
-}
-
-.imagenes .gradient-right {
-    right: 0;
-    background: linear-gradient(to left, var(--color-fondo), rgba(255, 255, 255, 0));
-}
-
 .imagenes .container {
     max-width: 1416px;
     margin: 0 auto;
@@ -3130,27 +3057,6 @@ body#piscinas .explorar {
 .ofrecer {
     position: relative;
     padding-top: 40px;
-}
-
-.ofrecer .gradient-left,
-.ofrecer .gradient-right {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 50px;
-    /* Adjust the width of the gradient as needed */
-    pointer-events: none;
-    z-index: 2;
-}
-
-.ofrecer .gradient-left {
-    left: 0;
-    background: linear-gradient(to right, var(--color-fondo), rgba(255, 255, 255, 0));
-}
-
-.ofrecer .gradient-right {
-    right: 0;
-    background: linear-gradient(to left, var(--color-fondo), rgba(255, 255, 255, 0));
 }
 
 .ofrecer .container {
@@ -3675,6 +3581,75 @@ body#piscinas .explorar {
     color: var(--color-blanco);
 }
 
+/* PROMOCIONES */
+
+.promos {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.promos .container {
+    max-width: var(--max-width);
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    border-radius: 10px;
+}
+
+.promos .columna-2 {
+    width: 100%;
+}
+
+.promos .carrusel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.promos .carrusel:hover {
+    box-shadow: var(--sombra);
+}
+
+.promos .carrusel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.promos .slick-prev,
+.promos .slick-next {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    color: var(--color-blanco);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+}
+
+.promos .slick-prev:hover,
+.promos .slick-next:hover {
+    filter: brightness(150%);
+    color: var(--color-negro);
+}
+
+.promos .slick-prev {
+    left: 10px;
+}
+
+.promos .slick-next {
+    right: 10px;
+}
 
 @media (max-width:900px) {
 
@@ -3780,11 +3755,6 @@ body#piscinas .explorar {
 
     .ofertas {
         height: 100vh;
-    }
-
-    .gradient-left,
-    .gradient-right {
-        display: none;
     }
 
     /* MAIN CONTENT */
