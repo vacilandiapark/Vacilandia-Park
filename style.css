@@ -173,18 +173,18 @@ body#terms {
 }
 
 body#inicio {
-    --color-primario: #18401E;
-    --rgba-primario: 24, 64, 30;
+    --color-primario: #136635;
+    --rgba-primario: 19, 102, 53;
     --color-subnavbar: #0e2511;
     --color-secundario: #D2D90B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
-    --color-title: #18401E;
+    --color-title: #136635;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
     --color-botones: #46a754;
-    --bg-rectangulos: #18401E;
+    --bg-rectangulos: #136635;
 }
 
 html,
