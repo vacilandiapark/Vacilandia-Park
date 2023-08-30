@@ -2,7 +2,7 @@
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
-    --sombra: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+    --sombra: 0px 0px 43px -15px rgba(0,0,0,0.8);
     ;
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1000px;
@@ -712,7 +712,8 @@ footer .logo img {
     position: relative;
     width: 20rem;
     height: auto;
-    border-radius: 10px;
+
+
     overflow: hidden;
     box-shadow: var(--sombra);
 }
@@ -872,7 +873,8 @@ footer .logo img {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
 
-    border-radius: 10px;
+
+
 }
 
 .promociones .card:hover {
@@ -925,9 +927,11 @@ footer .logo img {
     margin: 0 auto;
     height: auto;
     display: flex;
-    border-radius: 10px;
+
+
     box-shadow: var(--sombra);
-    border-radius: 10px;
+
+
 }
 
 .introduccion .columna-1 {
@@ -1162,7 +1166,8 @@ body#restaurante .explorar img {
     height: 350px;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+
+
     box-shadow: var(--sombra);
     transition: all 0.3s ease-in-out;
 }
@@ -1333,7 +1338,8 @@ body#canchas .mapa {
     position: relative;
     /* Proporción 16:9 (para un mapa de Google Maps) */
     height: 50vh;
-    border-radius: 10px;
+
+
     box-shadow: var(--sombra);
     transition: all 0.3s ease-in-out;
 }
@@ -1481,7 +1487,8 @@ body#canchas .mapa {
     right: 40px;
     width: 320px;
     background-color: var(--color-blanco);
-    border-radius: 10px;
+
+
     box-shadow: var(--sombra);
     z-index: 9998;
     font-family: Arial, sans-serif;
@@ -1567,7 +1574,8 @@ body#canchas .mapa {
     display: inline-block;
     padding: 8px 12px;
     background-color: #f1f0f0;
-    border-radius: 10px;
+
+
 }
 
 .message.sent .bubble {
@@ -1651,7 +1659,8 @@ body#canchas .mapa {
 .contacto .form-container {
     display: flex;
     box-shadow: var(--sombra);
-    border-radius: 10px;
+
+
 }
 
 .contacto .contacto-container h1 {
@@ -1757,7 +1766,8 @@ body#canchas .mapa {
     object-fit: cover;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-    border-radius: 10px;
+
+
     box-shadow: var(--sombra);
 }
 
@@ -1808,7 +1818,8 @@ body#canchas .mapa {
     border: none;
     color: var(--color-blanco);
     cursor: pointer;
-    border-radius: 10px;
+
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1908,7 +1919,8 @@ body#canchas .mapa {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     height: auto;
-    border-radius: 10px;
+
+
     box-shadow: var(--sombra);
     display: flex;
     flex-direction: column;
@@ -1979,7 +1991,8 @@ body#canchas .mapa {
     justify-content: space-between;
     height: 270px;
     overflow: hidden;
-    border-radius: 10px;
+
+
     margin-bottom: 30px;
     background: var(--color-blanco);
     transition: all 0.3s ease-in-out;
@@ -2072,7 +2085,8 @@ body#canchas .mapa {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     height: auto;
-    border-radius: 10px;
+
+
     background-color: var(--color-blanco);
     box-shadow: var(--sombra);
     display: flex;
@@ -2160,7 +2174,8 @@ body#canchas .mapa {
     justify-content: space-between;
     height: 400px;
     overflow: hidden;
-    border-radius: 10px;
+
+
     margin-bottom: 30px;
     box-shadow: var(--sombra);
     background: var(--color-blanco);
@@ -2247,7 +2262,8 @@ body#canchas .mapa {
 .platos .plato img {
     width: 100%;
     transition: all 0.3s ease-in-out;
-    border-radius: 10px;
+
+
 }
 
 .platos .plato img:hover {
@@ -2314,7 +2330,8 @@ body#canchas .mapa {
     height: 250px;
     margin: 0 auto;
     display: flex;
-    border-radius: 10px;
+
+
     margin-bottom: 20px;
     box-shadow: var(--sombra);
     background: var(--color-blanco);
@@ -2475,7 +2492,8 @@ body#piscinas .explorar {
     justify-content: space-between;
     height: auto;
     overflow: hidden;
-    border-radius: 10px;
+
+
     margin-bottom: 30px;
     background: var(--color-blanco);
     box-shadow: var(--sombra);
@@ -2564,7 +2582,8 @@ body#piscinas .explorar {
 .canchas-container .columna1 img {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+
+
     object-fit: cover;
     transition: all 0.3s ease-in-out;
 }
@@ -2586,7 +2605,8 @@ body#piscinas .explorar {
     height: auto;
     box-shadow: var(--sombra);
     /* Puedes cambiar el color aquí */
-    border-radius: 10px;
+
+
     background: var(--color-blanco);
     padding-top: 15px;
     padding-bottom: 15px;
@@ -2687,7 +2707,8 @@ body#piscinas .explorar {
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-    border-radius: 10px;
+
+
     margin: 5px;
 }
 
@@ -2781,7 +2802,8 @@ body#piscinas .explorar {
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-    border-radius: 10px;
+
+
     margin: 5px;
 }
 
@@ -2875,7 +2897,8 @@ body#piscinas .explorar {
     text-align: center;
     padding: 20px;
     background-color: #ffffff;
-    border-radius: 10px;
+
+
     box-shadow: var(--sombra);
 }
 
@@ -2921,7 +2944,8 @@ body#piscinas .explorar {
     height: 0;
     box-shadow: var(--sombra);
     overflow: hidden;
-    border-radius: 10px;
+
+
 }
 
 .youtube .youtube-container iframe {
@@ -3015,7 +3039,8 @@ body#piscinas .explorar {
 .terminos .container .row {
     display: flex;
     justify-content: center;
-    border-radius: 10px;
+
+
     box-shadow: var(--sombra);
     width: 100%;
     height: auto;
@@ -3118,7 +3143,8 @@ body#piscinas .explorar {
     max-width: 800px;
     width: 100%;
     margin-bottom: 30px;
-    border-radius: 10px;
+
+
     border: 1px solid var(--color-borde);
     box-shadow: var(--sombra);
     background-color: var(--color-fondo);
@@ -3193,7 +3219,8 @@ body#piscinas .explorar {
     max-width: 800px;
     width: 100%;
     margin-bottom: 15px;
-    border-radius: 10px;
+
+
     box-shadow: var(--sombra);
     background-color: var(--color-botones);
     overflow: hidden;
@@ -3252,7 +3279,8 @@ body#piscinas .explorar {
 .sub-section .sub-item .sub-answer li {
     background: var(--color-botones);
     padding: 10px;
-    border-radius: 10px;
+
+
 }
 
 .sub-section .sub-item .sub-answer ul a {
@@ -3269,14 +3297,17 @@ body#piscinas .explorar {
 .promos .container {
     max-width: var(--max-width);
     width: 100%;
-    border-radius: 10px;
+
+
     overflow: hidden;
     height: auto;
     display: flex;
     margin: 0 auto;
-    border-radius: 10px;
+
+
     box-shadow: var(--sombra);
-    border-radius: 10px;
+
+
 }
 
 .promos .columna-2 {
@@ -3345,9 +3376,7 @@ body#piscinas .explorar {
     margin: 0 auto;
 }
 
-.street iframe {
-    border-radius: 10px;
-}
+.street iframe {}
 
 .street-container {
     margin: 0 auto;
@@ -3355,7 +3384,8 @@ body#piscinas .explorar {
     width: 100%;
     height: 500px;
     overflow: hidden;
-    border-radius: 10px;
+
+
 }
 
 @media (max-width:900px) {
