@@ -1060,7 +1060,6 @@ body#barcilon .explorar {
     margin: 8px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-    border-radius: 10px;
 }
 
 body#restaurante .explorar .card,
@@ -1247,19 +1246,20 @@ body#restaurante .explorar img {
     margin-bottom: 20px;
     transition: all 0.3s ease-in-out;
     height: auto;
-    border-radius: 10px;
-    background-color: var(--color-blanco);
-    box-shadow: var(--sombra);
     display: flex;
     flex-direction: column;
-}
-
-.planificar .card:hover {
-    box-shadow: 0 2px 20px rgba(131, 131, 131, 0.5);
+    box-shadow: var(--sombra);
 }
 
 .planificar .card:hover .text {
     transform: translateY(-10%);
+    background: linear-gradient(to bottom right, rgba(var(--rgba-primario)), rgba(var(--rgba-secundario)));
+    box-shadow: var(--sombra);
+}
+
+.planificar .card:hover h1,
+.planificar .card:hover p{
+    color: var(--color-blanco);
 }
 
 .planificar .card .image {
@@ -1269,12 +1269,13 @@ body#restaurante .explorar img {
 }
 
 .planificar .card img {
-    width: 100%;
+    width: 120%;
     height: auto;
     transition: all 0.3s ease-in-out;
 }
 
 .planificar .text {
+    height: 130px;
     font-size: 16px;
     text-align: left;
     padding: 10px 20px 0px 30px;
