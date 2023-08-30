@@ -4,7 +4,7 @@
     --font-terciario: 'Poppins', sans-serif;
     --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
-    --max-width: 1200px;
+    --max-width: 1000px;
     --color-borde: #cdcfcf;
     --color-fondo: #fcfcfc;
     --size-title: 1.2rem;
@@ -815,7 +815,7 @@ footer .logo img {
 }
 
 .promociones .container {
-    max-width: 1390px;
+    max-width: 1190px;
     margin: 0 auto;
     background: var(--color-blanco);
 }
@@ -907,7 +907,7 @@ footer .logo img {
 .introduccion .container {
     max-width: var(--max-width);
     margin: 0 auto;
-    height: 350px;
+    height: auto;
     display: flex;
     border-radius: 10px;
     box-shadow: var(--sombra);
@@ -917,8 +917,8 @@ footer .logo img {
 .introduccion .columna-1 {
     display: flex;
     align-items: center;
-    width: 400px;
-    height: 350px;
+    width: 600px;
+    height: auto;
     z-index: 99;
 }
 
@@ -944,8 +944,8 @@ footer .logo img {
 }
 
 .introduccion .columna-2 {
-    width: 800px;
-    height: 350px;
+    width: 600px;
+    height: auto;
 }
 
 .introduccion .carrusel {
@@ -1005,7 +1005,7 @@ body#barcilon .explorar {
 }
 
 .explorar .container {
-    max-width: 1390px;
+    max-width: 1190px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -1150,12 +1150,7 @@ body#restaurante .explorar img {
 .pollo-vacilon .container img {
     width: auto;
     height: 100%;
-    filter: brightness(70%);
     transition: all 0.3s ease-in-out;
-}
-
-.pollo-vacilon .container img:hover {
-    filter: brightness(100%) saturate(150%);
 }
 
 .pollo-vacilon .content {
@@ -1722,7 +1717,7 @@ body#canchas .mapa {
 
 #paquetes-cumpleañeros .columna1 {
     margin: 0 auto;
-    width: 53.125rem;
+    width: 40.125rem;
 }
 
 #paquetes-cumpleañeros .columna1 .carousel {
@@ -1858,7 +1853,7 @@ body#canchas .mapa {
 }
 
 #productos-paq-cumple .text {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
     padding-bottom: 20px;
 }
@@ -1899,8 +1894,8 @@ body#canchas .mapa {
 }
 
 #productos-paq-cumple .cuadrado {
-    width: 380px;
-    height: 380px;
+    width: auto;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1915,12 +1910,9 @@ body#canchas .mapa {
 
 #productos-paq-cumple .cuadrado img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     transition: all 0.3s ease-in-out;
-    max-width: 100%;
-    /* Agregado */
-    max-height: 100%;
     /* Agregado */
     cursor: pointer;
 }
@@ -1936,7 +1928,7 @@ body#canchas .mapa {
 }
 
 .atracciones-section .text {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
     margin-bottom: 50px;
 }
@@ -1958,7 +1950,7 @@ body#canchas .mapa {
 }
 
 .atracciones-section .container {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
     box-shadow: var(--sombra);
     display: flex;
@@ -2108,10 +2100,6 @@ body#canchas .mapa {
 
 /* PÁGINA RESTAURANTE */
 
-.didi-food {
-    padding-top: 30px;
-}
-
 .didi-food .text {
     max-width: 1200px;
     margin: 0 auto;
@@ -2144,7 +2132,7 @@ body#canchas .mapa {
 }
 
 .didi-food .container {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -2205,7 +2193,7 @@ body#canchas .mapa {
 }
 
 .platos .container {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 
@@ -2232,7 +2220,7 @@ body#canchas .mapa {
 
 .platos .plato .image {
     overflow: hidden;
-    height: 250px;
+    height: 170px;
 }
 
 .platos .plato img {
@@ -2424,7 +2412,7 @@ body#piscinas .explorar {
 }
 
 .piscinas .text {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
     margin-bottom: 50px;
 }
@@ -2459,7 +2447,7 @@ body#piscinas .explorar {
 }
 
 .piscinas .container {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -2518,7 +2506,7 @@ body#piscinas .explorar {
 }
 
 .canchas-container {
-    max-width: 1200px;
+    max-width: var(--max-width);
     height: 450px;
     margin: 0 auto;
     display: flex;
@@ -2527,7 +2515,7 @@ body#piscinas .explorar {
 }
 
 .canchas .title {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 
@@ -2638,14 +2626,14 @@ body#piscinas .explorar {
 }
 
 .imagenes .container {
-    max-width: 1416px;
+    max-width: 1200px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
 }
 
 .imagenes .container .title {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 
@@ -2729,14 +2717,14 @@ body#piscinas .explorar {
 }
 
 .ofrecer .container {
-    max-width: 1420px;
+    max-width: 1200px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
 }
 
 .ofrecer .container .title {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 
@@ -2819,7 +2807,7 @@ body#piscinas .explorar {
 }
 
 .ofrecer .card img {
-    width: 100%;
+    width: 130%;
     height: auto;
     object-fit: cover;
     transition: all 0.3s ease-in-out;
