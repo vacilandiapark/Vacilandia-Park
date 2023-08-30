@@ -538,3 +538,12 @@ Object.assign(swiperEl, {
     },
 });
 swiperEl.initialize()
+
+/* OCULTAR EL BOTÓN */
+
+const hideButton = document.getElementById('hideButton');
+const rectangulo = document.querySelector('.rectangulo');
+
+hideButton.addEventListener('click', () => {
+    rectangulo.style.opacity = '0';
+});

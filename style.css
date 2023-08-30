@@ -111,7 +111,7 @@ button,
 }
 
 button:hover,
-.btn-comprar:hover{
+.btn-comprar:hover {
     background: var(--color-blanco);
     color: var(--color-primario);
     border: 1px solid var(--color-primario);
@@ -693,6 +693,7 @@ footer .logo img {
 }
 
 .ofertas .container .rectangulo {
+    position: relative;
     width: 20rem;
     height: auto;
     border-radius: 10px;
@@ -700,7 +701,15 @@ footer .logo img {
     box-shadow: var(--sombra);
 }
 
-.ofertas .container .rectangulo img{
+#hideButton {
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.ofertas .container .rectangulo img {
     width: 100%;
     height: auto;
 }
