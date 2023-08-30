@@ -3322,11 +3322,11 @@ body#piscinas .explorar {
 
 /* STREE VIEW */
 
-.street{
+.street {
     padding: 40px 0;
 }
 
-.street-column{
+.street-column {
     padding: 10px 0;
     display: flex;
     justify-content: center;
@@ -3336,11 +3336,11 @@ body#piscinas .explorar {
     margin: 0 auto;
 }
 
-.street iframe{
+.street iframe {
     border-radius: 10px;
 }
 
-.street-container{
+.street-container {
     margin: 0 auto;
     max-width: var(--max-width);
     width: 100%;
