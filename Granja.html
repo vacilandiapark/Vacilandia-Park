@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="icon" href="materials/Logos/logo-campestrewsewewe.png">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" />
@@ -309,17 +310,23 @@
                         TICKETS</a>
                 </div>
                 <div class="rectangulo">
-                    <div class="carrusel">
-                        <img decoding="async" src="materials/Promociones/Combo Kids 1.jpg" alt="Imagen 1"
-                            loading="lazy" />
-                        <img decoding="async" src="materials/Promociones/Combo Kids 2.jpg" alt="Imagen 2"
-                            loading="lazy" />
-                        <img decoding="async" src="materials/Promociones/Combo Kids 3.jpg" alt="Imagen 3"
-                            loading="lazy" />
-                        <img decoding="async" src="materials/Promociones/Promo2.jpg" alt="Imagen 6" loading="lazy" />
-                        <img decoding="async" src="materials/Promociones/Promo3.jpg" alt="Imagen 7" loading="lazy" />
-                        <img decoding="async" src="materials/Promociones/Info2.jpg" alt="Imagen 8" loading="lazy" />
-                    </div>
+                    <swiper-container init="false" class="promobanner">
+                        <swiper-slide>
+                            <img decoding="async" src="materials/Promociones/Combo Kids 1.jpg" alt="Imagen 1"
+                                loading="lazy" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img decoding="async" src="materials/Promociones/Combo Kids 2.jpg" alt="Imagen 2"
+                                loading="lazy" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img decoding="async" src="materials/Promociones/Combo Kids 3.jpg" alt="Imagen 3"
+                                loading="lazy" />
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img decoding="async" src="materials/Promociones/Info2.jpg" alt="Imagen 8" loading="lazy" />
+                        </swiper-slide>
+                    </swiper-container>
                 </div>
             </div>
             <div class="ofertas-carousel banner">
@@ -530,7 +537,8 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/f8eb9b1ffa.js" crossorigin="anonymous"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBGSZKJ2VC"></script>

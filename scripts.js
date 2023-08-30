@@ -1,6 +1,6 @@
 
 
-// //
+// POSICIONAMIENTO DE ID //
 
 $(document).ready(function () {
     $('a[href^="#"]').on('click', function (event) {
@@ -79,7 +79,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('.carousel-explorar').slick({
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="slick-prev">Anterior</button>',
         nextArrow: '<button type="button" class="slick-next">Siguiente</button>',
@@ -285,7 +285,7 @@ function toggleInfo(type) {
         if (windowWidth < 769) {
             infoContainer.style.transform = 'translateX(0px)';
         } else {
-            infoContainer.style.transform = 'translateX(90px)';
+            infoContainer.style.transform = 'translateX(75px)';
         }
 
         infoContainer.style.pointerEvents = 'auto';
@@ -505,6 +505,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+/* PARALLAX SCROLLING*/
+
 const iframe = document.querySelector('.scrolling-iframe');
 const iframeStyles = window.getComputedStyle(iframe);
 const initialPosition = iframe.getBoundingClientRect().top + window.scrollY - parseFloat(iframeStyles.marginTop);
@@ -517,3 +519,22 @@ function updateIframePosition() {
 }
 
 window.addEventListener('scroll', updateIframePosition);
+
+
+/* NUEVO CARRUSEL */
+
+var swiperEl = document.querySelector(".promobanner");
+Object.assign(swiperEl, {
+    grabCursor: true,
+    effect: "creative",
+    creativeEffect: {
+        prev: {
+            shadow: true,
+            translate: [0, 0, -400],
+        },
+        next: {
+            translate: ["100%", 0, 0],
+        },
+    },
+});
+swiperEl.initialize()
