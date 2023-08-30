@@ -79,7 +79,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('.carousel-explorar').slick({
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="slick-prev">Anterior</button>',
         nextArrow: '<button type="button" class="slick-next">Siguiente</button>',
