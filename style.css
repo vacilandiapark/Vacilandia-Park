@@ -2,7 +2,7 @@
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
-    --sombra: 0px 0px 43px -15px rgba(0,0,0,0.8);
+    --sombra: 0px 0px 43px -15px rgba(0,0,0,0.5);
     ;
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1000px;
@@ -133,6 +133,10 @@ img {
 
 a {
     text-decoration: none !important;
+}
+
+.main-content{
+    background: rgba(var(--rgba-primario), 0.05)
 }
 
 /* CONTENIDO*/
@@ -495,10 +499,6 @@ body#terms .main-content {
 /* FOOTER */
 
 footer {
-    background: var(--color-primario);
-    margin-top: 80px;
-    height: 300px;
-    width: 100%;
 }
 
 footer a {
@@ -506,9 +506,12 @@ footer a {
 }
 
 footer .container {
-    max-width: var(--max-width);
+    background: var(--color-primario);
     margin: 0 auto;
     display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
 }
 
 footer .terms {
@@ -922,11 +925,8 @@ footer .logo img {
     margin: 0 auto;
     height: auto;
     display: flex;
-
-
+    background: var(--color-blanco);
     box-shadow: var(--sombra);
-
-
 }
 
 .introduccion .columna-1 {
@@ -1308,7 +1308,7 @@ body#restaurante .explorar img {
 .mapa {
     display: flex;
     justify-content: center;
-    padding-bottom: 10px;
+    padding-bottom: 80px;
 }
 
 body#canchas .mapa {
@@ -2953,7 +2953,8 @@ body#piscinas .explorar {
 
 .horario {
     /* Centra horizontalmente el contenido */
-    background-color: #f0f0f0;
+    
+    background: linear-gradient(to right, rgba(var(--rgba-primario)), rgba(var(--rgba-secundario)));
     padding: 10px;
     box-sizing: border-box;
 }
@@ -2962,7 +2963,8 @@ body#piscinas .explorar {
     margin: 0;
     text-align: center;
     padding: 0px 40px 10px 40px;
-    color: var(--size-subtitle);
+    color: var(--color-blanco);
+    font-weight: bolder;
     font-size: var(--size-subtitle);
     font-family: var(--font-terciario);
     line-height: 1.1;
@@ -2999,7 +3001,7 @@ body#piscinas .explorar {
     font-family: var(--font-primario);
     font-size: var(--size-title);
     font-weight: lighter;
-    color: var(--color-negro);
+    color: var(--color-blanco);
 }
 
 .hora-container #rectangulo {
