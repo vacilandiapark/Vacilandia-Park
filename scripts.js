@@ -35,8 +35,22 @@ window.addEventListener("scroll", function () {
 $(document).ready(function () {
     $('.hamburger').click(function () {
         $('#menuPanel').toggleClass('open');
+
+        // Muestra u oculta la "x" de cierre según el estado del subpanel
+        if ($('#menuPanel').hasClass('open')) {
+            $('.close-button').show();
+        } else {
+            $('.close-button').hide();
+        }
+    });
+
+    // Agrega un evento click a la "x" para cerrar el panel
+    $('.close-button').click(function () {
+        $('#menuPanel').removeClass('open');
+        $('.close-button').hide();
     });
 });
+
 
 // CARRUSEL //
 

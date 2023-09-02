@@ -87,7 +87,7 @@ body#terms {
 }
 
 body#inicio {
-    --color-primario: #0C6634;
+    --color-primario: #016734;
     --rgba-primario: 12, 102, 52;
     --rgba-secundario: 148, 190, 31;
     --color-title: #0C6634;
@@ -490,11 +490,26 @@ body#terms .main-content {
     transition: right 0.3s ease;
 }
 
+/* Estilos para la "x" de cierre */
+#menuPanel .close-button {
+    position: absolute;
+    background: var(--color-botones);
+    padding: 10px 15px;
+    top: 20px; /* Ajusta la posición vertical según tus preferencias */
+    right: 20px; /* Ajusta la posición horizontal según tus preferencias */
+    cursor: pointer;
+    font-size: var(--size-title);
+    color: var(--color-blanco); /* Color de la "x" */
+    display: none; /* Oculta la "x" por defecto */
+  }
+  
+
 #menuPanel.open {
     right: 0;
 }
 
 .panel-navigation {
+    margin-top: 60px;
     list-style: none;
     padding: 0;
     font-family: var(--font-secundario);
@@ -2556,6 +2571,7 @@ body#piscinas .explorar {
     height: 450px;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
     margin-top: 30px;
     gap: 20px;
 }
@@ -2670,7 +2686,6 @@ body#piscinas .explorar {
 
 .imagenes {
     position: relative;
-    padding: 20px;
 }
 
 .imagenes .container {
@@ -3696,7 +3711,6 @@ body#piscinas .explorar {
     .introduccion {
         margin: 0;
         padding-top: 0;
-        margin-bottom: 30%;
     }
 
     .introduccion .container {
@@ -3774,7 +3788,6 @@ body#piscinas .explorar {
     }
 
     .planificar .container-planificar .card {
-        max-width: 380px;
         position: relative;
         /* Añadido */
         overflow: hidden;
@@ -3913,7 +3926,6 @@ body#piscinas .explorar {
 
     .explorar {
         padding-top: 40px;
-        padding-bottom: 50px;
     }
 
     /* MÁS OPCIONES */
@@ -3929,8 +3941,6 @@ body#piscinas .explorar {
     }
 
     .opciones .container-planificar .card {
-        width: calc(100% - 30px);
-        max-width: 380px;
         position: relative;
         /* Añadido */
         overflow: hidden;
@@ -4020,6 +4030,10 @@ body#piscinas .explorar {
 
     .canchas-container .columna1 {
         display: none;
+    }
+
+    .canchas-container .columna2 {
+        width: 100%;
     }
 
     .canchas-container .content {
