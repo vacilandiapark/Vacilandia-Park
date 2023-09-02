@@ -1134,7 +1134,9 @@ body#restaurante .explorar img {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: lighter;
+    text-transform: uppercase;
+    width: auto;
     z-index: 3;
 }
 
