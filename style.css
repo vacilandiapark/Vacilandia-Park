@@ -3179,7 +3179,7 @@ body#piscinas .explorar {
 /* ESTILOS PREGUNTAS Y RESPUESTAS */
 .faq-section {
     padding: 80px 0;
-    text-align: center;
+    text-align: left;
 }
 
 .faq-section i {
@@ -3193,7 +3193,7 @@ body#piscinas .explorar {
 }
 
 .faq-section h2 {
-    font-size: var(--size-title);
+    font-size: 40px;
     font-family: var(--font-primario);
     color: var(--color-title);
     font-weight: lighter;
