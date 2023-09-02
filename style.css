@@ -565,7 +565,7 @@ body#terms .main-content {
 /* FOOTER */
 
 footer {
-    background: var(--color-primario);
+    background: linear-gradient(to top, rgba(var(--rgba-primario)), rgba(var(--rgba-secundario)));
     height: 300px;
     width: 100%;
 }
@@ -1217,63 +1217,86 @@ body#restaurante .explorar img {
 
 /* POLLO VACILÓN */
 
-.pollo-vacilon {
-    padding: 20px 0;
-    text-align: left;
-    display: flex;
-    justify-content: center;
-}
-
-.pollo-vacilon .container {
+.pollo-vacilon .text {
     max-width: var(--max-width);
-    height: 350px;
-    position: relative;
-    overflow: hidden;
-
-
-    box-shadow: var(--sombra);
-    transition: all 0.3s ease-in-out;
+    margin: 0 auto;
+    margin-bottom: 50px;
 }
 
-.pollo-vacilon .container img {
-    width: auto;
-    height: 100%;
-    transition: all 0.3s ease-in-out;
-}
-
-.pollo-vacilon .content {
-    position: absolute;
-    padding-left: 70px;
-    top: 50%;
-    z-index: 5;
-    transform: translateY(-50%);
-    color: var(--color-blanco);
-}
-
-.pollo-vacilon .content h2 {
-    color: var(--color-blanco);
-    font-size: var(--size-title);
+.pollo-vacilon .text h1 {
     font-family: var(--font-primario);
-    font-style: normal;
     font-weight: lighter;
-    line-height: 1.2;
+    margin: 0;
+    color: var(--color-title);
+    padding: 0;
+    font-size: var(--size-title);
 }
 
-.pollo-vacilon .content p {
-    color: var(--color-blanco);
-    font-size: var(--size-subtitle);
+.pollo-vacilon .text p {
     font-family: var(--font-terciario);
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    color: var(--color-subtitle);
+    font-size: var(--size-subtitle);
+    margin-top: 10px;
 }
 
 .pollo-vacilon .buttons {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 10px;
     gap: 10px;
+}
+
+.pollo-vacilon i {
+    margin-left: 10px;
+}
+
+.pollo-vacilon .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    overflow: hidden;
+
+
+    margin-bottom: 30px;
+    box-shadow: var(--sombra);
+    background: var(--color-blanco);
+    /* Ajusta la altura según tus necesidades */
+}
+
+.pollo-vacilon .column1 {
+    width: 400px;
+    padding-left: 50px;
+    padding-right: 50px;
+    z-index: 99;
+}
+
+.pollo-vacilon .column1 h2 {
+    font-size: var(--size-title);
+    margin-bottom: 10px;
+    color: var(--color-title);
+    font-family: var(--font-primario);
+    font-weight: lighter;
+}
+
+.pollo-vacilon .column1 p {
+    font-size: var(--size-subtitle);
+    font-family: var(--font-terciario);
+    color: var(--color-subtitle);
+}
+
+.pollo-vacilon .column2 {
+    width: 800px;
+    height: auto;
+    overflow: hidden;
+}
+
+.pollo-vacilon .column2 iframe,
+.pollo-vacilon .column2 img {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+    transform: translateX(-50%);
 }
 
 /* EXPLORAR NUESTRO PARQUE */
@@ -3781,45 +3804,36 @@ body#piscinas .explorar {
         height: auto;
     }
 
-    /* RESTAURANTE */
-
-    .pollo-vacilon {
-        padding: 0;
-    }
-
-    .pollo-vacilon .container img {
-        height: 100%;
-        width: auto;
-    }
-
-    .pollo-vacilon .content {
+    .pollo-vacilon .text {
         text-align: center;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding-left: 0;
-    }
-
-    .pollo-vacilon .content h2 {
-        font-size: 5vw;
-        line-height: 1;
-    }
-
-    .pollo-vacilon .content p {
-        font-size: 4vw;
     }
 
     .pollo-vacilon .buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
+        justify-content: center;
     }
 
-    .pollo-vacilon .buttons button {
-        width: 200px;
-        height: 50px;
-        margin-bottom: 10px;
+    .pollo-vacilon .container {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .pollo-vacilon .column1,
+    .pollo-vacilon .column2 {
+        width: 100%;
+        order: initial;
+        /* Volvemos al orden original en versión desktop */
+    }
+
+    .pollo-vacilon .column2 {
+        order: 1;
+        /* Aseguramos que el iframe esté arriba en versión responsive */
+    }
+
+    .pollo-vacilon .column2 iframe,
+    .pollo-vacilon .column2 img {
+        padding-top: 20px;
     }
 
     /* PLANIFICAR */
