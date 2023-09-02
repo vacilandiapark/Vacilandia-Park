@@ -87,12 +87,24 @@ body#terms {
 }
 
 body#inicio {
+    --color-primario: #0C6634;
+    --rgba-primario: 12, 102, 52;
+    --rgba-secundario: 148, 190, 31;
+    --color-title: #0C6634;
+    --color-botones: #94BE1F;
+}
+
+/*
+
+body#inicio {
     --color-primario: #432F87;
     --rgba-primario: 67, 47, 135;
     --rgba-secundario: 234, 11, 139;
     --color-title: #432F87;
     --color-botones: #EA0B8B;
 }
+
+*/
 
 html,
 body {
