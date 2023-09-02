@@ -526,6 +526,9 @@ body#terms .main-content {
 /* FOOTER */
 
 footer {
+    background: var(--color-primario);
+    height: 300px;
+    width: 100%;
 }
 
 footer a {
@@ -533,12 +536,9 @@ footer a {
 }
 
 footer .container {
-    background: var(--color-primario);
-    margin: 0 auto;
+    max-width: var(--max-width);
     display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 300px;
+    margin: 0 auto;
 }
 
 footer .terms {
