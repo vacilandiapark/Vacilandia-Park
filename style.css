@@ -2435,6 +2435,10 @@ body#canchas .mapa {
     overflow: hidden;
 }
 
+.full-screen-section .column-1 img{
+    height: 100%;
+}
+
 .full-screen-section .column-2 {
     flex-basis: 70%;
     display: flex;
