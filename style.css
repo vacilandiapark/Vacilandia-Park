@@ -832,7 +832,7 @@ footer .logo img {
 .promociones .container {
     max-width: 1190px;
     margin: 0 auto;
-    background: var(--color-blanco);
+    overflow: hidden;
 }
 
 .promociones .container .title {
