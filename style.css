@@ -1522,8 +1522,6 @@ body#canchas .mapa {
     align-items: center;
     padding: 10px;
     background-color: #075e54;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
 
 #whatsapp-avatar img {
