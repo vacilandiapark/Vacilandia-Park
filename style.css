@@ -713,7 +713,6 @@ footer .logo img {
 
 
     overflow: hidden;
-    box-shadow: var(--sombra);
 }
 
 #hideButton {
@@ -727,6 +726,7 @@ footer .logo img {
 .ofertas .container .rectangulo img {
     width: 100%;
     height: auto;
+    box-shadow: var(--sombra);
 }
 
 .ofertas .overlay img {
