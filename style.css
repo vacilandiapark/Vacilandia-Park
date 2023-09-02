@@ -2,7 +2,7 @@
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
-    --sombra: 0px 0px 43px -15px rgba(0,0,0,0.5);
+    --sombra: 0px 0px 43px -15px rgba(0, 0, 0, 0.5);
     ;
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1000px;
@@ -14,6 +14,40 @@
     --color-subtitle: #000000;
     --size-subtitle: .90rem;
 }
+
+/* Estilo para la barra de desplazamiento */
+/* Asegúrate de que este código esté dentro de una etiqueta <style> en tu documento HTML o en un archivo CSS externo */
+
+/* Barra de desplazamiento vertical */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Ancho de la barra de desplazamiento */
+}
+
+/* Seguir el gradiente de arriba hacia abajo */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--color-primario), var(--color-botones));
+    /* Cambia estos colores según tus preferencias */
+    /* Bordes redondeados */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* Sombra */
+}
+
+/* Estilo cuando se pasa el ratón sobre la barra de desplazamiento */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, var(--color-primario), var(--color-botones));
+    /* Cambia estos colores según tus preferencias */
+}
+
+/* Estilo para el área del track de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background: rgba(var(--rgba-primario), 0.1));
+    /* Color de fondo del track */
+    /* Bordes redondeados */
+    box-shadow: var(--sombra);
+    /* Sombra interna */
+}
+
 
 body#zona-gamer {
     --color-primario: #EC2127;
@@ -147,7 +181,7 @@ a {
     text-decoration: none !important;
 }
 
-.main-content{
+.main-content {
     background: rgba(var(--rgba-primario), 0.1);
 }
 
@@ -179,6 +213,7 @@ body#terms .main-content {
     z-index: 9999999999;
     align-items: center;
     border-right: 5px solid var(--color-blanco);
+    overflow-x: auto;
 }
 
 .subnavbar a {
@@ -495,14 +530,18 @@ body#terms .main-content {
     position: absolute;
     background: var(--color-botones);
     padding: 10px 15px;
-    top: 20px; /* Ajusta la posición vertical según tus preferencias */
-    right: 20px; /* Ajusta la posición horizontal según tus preferencias */
+    top: 20px;
+    /* Ajusta la posición vertical según tus preferencias */
+    right: 20px;
+    /* Ajusta la posición horizontal según tus preferencias */
     cursor: pointer;
     font-size: var(--size-title);
-    color: var(--color-blanco); /* Color de la "x" */
-    display: none; /* Oculta la "x" por defecto */
-  }
-  
+    color: var(--color-blanco);
+    /* Color de la "x" */
+    display: none;
+    /* Oculta la "x" por defecto */
+}
+
 
 #menuPanel.open {
     right: 0;
@@ -2435,7 +2474,7 @@ body#canchas .mapa {
     overflow: hidden;
 }
 
-.full-screen-section .column-1 img{
+.full-screen-section .column-1 img {
     height: 100%;
 }
 
@@ -2986,7 +3025,7 @@ body#piscinas .explorar {
 
 .horario {
     /* Centra horizontalmente el contenido */
-    
+
     background: linear-gradient(to right, rgba(var(--rgba-primario)), rgba(var(--rgba-secundario)));
     padding: 10px;
     box-sizing: border-box;
@@ -3216,7 +3255,7 @@ body#piscinas .explorar {
 .faq-section .faq-item .answer {
     font-size: var(--size-subtitle);
     font-family: var(--font-terciario);
-    color: var(--size-subtitle);
+    color: var(--color-negro) !important;
     font-weight: bolder;
     padding: 20px;
     background-color: var(--color-borde);
@@ -3408,7 +3447,7 @@ body#piscinas .explorar {
 
 }
 
-.news{
+.news {
     max-width: var(--max-width);
     width: 100%;
     margin: 0 auto;
@@ -3417,7 +3456,7 @@ body#piscinas .explorar {
     padding-top: 10px;
 }
 
-.news iframe{
+.news iframe {
     width: 100%;
     height: 100%;
     border: none;

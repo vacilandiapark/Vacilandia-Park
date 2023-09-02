@@ -70,11 +70,152 @@
         <a href="Page-Not-Found.html" target="_blank" title="Mapa"><i class="fa-solid fa-map"></i><br>Mapa</a>
         <a href="https://vaope.com/parque-acuatico/vacilandia-park" target="_blank" title="Tickets"><i
                 class="fa-solid fa-ticket"></i><br>Tickets</a>
+        <a href="#" title="Preguntas Frecuentes" onclick="toggleInfo('faqs')"><i
+                class="fa-solid fa-question"></i><br>FAQS</a>
         <a href="https://vecarena.com.pe/" target="_blank"><img decoding="async" loading="lazy"
                 src="materials/Logos/venconcierto.png" alt="logo-concert"></a>
-        <!-- Agrega más elementos según tus necesidades -->
+        <!-- Agrega máss según tus necesidades -->
     </nav>
     <!-- CONTENEDOR DE INFORMACIÓN -->
+    <div class="info-container" id="info-faqs">
+        <span class="close-btn" onclick="closeInfoContainer('faqs')"><i class="fa-solid fa-x"></i></span>
+        <div class="text">
+            <i class="fa-solid fa-question"></i>
+            <section class="faq-section">
+                <div class="container">
+                    <h2>PREGUNTAS FRECUENTES</h2>
+                    <div class="faq-list">
+                        <div class="faq-item closed">
+                            <div class="question">
+                                <i class="fa-solid fa-caret-right"></i>¿Cuál es el horario de apertura del parque?
+                            </div>
+                            <div class="answer-wrapper">
+                                <div class="answer">
+                                    Nuestro parque solo apertura los sábados, domingos y feriados de 10:00 a.m. a 5:00
+                                    p.m.
+                                    También tenemos otros horarios donde puedes ver en el siguiente enlace: <a href="#"
+                                        onclick="toggleInfo('calendario')" title="Calendario y Horarios">Ver
+                                        Horarios</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item closed">
+                            <div class="question">
+                                <i class="fa-solid fa-caret-right"></i>¿Cuentan con estacionamiento? ¿Tiene algún costo?
+                            </div>
+                            <div class="answer-wrapper">
+                                <div class="answer">
+                                    Si contamos con estacionamiento amplio y es gratis.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item closed">
+                            <div class="question">
+                                <i class="fa-solid fa-caret-right"></i>¿Se puede llevar comida al parque?
+                            </div>
+                            <div class="answer-wrapper">
+                                <div class="answer">
+                                    No está permitido el ingreso de comida al parque a excepsion de alimentos para
+                                    bebes, como papillas, leche y tortas de cumpleaños.
+                                    Dentro del parque tenemos una variedad de productos de market y una amplia carta
+                                    gastronómica.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item closed">
+                            <div class="question">
+                                <i class="fa-solid fa-caret-right"></i>¿Funcionan las piscinas?
+                            </div>
+                            <div class="answer-wrapper">
+                                <div class="answer">
+                                    Actualmente se tiene abierto la piscina de adultos con toboganes solo los sábados,
+                                    domingos y feriados.
+                                    Pronto se aperturará las 3 piscinas juntas.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item closed">
+                            <div class="question">
+                                <i class="fa-solid fa-caret-right"></i>¿A que edad no se paga la entrada?
+                            </div>
+                            <div class="answer-wrapper">
+                                <div class="answer">
+                                    Niños menores a 4 años y adultos mayores a 64 años ingresan gratis.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item closed">
+                            <div class="question">
+                                <i class="fa-solid fa-caret-right"></i>¿Si salgo del parque puedo ingresar?
+                            </div>
+                            <div class="answer-wrapper">
+                                <div class="answer">
+                                    No esta permitido el ingreso una vez se sale del parque.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item closed">
+                            <div class="question">
+                                <i class="fa-solid fa-caret-right"></i>¿Puedo ingresar con mi mascota?
+                            </div>
+                            <div class="answer-wrapper">
+                                <div class="answer">
+                                    No está permitido el ingreso de mascotas al parque.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item closed">
+                            <div class="question">
+                                <i class="fa-solid fa-caret-right"></i>¿Puedo llevar flotadores, sillas y carpas?
+                            </div>
+                            <div class="answer-wrapper">
+                                <div class="answer">
+                                    No está permitido el ingreso de sillas y carpas, a excepsion de los flotadores donde
+                                    solo se puede ingresar si son pequeños para los brazos.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item closed">
+                            <div class="question">
+                                <i class="fa-solid fa-caret-right"></i>¿Solo puedo ingresar con ropa de baño a las
+                                piscinas?
+                            </div>
+                            <div class="answer-wrapper">
+                                <div class="answer">
+                                    Si, solo se puede ingresar con ropa de baño, no está permitido el uso de prendas no
+                                    aptas para el agua.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item closed">
+                            <div class="question">
+                                <i class="fa-solid fa-caret-right"></i>¿Cuál es el precio de entrada?
+                            </div>
+                            <div class="answer-wrapper">
+                                <div class="answer">
+                                    Los precios lo puedes revisar en la página de VAOpe desde el siguiente botón <a
+                                        href="https://vaope.com/parque-acuatico/vacilandia-park" target="_blank">Comprar
+                                        Tickets</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item closed">
+                            <div class="question">
+                                <i class="fa-solid fa-caret-right"></i>¿Donde puedo canjear mi vale de consumo?
+                            </div>
+                            <div class="answer-wrapper">
+                                <div class="answer">
+                                    Solo puedes canjear tu vale de consumo en el restaurante y solo es aplicable a los
+                                    platos de fondo, no está permitido canjearlo en productos de minimarket.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Agregar más preguntas y respuestas aquí -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
     <div class="info-container" id="info-telefono">
         <span class="close-btn" onclick="closeInfoContainer('telefono')"><i class="fa-solid fa-x"></i></span>
         <div class="text">
