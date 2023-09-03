@@ -150,6 +150,7 @@ body#inicio {
 
 html,
 body {
+    background: rgba(var(--rgba-primario), 0.05);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -1330,7 +1331,6 @@ body#restaurante .explorar img {
 .planificar .container-planificar {
     max-width: var(--max-width);
     margin: 0 auto;
-    margin-top: 40px;
     padding-bottom: 10px;
 }
 
@@ -3460,6 +3460,7 @@ body#piscinas .explorar {
 /* STREE VIEW */
 
 .street-view {
+    background: rgba(var(--rgba-primario), 0.05);
     width: 100%;
     height: auto;
     padding-bottom: 40px;
@@ -3479,7 +3480,7 @@ body#piscinas .explorar {
 }
 
 .street-view .col-1 {
-    background: linear-gradient(to right, rgba(var(--rgba-primario), 0.5), rgba(var(--rgba-secundario), 0.5)), url(https://www.vacilandia.com.pe/materials/Eventos%20y%20Reservas/YDRAY-DJI_0763-min.JPG);
+    background: linear-gradient(to right, rgba(var(--rgba-primario), 0.9), rgba(var(--rgba-secundario), 0.3)), url(https://www.vacilandia.com.pe/materials/Eventos%20y%20Reservas/YDRAY-DJI_0779-min.JPG);
     background-size: cover;
     background-attachment: fixed;
     width: 50%;
@@ -3517,7 +3518,7 @@ body#piscinas .explorar {
 }
 
 .street-view .col-2 {
-    background: linear-gradient(to right, rgba(var(--rgba-primario), 0.5), rgba(var(--rgba-secundario), 0.5)), url(https://www.vacilandia.com.pe/materials/Eventos%20y%20Reservas/YDRAY-DJI_0779-min.JPG);
+    background: linear-gradient(to right, rgba(var(--rgba-primario), 1), rgba(var(--rgba-primario), 1), rgba(var(--rgba-primario), 0.8), rgba(var(--rgba-secundario), 0.3)), url(https://www.vacilandia.com.pe/materials/Eventos%20y%20Reservas/YDRAY-DJI_0779-min.JPG);
     background-size: cover;
     background-attachment: fixed;
     width: 50%;
@@ -3529,23 +3530,35 @@ body#piscinas .explorar {
     padding: 40px 0;
 }
 
-.street-column {
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    max-width: var(--max-width);
-    width: 100%;
-    margin: 0 auto;
-}
-
 .street-container {
     margin: 0 auto;
     max-width: var(--max-width);
     width: 100%;
-    height: 500px;
+    height: auto;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+}
 
+.street-container iframe{
+    box-shadow: var(--sombra);
+}
+
+.street-container h1{
+    font-family: var(--font-primario);
+    color: var(--color-primario);
+    font-size: var(--size-title);
+    font-weight: lighter;
+}
+
+.street-container p{
+    font-family: var(--font-terciario);
+    color: var(--color-negro);
+    font-size: var(--size-subtitle);
+    font-weight: lighter;
 }
 
 .news {
@@ -4246,5 +4259,17 @@ body#piscinas .explorar {
 
     .street-view .content{
         padding: 60px 40px;
+    }
+
+    .street-container {
+        flex-direction: column;
+    }
+    
+    .street-container iframe{
+        order: 1;
+    }
+
+    .street-container .text{
+        order: 2;
     }
 }
