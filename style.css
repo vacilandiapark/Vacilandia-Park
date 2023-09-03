@@ -123,9 +123,9 @@ body#terms {
 body#inicio {
     --color-primario: #016734;
     --rgba-primario: 12, 102, 52;
-    --rgba-secundario: 148, 190, 31;
+    --rgba-secundario: 70, 223, 24;
     --color-title: #0C6634;
-    --color-botones: #94BE1F;
+    --color-botones: #46df18;
 }
 
 body#otros {
@@ -3064,10 +3064,14 @@ body#piscinas .explorar {
 
 .horario {
     /* Centra horizontalmente el contenido */
-
-    background: linear-gradient(to right, rgba(var(--rgba-primario)), rgba(var(--rgba-secundario)));
+    background: linear-gradient(to top right, rgba(var(--rgba-primario)), rgba(var(--rgba-secundario)));
     padding: 10px;
     box-sizing: border-box;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    z-index: -1;
+    box-shadow: var(--sombra);
 }
 
 .horario p {
@@ -4252,8 +4256,8 @@ body#piscinas .explorar {
         height: auto;
     }
 
-    .street-view .container .col-1,
-    .street-view .container .col-2{
+    .street-view .col-1,
+    .street-view .col-2{
         width: 100%;
     }
 
