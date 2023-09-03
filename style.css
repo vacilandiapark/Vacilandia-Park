@@ -128,6 +128,14 @@ body#inicio {
     --color-botones: #94BE1F;
 }
 
+body#otros {
+    --color-primario: #432F87;
+    --rgba-primario: 67, 47, 135;
+    --rgba-secundario: 234, 11, 139;
+    --color-title: #432F87;
+    --color-botones: #EA0B8B;
+}
+
 /*
 
 body#inicio {
@@ -162,6 +170,7 @@ button,
     cursor: pointer;
     font-family: var(--font-primario);
     transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
 }
 
 button:hover,
@@ -182,7 +191,7 @@ a {
 }
 
 .main-content {
-    background: rgba(var(--rgba-primario), 0.1);
+    background: rgba(var(--rgba-primario), 0.05);
 }
 
 /* CONTENIDO*/
@@ -319,7 +328,6 @@ body#terms .main-content {
     background: var(--color-primario);
     border: none;
     width: 500px;
-    border-radius: 0;
     text-align: center;
     padding-top: 20px;
     font-family: var(--font-terciario);
@@ -368,6 +376,7 @@ body#terms .main-content {
     background: var(--color-primario);
 }
 
+
 .navbar.scrolled .logo {
     background: var(--color-primario);
 }
@@ -385,7 +394,9 @@ body#terms .main-content {
 
 .sub-menu {
     position: absolute;
-    top: 40px;
+    top: 35px;
+    width: 250px;
+    overflow: hidden;
     left: 0;
     pointer-events: none;
     padding: 0;
@@ -403,20 +414,17 @@ body#terms .main-content {
 
 .navbar .sub-menu li {
     margin: 0;
+    width: 250px;
+    overflow: hidden;
     padding-top: 25px;
     padding-bottom: 25px;
     list-style-type: none;
     background-color: var(--color-botones);
-    width: 250%;
     z-index: -22222222;
 }
 
 .navbar ul {
     padding: 0;
-}
-
-.navbar .sub-menu li a {
-    color: var(--color-blanco);
 }
 
 .navbar .row-1 {
@@ -576,7 +584,7 @@ body#terms .main-content {
 /* FOOTER */
 
 footer {
-    background: linear-gradient(to top, rgba(var(--rgba-primario)), rgba(var(--rgba-secundario)));
+    background: var(--color-primario);
     height: 300px;
     width: 100%;
 }
@@ -793,7 +801,6 @@ footer .logo img {
 }
 
 #hideButton {
-    border-radius: 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -818,9 +825,11 @@ footer .logo img {
     font-size: var(--size-subtitle);
     font-weight: lighter;
     margin-top: 10px;
+    text-transform: lowercase;
 }
 
 .ofertas .overlay h2 {
+    text-transform: uppercase;
     margin: 0;
     padding: 0;
     font-family: var(--font-primario);
@@ -1691,7 +1700,6 @@ body#canchas .mapa {
     flex: 1;
     padding: 8px;
     border: none;
-    border-radius: 20px;
     background-color: #f1f0f0;
 }
 
@@ -1700,7 +1708,6 @@ body#canchas .mapa {
     color: var(--color-blanco);
     padding: 8px 16px;
     border: none;
-    border-radius: 20px;
     margin-left: 10px;
     cursor: pointer;
 }
@@ -1712,7 +1719,7 @@ body#canchas .mapa {
 /* FORMULARIO DE CONTACTO */
 
 .contacto {
-    padding-top: 50px;
+    padding-top: 40px;
     padding-bottom: 60px;
     -webkit-animation: AnimationName 5s ease infinite;
     -moz-animation: AnimationName 5s ease infinite;
@@ -1721,7 +1728,7 @@ body#canchas .mapa {
 
 .contacto .iframe-container {
     width: 100%;
-    height: 500px;
+    height: 700px;
     /* Altura del iframe ajustada para recortar el contenido */
     overflow: hidden;
     /* Ocultamos el scroll del contenedor */
@@ -2393,7 +2400,6 @@ body#canchas .mapa {
     background: var(--color-botones);
     color: var(--color-blanco);
     border: none;
-    border-radius: 0 0;
     cursor: pointer;
     margin: 0;
 }
@@ -2600,14 +2606,14 @@ body#piscinas .explorar {
 }
 
 .piscinas .column1 {
-    width: 600px;
+    width: 700px;
     padding-left: 50px;
     padding-right: 50px;
 }
 
 .piscinas .column1 h2 {
     font-size: var(--size-title);
-    margin-bottom: 10px;
+    margin: 0;
     color: var(--color-title);
     font-family: var(--font-primario);
     font-weight: lighter;
@@ -2943,7 +2949,6 @@ body#piscinas .explorar {
     font-size: 14px;
     font-weight: bold;
     text-align: left;
-    border-radius: 5px;
     font-size: 17px;
     font-family: var(--font-primario);
     font-weight: lighter;
@@ -3024,7 +3029,6 @@ body#piscinas .explorar {
     font-family: var(--font-primario);
     font-weight: lighter;
     text-decoration: none;
-    border-radius: 5px;
     font-size: var(--size-subtitle);
     transition: all 0.2s ease;
 }
@@ -3099,7 +3103,6 @@ body#piscinas .explorar {
     color: var(--color-blanco);
     padding: 3px 8px;
     /* Ajusta el espacio alrededor del texto */
-    border-radius: 5px;
 }
 
 .hora-container .estado {
@@ -3116,7 +3119,6 @@ body#piscinas .explorar {
     height: 20px;
     margin-right: 5px;
     /* Agrega un espacio entre el rectángulo y el texto del estado */
-    border-radius: 3px;
 }
 
 .hora-container .abierto {
@@ -3190,8 +3192,6 @@ body#piscinas .explorar {
     width: 100%;
     height: auto;
 }
-
-.terminos .image {}
 
 .terminos .image img {
     width: 300px;
@@ -3459,6 +3459,72 @@ body#piscinas .explorar {
 
 /* STREE VIEW */
 
+.street-view {
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+}
+
+.street-view .container {
+    width: 100%;
+    display: flex;
+    height: 400px;
+}
+
+.street-view .col-1,
+.street-view .col-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.street-view .col-1 {
+    background: linear-gradient(to right, rgba(var(--rgba-primario), 0.5), rgba(var(--rgba-secundario), 0.5)), url(https://www.vacilandia.com.pe/materials/Eventos%20y%20Reservas/YDRAY-DJI_0763-min.JPG);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 50%;
+    transition: all 100s ease;
+    animation: zoom 100s linear;
+}
+
+@keyframes zoom{
+    0%{
+        background-size: 100%;
+    }
+
+    100%{
+        background-size: 120%;
+    }
+}
+
+.street-view .content {
+    padding: 0 50px;
+}
+
+.street-view .content h1 {
+    font-family: var(--font-primario);
+    color: var(--color-blanco);
+    font-weight: lighter;
+    margin: 0;
+    font-size: var(--size-title);
+    text-transform: uppercase;
+}
+
+.street-view .content p {
+    color: var(--color-blanco);
+    font-family: var(--font-terciario);
+    font-size: var(--size-title);
+}
+
+.street-view .col-2 {
+    background: linear-gradient(to right, rgba(var(--rgba-primario), 0.5), rgba(var(--rgba-secundario), 0.5)), url(https://www.vacilandia.com.pe/materials/Eventos%20y%20Reservas/YDRAY-DJI_0779-min.JPG);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 50%;
+    transition: all 100s ease;
+    animation: zoom 100s linear;
+}
+
 .street {
     padding: 40px 0;
 }
@@ -3567,6 +3633,9 @@ body#piscinas .explorar {
     }
 
     .subnavbar {
+        background: linear-gradient(to right, rgba(var(--rgba-primario)), rgba(var(--rgba-secundario)));
+        border: none;
+        border-top: 5px solid var(--color-blanco);
         width: 100%;
         height: auto;
         flex-direction: row;
@@ -4163,5 +4232,19 @@ body#piscinas .explorar {
 
     .info-container .text {
         padding: 0px 30px;
+    }
+
+    .street-view .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .street-view .container .col-1,
+    .street-view .container .col-2{
+        width: 100%;
+    }
+
+    .street-view .content{
+        padding: 60px 40px;
     }
 }
