@@ -957,9 +957,7 @@ footer .logo img {
     margin: 0 8px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-
-
-
+    box-shadow: var(--sombra);
 }
 
 .promociones .card:hover {
