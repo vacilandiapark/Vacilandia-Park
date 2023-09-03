@@ -150,12 +150,10 @@ body#inicio {
 
 html,
 body {
-    background: rgba(var(--rgba-primario), 0.05);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    background: var(--color-fondo);
 }
 
 /* BOTONES */
@@ -192,7 +190,7 @@ a {
 }
 
 .main-content {
-    background: rgba(var(--rgba-primario), 0.05);
+    background: var(--color-blanco);
 }
 
 /* CONTENIDO*/
@@ -721,7 +719,7 @@ footer .logo img {
     width: 100%;
     height: auto;
     padding: 20px 0px 10px 0px;
-    box-shadow: var(--sombra);
+    background: transparent;
 }
 
 .boton-comprar .container {
@@ -3462,7 +3460,7 @@ body#piscinas .explorar {
 /* STREE VIEW */
 
 .street-view {
-    background: rgba(var(--rgba-primario), 0.05);
+    box-shadow: var(--sombra);
     width: 100%;
     height: auto;
     padding-bottom: 40px;
