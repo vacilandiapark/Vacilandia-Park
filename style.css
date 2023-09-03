@@ -2809,8 +2809,7 @@ body#piscinas .explorar {
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-
-
+    box-shadow: var(--sombra);
     margin: 5px;
 }
 
