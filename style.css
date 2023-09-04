@@ -3067,7 +3067,7 @@ body#piscinas .explorar {
     margin: 0 auto;
     z-index: -1;
     box-shadow: var(--sombra);
-    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .horario p {
