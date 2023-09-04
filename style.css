@@ -864,7 +864,7 @@ footer .logo img {
 }
 
 .scrolling-iframe,
-.ofertas .ofertas-carousel img{
+.ofertas .ofertas-carousel img {
     bottom: 0;
     left: 50%;
     filter: saturate(150%);
@@ -3472,7 +3472,7 @@ body#piscinas .explorar {
 }
 
 .street-view .col-1,
-.street-view .col-2{
+.street-view .col-2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -3509,8 +3509,6 @@ body#piscinas .explorar {
     background-size: cover;
     background-attachment: fixed;
     width: 50%;
-    transition: all 100s ease;
-    animation: zoom 100s linear;
 }
 
 .street {
@@ -3530,18 +3528,18 @@ body#piscinas .explorar {
     text-align: center;
 }
 
-.street-container iframe{
+.street-container iframe {
     box-shadow: var(--sombra);
 }
 
-.street-container h1{
+.street-container h1 {
     font-family: var(--font-primario);
     color: var(--color-primario);
     font-size: var(--size-title);
     font-weight: lighter;
 }
 
-.street-container p{
+.street-container p {
     font-family: var(--font-terciario);
     color: var(--color-negro);
     font-size: var(--size-subtitle);
@@ -3750,13 +3748,18 @@ body#piscinas .explorar {
 
 /* Media queries para pantallas menores a 768px */
 @media (max-width: 767px) {
+
+    * {
+        text-align: center;
+    }
+
     :root {
         --sombra: none;
         --size-title: 0.9em;
         --size-subtitle: 0.7em;
     }
 
-    .navbar .logo{
+    .navbar .logo {
         width: 5em;
         margin-top: 30px;
         padding: 10px;
@@ -3834,7 +3837,7 @@ body#piscinas .explorar {
         padding: 0;
     }
 
-    .horario p{
+    .horario p {
         padding: 10px 0;
     }
 
@@ -4250,23 +4253,23 @@ body#piscinas .explorar {
     }
 
     .street-view .col-1,
-    .street-view .col-2{
+    .street-view .col-2 {
         width: 100%;
     }
 
-    .street-view .content{
+    .street-view .content {
         padding: 60px 40px;
     }
 
     .street-container {
         flex-direction: column;
     }
-    
-    .street-container iframe{
+
+    .street-container iframe {
         order: 1;
     }
 
-    .street-container .text{
+    .street-container .text {
         order: 2;
     }
 }
