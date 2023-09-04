@@ -3518,7 +3518,7 @@ body#piscinas .explorar {
 }
 
 .street-view .col-2 {
-    background: linear-gradient(to right, rgba(var(--rgba-primario), 1), rgba(var(--rgba-primario), 1), rgba(var(--rgba-primario), 0.8), rgba(var(--rgba-secundario), 0.3)), url(https://www.vacilandia.com.pe/materials/Eventos%20y%20Reservas/YDRAY-DJI_0779-min.JPG);
+    background: linear-gradient(to right, rgba(var(--rgba-primario), 1), rgba(var(--rgba-primario), 1), rgba(var(--rgba-primario), 0.8), rgba(var(--rgba-secundario), 0.3)), url(http://www.vacilandia.com.pe/materials/Eventos%20y%20Reservas/YDRAY-DJI_0763-min.JPG);
     background-size: cover;
     background-attachment: fixed;
     width: 50%;
