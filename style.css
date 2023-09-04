@@ -489,7 +489,6 @@ body#terms .main-content {
     height: 20px;
     color: var(--color-blanco);
     cursor: pointer;
-    margin-left: 30px;
 }
 
 .navbar .hamburger .line {
@@ -865,7 +864,7 @@ footer .logo img {
 }
 
 .scrolling-iframe,
-.ofertas .ofertas-carousel img {
+.ofertas .ofertas-carousel img{
     bottom: 0;
     left: 50%;
     filter: saturate(150%);
@@ -1388,7 +1387,7 @@ body#restaurante .explorar img {
 }
 
 .planificar .text {
-    height: 130px;
+    height: auto;
     font-size: 16px;
     text-align: left;
     padding: 10px 20px 0px 30px;
@@ -3484,18 +3483,6 @@ body#piscinas .explorar {
     background-size: cover;
     background-attachment: fixed;
     width: 50%;
-    transition: all 100s ease;
-    animation: zoom 100s linear;
-}
-
-@keyframes zoom{
-    0%{
-        background-size: 100%;
-    }
-
-    100%{
-        background-size: 120%;
-    }
 }
 
 .street-view .content {
@@ -3727,7 +3714,6 @@ body#piscinas .explorar {
     .introduccion {
         margin: 0;
         padding-top: 0;
-        margin-bottom: 30%;
     }
 
     .introduccion .container {
@@ -3764,9 +3750,16 @@ body#piscinas .explorar {
 
 /* Media queries para pantallas menores a 768px */
 @media (max-width: 767px) {
-
     :root {
         --sombra: none;
+        --size-title: 0.9em;
+        --size-subtitle: 0.7em;
+    }
+
+    .navbar .logo{
+        width: 5em;
+        margin-top: 30px;
+        padding: 10px;
     }
 
     .ofertas .container {
@@ -3839,6 +3832,10 @@ body#piscinas .explorar {
     .banner .banner-overlay .container {
         align-items: center;
         padding: 0;
+    }
+
+    .horario p{
+        padding: 10px 0;
     }
 
     /* BOTÓN COMPRAR */
