@@ -12,7 +12,7 @@
     --color-blanco: #fff;
     --color-negro: #000;
     --color-subtitle: #000000;
-    --size-subtitle: .90rem;
+    --size-subtitle: .80rem;
 }
 
 /* Estilo para la barra de desplazamiento */
@@ -1387,7 +1387,7 @@ body#restaurante .explorar img {
 }
 
 .planificar .text {
-    height: auto;
+    height: 130px;
     font-size: 16px;
     text-align: left;
     padding: 10px 20px 0px 30px;
