@@ -299,7 +299,7 @@ function toggleInfo(type) {
         if (windowWidth < 769) {
             infoContainer.style.transform = 'translateX(0px)';
         } else {
-            infoContainer.style.transform = 'translateX(75px)';
+            infoContainer.style.transform = 'translateX(70px)';
         }
 
         infoContainer.style.pointerEvents = 'auto';
