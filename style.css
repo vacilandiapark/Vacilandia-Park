@@ -907,6 +907,19 @@ footer .logo img {
     right: 10px;
 }
 
+/* PROMO BANNER */
+
+.promo-banner{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
+.promo-banner img{
+    width: 100%;
+}
+
 /* PROMOCIONES CARRUSEL */
 
 .promociones {
@@ -3590,6 +3603,12 @@ body#piscinas .explorar {
 
 /* Media queries para pantallas menores a 1250px */
 @media (max-width: 1280px) {
+
+    
+
+    .promo-banner{
+        margin-bottom: 40px;
+    }
 
     #whatsapp-button {
         bottom: 100px;
