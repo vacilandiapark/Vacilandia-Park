@@ -2539,7 +2539,7 @@ body#canchas .mapa {
 .full-screen-section .column-2 h1 {
     font-family: var(--font-secundario);
     font-weight: lighter;
-    font-size: 85px;
+    font-size: var(--size-title);
     margin: 0;
     padding: 0;
 }
@@ -2548,7 +2548,7 @@ body#canchas .mapa {
     font-family: var(--font-terciario);
     color: var(--color-gris);
     margin: 0;
-    font-size: 30px;
+    font-size: var(--size-subtitle);
     margin-bottom: 20px;
 }
 
@@ -4193,12 +4193,6 @@ body#piscinas .explorar {
 
     .full-screen-section {
         flex-direction: column;
-    }
-
-    /* Reiniciamos el ancho de las columnas para que ocupen el 100% del ancho en móviles */
-    .full-screen-section .column-1,
-    .full-screen-section .column-2 {
-        flex-basis: 100%;
     }
 
     /* CANCHAS*/
