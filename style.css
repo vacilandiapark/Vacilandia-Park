@@ -154,6 +154,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* BOTONES */
@@ -582,8 +583,10 @@ body#terms .main-content {
 /* FOOTER */
 
 footer {
-    background: var(--color-primario);
-    height: 300px;
+    background: linear-gradient(to bottom, rgba(var(--rgba-primario)), rgba(var(--rgba-primario), 0.8)), url(materials/piscinas/_DSC7047-min.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     width: 100%;
 }
 
@@ -592,27 +595,74 @@ footer a {
 }
 
 footer .container {
-    max-width: var(--max-width);
     display: flex;
+    padding: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer .col {
     margin: 0 auto;
+}
+
+footer .col:nth-child(4) {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer h1 {
+    font-size: var(--size-title);
+    font-family: var(--font-primario);
+    font-weight: lighter;
+    color: var(--color-blanco);
+}
+
+footer ul li {
+    color: blanco;
+    font-family: var(--font-terciario);
+    font-size: var(--size-subtitle);
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 5px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+footer i {
+    color: var(--color-blanco);
+    font-weight: bold;
+}
+
+footer img {
+    max-width: 200px;
+    width: 100%;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 footer .terms {
-    height: 80px;
     display: flex;
     align-items: center;
-    border-top: 1px solid var(--color-botones);
-    background: var(--color-primario);
+    justify-content: center;
 }
 
-footer .terms .text {
-    max-width: var(--max-width);
+footer .terms .text h1 {
+    width: 100%;
     margin: 0 auto;
     color: var(--color-blanco);
-    font-family: var(--font-terciario);
-    font-size: 0.4rem;
     text-align: center;
     padding: 20px;
+    font-weight: bolder;
+    font-size: var(--size-subtitle);
+    font-family: var(--font-terciario);
 }
 
 /* Estilo base para el enlace */
@@ -649,67 +699,6 @@ footer .terms .text a.rainbow-text {
     100% {
         background-position: 1800% center;
     }
-}
-
-footer .columna-1 {
-    width: 300px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-footer .columna-1 ul {
-    list-style: none;
-    margin: 0;
-    color: var(--color-blanco);
-    font-size: 15px;
-    font-family: var(--font-primario);
-}
-
-footer .columna-1 ul li {
-    margin-bottom: 10px;
-}
-
-footer .columna-2 {
-    width: 600px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20px;
-}
-
-footer .columna-2 h3 {
-    margin-bottom: 20px;
-    color: var(--color-blanco);
-    font-size: var(--size-title);
-    font-family: var(--font-primario);
-    font-weight: lighter;
-}
-
-footer .redes-sociales {
-    margin-top: 15px;
-    color: var(--color-blanco);
-}
-
-footer .columna-2 .redes-sociales i {
-    margin-right: 10px;
-}
-
-footer .columna-3 {
-    width: 300px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer .logo img {
-    max-width: 300px;
-    max-height: 100%;
 }
 
 /* BOTON COMPRAR */
@@ -909,14 +898,14 @@ footer .logo img {
 
 /* PROMO BANNER */
 
-.promo-banner{
+.promo-banner {
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     height: auto;
 }
 
-.promo-banner img{
+.promo-banner img {
     width: 100%;
 }
 
@@ -3578,6 +3567,40 @@ body#piscinas .explorar {
 
 @media (max-width:900px) {
 
+
+    footer .container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    footer .col {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 30px;
+        border-bottom: 1px solid var(--color-blanco);
+        padding: 30px 0;
+    }
+
+    footer .col:nth-child(4) {
+        order: 1;
+    }
+
+    footer .col:nth-child(1) {
+        order: 2;
+    }
+
+    footer .col:nth-child(2) {
+        order: 3;
+    }
+
+    footer .col:nth-child(3) {
+        order: 4;
+    }
+
+    footer h1 {
+        text-align: left;
+    }
+
     .navbar .row-1 {
         background: var(--color-primario);
         margin: 0;
@@ -3604,9 +3627,15 @@ body#piscinas .explorar {
 /* Media queries para pantallas menores a 1250px */
 @media (max-width: 1280px) {
 
-    
+    footer .terms{
+        margin-bottom: 75px;
+    }
 
-    .promo-banner{
+    footer .terms .text h1{
+        text-align: left;
+    }
+
+    .promo-banner {
         margin-bottom: 40px;
     }
 
@@ -3778,6 +3807,7 @@ body#piscinas .explorar {
         --size-subtitle: 0.7em;
     }
 
+
     .navbar .logo {
         width: 5em;
         margin-top: 30px;
@@ -3788,52 +3818,6 @@ body#piscinas .explorar {
         justify-content: center;
         margin-top: 20px;
         /* Centra verticalmente el contenedor */
-    }
-
-    footer {
-        height: 600px;
-        /* Ajustar la altura del footer según sea necesario */
-    }
-
-    footer .container {
-        flex-wrap: wrap;
-        padding-bottom: 30px;
-    }
-
-    footer .columna-1 {
-        display: none;
-    }
-
-    footer .columna-2 {
-        order: 2;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 0;
-    }
-
-    footer .columna-3 {
-        order: 1;
-        margin-top: 20px;
-        height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-    }
-
-    footer .columna-3 .logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-
-    footer .columna-3 .logo img {
-        max-height: 110px;
-        max-width: 100%;
     }
 
     .main {
