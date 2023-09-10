@@ -3480,7 +3480,6 @@ body#restaurante .explorar img {
     box-shadow: var(--sombra);
     width: 100%;
     height: auto;
-    padding: var(--espacio) 0;
 }
 
 .street-view .container {
