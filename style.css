@@ -749,7 +749,7 @@ footer .terms .text a.rainbow-text {
 
 /* OFERTAS CARRUSEL */
 
-.ofertas svg {
+svg {
     position: absolute;
     fill: var(--color-blanco);
     bottom: 0;
@@ -907,8 +907,10 @@ footer .terms .text a.rainbow-text {
     height: auto;
 }
 
-.promo-banner img {
+.promo-banner img,
+.promo-banner iframe {
     width: 100%;
+    border: none;
 }
 
 /* PROMOCIONES CARRUSEL */
