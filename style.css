@@ -6,13 +6,14 @@
     ;
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1000px;
-    --color-borde: #cdcfcf;
+    --color-borde: #746c6c;
     --color-fondo: #fcfcfc;
     --size-title: 1.2rem;
     --color-blanco: #fff;
     --color-negro: #000;
     --color-subtitle: #000000;
     --size-subtitle: .80rem;
+    --espacio: 30px;
 }
 
 /* Estilo para la barra de desplazamiento */
@@ -137,12 +138,13 @@ body#otros {
 }
 
 body#concierto {
-    --color-primario: #000;
-    --rgba-primario: 0, 0, 0;
+    --color-primario: #111111;
+    --rgba-primario: 17, 17, 17;
     --rgba-secundario: 0, 0, 0;
     --color-title: #fff;
-    --color-botones: #13010b9f;
-    background: linear-gradient(to bottom, rgba(var(--rgba-primario)), rgba(var(--rgba-primario), 0.8)), url(materials/piscinas/_DSC7047-min.JPG);
+    --color-botones: #000;
+    background: var(--color-primario);
+    --color-subtitle: #fff;
 }
 
 /*
@@ -188,6 +190,14 @@ button:hover,
     background: var(--color-blanco);
     color: var(--color-primario);
     border: 1px solid var(--color-primario);
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 99;
 }
 
 /* OTROS */
@@ -460,7 +470,7 @@ body#terms .main-content {
     margin-top: 50px;
     width: 7em;
     padding: 20px;
-    border-bottom-right-radius: 50%;
+    border-bottom-right-radius: 20px;
     filter: saturate(100%);
     transition: all 0.3s ease;
 }
@@ -592,7 +602,7 @@ body#terms .main-content {
 /* FOOTER */
 
 footer {
-    background: linear-gradient(to bottom, rgba(var(--rgba-primario)), rgba(var(--rgba-primario), 0.8)), url(materials/piscinas/_DSC7047-min.JPG);
+    background-image: linear-gradient(to bottom, rgba(var(--rgba-primario)), rgba(var(--rgba-primario)));
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -765,6 +775,10 @@ svg {
     margin-bottom: -5px;
 }
 
+body#concierto svg {
+    fill: var(--color-primario);
+}
+
 .ofertas {
     position: relative;
     width: 100%;
@@ -924,7 +938,7 @@ svg {
 /* PROMOCIONES CARRUSEL */
 
 .promociones {
-    padding: 20px 0;
+    padding: var(--espacio) 0;
 }
 
 .promociones .container {
@@ -1012,8 +1026,7 @@ svg {
 /* INTRODUCCIÓN */
 
 .introduccion {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: var(--espacio) 0;
 }
 
 .introduccion .container {
@@ -1021,7 +1034,6 @@ svg {
     margin: 0 auto;
     height: auto;
     display: flex;
-    background: var(--color-blanco);
     box-shadow: var(--sombra);
 }
 
@@ -1109,10 +1121,7 @@ svg {
 
 .explorar {
     position: relative;
-}
-
-body#barcilon .explorar {
-    padding-top: 40px;
+    padding: var(--espacio) 0;
 }
 
 .explorar .container {
@@ -1247,6 +1256,10 @@ body#restaurante .explorar img {
 
 /* POLLO VACILÓN */
 
+.pollo-vacilon{
+    padding: var(--espacio) 0;
+}
+
 .pollo-vacilon .text {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -1335,12 +1348,12 @@ body#restaurante .explorar img {
     -webkit-animation: AnimationName 5s ease infinite;
     -moz-animation: AnimationName 5s ease infinite;
     animation: AnimationName 5s ease infinite;
+    padding: var(--espacio) 0;
 }
 
 .planificar .container-planificar {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding-bottom: 10px;
 }
 
 .planificar .container-planificar h1 {
@@ -1428,11 +1441,7 @@ body#restaurante .explorar img {
 .mapa {
     display: flex;
     justify-content: center;
-    padding-bottom: 40px;
-}
-
-body#canchas .mapa {
-    padding-top: 40px;
+    padding: var(--espacio) 0;
 }
 
 .mapa h1 {
@@ -1476,7 +1485,7 @@ body#canchas .mapa {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 70px);
 }
 
 .mapa .rectangulo {
@@ -1485,7 +1494,6 @@ body#canchas .mapa {
     left: 0;
     width: 100%;
     height: 70;
-    background: var(--color-blanco);
     padding: 10px 0px 0px 20px;
     box-sizing: border-box;
     /* Agregado */
@@ -1728,8 +1736,7 @@ body#canchas .mapa {
 /* FORMULARIO DE CONTACTO */
 
 .contacto {
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding: var(--espacio) 0;
     -webkit-animation: AnimationName 5s ease infinite;
     -moz-animation: AnimationName 5s ease infinite;
     animation: AnimationName 5s ease infinite;
@@ -1824,7 +1831,7 @@ body#canchas .mapa {
 /* PÁGINA PAQUETES CUMPLEAÑEROS */
 
 #paquetes-cumpleañeros {
-    padding-top: 40px;
+    padding: var(--espacio) 0;
 }
 
 #paquetes-cumpleañeros .container {
@@ -1991,8 +1998,7 @@ body#canchas .mapa {
 /* PRODUCTOS DEL PAQUETE CUMPLEAÑERO */
 
 #productos-paq-cumple {
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding: var(--espacio) 0;
 }
 
 #productos-paq-cumple .text {
@@ -2068,7 +2074,7 @@ body#canchas .mapa {
 /* PÁGINA ZONA GAMER */
 
 .atracciones-section {
-    padding-top: 30px;
+    padding: var(--espacio) 0;
 }
 
 .atracciones-section .text {
@@ -2158,12 +2164,12 @@ body#canchas .mapa {
     -webkit-animation: AnimationName 5s ease infinite;
     -moz-animation: AnimationName 5s ease infinite;
     animation: AnimationName 5s ease infinite;
+    padding: var(--espacio) 0;
 }
 
 .opciones .container-planificar {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding-bottom: 10px;
 }
 
 .opciones .container-planificar h1 {
@@ -2245,6 +2251,10 @@ body#canchas .mapa {
 }
 
 /* PÁGINA RESTAURANTE */
+
+.didi-food{
+    padding: var(--espacio) 0;
+}
 
 .didi-food .text {
     max-width: var(--max-width);
@@ -2337,6 +2347,7 @@ body#canchas .mapa {
 
 .platos {
     text-align: center;
+    padding: var(--espacio) 0;
 }
 
 .platos .container {
@@ -2431,8 +2442,7 @@ body#canchas .mapa {
 /* PÁGINA GRANJA */
 
 .animales {
-    padding-bottom: 70px;
-    padding-top: 40px;
+    padding: var(--espacio) 0;
 }
 
 .animales-container {
@@ -2556,11 +2566,7 @@ body#canchas .mapa {
 /* PÁGINA PISCINAS */
 
 .piscinas {
-    padding-top: 30px;
-}
-
-body#piscinas .explorar {
-    padding-top: 40px;
+    padding: var(--espacio) 0;
 }
 
 .piscinas .text {
@@ -2606,10 +2612,7 @@ body#piscinas .explorar {
     justify-content: space-between;
     height: auto;
     overflow: hidden;
-
-
     margin-bottom: 30px;
-    background: var(--color-blanco);
     box-shadow: var(--sombra);
     /* Ajusta la altura según tus necesidades */
 }
@@ -2655,7 +2658,7 @@ body#piscinas .explorar {
 /* PÁGINA CANCHAS */
 
 .canchas {
-    padding-top: 40px;
+    padding: var(--espacio) 0;
 }
 
 .canchas-container {
@@ -2664,8 +2667,8 @@ body#piscinas .explorar {
     margin: 0 auto;
     display: flex;
     justify-content: center;
-    margin-top: 30px;
     gap: 20px;
+    padding: var(--espacio) 0;
 }
 
 .canchas .title {
@@ -2778,7 +2781,7 @@ body#piscinas .explorar {
 
 .imagenes {
     position: relative;
-    padding-top: 40px;
+    padding: var(--espacio) 0;
 }
 
 .imagenes .container {
@@ -2869,7 +2872,7 @@ body#piscinas .explorar {
 
 .ofrecer {
     position: relative;
-    padding-top: 40px;
+    padding: var(--espacio) 0;
 }
 
 .ofrecer .container {
@@ -2882,6 +2885,7 @@ body#piscinas .explorar {
 .ofrecer .container .title {
     max-width: var(--max-width);
     margin: 0 auto;
+    padding: 20px 0;
 }
 
 .ofrecer .container .title h1 {
@@ -3046,7 +3050,7 @@ body#piscinas .explorar {
 .youtube {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding-top: 40px;
+    padding: var(--espacio) 0;
 }
 
 .youtube .youtube-container {
@@ -3147,6 +3151,7 @@ body#piscinas .explorar {
 .terminos {
     display: flex;
     justify-content: center;
+    padding: var(--espacio) 0;
 }
 
 .terminos .container {
@@ -3226,7 +3231,7 @@ body#piscinas .explorar {
 
 /* ESTILOS PREGUNTAS Y RESPUESTAS */
 .faq-section {
-    padding: 80px 0;
+    padding: var(--espacio) 0;
     text-align: left;
 }
 
@@ -3316,6 +3321,7 @@ body#piscinas .explorar {
 /* ESTILOS PREGUNTAS Y RESPUESTAS */
 .sub-section {
     text-align: center;
+    padding: var(--espacio) 0;
 }
 
 .sub-section .container {
@@ -3404,20 +3410,18 @@ body#piscinas .explorar {
 
 /* PROMOCIONES */
 
+.promos{
+    padding: var(--espacio) 0;
+}
+
 .promos .container {
     max-width: var(--max-width);
     width: 100%;
-
-
     overflow: hidden;
     height: auto;
     display: flex;
     margin: 0 auto;
-
-
     box-shadow: var(--sombra);
-
-
 }
 
 .promos .columna-2 {
@@ -3476,7 +3480,7 @@ body#piscinas .explorar {
     box-shadow: var(--sombra);
     width: 100%;
     height: auto;
-    padding-bottom: 40px;
+    padding: var(--espacio) 0;
 }
 
 .street-view .container {
@@ -3526,7 +3530,7 @@ body#piscinas .explorar {
 }
 
 .street {
-    padding: 40px 0;
+    padding: var(--espacio) 0;
 }
 
 .street-container {
@@ -3538,7 +3542,6 @@ body#piscinas .explorar {
     display: flex;
     align-items: center;
     gap: 50px;
-    margin-bottom: 40px;
     text-align: center;
 }
 
@@ -3565,8 +3568,7 @@ body#piscinas .explorar {
     width: 100%;
     margin: 0 auto;
     height: 191.5px;
-    padding-bottom: 20px;
-    padding-top: 10px;
+    padding: var(--espacio) 0;
 }
 
 .news iframe {
@@ -3577,6 +3579,137 @@ body#piscinas .explorar {
     overflow: hidden;
 }
 
+
+
+#banner-concert {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    /* Agrega esta línea */
+}
+
+#banner-concert img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+    top: 0;
+    left: 0;
+}
+
+
+#banner-concert #shadow-bottom {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(var(--rgba-primario), 1), rgba(var(--rgba-primario), 0));
+}
+
+#banner-concert #logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    z-index: 2;
+}
+
+#banner-concert #logo img {
+    width: 100%;
+    height: auto;
+}
+
+#banner-concert #tagline {
+    position: absolute;
+    top: calc(50% + 40px);
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-blanco);
+    font-size: 30px;
+    text-align: center;
+    margin-top: -20px;
+    z-index: 2;
+    font-family: var(--font-secundario);
+}
+
+
+/* CARTELERA */
+
+#cartelera {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--espacio) 0;
+}
+
+#cartelera h2 {
+    color: var(--color-blanco);
+    font-weight: lighter;
+    font-size: var(--size-title);
+    font-family: var(--font-primario);
+    text-transform: uppercase;
+}
+
+#cartelera .eventos-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+
+#cartelera .evento {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+#cartelera .evento img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+#cartelera .evento:hover img {
+    transform: scale(1.1);
+}
+
+#cartelera .evento-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: bold;
+    padding: 18px;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    transform: translateY(5%);
+    transition: transform 0.3s;
+}
+
+#cartelera .evento:hover .evento-info {
+    transform: translateY(0);
+}
+
+#cartelera .evento-info h3 {
+    font-size: var(--size-title);
+    font-weight: lighter;
+    margin: 0;
+    color: var(--color-blanco);
+    font-family: var(--font-secundario);
+}
+
+#cartelera .evento-info p {
+    font-size: var(--size-subtitle);
+    margin: 5px 0;
+    color: var(--color-blanco);
+    line-height: 1;
+    font-family: var(--font-terciario);
+}
 
 @media (max-width:900px) {
 
@@ -3818,6 +3951,32 @@ body#piscinas .explorar {
         --sombra: none;
         --size-title: 0.9em;
         --size-subtitle: 0.7em;
+    }
+
+
+    #cartelera h2 {
+        padding: 1cm;
+        margin-bottom: -2em;
+    }
+
+    #cartelera .eventos-container {
+        grid-template-columns: 1fr;
+    }
+
+    #cartelera .evento {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #cartelera .evento img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #cartelera .evento-info {
+        position: static;
+        transform: translateY(0);
+        margin-top: 10px;
     }
 
 
