@@ -561,3 +561,4 @@ const rectangulo = document.querySelector('.rectangulo');
 hideButton.addEventListener('click', () => {
     rectangulo.style.opacity = '0';
 });
+
