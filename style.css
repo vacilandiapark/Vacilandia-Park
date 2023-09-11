@@ -6,7 +6,7 @@
     ;
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1000px;
-    --color-borde: #746c6c;
+    --color-borde: #c9bdbd;
     --color-fondo: #fcfcfc;
     --size-title: 1.2rem;
     --color-blanco: #fff;
@@ -114,10 +114,10 @@ body#gracias {
 }
 
 body#terms {
-    --color-primario: #724C9F;
-    --rgba-primario: 114, 76, 159;
+    --color-primario: #432F87;
+    --rgba-primario: 67, 47, 135;
     --rgba-secundario: 67, 47, 135;
-    --color-title: #724C9F;
+    --color-title: #432F87;
     --color-botones: #846ca1;
 }
 
@@ -210,9 +210,7 @@ a {
     text-decoration: none !important;
 }
 
-.main-content {
-    background: transparent;
-}
+.main-content {}
 
 /* CONTENIDO*/
 
@@ -222,7 +220,7 @@ a {
 }
 
 body#terms .main-content {
-    padding-top: 10%;
+    padding-top: 3%;
 }
 
 /* SUBNAVBAR*/
@@ -389,6 +387,14 @@ body#terms .main-content {
     top: 0;
     z-index: 9999;
     transition: all 0.3s ease;
+}
+
+body#terms .navbar{
+    background: var(--color-primario);
+}
+
+body#terms .navbar .logo{
+    background: var(--color-primario);
 }
 
 .navbar.scrolled {
@@ -602,7 +608,7 @@ body#terms .main-content {
 /* FOOTER */
 
 footer {
-    background-image: linear-gradient(to bottom, rgba(var(--rgba-primario)), rgba(var(--rgba-primario)));
+    background: linear-gradient(to bottom, rgba(var(--rgba-primario), 1), rgba(var(--rgba-primario), 0.9)), url(https://vacilandia.com.pe/materials/Eventos%20y%20Reservas/YDRAY-DJI_0779-min.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -668,21 +674,21 @@ footer ul {
     padding: 0;
 }
 
-footer .terms {
+footer .terms .text {
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
+    padding: var(--espacio) 0;
+    gap: 30px;
 }
 
 footer .terms .text h1 {
-    width: 100%;
-    margin: 0 auto;
     color: var(--color-blanco);
     text-align: center;
-    padding: 20px;
-    font-weight: bolder;
-    font-size: var(--size-subtitle);
-    font-family: var(--font-terciario);
+    font-weight: lighter;
+    font-size: var(--size-title);
+    font-family: var(--font-secundario);
 }
 
 /* Estilo base para el enlace */
@@ -1256,7 +1262,7 @@ body#restaurante .explorar img {
 
 /* POLLO VACILÓN */
 
-.pollo-vacilon{
+.pollo-vacilon {
     padding: var(--espacio) 0;
 }
 
@@ -2252,7 +2258,7 @@ body#restaurante .explorar img {
 
 /* PÁGINA RESTAURANTE */
 
-.didi-food{
+.didi-food {
     padding: var(--espacio) 0;
 }
 
@@ -3410,7 +3416,7 @@ body#restaurante .explorar img {
 
 /* PROMOCIONES */
 
-.promos{
+.promos {
     padding: var(--espacio) 0;
 }
 
@@ -3710,7 +3716,114 @@ body#restaurante .explorar img {
     font-family: var(--font-terciario);
 }
 
+.trabajo {
+    padding: var(--espacio) 0;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.trabajo .sidebar {
+    width: 20%;
+    height: 100vh;
+    border-radius: 10px;
+}
+
+.trabajo .sidebar ul {
+    padding: 0;
+    padding: 30px;
+    background: var(--color-blanco);
+    list-style: none;
+    position: fixed;
+    box-shadow: var(--sombra);
+}
+
+.trabajo .sidebar li {
+    font-family: var(--font-terciario);
+    font-weight: bolder;
+    margin: 10px;
+    padding: 5px 0;
+    font-size: var(--size-subtitle);
+}
+
+.trabajo .sidebar a {
+    text-decoration: none;
+    color: var(--color-primario);
+}
+
+.trabajo .content {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.trabajo .content .container{
+    background: linear-gradient(to bottom, rgba(var(--rgba-primario), 0.1), transparent);
+    padding-top: 50px;
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border-top: 2px solid var(--color-primario);
+}
+
+.trabajo .content h4{
+    text-align: center;
+    color: var(--color-primario);
+    font-size: var(--size-title);
+    font-family: var(--font-primario);
+    font-weight: lighter;
+}
+
+.trabajo .job {
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+    box-shadow: var(--sombra);
+}
+
+.trabajo .job .info{
+    padding: 20px;
+    background: var(--color-blanco);
+}
+
+.trabajo .job img {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+}
+
+.trabajo .job h2 {
+    font-size: var(--size-title);
+    font-family: var(--font-primario);
+    color: var(--color-primario);
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.trabajo .job h3{
+    font-size: var(--size-subtitle);
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: var(--color-negro);
+    font-family: var(--font-primario);
+}
+
+.trabajo .job li,
+.trabajo .job p {
+    font-family: var(--font-terciario);
+    color: var(--color-subtitle);
+    font-size: var(--size-subtitle);
+}
+
 @media (max-width:900px) {
+
+    footer .terms .text {
+        display: block;
+        padding: 30px;
+        width: 100%;
+    }
 
 
     footer .container {
@@ -3826,7 +3939,6 @@ body#restaurante .explorar img {
     .subnavbar {
         background: linear-gradient(to right, rgba(var(--rgba-primario)), rgba(var(--rgba-secundario)));
         border: none;
-        border-top: 5px solid var(--color-blanco);
         width: 100%;
         height: auto;
         flex-direction: row;
