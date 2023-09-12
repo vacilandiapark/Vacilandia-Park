@@ -12,8 +12,9 @@
     --color-blanco: #fff;
     --color-negro: #000;
     --color-subtitle: #000000;
-    --size-subtitle: .80rem;
+    --size-subtitle: .90rem;
     --espacio: 30px;
+    --size-mtitle: 2em;
 }
 
 /* Estilo para la barra de desplazamiento */
@@ -51,90 +52,92 @@
 
 
 body#zona-gamer {
-    --color-primario: #EC2127;
-    --rgba-primario: 236, 33, 39;
-    --rgba-secundario: 245, 130, 32;
-    --color-title: #EC2127;
-    --color-botones: #ff495e;
+    --color-primario: #432F87;
+    --rgba-primario: 67, 47, 135;
+    --rgba-secundario: 114, 76, 159;
+    --color-title: #432F87;
+    --color-botones: #724C9F;
 }
 
 body#canchas {
-    --color-primario: #77C043;
-    --rgba-primario: 119, 192, 67;
-    --rgba-secundario: 210, 217, 11;
-    --color-title: #77C043;
-    --color-botones: #97c575;
+    --color-primario: #432F87;
+    --rgba-primario: 67, 47, 135;
+    --rgba-secundario: 114, 76, 159;
+    --color-title: #432F87;
+    --color-botones: #724C9F;
 }
 
 body#recorrido {
-    --color-primario: #724C9F;
-    --rgba-primario: 114, 76, 159;
-    --rgba-secundario: 67, 47, 135;
-    --color-title: #724C9F;
-    --color-botones: #846ca1;
+    --color-primario: #432F87;
+    --rgba-primario: 67, 47, 135;
+    --rgba-secundario: 114, 76, 159;
+    --color-title: #432F87;
+    --color-botones: #724C9F;
 }
 
 body#granja {
-    --color-primario: #683A10;
-    --rgba-primario: 104, 58, 16;
-    --rgba-secundario: 245, 130, 32;
-    --color-title: #683A10;
-    --color-botones: #775434;
+    --color-primario: #432F87;
+    --rgba-primario: 67, 47, 135;
+    --rgba-secundario: 114, 76, 159;
+    --color-title: #432F87;
+    --color-botones: #724C9F;
 }
 
 body#piscinas {
-    --color-primario: #2BABE2;
-    --rgba-primario: 43, 171, 226;
+    --color-primario: #432F87;
+    --rgba-primario: 67, 47, 135;
     --rgba-secundario: 114, 76, 159;
-    --color-title: #2BABE2;
-    --color-botones: #6ebadb;
+    --color-title: #432F87;
+    --color-botones: #724C9F;
 }
 
 body#barcilon {
-    --color-primario: #EA0B8B;
-    --rgba-primario: 234, 11, 139;
-    --rgba-secundario: 236, 33, 39;
-    --color-title: #EA0B8B;
-    --color-botones: #ee60b1;
+    --color-primario: #432F87;
+    --rgba-primario: 67, 47, 135;
+    --rgba-secundario: 114, 76, 159;
+    --color-title: #432F87;
+    --color-botones: #724C9F;
 }
 
 body#restaurante {
-    --color-primario: #F58220;
-    --rgba-primario: 245, 130, 32;
-    --rgba-secundario: 255, 210, 0;
-    --color-title: #F58220;
-    --color-botones: #f09c54;
+    --color-primario: #432F87;
+    --rgba-primario: 67, 47, 135;
+    --rgba-secundario: 114, 76, 159;
+    --color-title: #432F87;
+    --color-botones: #724C9F;
 }
 
 body#gracias {
-    --color-primario: #724C9F;
-    --rgba-primario: 114, 76, 159;
-    --color-title: #724C9F;
-    --color-botones: #a972ec;
+    --color-primario: #432F87;
+    --rgba-primario: 67, 47, 135;
+    --rgba-secundario: 114, 76, 159;
+    --color-title: #432F87;
+    --color-botones: #724C9F;
 }
 
 body#terms {
     --color-primario: #432F87;
     --rgba-primario: 67, 47, 135;
-    --rgba-secundario: 67, 47, 135;
+    --rgba-secundario: 114, 76, 159;
     --color-title: #432F87;
-    --color-botones: #846ca1;
+    --color-botones: #724C9F;
 }
 
+
 body#inicio {
-    --color-primario: #016734;
-    --rgba-primario: 12, 102, 52;
-    --rgba-secundario: 70, 223, 24;
-    --color-title: #0C6634;
-    --color-botones: #46df18;
+    --color-primario: #432F87;
+    --rgba-primario: 67, 47, 135;
+    --rgba-secundario: 114, 76, 159;
+    --color-title: #432F87;
+    --color-botones: #724C9F;
 }
 
 body#otros {
     --color-primario: #432F87;
     --rgba-primario: 67, 47, 135;
-    --rgba-secundario: 234, 11, 139;
+    --rgba-secundario: 114, 76, 159;
     --color-title: #432F87;
-    --color-botones: #EA0B8B;
+    --color-botones: #724C9F;
 }
 
 body#concierto {
@@ -172,8 +175,8 @@ body {
 
 button,
 .btn-comprar {
-    background: linear-gradient(to bottom right, rgba(var(--rgba-primario)), rgba(var(--rgba-secundario)));
-    color: var(--color-blanco);
+    background: linear-gradient(to bottom right, #F58220, #FFD200);
+    color:#432F87;
     padding: 10px 10px;
     border: none;
     font-size: var(--size-subtitle);
@@ -182,7 +185,6 @@ button,
     font-family: var(--font-primario);
     transition: all 0.2s ease-in-out;
     text-transform: uppercase;
-    border: 1px solid var(--color-botones);
 }
 
 button:hover,
@@ -250,7 +252,7 @@ body#terms .main-content {
     text-decoration: none;
     width: 100%;
     transition: 0.2s ease-in-out;
-    font-size: var(--size-subtitle);
+    font-size: 0.7em;
     padding: 10px 0px;
 }
 
@@ -851,7 +853,7 @@ body#concierto svg {
     padding: 0;
     font-family: var(--font-primario);
     color: var(--color-blanco);
-    font-size: var(--size-title);
+    font-size: var(--size-mtitle);
     font-weight: lighter;
     padding-right: 50px;
     margin-bottom: 25px;
@@ -872,7 +874,7 @@ body#concierto svg {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom right, rgba(var(--rgba-primario), 0.6), rgba(var(--rgba-secundario), 0.6));
+    background: linear-gradient(to bottom right, rgba(var(--rgba-primario), 0.5), rgba(var(--rgba-secundario), 0.5));
     /* Desired color and opacity */
     z-index: 1;
 }
@@ -1787,6 +1789,10 @@ body#restaurante .explorar img {
 
 }
 
+.contacto .contacto-container button{
+    margin-top: 10px;
+}
+
 .contacto .contacto-container h1 {
     color: var(--color-title);
     font-size: var(--size-title);
@@ -1806,6 +1812,7 @@ body#restaurante .explorar img {
 .contacto .contacto-container h2 {
     line-height: 1.2;
     font-weight: lighter;
+    font-size: var(--size-title);
     color: var(--color-title);
     font-family: var(--font-primario);
 }
@@ -3082,7 +3089,7 @@ body#restaurante .explorar img {
 
 .horario {
     /* Centra horizontalmente el contenido */
-    background: linear-gradient(to top right, rgba(var(--rgba-primario)), rgba(var(--rgba-secundario)));
+    background: linear-gradient(to right, rgba(var(--rgba-primario)), rgba(var(--rgba-secundario)));
     padding: 10px;
     box-sizing: border-box;
     max-width: var(--max-width);
@@ -3548,6 +3555,7 @@ body#restaurante .explorar img {
     align-items: center;
     gap: 50px;
     text-align: center;
+    padding: var(--espacio) 0;
 }
 
 .street-container iframe {
@@ -3726,7 +3734,62 @@ body#restaurante .explorar img {
 #trabajo .container{
     max-width: var(--max-width);
     width: 100%;
+}
 
+#trabajo .container h1{
+    font-size: var(--size-title);
+    font-family: var(--font-primario);
+    font-weight: lighter;
+    color: var(--color-primario);
+}
+
+#trabajo .container p{
+    font-size: var(--size-subtitle);
+    font-family: var(--font-terciario);
+    color: var(--color-subtitle);
+}
+
+#trabajo .nosotros{
+    display: flex;
+    padding: var(--espacio) 0;
+    gap: 10px;
+}
+
+#trabajo .nosotros .col{
+    box-shadow: var(--sombra);
+    padding: 20px var(--espacio);
+    width: 50%;
+}
+
+#trabajo .navegacion{
+    display: flex;
+    gap: 20px;
+    box-shadow: var(--sombra);
+    padding: 0 var(--espacio);
+    justify-content: center;
+}
+
+#trabajo .filtro{
+    display: flex;
+    padding: 0;
+    list-style: none;
+    gap: 20px;
+}
+
+#trabajo .navegacion input{
+    margin: 10px;
+    border: none;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    padding: 0 20px;
+    box-shadow: var(--sombra);
+}
+
+#trabajo .filtro li{
+    color: var(--color-primario);
+    font-family: var(--font-primario);
+    font-weight: lighter;
+    font-size: var(--size-subtitle);
 }
 
 @media (max-width:900px) {
