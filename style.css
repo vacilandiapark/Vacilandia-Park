@@ -382,11 +382,11 @@ body#terms .main-content {
     transition: all 0.3s ease;
 }
 
-body#terms .navbar{
+body#terms .navbar {
     background: var(--color-primario);
 }
 
-body#terms .navbar .logo{
+body#terms .navbar .logo {
     background: var(--color-primario);
 }
 
@@ -1027,6 +1027,7 @@ body#concierto svg {
 }
 
 .introduccion .columna-1 {
+    background: linear-gradient(to bottom right, rgba(var(--rgba-primario)), rgba(var(--rgba-secundario)));
     display: flex;
     align-items: center;
     width: 600px;
@@ -1042,14 +1043,14 @@ body#concierto svg {
 }
 
 .introduccion .columna-1 h2 {
-    color: var(--color-title);
+    color: var(--color-blanco);
     font-size: var(--size-title);
     font-family: var(--font-primario);
     font-weight: lighter;
 }
 
 .introduccion .columna-1 p {
-    color: var(--color-subtitle);
+    color: var(--color-blanco);
     font-size: var(--size-subtitle);
     font-weight: lighter;
     font-family: var(--font-terciario);
@@ -1079,9 +1080,12 @@ body#concierto svg {
 
 .introduccion .slick-prev,
 .introduccion .slick-next {
+    background: transparent;
+    border-radius: 50%;
     position: absolute;
     border: none;
     top: 50%;
+    color: var(--color-blanco);
     transform: translateY(-50%);
     font-size: 15px;
     padding: 10px;
@@ -1233,6 +1237,61 @@ body#restaurante .explorar img {
 }
 
 
+/* PRUEBA */
+
+.explorar .evento {
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    overflow: hidden;
+    height: 400px;
+    margin: 0 5px;
+}
+
+.explorar .evento img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.explorar .evento:hover img {
+    transform: scale(1.1);
+}
+
+.explorar .evento-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: bold;
+    padding: 18px;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    transform: translateY(5%);
+    transition: transform 0.3s;
+}
+
+.explorar .evento:hover .evento-info {
+    transform: translateY(0);
+}
+
+.explorar .evento-info h3 {
+    font-size: var(--size-title);
+    font-weight: lighter;
+    margin: 0;
+    color: var(--color-blanco);
+    font-family: var(--font-primario);
+}
+
+.explorar .evento-info p {
+    font-size: var(--size-subtitle);
+    margin: 5px 0;
+    color: var(--color-blanco);
+    line-height: 1;
+    font-family: var(--font-terciario);
+}
+
+
 /* POLLO VACILÓN */
 
 .pollo-vacilon {
@@ -1352,9 +1411,14 @@ body#restaurante .explorar img {
 
 .planificar .container-planificar .row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-content: center;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
+    grid-gap: 20px;
+}
+
+/* Tamaño de la card del medio */
+.planificar .full-width {
+    grid-column: span 2;
+    /* Ocupa dos columnas completas */
 }
 
 .planificar .card {
@@ -1413,6 +1477,60 @@ body#restaurante .explorar img {
     color: var(--color-subtitle);
     font-size: var(--size-subtitle);
     margin-top: 10px;
+}
+
+
+/* PRUEBA */
+
+.planificar .evento {
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    overflow: hidden;
+    height: 200px;
+}
+
+.planificar .evento img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.planificar .evento:hover img {
+    transform: scale(1.1);
+}
+
+.planificar .evento-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: bold;
+    padding: 18px;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    transform: translateY(5%);
+    transition: transform 0.3s;
+}
+
+.planificar .evento:hover .evento-info {
+    transform: translateY(0);
+}
+
+.planificar .evento-info h3 {
+    font-size: var(--size-title);
+    font-weight: lighter;
+    margin: 0;
+    color: var(--color-blanco);
+    font-family: var(--font-primario);
+}
+
+.planificar .evento-info p {
+    font-size: var(--size-subtitle);
+    margin: 5px 0;
+    color: var(--color-blanco);
+    line-height: 1;
+    font-family: var(--font-terciario);
 }
 
 /* MAPA GOOGLE MAPS */
@@ -1760,7 +1878,7 @@ body#restaurante .explorar img {
 
 }
 
-.contacto .contacto-container button{
+.contacto .contacto-container button {
     margin-top: 10px;
 }
 
@@ -3682,42 +3800,42 @@ body#restaurante .explorar img {
 
 /* TRABAJO */
 
-#trabajo{
+#trabajo {
     display: flex;
     justify-content: center;
 }
 
-#trabajo .container{
+#trabajo .container {
     max-width: var(--max-width);
     width: 100%;
 }
 
-#trabajo .container h1{
+#trabajo .container h1 {
     font-size: var(--size-title);
     font-family: var(--font-primario);
     font-weight: lighter;
     color: var(--color-primario);
 }
 
-#trabajo .container p{
+#trabajo .container p {
     font-size: var(--size-subtitle);
     font-family: var(--font-terciario);
     color: var(--color-subtitle);
 }
 
-#trabajo .nosotros{
+#trabajo .nosotros {
     display: flex;
     padding: var(--espacio) 0;
     gap: 10px;
 }
 
-#trabajo .nosotros .col{
+#trabajo .nosotros .col {
     box-shadow: var(--sombra);
     padding: 20px var(--espacio);
     width: 50%;
 }
 
-#trabajo .navegacion{
+#trabajo .navegacion {
     display: flex;
     gap: 20px;
     box-shadow: var(--sombra);
@@ -3725,14 +3843,14 @@ body#restaurante .explorar img {
     justify-content: center;
 }
 
-#trabajo .filtro{
+#trabajo .filtro {
     display: flex;
     padding: 0;
     list-style: none;
     gap: 20px;
 }
 
-#trabajo .navegacion input{
+#trabajo .navegacion input {
     margin: 10px;
     border: none;
     border: 1px solid gainsboro;
@@ -3741,7 +3859,7 @@ body#restaurante .explorar img {
     box-shadow: var(--sombra);
 }
 
-#trabajo .filtro li{
+#trabajo .filtro li {
     color: var(--color-primario);
     font-family: var(--font-primario);
     font-weight: lighter;
