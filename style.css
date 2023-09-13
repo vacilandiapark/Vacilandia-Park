@@ -601,7 +601,7 @@ body#terms .navbar .logo {
 /* FOOTER */
 
 footer {
-    background: linear-gradient(to bottom, rgba(var(--rgba-primario), 1), rgba(var(--rgba-primario), 0.9)), url(https://vacilandia.com.pe/materials/Eventos%20y%20Reservas/YDRAY-DJI_0779-min.JPG);
+    background: linear-gradient(to bottom, rgba(var(--rgba-primario), 1), rgba(var(--rgba-secundario), 0.5)), url(https://vacilandia.com.pe/materials/Eventos%20y%20Reservas/YDRAY-DJI_0779-min.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -778,10 +778,40 @@ body#concierto svg {
     fill: var(--color-primario);
 }
 
+.rectangulo-promo {
+    position: fixed;
+    width: 14rem;
+    margin-right: 10px;
+    /* Resta la altura del subnavbar */
+    bottom: 120px;
+    right: -25rem;
+    transition: all 0.5s ease;
+    /* Agregamos una transición suave */
+    z-index: 9999999;
+    /* Agregamos una transición suave */
+}
+
+#hideButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.rectangulo-promo img {
+    width: 100%;
+    height: auto;
+}
+
+
+.ofertas .overlay img {
+    width: 150px;
+}
+
 .ofertas {
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -798,33 +828,7 @@ body#concierto svg {
     height: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.ofertas .container .rectangulo {
-    position: relative;
-    width: 20rem;
-    height: auto;
-
-
-    overflow: hidden;
-}
-
-#hideButton {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 999;
-}
-
-.ofertas .container .rectangulo img {
-    width: 100%;
-    height: auto;
-    box-shadow: var(--sombra);
-}
-
-.ofertas .overlay img {
-    width: 150px;
+    justify-content: left;
 }
 
 .ofertas .overlay h1 {
@@ -1487,7 +1491,7 @@ body#restaurante .explorar img {
     display: flex;
     text-decoration: none;
     overflow: hidden;
-    height: 200px;
+    height: 300px;
 }
 
 .planificar .evento img {

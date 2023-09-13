@@ -562,5 +562,22 @@ hideButton.addEventListener('click', () => {
 });
 
 
-// TRABAJO //
+// POP UP //
 
+// Espera a que el documento esté listo
+document.addEventListener("DOMContentLoaded", function () {
+    // Función para mostrar el pop-up
+    function showPopup() {
+        const rectanguloPromo = document.querySelector('.rectangulo-promo');
+        rectanguloPromo.style.right = '0'; // Muestra el pop-up moviendo left a 0
+    }
+
+    // Espera 3 segundos antes de mostrar el pop-up
+    setTimeout(showPopup, 3000);
+
+    // Maneja el clic en el botón "X" para ocultar el pop-up
+    document.getElementById('hideButton').addEventListener('click', function () {
+        const rectanguloPromo = document.querySelector('.rectangulo-promo');
+        rectanguloPromo.style.right = '-25rem'; // Oculta el pop-up moviendo left de nuevo
+    });
+});
