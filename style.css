@@ -3,7 +3,6 @@
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
     --sombra: 0px 0px 43px -15px rgba(0, 0, 0, 0.5);
-    ;
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1000px;
     --color-borde: #c9bdbd;
@@ -14,7 +13,7 @@
     --color-subtitle: #000000;
     --size-subtitle: .90rem;
     --espacio: 30px;
-    --size-mtitle: 2em;
+    --size-mtitle: 1.7rem;
 }
 
 /* Estilo para la barra de desplazamiento */
@@ -176,7 +175,7 @@ body {
 button,
 .btn-comprar {
     background: linear-gradient(to bottom right, #F58220, #FFD200);
-    color:#432F87;
+    color: var(--color-primario);
     padding: 10px 10px;
     border: none;
     font-size: var(--size-subtitle);
@@ -191,16 +190,8 @@ button:hover,
 .btn-comprar:hover {
     background: var(--color-blanco);
     color: var(--color-primario);
-    border: 1px solid var(--color-primario);
 }
 
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    z-index: 99;
-}
 
 /* OTROS */
 
@@ -902,9 +893,7 @@ body#concierto svg {
 .ofertas .slick-prev,
 .ofertas .slick-next {
     position: absolute;
-    background-color: transparent;
     border: none;
-    color: var(--color-blanco);
     top: 50%;
     transform: translateY(-50%);
     font-size: 15px;
@@ -912,12 +901,6 @@ body#concierto svg {
     cursor: pointer;
     z-index: 999;
     transition: all 0.3s ease-in-out;
-}
-
-.ofertas .slick-prev:hover,
-.ofertas .slick-next:hover {
-    filter: brightness(150%);
-    color: var(--color-negro);
 }
 
 .ofertas .slick-prev {
@@ -967,7 +950,7 @@ body#concierto svg {
     margin: 0;
     color: var(--color-title);
     font-weight: lighter;
-    font-size: var(--size-title);
+    font-size: var(--size-mtitle);
 }
 
 .promociones .container .title p {
@@ -1014,8 +997,6 @@ body#concierto svg {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--color-blanco);
-    background-color: var(--color-primario);
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -1099,9 +1080,7 @@ body#concierto svg {
 .introduccion .slick-prev,
 .introduccion .slick-next {
     position: absolute;
-    background: transparent;
     border: none;
-    color: var(--color-blanco);
     top: 50%;
     transform: translateY(-50%);
     font-size: 15px;
@@ -1109,12 +1088,6 @@ body#concierto svg {
     cursor: pointer;
     z-index: 999;
     transition: all 0.3s ease-in-out;
-}
-
-.introduccion .slick-prev:hover,
-.introduccion .slick-next:hover {
-    filter: brightness(150%);
-    color: var(--color-botones);
 }
 
 .introduccion .slick-prev {
@@ -1153,7 +1126,7 @@ body#concierto svg {
     margin: 0;
     color: var(--color-title);
     font-weight: lighter;
-    font-size: var(--size-title);
+    font-size: var(--size-mtitle);
 }
 
 .explorar .container .title p {
@@ -1242,8 +1215,6 @@ body#restaurante .explorar img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--color-blanco);
-    background-color: var(--color-primario);
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -1368,7 +1339,7 @@ body#restaurante .explorar img {
     font-family: var(--font-primario);
     font-weight: lighter;
     color: var(--color-title);
-    font-size: var(--size-title);
+    font-size: var(--size-mtitle);
     margin: 0;
 }
 
@@ -1454,7 +1425,7 @@ body#restaurante .explorar img {
 
 .mapa h1 {
     color: var(--color-title);
-    font-size: var(--size-title);
+    font-size: var(--size-mtitle);
     font-family: var(--font-primario);
     font-weight: 400;
     text-align: left;
@@ -1795,7 +1766,7 @@ body#restaurante .explorar img {
 
 .contacto .contacto-container h1 {
     color: var(--color-title);
-    font-size: var(--size-title);
+    font-size: var(--size-mtitle);
     font-family: var(--font-primario);
     font-weight: 400;
     text-align: left;
@@ -1854,8 +1825,7 @@ body#restaurante .explorar img {
 }
 
 #paquetes-cumpleañeros h1 {
-    color: black;
-    font-size: var(--size-title);
+    font-size: var(--size-mtitle);
     margin: 0;
     font-weight: lighter;
     color: var(--color-title);
@@ -2021,7 +1991,7 @@ body#restaurante .explorar img {
 }
 
 #productos-paq-cumple .text h1 {
-    font-size: var(--size-title);
+    font-size: var(--size-mtitle);
     color: var(--color-primario);
     font-family: var(--font-primario);
     font-weight: lighter;
@@ -2102,7 +2072,7 @@ body#restaurante .explorar img {
     margin: 0;
     color: var(--color-title);
     padding: 0;
-    font-size: var(--size-title);
+    font-size: var(--size-mtitle);
 }
 
 .atracciones-section .text p {
@@ -2189,7 +2159,7 @@ body#restaurante .explorar img {
     font-family: var(--font-primario);
     font-weight: lighter;
     color: var(--color-title);
-    font-size: var(--size-title);
+    font-size: var(--size-mtitle);
     margin: 0;
 }
 
@@ -2478,7 +2448,7 @@ body#restaurante .explorar img {
 .animales .text h1 {
     font-family: var(--font-primario);
     color: var(--color-primario);
-    font-size: var(--size-title);
+    font-size: var(--size-mtitle);
     font-weight: lighter;
     margin: 0;
 }
@@ -2607,7 +2577,7 @@ body#restaurante .explorar img {
     margin: 0;
     color: var(--color-title);
     padding: 0;
-    font-size: var(--size-title);
+    font-size: var(--size-mtitle);
 }
 
 .piscinas .text p {
@@ -2694,7 +2664,7 @@ body#restaurante .explorar img {
     margin: 0;
     color: var(--color-title);
     font-weight: lighter;
-    font-size: var(--size-title);
+    font-size: var(--size-mtitle);
 }
 
 .canchas .title p {
@@ -2814,7 +2784,7 @@ body#restaurante .explorar img {
     margin: 0;
     color: var(--color-title);
     font-weight: lighter;
-    font-size: var(--size-title);
+    font-size: var(--size-mtitle);
 }
 
 .imagenes .container .title p {
@@ -2864,8 +2834,6 @@ body#restaurante .explorar img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--color-blanco);
-    background-color: var(--color-primario);
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -2906,7 +2874,7 @@ body#restaurante .explorar img {
     margin: 0;
     color: var(--color-title);
     font-weight: lighter;
-    font-size: var(--size-title);
+    font-size: var(--size-mtitle);
 }
 
 .ofrecer .container .title p {
@@ -2995,8 +2963,6 @@ body#restaurante .explorar img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--color-blanco);
-    background-color: var(--color-primario);
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -3261,7 +3227,7 @@ body#restaurante .explorar img {
 .faq-section h2 {
     font-size: 40px;
     font-family: var(--font-primario);
-    color: var(--color-title);
+    color: var(--color-primario);
     font-weight: lighter;
 }
 
@@ -3275,9 +3241,7 @@ body#restaurante .explorar img {
 .faq-section .faq-item {
     max-width: 800px;
     width: 100%;
-    margin-bottom: 30px;
-
-
+    margin-bottom: 10px;
     border: 1px solid var(--color-borde);
     box-shadow: var(--sombra);
     background-color: var(--color-fondo);
@@ -3291,10 +3255,10 @@ body#restaurante .explorar img {
 }
 
 .faq-section .faq-item .question {
-    font-size: var(--size-title);
+    font-size: var(--size-subtitle);
     font-family: var(--font-terciario);
     font-weight: bolder;
-    color: var(--color-title);
+    color: var(--color-primario);
     padding: 20px;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -3461,9 +3425,7 @@ body#restaurante .explorar img {
 .promos .slick-prev,
 .promos .slick-next {
     position: absolute;
-    background: transparent;
     border: none;
-    color: var(--color-blanco);
     top: 50%;
     transform: translateY(-50%);
     font-size: 15px;
@@ -3471,12 +3433,6 @@ body#restaurante .explorar img {
     cursor: pointer;
     z-index: 999;
     transition: all 0.3s ease-in-out;
-}
-
-.promos .slick-prev:hover,
-.promos .slick-next:hover {
-    filter: brightness(150%);
-    color: var(--color-botones);
 }
 
 .promos .slick-prev {
@@ -3660,7 +3616,7 @@ body#restaurante .explorar img {
 #cartelera h2 {
     color: var(--color-blanco);
     font-weight: lighter;
-    font-size: var(--size-title);
+    font-size: var(--size-mtitle);
     font-family: var(--font-primario);
     text-transform: uppercase;
 }
@@ -3880,6 +3836,7 @@ body#restaurante .explorar img {
 
     .navbar .hamburger {
         display: flex;
+        padding-left: 10px;
     }
 
     .navbar .container {
