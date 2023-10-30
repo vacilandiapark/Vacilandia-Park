@@ -3,6 +3,23 @@ window.onbeforeunload = function () {
 };
 
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburguer = document.querySelector(".hamburguer");
+  const menuPanel = document.getElementById("menuPanel");
+  const closeButton = document.querySelector("#menuPanel .close-button");
+
+  hamburguer.addEventListener("click", function () {
+    menuPanel.classList.add("open");
+  });
+
+  closeButton.addEventListener("click", function () {
+    menuPanel.classList.remove("open");
+  });
+});
+
+
 // Función para introducir una pausa (delay) antes de completar una transición
 function delay(n) {
   n = n || 700; // Puedes ajustar la duración del retraso aquí
@@ -81,21 +98,6 @@ $(function () {
   });
 });
 
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const hamburguer = document.querySelector(".hamburguer");
-  const menuPanel = document.getElementById("menuPanel");
-  const closeButton = document.querySelector("#menuPanel .close-button");
-
-  hamburguer.addEventListener("click", function () {
-    menuPanel.classList.add("open");
-  });
-
-  closeButton.addEventListener("click", function () {
-    menuPanel.classList.remove("open");
-  });
-});
 
 
 

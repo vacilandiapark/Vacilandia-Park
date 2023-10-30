@@ -590,6 +590,7 @@ button#amarillo {
     cursor: pointer;
     font-size: var(--font-msize);
     padding-right: 20px;
+    z-index: 11;
 }
 
 /* NAVBAR RESPONSIVE */
