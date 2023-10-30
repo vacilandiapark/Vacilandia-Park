@@ -41,7 +41,7 @@ function getRandomColor() {
 function pageTransition() {
   var tl = gsap.timeline();
   tl.to(".loading-screen", {
-    duration: 0.5, // Reduz la duración de la primera animación a 0.8 segundos
+    duration: 0.5, // Reduz la duración de la primera animación a 0.8 segundoszz
     width: "100%",
     left: "0%",
     ease: "Expo.easeInOut",
