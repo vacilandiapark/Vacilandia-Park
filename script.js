@@ -6,83 +6,132 @@ window.onbeforeunload = function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  const hamburguer = document.querySelector(".hamburguer");
-  const menuPanel = document.getElementById("menuPanel");
-  const closeButton = document.querySelector("#menuPanel .close-button");
+  let hamburguer;
+  let menuPanel;
+  let closeButton;
+  let faqItems;
 
-  hamburguer.addEventListener("click", function () {
-    menuPanel.classList.add("open");
-  });
+  function initializeHamburguer() {
+    hamburguer = document.querySelector(".hamburguer");
+    menuPanel = document.getElementById("menuPanel");
+    closeButton = document.querySelector("#menuPanel .close-button");
 
-  closeButton.addEventListener("click", function () {
-    menuPanel.classList.remove("open");
-  });
-});
+    hamburguer.addEventListener("click", function () {
+      menuPanel.classList.add("open");
+    });
 
+    closeButton.addEventListener("click", function () {
+      menuPanel.classList.remove("open");
+    });
+  }
 
-// Función para introducir una pausa (delay) antes de completar una transición
-function delay(n) {
-  n = n || 700; // Puedes ajustar la duración del retraso aquí
-  return new Promise((done) => {
-    setTimeout(() => {
-      done();
-    }, n);
-  });
-}
+  // Función para inicializar preguntas y respuestas
+  function initializeFAQ() {
+    faqItems = document.querySelectorAll('.faq-item');
 
-// Función para obtener un color aleatorio de una lista de colores
-function getRandomColor() {
-  const colors = ["#EC2127", "#EA0B8B", "#F58220", "#FFD200", "#77C043", "#2BABE2", "#724C9F", "#432F87"];
-  const randomIndex = Math.floor(Math.random() * colors.length);
-  return colors[randomIndex];
-}
+    faqItems.forEach(item => {
+      const question = item.querySelector('.question');
+      const answerWrapper = item.querySelector('.answer-wrapper');
 
-// Función para manejar la transición de la página
-function pageTransition() {
-  var tl = gsap.timeline();
-  tl.to(".loading-screen", {
-    duration: 0.5, // Reduz la duración de la primera animación a 0.8 segundoszz
-    width: "100%",
-    left: "0%",
-    ease: "Expo.easeInOut",
-    backgroundColor: getRandomColor(),
-    onComplete: function () {
-      gsap.to(".loading-image", { opacity: 1, duration: 0.1 }); // Hacer que la imagen aparezca gradualmente
+      item.classList.add('closed'); // Agregamos la clase "closed" por defecto
+
+      question.addEventListener('click', () => {
+        if (!item.classList.contains('active')) {
+          // Abrir la pregunta
+          closeAllQuestions();
+          item.classList.add('active');
+          item.classList.remove('closed');
+          answerWrapper.style.maxHeight = answerWrapper.scrollHeight + 'px';
+        } else {
+          // Cerrar la pregunta
+          item.classList.remove('active');
+          item.classList.add('closed');
+          answerWrapper.style.maxHeight = '0';
+        }
+      });
+    });
+
+    function closeAllQuestions() {
+      faqItems.forEach(item => {
+        const answerWrapper = item.querySelector('.answer-wrapper');
+        if (item.classList.contains('active')) {
+          item.classList.remove('active');
+          item.classList.add('closed');
+          answerWrapper.style.maxHeight = '0';
+        }
+      });
     }
-  });
+  }
 
-  tl.to(".loading-screen", {
-    duration: 0.5, // Reduz la duración de la segunda animación a 0.8 segundos
-    width: "100%",
-    left: "100%",
-    ease: "Expo.easeInOut",
-    delay: 0.2 // Reduce el retraso
-  });
-  tl.set(".loading-screen", { left: "-100%" });
-}
+  // Función para introducir una pausa (delay) antes de completar una transición
+  function delay(n) {
+    n = n || 700; // Puedes ajustar la duración del retraso aquí
+    return new Promise((done) => {
+      setTimeout(() => {
+        done();
+      }, n);
+    });
+  }
 
-// Función para animar el contenido de la página
-function contentAnimation() {
-  var tl = gsap.timeline();
-  tl.from(".animate-this", {
-    duration: 0.4, // Reduz la duración de la animación del contenido a 0.6 segundos
-    y: 30,
-    opacity: 0,
-    stagger: 0.4,
-    delay: 0.2
-  });
-}
+  // Función para obtener un color aleatorio de una lista de colores
+  function getRandomColor() {
+    const colors = ["#EC2127", "#EA0B8B", "#F58220", "#FFD200", "#77C043", "#2BABE2", "#724C9F", "#432F87"];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomIndex];
+  }
 
-$(function () {
+  // Función para manejar la transición de la página
+  function pageTransition() {
+    var tl = gsap.timeline();
+    tl.to(".loading-screen", {
+      duration: 0.5,
+      width: "100%",
+      left: "0%",
+      ease: "Expo.easeInOut",
+      backgroundColor: getRandomColor(),
+      onComplete: function () {
+        gsap.to(".loading-image", { opacity: 1, duration: 0.1 });
+      }
+    });
+
+    tl.to(".loading-screen", {
+      duration: 0.5,
+      width: "100%",
+      left: "100%",
+      ease: "Expo.easeInOut",
+      delay: 0.2
+    });
+    tl.set(".loading-screen", { left: "-100%" });
+  }
+
+  // Función para animar el contenido de la página
+  function contentAnimation() {
+    var tl = gsap.timeline();
+    tl.from(".animate-this", {
+      duration: 0.4,
+      y: 30,
+      opacity: 0,
+      stagger: 0.4,
+      delay: 0.2,
+      onComplete: function () {
+        initializeHamburguer(); // Inicializar hamburguesa
+        initializeFAQ(); // Inicializar preguntas y respuestas
+      }
+    });
+  }
+
+  // Ejecutar la animación de transición
+  pageTransition();
+
+  // Configuración de Barba.js
   barba.init({
     sync: true,
-
     transitions: [
       {
         async leave(data) {
           const done = this.async();
           pageTransition();
-          await delay(500); // Reduce el tiempo de espera a 800 milisegundos
+          await delay(500);
           done();
         },
 

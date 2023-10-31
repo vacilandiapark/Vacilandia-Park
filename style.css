@@ -30,7 +30,7 @@ body {
     width: 300px;
     height: 300px;
     object-fit: contain;
-    opacity: 0;
+    opacity: 1;
     /* Inicialmente, la imagen tiene opacidad 0 */
 }
 
@@ -1726,12 +1726,8 @@ button#amarillo {
     color: var(--negro);
 }
 
-.faq-section#zona_gamer {
-    background:
-        linear-gradient(45deg, rgba(var(--rgba-rojo), 0.9), rgba(var(--rgba-naranja), 0.9)),
-        url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/Materials/Canchas%20Deportivas/DJI_0113-min_r7vuby.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+#nav-responsive .faq-item{
+    box-shadow: none;
 }
 
 .faq-section i {
@@ -1772,7 +1768,7 @@ button#amarillo {
     font-weight: bolder;
     color: var(--purpura);
     padding: 20px;
-    background: linear-gradient(to top right, rgba(var(--rgba-blanco)), rgba(var(--rgba-gris), 0.3));
+    background: var(--blanco);
     cursor: pointer;
     transition: color 0.3s ease;
 }
