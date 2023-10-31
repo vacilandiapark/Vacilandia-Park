@@ -1953,6 +1953,7 @@ button#amarillo {
     height: 100%;
     display: flex;
     align-items: center;
+    margin: 0 auto;
 }
 
 .modal.active {
@@ -1984,7 +1985,7 @@ button#amarillo {
     right: 20px;
     font-size: 30px;
     cursor: pointer;
-    color: white;
+    color: var(--blanco);
     opacity: 0;
     /* Ocultar la "X" inicialmente */
     transition: opacity 0.2s ease-in-out;

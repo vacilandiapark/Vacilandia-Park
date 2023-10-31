@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let menuPanel;
   let closeButton;
   let faqItems;
+  let modal;
+  let modalContent;
+  let closeModal;
 
   function initializeHamburguer() {
     hamburguer = document.querySelector(".hamburguer");
@@ -19,6 +22,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     closeButton.addEventListener("click", function () {
       menuPanel.classList.remove("open");
+    });
+  }
+
+
+
+  function initializeModal() {
+    modal = document.getElementById("modal");
+    modalContent = document.getElementById("modal-img");
+    closeModal = document.getElementById("close-modal");
+
+    // Abrir el modal cuando se haga clic en una imagen
+    const images = document.querySelectorAll(".image img");
+    images.forEach((image) => {
+      image.addEventListener("click", function () {
+        modal.style.display = "flex";
+        modalContent.src = this.src;
+        modal.classList.add("active");
+      });
+    });
+
+    // Cerrar el modal al hacer clic en el botón de cierre (X)
+    closeModal.addEventListener("click", function () {
+      modal.style.display = "none";
+      modal.classList.remove("active");
     });
   }
 
@@ -114,6 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
       onComplete: function () {
         initializeHamburguer(); // Inicializar hamburguesa
         initializeFAQ(); // Inicializar preguntas y respuestas
+        initializeModal();
       }
     });
   }
