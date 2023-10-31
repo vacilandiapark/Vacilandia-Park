@@ -37,37 +37,15 @@
 
     <div class="all" data-barba="container" data-barba-namespace="eventoscorporativos-section">
 
-
-        <!-- Messenger Plugin de chat Code -->
-        <div id="fb-root"></div>
-
-        <!-- Your Plugin de chat code -->
-        <div id="fb-customer-chat" class="fb-customerchat">
-        </div>
-
-        <script>
-            var chatbox = document.getElementById('fb-customer-chat');
-            chatbox.setAttribute("page_id", "108571858435746");
-            chatbox.setAttribute("attribution", "biz_inbox");
-        </script>
-
-        <!-- Your SDK code -->
-        <script>
-            window.fbAsyncInit = function () {
-                FB.init({
-                    xfbml: true,
-                    version: 'v18.0'
-                });
-            };
-
-            (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
+        <a href="https://api.whatsapp.com/send/?phone=%2B51913479416&text&type=phone_number&app_absent=0">
+            <div id="whatsapp-button">
+                <div id="whatsapp-icon">
+                    <img decoding="async"
+                        src="https://static-00.iconduck.com/assets.00/whatsapp-icon-512x512-8q344er8.png"
+                        alt="WhatsApp">
+                </div>
+            </div>
+        </a>
 
         <nav class="subnavbar">
             <div class="container">
@@ -420,10 +398,12 @@
                     </div>
                     <div class="buttons">
                         <div class="dropdown">
-                            <button id="comprar" onclick="toggleDropdown()">COMPRAR TICKETS</button><div class="dropdown-content">
+                            <button id="comprar" onclick="toggleDropdown()">COMPRAR TICKETS</button>
+                            <div class="dropdown-content">
                                 <a target="_blank" id="joinnus"
                                     href="https://www.joinnus.com/events/entertainment/lima-full-day-vacilandia-park-58225">JOINNUS</a>
-                                <a target="_blank" id="vaope" href="https://vaope.com/parque-acuatico/vacilandia-park">VAOPE</a>
+                                <a target="_blank" id="vaope"
+                                    href="https://vaope.com/parque-acuatico/vacilandia-park">VAOPE</a>
                             </div>
                         </div>
                         <a target="_blank" href="https://vacilandia-park.odoo.com/web/login"><button
