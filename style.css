@@ -42,7 +42,8 @@ body {
     height: 100vh;
     overflow: hidden;
     z-index: 10;
-    pointer-events: none;z
+    pointer-events: none;
+    z
 }
 
 /* VARIABLES */
@@ -81,7 +82,7 @@ body {
     ;
     --font-secundario: 'Montserrat Alternates', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
-    --sombra: 1px 1px 14px 6px rgba(0, 0, 0, .06);
+    --sombra: 1px 1px 14px 6px rgba(0, 0, 0, .05);
     --max-width: 1000px;
     --sombra-color: #f0f0f0;
     --sombra-global: linear-gradient(25deg, var(--sombra-color) 50%, var(--blanco) 0%);
@@ -1726,7 +1727,7 @@ button#amarillo {
     color: var(--negro);
 }
 
-#nav-responsive .faq-item{
+#nav-responsive .faq-item {
     box-shadow: none;
 }
 
