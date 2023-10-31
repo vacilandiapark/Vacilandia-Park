@@ -148,19 +148,28 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
 function toggleDropdown() {
   var dropdown = document.querySelector(".dropdown-content");
   var buttons = document.querySelector(".buttons");
 
   if (dropdown.style.display === "block") {
+    dropdown.style.display = "none";
+    buttons.classList.remove("open");
+  } else {
+    dropdown.style.display = "block";
+    buttons.classList.add("open");
+  }
+
+  // Agregar un event listener para cerrar el dropdown cuando se hace clic fuera de él
+  document.addEventListener("click", function(event) {
+    if (!dropdown.contains(event.target) && !buttons.contains(event.target)) {
+      // El clic ocurrió fuera del dropdown y los botones
       dropdown.style.display = "none";
       buttons.classList.remove("open");
-  } else {
-      dropdown.style.display = "block";
-      buttons.classList.add("open");
-  }
+    }
+  });
 }
+
 
 
 // Obtenemos el elemento de audio y el botón de reproducción
