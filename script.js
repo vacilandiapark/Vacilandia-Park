@@ -171,6 +171,7 @@ buttons.addEventListener("click", function (event) {
   event.stopPropagation();
 });
 
+
 // Obtenemos el elemento de audio y el botón de reproducción
 var playButton = document.getElementById('play-button');
 var audio = new Audio('Audio/ytmp3free.cc_vacilandia-park-el-parque-acuatico-mas-grande-de-lima-youtubemp3free.org.mp3');
