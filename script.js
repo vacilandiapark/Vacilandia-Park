@@ -7,11 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let menuPanel;
   let closeButton;
   let faqItems;
-  let images; // Agregamos una variable para las imágenes del modal
-  let modal; // Agregamos una variable para el modal
-  let modalImg;
-  let modalContent;
-  let closeModal;
 
   function initializeHamburguer() {
     hamburguer = document.querySelector(".hamburguer");
@@ -25,28 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
     closeButton.addEventListener("click", function () {
       menuPanel.classList.remove("open");
     });
-  }
-
-  // Función para mostrar el modal
-  function openModal(imgSrc) {
-    // Restablecer la escala a su valor inicial
-    modalContent.style.transform = 'scale(0.3)';
-
-    modal.style.display = 'block';
-    modal.classList.add('active'); // Agregar la clase "active" para mostrar la modal
-    modalImg.src = imgSrc;
-
-    // Retrasar ligeramente la aplicación de la escala para permitir la transición
-    setTimeout(() => {
-      modalContent.style.transform = 'scale(1)';
-    }, 0);
-  }
-
-  // Función para cerrar el modal
-  function closeModalFunction() {
-    modal.style.display = 'none';
-    modal.classList.remove('active'); // Remover la clase "active" para ocultar la modal
-    modalContent.style.transform = 'scale(0.8)'; // Restablecer la escala
   }
 
   // Función para inicializar preguntas y respuestas
@@ -86,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
+
 
   // Función para introducir una pausa (delay) antes de completar una transición
   function delay(n) {
@@ -303,3 +277,46 @@ function closeInfo(infoNumber) {
   // Cerrar el contenedor
   infoContainer.classList.remove('active');
 }
+
+
+
+function openModal(imageSrc) {
+  var modal = document.getElementById("modal");
+  var modalImg = document.getElementById("modal-img");
+
+  modal.style.display = "block";
+  modalImg.src = imageSrc;
+
+  // Agrega una clase "active" para aplicar estilos específicos a la modal
+  modal.classList.add("active");
+}
+
+// Función para cerrar la modal
+function closeModal() {
+  var modal = document.getElementById("modal");
+
+  modal.style.display = "none";
+
+  // Remueve la clase "active" para ocultar la modal
+  modal.classList.remove("active");
+}
+
+// Agrega un evento clic a cada imagen de la galería
+var images = document.querySelectorAll(".image img");
+images.forEach(function (image) {
+  image.addEventListener("click", function () {
+    openModal(this.src);
+  });
+});
+
+// Agrega un evento clic para cerrar la modal al hacer clic en la "X"
+var closeModalButton = document.getElementById("close-modal");
+closeModalButton.addEventListener("click", closeModal);
+
+// Agrega un evento clic para cerrar la modal al hacer clic fuera de la imagen
+window.addEventListener("click", function (event) {
+  var modal = document.getElementById("modal");
+  if (event.target == modal) {
+    closeModal();
+  }
+});
