@@ -150,11 +150,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-function toggleDropdown() {
+function toggleDropdown(event) {
   var dropdown = document.querySelector(".dropdown-content");
   var buttons = document.querySelector(".buttons");
 
-  if (dropdown.style.display === "block") {
+  if (event.target !== buttons && !buttons.contains(event.target) && dropdown.style.display === "block") {
     dropdown.style.display = "none";
     buttons.classList.remove("open");
   } else {
@@ -162,6 +162,14 @@ function toggleDropdown() {
     buttons.classList.add("open");
   }
 }
+
+// Agregar un evento de escucha al documento para cerrar el dropdown si se hace clic fuera del botón
+document.addEventListener("click", toggleDropdown);
+
+// También puedes agregar un evento para detener la propagación del clic en el botón para evitar que se cierre automáticamente cuando se hace clic en el botón
+buttons.addEventListener("click", function (event) {
+  event.stopPropagation();
+});
 
 // Obtenemos el elemento de audio y el botón de reproducción
 var playButton = document.getElementById('play-button');
