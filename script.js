@@ -2,13 +2,11 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
 
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
   let hamburguer;
   let menuPanel;
   let closeButton;
+  let faqItems;
 
   function initializeHamburguer() {
     hamburguer = document.querySelector(".hamburguer");
@@ -22,6 +20,44 @@ document.addEventListener("DOMContentLoaded", function () {
     closeButton.addEventListener("click", function () {
       menuPanel.classList.remove("open");
     });
+  }
+
+  // Función para inicializar preguntas y respuestas
+  function initializeFAQ() {
+    faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.question');
+      const answerWrapper = item.querySelector('.answer-wrapper');
+
+      item.classList.add('closed'); // Agregamos la clase "closed" por defecto
+
+      question.addEventListener('click', () => {
+        if (!item.classList.contains('active')) {
+          // Abrir la pregunta
+          closeAllQuestions();
+          item.classList.add('active');
+          item.classList.remove('closed');
+          answerWrapper.style.maxHeight = answerWrapper.scrollHeight + 'px';
+        } else {
+          // Cerrar la pregunta
+          item.classList.remove('active');
+          item.classList.add('closed');
+          answerWrapper.style.maxHeight = '0';
+        }
+      });
+    });
+
+    function closeAllQuestions() {
+      faqItems.forEach(item => {
+        const answerWrapper = item.querySelector('.answer-wrapper');
+        if (item.classList.contains('active')) {
+          item.classList.remove('active');
+          item.classList.add('closed');
+          answerWrapper.style.maxHeight = '0';
+        }
+      });
+    }
   }
 
   // Función para introducir una pausa (delay) antes de completar una transición
@@ -74,7 +110,10 @@ document.addEventListener("DOMContentLoaded", function () {
       opacity: 0,
       stagger: 0.4,
       delay: 0.2,
-      onComplete: initializeHamburguer
+      onComplete: function () {
+        initializeHamburguer(); // Inicializar hamburguesa
+        initializeFAQ(); // Inicializar preguntas y respuestas
+      }
     });
   }
 
@@ -104,8 +143,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ],
   });
 });
-
-
 
 
 function toggleDropdown() {
@@ -157,45 +194,6 @@ function playMusic() {
     isPlaying = false;
   }
 }
-// PREGUNTAS Y RESPUESTAS //
-document.addEventListener('DOMContentLoaded', function () {
-  const faqItems = document.querySelectorAll('.faq-item');
-
-  faqItems.forEach(item => {
-    const question = item.querySelector('.question');
-    const answerWrapper = item.querySelector('.answer-wrapper');
-
-    item.classList.add('closed'); // Agregamos la clase "closed" por defecto
-
-    question.addEventListener('click', () => {
-      if (!item.classList.contains('active')) {
-        // Abrir la pregunta
-        closeAllQuestions();
-        item.classList.add('active');
-        item.classList.remove('closed');
-        answerWrapper.style.maxHeight = answerWrapper.scrollHeight + 'px';
-      } else {
-        // Cerrar la pregunta
-        item.classList.remove('active');
-        item.classList.add('closed');
-        answerWrapper.style.maxHeight = '0';
-      }
-    });
-  });
-
-  function closeAllQuestions() {
-    faqItems.forEach(item => {
-      const answerWrapper = item.querySelector('.answer-wrapper');
-      if (item.classList.contains('active')) {
-        item.classList.remove('active');
-        item.classList.add('closed');
-        answerWrapper.style.maxHeight = '0';
-      }
-    });
-  }
-});
-
-
 
 
 // Obtén elementos del DOM
