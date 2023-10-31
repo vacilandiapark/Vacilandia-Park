@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
   let menuPanel;
   let closeButton;
   let faqItems;
+  let images; // Agregamos una variable para las imágenes del modal
+  let modal; // Agregamos una variable para el modal
+  let modalImg;
+  let modalContent;
+  let closeModal;
 
   function initializeHamburguer() {
     hamburguer = document.querySelector(".hamburguer");
@@ -20,6 +25,28 @@ document.addEventListener("DOMContentLoaded", function () {
     closeButton.addEventListener("click", function () {
       menuPanel.classList.remove("open");
     });
+  }
+
+  // Función para mostrar el modal
+  function openModal(imgSrc) {
+    // Restablecer la escala a su valor inicial
+    modalContent.style.transform = 'scale(0.3)';
+
+    modal.style.display = 'block';
+    modal.classList.add('active'); // Agregar la clase "active" para mostrar la modal
+    modalImg.src = imgSrc;
+
+    // Retrasar ligeramente la aplicación de la escala para permitir la transición
+    setTimeout(() => {
+      modalContent.style.transform = 'scale(1)';
+    }, 0);
+  }
+
+  // Función para cerrar el modal
+  function closeModalFunction() {
+    modal.style.display = 'none';
+    modal.classList.remove('active'); // Remover la clase "active" para ocultar la modal
+    modalContent.style.transform = 'scale(0.8)'; // Restablecer la escala
   }
 
   // Función para inicializar preguntas y respuestas
@@ -194,55 +221,6 @@ function playMusic() {
     isPlaying = false;
   }
 }
-
-
-// Obtén elementos del DOM
-const images = document.querySelectorAll('.galeria .image img');
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modal-img');
-const modalContent = document.querySelector('.modal-content');
-const closeModal = document.getElementById('close-modal');
-
-// Función para mostrar el modal
-function openModal(imgSrc) {
-  // Restablecer la escala a su valor inicial
-  modalContent.style.transform = 'scale(0.3)';
-
-  modal.style.display = 'block';
-  modal.classList.add('active'); // Agregar la clase "active" para mostrar la modal
-  modalImg.src = imgSrc;
-
-  // Retrasar ligeramente la aplicación de la escala para permitir la transición
-  setTimeout(() => {
-    modalContent.style.transform = 'scale(1)';
-  }, 0);
-}
-
-// Función para cerrar el modal
-function closeModalFunction() {
-  modal.style.display = 'none';
-  modal.classList.remove('active'); // Remover la clase "active" para ocultar la modal
-  modalContent.style.transform = 'scale(0.8)'; // Restablecer la escala
-}
-
-// Agrega un controlador de clic a cada imagen
-images.forEach((image) => {
-  image.addEventListener('click', () => {
-    openModal(image.src);
-  });
-});
-
-// Agrega un controlador de clic para cerrar el modal
-closeModal.addEventListener('click', () => {
-  closeModalFunction();
-});
-
-// Cierra el modal si se hace clic en cualquier parte de la pantalla
-window.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    closeModalFunction();
-  }
-});
 
 
 
