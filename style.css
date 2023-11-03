@@ -78,8 +78,8 @@ body {
     --font-msize: 2rem;
     --font-size: 1rem;
     --font-subsize: 0.75rem;
+    --color-text: #fff;
     --font-primario: 'Lilita One', sans-serif;
-    ;
     --font-secundario: 'Montserrat Alternates', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
     --sombra: 1px 1px 14px 6px rgba(0, 0, 0, .05);
@@ -88,6 +88,12 @@ body {
     --sombra-global: linear-gradient(25deg, var(--sombra-color) 50%, var(--blanco) 0%);
     --swiper-navigation-color: white;
     --swiper-pagination-color: white;
+}
+
+body#venconcierto{
+    --primary-concierto: #191919;
+    --rgba-primary: 25, 25, 25 ;
+    --secundary-concierto: #000000;
 }
 
 
@@ -335,6 +341,7 @@ button#amarillo {
     position: fixed;
     z-index: 7;
 }
+
 
 .subnavbar .container {
     display: flex;
@@ -685,6 +692,10 @@ button#amarillo {
     text-align: center;
 }
 
+.navbar #venconcierto_logo {
+    width: 50px;
+}
+
 .navbar .icons {
     display: flex;
     gap: 10px;
@@ -994,7 +1005,7 @@ button#amarillo {
     left: 0;
     width: 100%;
     height: 50%;
-    background: linear-gradient(to top, rgba(var(--rgba-negro), 0.7), transparent);
+    background: linear-gradient(to top, rgba(var(--rgba-negro), 0.8), transparent);
 }
 
 .cards-globales #marca {
@@ -1012,6 +1023,7 @@ button#amarillo {
     bottom: 0;
     left: 0;
     border-radius: 0 0 20px 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     transition: all 0.2s ease-in-out;
@@ -1019,10 +1031,18 @@ button#amarillo {
 
 .cards-globales .text h1 {
     margin: 0;
-    padding: 20px;
     color: var(--blanco);
     font-family: var(--font-primario);
     font-size: var(--font-size);
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.cards-globales .text p {
+    margin: 0;
+    color: var(--blanco);
+    font-family: var(--font-terciario);
+    font-size: var(--font-subsize);
     font-weight: lighter;
 }
 
@@ -1413,6 +1433,8 @@ button#amarillo {
     display: flex;
     height: 300px;
     padding: var(--espacio) 0 0 0;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .mapa .container .frame {
@@ -1429,7 +1451,6 @@ button#amarillo {
     box-shadow: var(--sombra);
     gap: 15px;
     background: var(--sombra-global);
-    border-radius: 20px;
     overflow: hidden;
 }
 
@@ -3328,7 +3349,48 @@ button#amarillo {
     border-radius: 20px;
 }
 
+.banner{
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+
+.banner .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, rgba(var(--rgba-primary)), rgba(var(--rgba-primary), 0));
+}
+
+.banner .overlay h1{
+    color: var(--blanco);
+    font-family: var(--font-primario);
+    font-size: var(--font-size);
+}
+
+.banner .overlay .logo-banner{
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 @media (max-width: 1100px) {
+
+    #whatsapp-button {
+        bottom: 60px;
+    }
 
     .footer {
         padding-bottom: 50px;
