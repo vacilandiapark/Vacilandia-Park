@@ -1019,7 +1019,7 @@ button#amarillo {
 
 .cards-globales .text {
     position: absolute;
-    width: 100%;
+    width: 90%;
     bottom: 0;
     left: 0;
     border-radius: 0 0 20px 20px;
@@ -1996,7 +1996,7 @@ button#amarillo {
 }
 
 .modal.active .modal-content {
-    transform: scale(1);
+    transform: scale(0.7);
     /* Escala completa en la modal activa */
 }
 
@@ -3539,7 +3539,7 @@ button#amarillo {
     }
 
     .navbar .buttons {
-        display: none;
+        display: flex;
     }
 
     #menuPanel {
