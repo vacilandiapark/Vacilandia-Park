@@ -2468,7 +2468,6 @@ button#amarillo {
 }
 
 .pdf .container {
-    padding: var(--espacio) 0 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
