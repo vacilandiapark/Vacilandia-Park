@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 
+<!-- OPTIMIZACIÓN SE SEO -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campeonatos deportivos en Vacilandia Park 💜</title>
+    <title>Campeonatos Deportivos - Vacilandia Park 💜</title>
     <meta name="description"
         content="Somos el parque campestre mas grande de todo Lima, contamos con piscinas y toboganes, áreas verdes, juegos, conciertos, restaurante, divertidos juegos en familia y sobre todo un espacio de más de 90000m2 para que nos podamos divertir a lo grande!.">
     <meta name="author" content="ZeyN">
@@ -13,28 +15,53 @@
     <meta name="theme-color" content="#18401E">
     <meta name="keywords"
         content="piscinas, restaurante, campestre, conciertos, toboganes, pollo, canchas, parque acuatico, parque de diversiones, eventos corporativos, promociones de colegio, reserva de espacios">
+    <link rel="canonical" href="https://vacilandia.com.pe/">
+
+    <!-- API DE GOOGLEFONTS -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+
+    <!-- LIBRERÍA DE SWIPER CARRUSEL -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <link rel="icon"
-        href="https://res.cloudinary.com/dlvqvbok1/image/upload/w_100/q_auto/f_auto/v1/Materials/Logos/s7bdcd2tqqmlceg1t5fj">
-    <link rel="canonical" href="https://vacilandia.com.pe/">
+
+    <!-- LIBRERÍA DE ANIMATE.CSS -->
+
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- ESTILOS PROPIOS -->
+
+    <link rel="icon"
+        href="https://res.cloudinary.com/dlvqvbok1/image/upload/w_100/q_auto/f_auto/v1/Materials/Logos/s7bdcd2tqqmlceg1t5fj">
     <link rel="stylesheet" href="style.css">
+
 </head>
+
+<!-- CONTENIDO DE LA PÁGINA WEB -->
+<!-- SE CARGA BARBA.JS PARA LA ANIMACIÓN ENTRE PÁGINAS WEBS -->
 
 <body data-barba="wrapper">
 
+    <!-- DIV DE LA ANIMACIÓN, POSTERIORMENTE SE ESTILIZA -->
+
     <div class="load-container">
-        <div class="loading-screen"></div>
+        <div class="loading-screen">
+            <img src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Logos/s7bdcd2tqqmlceg1t5fj"
+                alt="Imagen de carga" class="loading-image">
+        </div>
     </div>
 
+    <!-- SE COLOCA EL NOMBRE DE LA PÁGINA PARA LA CARGA DE BARBA.JS -->
+
     <div class="all" data-barba="container" data-barba-namespace="campeonatosdeportivos-section">
+
+        <!-- DIV DEL BOTÓN DEL WHATSAPP FLOTANTE -->
 
         <a href="https://api.whatsapp.com/send/?phone=%2B51913479416&text&type=phone_number&app_absent=0">
             <div id="whatsapp-button">
@@ -45,6 +72,8 @@
                 </div>
             </div>
         </a>
+
+        <!-- SEGUNDO NAVBAR QUE VA EN VERTICAL AL LADO IZQUIERDO -->
 
         <nav class="subnavbar">
             <div class="container">
@@ -60,6 +89,9 @@
                         </svg>
                     </a>
                 </div>
+
+                <!-- SE COLOCA TOGGLEINFO("NÚMERO DEL INFO-CONTAINER QUE VA MÁS ABAJO PARA PODER ABRIRLO POSTERIORMENTE DE ACORDE LO QUE SELECCIONE EL USUARIO") -->
+
                 <div class="item" onclick="toggleInfo(1)" title="Calendario">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar" width="36"
                         height="36" viewBox="0 0 24 24" stroke-width="0.7" stroke="#000000" fill="none"
@@ -110,9 +142,13 @@
                     </svg>
                 </div>
                 <div class="item">
-                    <!-- Contenedor de la tarjeta -->
+
+                    <!-- CONTENEDOR DE LA TARJETA DE MÚSICA -->
+
                     <div id="music-card">
-                        <!-- Botón de reproducción de música -->
+
+                        <!-- BOTÓN DE REPRODUCCIÓN -->
+
                         <div id="play-button" onclick="playMusic()">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-headphones"
                                 width="36" height="36" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none"
@@ -142,7 +178,12 @@
             </div>
         </nav>
 
+        <!-- COLOCAMOS EL NÚMERO QUE MÁS ARRIBA COLOCAMOS PARA PODER HACER REFERENCIA A SU CONTAINER, EN ESTE CASO INFO-"NÚMERO DEL TOGGLEINFO("#")" -->
+
         <div class="info-container info-1">
+
+            <!-- CLOSEINFO("NÚMERO A CERRAR DE INFO-"#") -->
+
             <button class="close-button" onclick="closeInfo(1)">X</button>
             <div class="content">
                 <h1>HORARIOS DISPONIBLES</h1>
@@ -182,12 +223,21 @@
             <button class="close-button" onclick="closeInfo(3)">X</button>
             <div class="content">
                 <h1>PREGUNTAS Y RESPUESTAS</h1>
+
+                <!-- SECCIÓN DE PREGUNTAS Y RESPUESTAS - TOGGLE INFO -->
+
                 <section class="faq-section" style="padding: 0;">
                     <div class="container" style="padding: 0;">
                         <div class="faq-list" style="padding: 0;">
+
+                            <!-- ESTILOS DE LA PREGUNTA -->
+
                             <div class="faq-item closed">
                                 <div class="question">¿Cuál es el horario de apertura del parque?
                                 </div>
+
+                                <!-- ESTILOS DE LA RESPUESTA -->
+
                                 <div class="answer-wrapper">
                                     <div class="answer">
                                         Nuestro parque solo apertura los sábados, domingos y feriados de 10:00 a.m. a
@@ -200,6 +250,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="faq-item closed">
                                 <div class="question">¿Cuentan con estacionamiento? ¿Tiene algún costo?
                                 </div>
@@ -209,6 +260,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="faq-item closed">
                                 <div class="question">¿Se puede llevar comida al parque?
                                 </div>
@@ -221,6 +273,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="faq-item closed">
                                 <div class="question">¿Las piscinas están abiertas?
                                 </div>
@@ -233,6 +286,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="faq-item closed">
                                 <div class="question">¿A qué edad no se paga la entrada?
                                 </div>
@@ -243,6 +297,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="faq-item closed">
                                 <div class="question">¿Si salgo del parque puedo ingresar?
                                 </div>
@@ -252,6 +307,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="faq-item closed">
                                 <div class="question">¿Puedo ingresar con mi mascota?
                                 </div>
@@ -261,6 +317,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="faq-item closed">
                                 <div class="question">¿Puedo llevar flotadores, sillas y carpas?
                                 </div>
@@ -272,6 +329,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="faq-item closed">
                                 <div class="question">¿Solo puedo ingresar con ropa de baño a las
                                     piscinas?
@@ -284,6 +342,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="faq-item closed">
                                 <div class="question">¿Cuál es el precio de entrada?
                                 </div>
@@ -296,6 +355,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="faq-item closed">
                                 <div class="question">¿Dónde puedo canjear mi vale de consumo?
                                 </div>
@@ -307,7 +367,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Agregar más preguntas y respuestas aquí -->
+
+                            <!-- SE AGREGA MAS PREGUNTAS Y RESPUESTAS DEL MISMO MÉTODO -->
+
                         </div>
                     </div>
                 </section>
@@ -334,17 +396,31 @@
             </div>
         </div>
 
+        <!-- SE AGREGA MÁS INFO-CONTAINER DE ACORDE A LA LÓGICA DADA MÁS ARRIBA -->
+
+        <!-- MAIN - CONTENEDOR DE LA PÁGINA AL COSTADO DEL SUBNAVBAR -->
+
         <main>
+
+            <!-- SECCIÓN DEL NAVBAR -->
+
             <nav class="navbar">
                 <div class="row-gradient"></div>
                 <div class="row">
+
+                    <!-- LOGO -->
+
                     <div class="logo">
                         <a href="/"><img decoding="async" loading="lazy"
                                 src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_300/q_auto/f_auto/v1/Materials/Logos/s7bdcd2tqqmlceg1t5fj"
                                 alt=""></a>
                     </div>
+
+                    <!-- BOTONES DE NAVEGACIÓN -->
+
                     <ul class="navigation">
                         <li><a href="Nosotros">NOSOTROS</a></li>
+
                         <li><a href="#">ATRACCIONES<i class="fa-solid fa-caret-down"></i></a>
                             <ul class="submenu">
                                 <li><a href="Piscinas-y-Toboganes">PISCINAS Y TOBOGANES</a></li>
@@ -353,6 +429,7 @@
                                 <li><a href="Canchas-Deportivas">CANCHAS DEPORTIVAS</a></li>
                             </ul>
                         </li>
+
                         <li><a href="#">ENTRETENIMIENTO<i class="fa-solid fa-caret-down"></i></a>
                             <ul class="submenu">
                                 <li><a href="Recorrido-Ecológico">RECORRIDO ECOLÓGICO</a></li>
@@ -362,6 +439,7 @@
                                 <li><a href="Shows-en-Vivo">SHOWS EN VIVO</a></li>
                             </ul>
                         </li>
+
                         <li><a href="#">GASTRONOMÍA<i class="fa-solid fa-caret-down"></i></a>
                             <ul class="submenu">
                                 <li><a href="Restaurante">RESTAURANTE</a></li>
@@ -369,6 +447,7 @@
                                 <li><a href="Rincón-Chelero">RINCÓN CHELERO</a></li>
                             </ul>
                         </li>
+
                         <li><a href="#">SERVICIOS<i class="fa-solid fa-caret-down"></i></a>
                             <ul class="submenu">
                                 <li><a href="Eventos-Corporativos">EVENTOS CORPORATIVOS</a></li>
@@ -378,8 +457,12 @@
                                 <li><a href="Espacios-Publicitarios">ESPACIOS PUBLICITARIOS</a></li>
                             </ul>
                         </li>
+
                         <li><a href="https://vacilandia-park.odoo.com/contactus">CONTÁCTENOS</a></li>
                     </ul>
+
+                    <!-- ICONOS DE NAVEGACIÓN -->
+
                     <div class="icons">
                         <a target="_blank" href="https://www.facebook.com/vacilandiapark"><i
                                 class="fa-brands fa-facebook"></i></a>
@@ -392,6 +475,9 @@
                         <a target="_blank" href="https://www.linkedin.com/company/vacilandia-park/mycompany/"><i
                                 class="fa-brands fa-linkedin"></i></a>
                     </div>
+
+                    <!-- BOTONES DE COMPRA E INGRESO -->
+
                     <div class="buttons">
                         <div class="dropdown">
                             <button id="comprar" onclick="toggleDropdown()">COMPRAR TICKETS</button>
@@ -405,20 +491,26 @@
                         <a target="_blank" href="https://vacilandia-park.odoo.com/web/login"><button
                                 id="celeste">INGRESAR</button></a>
                     </div>
+
+                    <!-- HAMBURGUESA PARA EL RESPONSIVE-->
+
                     <div class="hamburguer">
                         <i class="fa-solid fa-bars"></i>
                     </div>
                 </div>
             </nav>
 
+            <!-- NAVBAR DEL RESPONSIVE-->
 
-            <!--SUBNAVBAR-->
             <div id="menuPanel">
                 <div class="close-button"><i class="fa-solid fa-x"></i></div>
                 <ul class="panel-navigation">
                     <section class="faq-section" id="nav-responsive" style="padding: 0;">
                         <div class="container" style="padding: 0;">
                             <div class="faq-list" style="padding: 0;">
+
+                                <!-- ESTILO DEL PRIMER  BOTÓN -->
+
                                 <div class="faq-item closed">
                                     <a href="Nosotros">
                                         <div class="question">
@@ -426,10 +518,16 @@
                                         </div>
                                     </a>
                                 </div>
+
+                                <!-- ESTILO DEL PRIMER  BOTÓN -->
+
                                 <div class="faq-item closed">
                                     <div class="question">
                                         ATRACCIONES
                                     </div>
+
+                                    <!-- ESTILOS DE LOS SUBBOTONES-->
+
                                     <div class="answer-wrapper">
                                         <div class="answer">
                                             <a href="Piscinas-y-Toboganes"><button>PISCINAS Y
@@ -440,6 +538,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="faq-item closed">
                                     <div class="question">
                                         ENTRETENIMIENTO
@@ -454,6 +553,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="faq-item closed">
                                     <div class="question">
                                         GASTRONOMÍA
@@ -466,6 +566,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="faq-item closed">
                                     <div class="question">
                                         SERVICIOS
@@ -485,6 +586,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="faq-item closed">
                                     <a target="_blank" href="https://vacilandia-park.odoo.com/contactus">
                                         <div class="question">
@@ -492,19 +594,30 @@
                                         </div>
                                     </a>
                                 </div>
-                                <!-- Agregar más preguntas y respuestas aquí -->
+
+                                <!-- AGREGAR MÁS BOTONES DE NAVEGACIÓN -->
+
                             </div>
                         </div>
                     </section>
                 </ul>
             </div>
 
+            <!-- SECCIÓN DEL BANNER PRINCIPAL ESTILO CARRUSEL -->
+
             <swiper-container class="promociones" space-between="15" pagination-clickable="true" navigation="true"
                 pagination="true">
+
                 <swiper-slide>
                     <div class="overlay">
+
+                        <!-- IMÁGEN DE FONDO DEL BANNER -->
+
                         <img src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_700/q_auto/f_auto/Materials/Campeonatos%20deportivos/DSC_8271-min_vzndld.jpg"
                             alt="">
+
+                        <!-- CONTENIDO SUPERPUESTO TEXTO Y BOTÓN -->
+
                         <div class="content">
                             <div class="text">
                                 <h1>CAMPEONATOS DEPORTIVOS</h1>
@@ -524,13 +637,21 @@
                         </div>
                     </div>
                 </swiper-slide>
+
+                <!-- SE AGREGA MÁS CONTENIDO COPIANDO EL MISMO ESTILO DE ARRIBA -->
+
             </swiper-container>
+
+            <!-- CONTENIDO TERCERO DE LA PÁGINA DEBAJO DEL BANNER PRINCIPAL -->
 
             <div class="main-content">
 
 
                 <section class="title-3">
                     <div class="container">
+
+                        <!-- TÍTULO GLOBAL EN TODAS LAS PÁGINAS -->
+
                         <div class="title">
                             <h1>CAMPEONATOS DEPORTIVOS
                             </h1>
@@ -540,63 +661,97 @@
                     </div>
                 </section>
 
+                <!-- SECCIÓN DE CARRUSEL DE IMÁGENES CON THUMBNAILS -->
 
                 <section class="galeria-4">
                     <div class="container">
+
+                        <!-- CONTENIDO PARA LAS IMÁGENES -->
+
                         <div class="content">
                             <swiper-container class="mySwiper" thumbs-swiper=".mySwiper2" loop="true" space-between="15"
                                 navigation="true" autoplay-delay="2000" autoplay-disable-on-interaction="true">
+
+                                <!-- IMAGEN DONDE SE MOSTRARÁ EN EL CUADRO PRINCIPAL -->
+
                                 <swiper-slide>
                                     <img
                                         src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Campeonatos%20deportivos/campeonatos%20deportivos/img_3_m48xe8.jpg" />
                                 </swiper-slide>
+
                                 <swiper-slide>
                                     <img
                                         src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Campeonatos%20deportivos/campeonatos%20deportivos/market_fnomuf.jpg" />
                                 </swiper-slide>
+
                                 <swiper-slide>
                                     <img
                                         src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Campeonatos%20deportivos/DSC_8294-min_u6ywzo.jpg" />
                                 </swiper-slide>
+
                                 <swiper-slide>
                                     <img
                                         src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Campeonatos%20deportivos/DSC_8271-min_vzndld.jpg" />
                                 </swiper-slide>
+
+                                <!-- AGREGAR MÁS IMAGENES SI ES NECESARIO -->
+
                             </swiper-container>
+
+                            <!-- THUMBNAILS EN MINIATURA DE ACORDE A LA IMAGEN CENTRADA EN EL CUADRO GRANDE-->
 
                             <swiper-container class="mySwiper2" direction="vertical" space-between="15"
                                 slides-per-view="4" free-mode="true" watch-slides-progress="true" mousewheel="true">
+
+                                <!-- THUMBNAIL -->
+
                                 <swiper-slide>
                                     <img
                                         src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Campeonatos%20deportivos/campeonatos%20deportivos/img_3_m48xe8.jpg" />
                                 </swiper-slide>
+
                                 <swiper-slide>
                                     <img
                                         src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Campeonatos%20deportivos/campeonatos%20deportivos/market_fnomuf.jpg" />
                                 </swiper-slide>
+
                                 <swiper-slide>
                                     <img
                                         src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Campeonatos%20deportivos/DSC_8294-min_u6ywzo.jpg" />
                                 </swiper-slide>
+
                                 <swiper-slide>
                                     <img
                                         src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Campeonatos%20deportivos/DSC_8271-min_vzndld.jpg" />
                                 </swiper-slide>
+
+                                <!-- AGREGAR LOS THUMBNAILS EN ORDEN DE ACORDE A LAS IMÁGENES -->
+
                             </swiper-container>
                         </div>
                     </div>
                 </section>
 
+                <!-- SECCIÓN DE LAS TARJETAS GLOBALES -->
 
                 <section class="cards-globales" id="campeonatos">
                     <div class="container">
+
+                        <!-- TÍTULO GLOBAL EN TODAS LAS PÁGINAS -->
+
                         <div class="title">
                             <h1 style="color: var(--blanco);">ORGANIZA EMOCIONANTES CAMPEONATOS</h1>
                         </div>
+
+                        <!-- CARRUSEL DE LAS TARJETAS GLOBALES-->
+
                         <swiper-container class="carrusel-atracciones" space-between="15" pagination-clickable="true"
                             navigation="true" pagination="true" slides-per-view="1.5" free-mode="true"
                             autoplay-delay="2000" autoplay-disable-on-interaction="true"
                             breakpoints='{"900": {"slidesPerView": 2.5}}'>
+
+                            <!-- TARJETA CON LA IMAGEN Y TITULO -->
+
                             <swiper-slide>
                                 <div class="card">
                                     <img decoding="async" loading="lazy"
@@ -604,6 +759,7 @@
                                         alt="">
                                 </div>
                             </swiper-slide>
+
                             <swiper-slide>
                                 <div class="card">
                                     <img decoding="async" loading="lazy"
@@ -611,6 +767,7 @@
                                         alt="">
                                 </div>
                             </swiper-slide>
+
                             <swiper-slide>
                                 <div class="card">
                                     <img decoding="async" loading="lazy"
@@ -618,6 +775,7 @@
                                         alt="">
                                 </div>
                             </swiper-slide>
+
                             <swiper-slide>
                                 <div class="card">
                                     <img decoding="async" loading="lazy"
@@ -625,28 +783,52 @@
                                         alt="">
                                 </div>
                             </swiper-slide>
+
+                            <!-- AGREGAR MÁS TARJETAS SI ES NECESARIO -->
+                            
                         </swiper-container>
                     </div>
                 </section>
 
-                <!-- Modal de imagen -->
+                <!-- VENTANA MODAL DE LA IMAGEN A SELECCIONAR -->
+
                 <div id="modal" class="modal">
                     <div class="container">
+
+                        <!-- BOTÓN PARA CERRAR LA MODAL -->
+
                         <span class="close-modal" id="close-modal">&times;</span>
+
+                        <!-- SE JALA LA IMAGEN SELECCIONADA Y SE MUESTRA EN MODAL DE ACORDE AL CODIGO JS DEL MODAL-IMG -->
+
                         <img class="modal-content" id="modal-img">
                     </div>
                 </div>
 
+                <!-- SECCIÓN DE FORMULARIO -->
+
                 <section class="formulario">
                     <div class="container">
+
+                        <!-- TÍTULO GLOBAL EN TODAS LAS PÁGINAS -->
+
                         <div class="title">
                             <h1>CONTÁCTENOS PARA MÁS INFORMACIÓN</h1>
                         </div>
+
+                        <!-- CONTENIDO DEL FORMULARIO -->
+
                         <div class="contenido">
+
+                            <!-- IFRAME DIRECTAMENTE DE ODOO PARA EL FORMULARIO Y RECOPILACIÓN -->
+
                             <div class="col-form">
                                 <iframe src="https://vacilandia-park.odoo.com/corporativos-y-empresas"
                                     frameborder="0"></iframe>
                             </div>
+
+                            <!-- IMÁGEN DE ACORDE A LA PÁGINA WEB-->
+
                             <div class="content">
                                 <img loading="lazy" decoding="async"
                                     src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_700/q_auto/f_auto/v1/Materials/Campeonatos%20deportivos/DSC_8271-min_vzndld.jpg"
@@ -662,12 +844,21 @@
 
             <footer class="footer">
                 <div class="container">
+
+                    <!-- PRIMERA FILA DEL FOOTER LOGO / BOTONES DE NAVEGACIÓN -->
+
                     <div class="row">
+
+                        <!-- LOGO DEL FOOTER  -->
+
                         <div class="col">
                             <img decoding="async" loading="lazy"
                                 src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_300/q_auto/f_auto/v1/Materials/Logos/s7bdcd2tqqmlceg1t5fj"
                                 alt="">
                         </div>
+
+                        <!-- ATRACCIONES -->
+
                         <div class="col">
                             <h1>ATRACCIONES</h1>
                             <ul>
@@ -677,6 +868,9 @@
                                 <li><a href="Canchas-Deportivas">CANCHAS DEPORTIVAS</a></li>
                             </ul>
                         </div>
+
+                        <!-- GASTRONOMÍA -->
+
                         <div class="col">
                             <h1>GASTRONOMÍA</h1>
                             <ul>
@@ -685,6 +879,9 @@
                                 <li><a href="Rincón-Chelero">RINCÓN CHELERO</a></li>
                             </ul>
                         </div>
+
+                        <!-- SERVICIOS -->
+
                         <div class="col">
                             <h1>SERVICIOS</h1>
                             <ul>
@@ -695,6 +892,9 @@
                                 <li><a href="Espacios-Publicitarios">ESPACIOS PUBLICITARIOS</a></li>
                             </ul>
                         </div>
+
+                        <!-- ENTRETENIMIENTO -->
+
                         <div class="col">
                             <h1>ENTRETENIMIENTO</h1>
                             <ul>
@@ -705,6 +905,9 @@
                                 <li><a href="Shows-en-Vivo">SHOWS EN VIVO</a></li>
                             </ul>
                         </div>
+
+                        <!-- MÁS INFORMACIÓN -->
+
                         <div class="col">
                             <h1>MÁS</h1>
                             <ul>
@@ -715,10 +918,16 @@
                             </ul>
                         </div>
                     </div>
+
+                    <!-- BOTONES DE SALIDA -->
+
                     <div class="buttons">
                         <a href="https://vacilandia-park.odoo.com/contactus"><button>CONTACTÁNOS</button></a>
                         <a href="/"><button>VOLVER AL INICIO</button></a>
                     </div>
+
+                    <!-- COPYRIGHT Y DERECHOS DE AUTOR -->
+
                     <div class="terms">
                         <h1>Desarrollado por <a target="_blank"
                                 href="https://www.linkedin.com/in/michael-de-la-cruz-2784951a9/">ZeyN</a> | Vacilandia
@@ -730,13 +939,33 @@
         </main>
     </div>
 
+    <!-- SE CARGA JQUERY -->
+
     <script async src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- SE CARGA LAS LIBRERÍAS JS DE SWIPER CARRUSEL -->
+
     <script async src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
     <script async src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- SE CARGA LA LIBRERÍA DE ICONOS DE FONT AWESOME -->
+
     <script async src="https://kit.fontawesome.com/f8eb9b1ffa.js" crossorigin="anonymous"></script>
+
+    <!-- SE CARGA LA LIBRERÍA DE BARBA.JS PARA LA ANIMACIÓN ENTRE PÁGINAS -->
+
     <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+
+    <!-- SE CARGA LA LIBRERÍA DE GSAP PARA LA ANIMACIÓN SUAVE DE LA PÁGINA WEB -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- ESTILOS PROPIOS DE JAVASCRIPT -->
+
     <script src="script.js"></script>
+
+    <!-- CÓDIGO DE GOOGLE ANALYTICS -->
+
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
