@@ -166,9 +166,9 @@ main {
     margin-left: 50px;
 }
 
-/* NAVBAR */
+/* NAVEGACIÓN PRINCIPAL - NAVBAR */
 
-.navbar {
+.navegacion_principal {
 
     width: calc(100% - 50px);
     position: fixed;
@@ -365,7 +365,7 @@ main {
 
 /* BOTÓN DE MÚSICA */
 
-#music-card {
+#boton_de_musica {
     width: 100%;
 
     #play-button {
@@ -382,7 +382,7 @@ main {
 
 /* PANTALLA DE CARGA */
 
-.load-container {
+.pantalla_de_carga {
     position: fixed;
     top: 0;
     left: 0;
@@ -416,7 +416,7 @@ main {
 
 /* BOTÓN DE WHATSAPP */
 
-#whatsapp-button {
+#boton_de_whatsapp {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -528,7 +528,7 @@ main {
 
 /* BARRA VERTICAL DE NAVEGACIÓN DERECHO*/
 
-.subnavbar {
+.barra_vertical {
     width: 50px;
     height: 100%;
     background: $blanco;
@@ -574,7 +574,7 @@ main {
 
 /* CONTENEDOR DE INFORMACIÓN DE LA BARRA VERTICAL DE NAVEGACIÓN */
 
-.info-container {
+.contenedor_informacion {
     position: fixed;
     top: 0;
     left: -100%;
@@ -732,7 +732,7 @@ main {
 
 /* PANEL DE RESPONSIVE DEL NAVBAR */
 
-#menuPanel {
+#responsive_navegacion {
     display: none;
     background: $blanco;
     color: $blanco;
@@ -785,7 +785,7 @@ main {
 
 /* 01 - SECCIÓN DEL BANNER PRINCIPAL DE INICIO */
 
-.promos {
+.banner_principal {
     display: flex;
     height: 520px;
     justify-content: center;
@@ -888,7 +888,7 @@ main {
 
 /* 03 - SECCIÓN DE PANEL DE NAVEGACIÓN */
 
-.subpanel {
+.panel_de_navegacion {
     padding: $espacio 0;
     display: flex;
     justify-content: center;
@@ -959,7 +959,7 @@ main {
 
 /* 04 - SECCIÓN DE PRECIOS Y PROMOCIONES */
 
-.carta {
+.promociones_precios {
     padding: $espacio 0;
 
     .tab-content {
@@ -1515,7 +1515,7 @@ main {
 
 /* 09 - SECCIÓN DE ENLACE A MAPA INTERACTIVO */
 
-.fill-section {
+.enlace_a_mapa {
     background: linear-gradient(45deg, rgba($rgba-verde, 0.9), rgba($rgba-verde, 0.9)), url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Otros/k1woujpafqqml8gq7ofr);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1601,7 +1601,7 @@ main {
 
 /* 10 - SECCIÓN DE UBICACIÓN GMAPS */
 
-.mapa {
+.ubicacion {
     display: flex;
     justify-content: center;
 
@@ -1747,7 +1747,7 @@ main {
 
 /* 11 - SECCIÓN DE PREGUNTAS Y RESPUESTAS*/
 
-.faq-section {
+.preguntas_y_respuestas {
     padding: $espacio 0;
     display: flex;
     justify-content: center;
@@ -1825,7 +1825,7 @@ main {
 
 /* 11.1 - SE REUTILIZA LA SECCIÓN 11 PARA EL MENUPANEL*/
 
-#nav-responsive {
+#contenido_nav_responsive {
 
     .container {
         overflow-x: auto;
@@ -1949,7 +1949,7 @@ main {
 
 /* 13 - SECCIÓN DE TARJETAS PARA PRESENTACIÓN DE IMAGEN Y TEXTO */
 
-.cards-globales {
+.tarjetas {
     padding: $espacio 0;
     display: flex;
     justify-content: center;
@@ -2305,7 +2305,7 @@ main {
 
 /* 16 - SECCIÓN DE TARJETAS SECUNDARIAS */
 
-.galeria-2 {
+.carrusel_texto_imagen {
     padding: $espacio 0;
     display: flex;
     justify-content: center;
@@ -2441,7 +2441,7 @@ main {
 
 /* 19 - SECCIÓN DE INFORMACIÓN BREVE E IMAGEN */
 
-.info {
+.introduccion {
     padding: $espacio 0;
     display: flex;
     justify-content: center;
@@ -2709,7 +2709,7 @@ main {
 
 /* 22 - SECCIÓN PARA LOS PLATOS O CARTA GASTRONÓMICA*/
 
-.platos {
+.carta_gastronomica {
     justify-content: center;
     padding: $espacio 0;
 
@@ -2802,7 +2802,7 @@ main {
 
 /* 23 - SECCIÓN DE INFORMACIÓN DE PDF CON QR */
 
-.pdf {
+.seccion_pdf {
     background: linear-gradient(45deg, rgba($rgba-naranja, 0.9), rgba($rgba-rojo, 0.9)), url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Otros/k1woujpafqqml8gq7ofr);
     background-repeat: no-repeat;
     background-size: cover;
@@ -2817,7 +2817,7 @@ main {
         max-width: $tamaño_maximo;
         width: 100%;
 
-        .carta-pdf {
+        .promociones_precios-pdf {
             width: 40%;
             height: auto;
             border-radius: 20px;
@@ -2866,7 +2866,7 @@ main {
 
 /* 24 - SECCIÓN DE IMAGENES ESTILO CARRUSEL VERTICAL */
 
-.galeria-4 {
+.carrusel_imagenes {
     padding: $espacio;
 
     .container {
@@ -2931,7 +2931,7 @@ main {
 
 /* 25 - SECCIÓN DE IMAGENES ESTILO CARRUSEL HORIZONTAL */
 
-#galeria-3 {
+#carrusel_caracteristicas {
     width: 100%;
     height: auto;
     background: linear-gradient(45deg, rgba($rgba-purpura, 0.9), rgba($rgba-celeste, 0.9)), url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Entretenimiento/7.%20RECORRIDO%20CORAZONES);
@@ -3000,7 +3000,7 @@ main {
 
 /* 26 - SECCIÓN DE FORMULARIO DE CONTACTO */
 
-.formulario {
+.formulario_de_contacto {
     padding: $espacio 0;
     display: flex;
     justify-content: center;
@@ -3050,7 +3050,7 @@ main {
 
 /* 27 - SECCIÓN PARA INFORMACIÓN DE PAQUETES EN CARRUSEL */
 
-.paqs {
+.paquetes_informacion {
     padding: $espacio 0;
     display: flex;
     justify-content: center;
@@ -3135,7 +3135,7 @@ main {
 
 /* 28 - SECCIÓN DE FILAS PARA LA PÁGINA NOSOTROS */
 
-.wave {
+.informacion_empresa {
     width: 100%;
     display: flex;
     align-items: center;
@@ -3319,7 +3319,7 @@ main {
 
 /* 30 - SECCIÓN PARA EL MAPA DEL PARQUE */
 
-.mappark {
+.mapa_del_parque {
     display: flex;
     justify-content: center;
     padding: $espacio 0;
@@ -3402,7 +3402,7 @@ main {
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 
 @media (max-width: 1100px) {
-    #whatsapp-button {
+    #boton_de_whatsapp {
         bottom: 60px;
     }
 
@@ -3419,7 +3419,7 @@ main {
         width: calc(100% - 25px);
     }
 
-    .wave .col-text {
+    .informacion_empresa .col-text {
         width: calc(100% - 35px);
     }
 
@@ -3427,7 +3427,7 @@ main {
         margin: 0;
     }
 
-    .subnavbar {
+    .barra_vertical {
         width: 100%;
         height: 50px;
         bottom: 0;
@@ -3441,24 +3441,24 @@ main {
 
     /* INFO CONTAINER */
 
-    .info-container {
+    .contenedor_informacion {
         left: -200%;
         padding: 0;
         width: 100%;
         overflow-y: auto;
     }
 
-    .promos .articulo,
+    .banner_principal .articulo,
     .promociones {
         border-radius: 0;
     }
 
-    .platos .container,
-    .galeria-2 .container {
+    .carta_gastronomica .container,
+    .carrusel_texto_imagen .container {
         padding: 0;
     }
 
-    .info .text {
+    .introduccion .text {
         background: none;
 
         h1,
@@ -3468,36 +3468,36 @@ main {
     }
 
     .canchas,
-    .info,
-    .galeria-4,
-    .platos,
-    .pdf,
-    .carta,
+    .introduccion,
+    .carrusel_imagenes,
+    .carta_gastronomica,
+    .seccion_pdf,
+    .promociones_precios,
     .atracciones,
     .entretenimiento,
     .servicios,
-    .mapa,
-    .fill-section,
+    .ubicacion,
+    .enlace_a_mapa,
     .gastronomia,
-    .subpanel,
+    .panel_de_navegacion,
     .reseñas,
-    .faq-section,
+    .preguntas_y_respuestas,
     .piscinas,
-    .cards-globales,
+    .tarjetas,
     .galeria,
-    .galeria-2,
-    .paqs,
+    .carrusel_texto_imagen,
+    .paquetes_informacion,
     .title-3,
-    .mappark,
+    .mapa_del_parque,
     .trabajo,
-    .formulario,
+    .formulario_de_contacto,
     .animales,
     .promociones .text {
         padding: 20px;
         overflow: hidden;
     }
 
-    .formulario {
+    .formulario_de_contacto {
         .contenido {
             flex-direction: column;
             border-radius: 20px;
@@ -3531,7 +3531,7 @@ main {
 
     /* NAVBAR */
 
-    .navbar {
+    .navegacion_principal {
         width: 100%;
 
         .hamburguer {
@@ -3552,7 +3552,7 @@ main {
         }
     }
 
-    #menuPanel {
+    #responsive_navegacion {
         display: block;
     }
 }
@@ -3584,7 +3584,7 @@ main {
 
     /* promos */
 
-    .promos {
+    .banner_principal {
         .contenido {
             width: 100%;
             order: 2;
@@ -3595,7 +3595,7 @@ main {
         }
     }
 
-    .paqs {
+    .paquetes_informacion {
         .card {
             flex-direction: column;
         }
@@ -3616,7 +3616,7 @@ main {
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 600PX */
 
 @media (max-width: 600px) {
-    .subpanel .container {
+    .panel_de_navegacion .container {
         flex-direction: column;
 
         .box {
@@ -3642,7 +3642,7 @@ main {
         }
     }
 
-    .mapa .container {
+    .ubicacion .container {
         .contenido {
             flex-direction: column;
         }
@@ -3668,7 +3668,7 @@ main {
         }
     }
 
-    .pdf {
+    .seccion_pdf {
         .container {
             flex-direction: column;
 
@@ -3677,7 +3677,7 @@ main {
             }
         }
 
-        .carta-pdf {
+        .promociones_precios-pdf {
             width: 100%;
         }
 
@@ -3690,7 +3690,7 @@ main {
         }
     }
 
-    .info {
+    .introduccion {
         .container {
             flex-direction: column;
         }

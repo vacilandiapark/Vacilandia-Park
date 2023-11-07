@@ -4,7 +4,7 @@ window.onbeforeunload = function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   let hamburguer;
-  let menuPanel;
+  let responsive_navegacion;
   let closeButton;
   let faqItems;
   let modal;
@@ -13,15 +13,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function initializeHamburguer() {
     hamburguer = document.querySelector(".hamburguer");
-    menuPanel = document.getElementById("menuPanel");
-    closeButton = document.querySelector("#menuPanel .close-button");
+    responsive_navegacion = document.getElementById("responsive_navegacion");
+    closeButton = document.querySelector("#responsive_navegacion .close-button");
 
     hamburguer.addEventListener("click", function () {
-      menuPanel.classList.add("open");
+      responsive_navegacion.classList.add("open");
     });
 
     closeButton.addEventListener("click", function () {
-      menuPanel.classList.remove("open");
+      responsive_navegacion.classList.remove("open");
     });
   }
 
@@ -205,7 +205,7 @@ var isPlaying = false;
 function closeCard() {
   // Detenemos la música y ocultamos la tarjeta al hacer clic en el botón de cierre
   audio.pause();
-  document.getElementById('music-card').style.display = 'none';
+  document.getElementById('boton_de_musica').style.display = 'none';
 }
 
 function playMusic() {
@@ -284,7 +284,7 @@ function toggleInfo(infoNumber) {
   const isOpen = infoContainers[0].classList.contains('active');
 
   // Cerrar todos los contenedores activos
-  const allInfoContainers = document.querySelectorAll('.info-container');
+  const allInfoContainers = document.querySelectorAll('.contenedor_informacion');
   allInfoContainers.forEach(container => {
     container.classList.remove('active');
   });
