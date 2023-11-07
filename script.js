@@ -1,6 +1,4 @@
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
+/* CÓDIGO PARA SCRIPTS QUE INTERFIEREN CON LA ANIMACIÓN DE BARBA.JS SE UNIFICA TODO*/
 
 document.addEventListener("DOMContentLoaded", function () {
   let hamburguer;
@@ -10,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let modal;
   let modalContent;
   let closeModal;
+
+  /* CÓDIGO PARA LA HAMBURGUESA DEL NAVBAR EN RESPONSIVE */
 
   function initializeHamburguer() {
     hamburguer = document.querySelector(".hamburguer");
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-
+  /* CÓDIGO PARA LA AMPLIACIÓN DE IMAGEN EN MODO MODAL */
 
   function initializeModal() {
     modal = document.getElementById("modal");
@@ -49,7 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Función para inicializar preguntas y respuestas
+  // CÓDIGO PARA ABRIR LAS RESPUESTAS DE LAS PREGUNTAS EN PREGUNTAS_Y_RESPUESTAS //
+
   function initializeFAQ() {
     faqItems = document.querySelectorAll('.faq-item');
 
@@ -75,6 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
+    // Para cerrar las respuestas //
+
     function closeAllQuestions() {
       faqItems.forEach(item => {
         const answerWrapper = item.querySelector('.answer-wrapper');
@@ -87,8 +90,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  /* CÓDIGO PARA INICIAR LA DURACIÓN DE LA TRANSICIÓN ENTRE PÁGINAS*/
 
   // Función para introducir una pausa (delay) antes de completar una transición
+
   function delay(n) {
     n = n || 700; // Puedes ajustar la duración del retraso aquí
     return new Promise((done) => {
@@ -99,13 +104,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Función para obtener un color aleatorio de una lista de colores
+
   function getRandomColor() {
     const colors = ["#EC2127", "#EA0B8B", "#F58220", "#FFD200", "#77C043", "#2BABE2", "#724C9F", "#432F87"];
     const randomIndex = Math.floor(Math.random() * colors.length);
     return colors[randomIndex];
   }
 
-  // Función para manejar la transición de la página
+  // FUNCIÓN PARA MANEJAR LA TRANSICIÓN DE LA PÁGINA WEB //
+
   function pageTransition() {
     var tl = gsap.timeline();
     tl.to(".loading-screen", {
@@ -129,7 +136,8 @@ document.addEventListener("DOMContentLoaded", function () {
     tl.set(".loading-screen", { left: "-100%" });
   }
 
-  // Función para animar el contenido de la página
+  // FUNCIÓN PARA ANIMAR EL CONTENIDO DE LA PÁGINA //
+
   function contentAnimation() {
     var tl = gsap.timeline();
     tl.from(".animate-this", {
@@ -139,17 +147,22 @@ document.addEventListener("DOMContentLoaded", function () {
       stagger: 0.4,
       delay: 0.2,
       onComplete: function () {
-        initializeHamburguer(); // Inicializar hamburguesa
-        initializeFAQ(); // Inicializar preguntas y respuestas
+
+        // INICIAMOS LAS FUNCIONES DESPUÉS DE INICIAR LA TRANSICIÓN DE BARBA Y GSAP
+
+        initializeHamburguer();
+        initializeFAQ();
         initializeModal();
       }
     });
   }
 
-  // Ejecutar la animación de transición
+  // EJECUTAMOS LA ANIMACIÓN DE LA PÁGINA //
+
   pageTransition();
 
-  // Configuración de Barba.js
+  // CONFIGURACIÓN DE BARBA.JS //
+
   barba.init({
     sync: true,
     transitions: [
@@ -173,6 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// CÓDIGO PARA DESGLOSAR OPCIONES DEL BOTÓN COMPRAR TICKETS DEL NAVBAR // 
 
 function toggleDropdown() {
   var dropdown = document.querySelector(".dropdown-content");
@@ -196,6 +210,8 @@ function toggleDropdown() {
   });
 }
 
+
+// CÓDIGO PARA EL BOTÓN DE MÚSICA EN LA BARRA LATERAL //
 
 // Obtenemos el elemento de audio y el botón de reproducción
 var playButton = document.getElementById('play-button');
@@ -225,11 +241,7 @@ function playMusic() {
 }
 
 
-
-
-/* CARTA */
-
-
+/* FUNCIÓN PARA EL OVERLAY INFORMATIVO DE LA SECCIÓN PROMOCIONES AL PRESIONAR "MÁS INFORMACIÓN" */
 
 function showOverlay(event) {
   const card = event.currentTarget.closest(".card");
@@ -254,8 +266,7 @@ function showOverlay(event) {
 }
 
 
-
-
+// FUNCIÓN PARA LAS PESTAÑAS DE LA CARTA GASTRONÓMICA E INTERACTUAR CON ELLAS //
 
 // Función para cambiar la pestaña activa
 function changeTab(tabIndex) {
@@ -274,6 +285,7 @@ function changeTab(tabIndex) {
   tabContents[tabIndex - 1].classList.add('active');
 }
 
+// FUNCIÓN PARA ABRIR EL CONTENEDOR DE INFORMACIÓN DE LA BARRA LATERAL //
 
 
 function toggleInfo(infoNumber) {
@@ -306,7 +318,7 @@ function closeInfo(infoNumber) {
   infoContainer.classList.remove('active');
 }
 
-
+// FUNCIÓN PARA PODER ABRIR LA MODAL DE LA IMAGEN DE GALERÍA //
 
 function openModal(imageSrc) {
   var modal = document.getElementById("modal");
