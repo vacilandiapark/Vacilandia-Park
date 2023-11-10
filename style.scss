@@ -122,6 +122,10 @@ body {
     background: #EFEFEF;
     box-sizing: border-box;
     scroll-behavior: smooth;
+
+    &#concierto {
+        background: $concierto_primario;
+    }
 }
 
 /* IMG y VIDEO PERSONALIZABLE CON SATURACIÓN */
@@ -173,6 +177,39 @@ main {
     width: calc(100% - 50px);
     position: fixed;
     z-index: 5;
+
+    &#concierto {
+        .row {
+
+            background: $concierto_secundario;
+
+            li {
+
+                a {
+
+                    color: $blanco;
+                }
+            }
+
+            .submenu{
+
+                li{
+
+                    a{
+                        color: $concierto_secundario;
+                    }
+                }
+            }
+
+            .icons{
+
+                i{
+
+                    color: $blanco;
+                }
+            }
+        }
+    }
 
     .row {
         display: flex;
@@ -536,6 +573,11 @@ main {
     position: fixed;
     z-index: 7;
 
+    &#concierto{
+        
+        background: $concierto_secundario;
+    }
+
     .container {
         display: flex;
         flex-direction: column;
@@ -789,6 +831,15 @@ main {
     display: flex;
     height: 520px;
     justify-content: center;
+
+    &#concierto {
+        height: 450px !important;
+        padding: 0;
+
+        .articulo {
+            max-width: $tamaño_maximo;
+        }
+    }
 
     .articulo {
         max-width: 1200px;
@@ -1444,6 +1495,10 @@ main {
     justify-content: center;
     padding: $espacio 0;
 
+    &#concierto {
+        background: none;
+    }
+
     .container {
         max-width: $tamaño_maximo;
         width: 100%;
@@ -1670,6 +1725,13 @@ main {
 .footer {
     display: flex;
     justify-content: center;
+
+    &#concierto{
+
+        .container{
+            background: $concierto_secundario;
+        }
+    }
 
     .container {
         background: linear-gradient(45deg, rgba($rgba-morado, 0.7), rgba($rgba-rosado, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:%23ffffff;display:block;z-index:1;position:relative" width="1920" height="733" preserveAspectRatio="xMidYMid" viewBox="0 0 1920 733"><g transform="translate(960,366.5) scale(1,1) translate(-960,-366.5)"><linearGradient id="lg-0.6414523159003382" x1="0" x2="1" y1="0" y2="0"><stop stop-color="%23432f87" offset="0"></stop><stop stop-color="%23432f87" offset="1"></stop></linearGradient><path d="" fill="url(%23lg-0.6414523159003382)" opacity="0.4"><animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" begin="0s" values="M0 0L 0 283.67101309538634Q 192 251.90884526447005 384 219.90646049124118T 768 299.4509100285186T 1152 270.42778080305214T 1536 218.3149507416504T 1920 89.43474323894026L 1920 0 Z;M0 0L 0 256.4143765620531Q 192 299.7801522037929 384 275.15966155989605T 768 262.2504295479387T 1152 178.41284475969195T 1536 197.5822468834999T 1920 127.96264806421516L 1920 0 Z;M0 0L 0 356.4713497916909Q 192 253.36828550994926 384 218.7997337945651T 768 276.6406492885463T 1152 199.16649389647478T 1536 226.55369246880318T 1920 146.09582312717635L 1920 0 Z;M0 0L 0 283.67101309538634Q 192 251.90884526447005 384 219.90646049124118T 768 299.4509100285186T 1152 270.42778080305214T 1536 218.3149507416504T 1920 89.43474323894026L 1920 0 Z"></animate></path><path d="" fill="url(%23lg-0.6414523159003382)" opacity="0.4"><animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" begin="-2s" values="M0 0L 0 319.11899333912424Q 192 342.44715892858386 384 323.3705368708085T 768 188.31197766532387T 1152 206.3977365614634T 1536 260.0630856779243T 1920 192.7027560727124L 1920 0 Z;M0 0L 0 322.5803039795676Q 192 229.39986654594563 384 204.19325867766983T 768 223.91297831196093T 1152 190.92343104493193T 1536 205.9548905536828T 1920 116.48944682183478L 1920 0 Z;M0 0L 0 278.01581311325333Q 192 357.7116843618869 384 326.47377518937094T 768 189.95166733320247T 1152 238.77923407518517T 1536 194.79213308826797T 1920 229.76568114706322L 1920 0 Z;M0 0L 0 319.11899333912424Q 192 342.44715892858386 384 323.3705368708085T 768 188.31197766532387T 1152 206.3977365614634T 1536 260.0630856779243T 1920 192.7027560727124L 1920 0 Z"></animate></path><path d="" fill="url(%23lg-0.6414523159003382)" opacity="0.4"><animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" begin="-4s" values="M0 0L 0 265.70792357537226Q 192 325.22216839240366 384 308.09574833381487T 768 284.299085417025T 1152 151.69916492672928T 1536 143.23381353212494T 1920 173.4754185299112L 1920 0 Z;M0 0L 0 300.28048798354644Q 192 315.08891322627363 384 279.73950821969436T 768 190.00694883403486T 1152 252.67385647634717T 1536 237.21356941230746T 1920 108.84577570387708L 1920 0 Z;M0 0L 0 248.25846334993983Q 192 305.09726028659037 384 281.1192359766636T 768 211.52210365369277T 1152 263.5222112452816T 1536 189.94224228611233T 1920 137.51683681406817L 1920 0 Z;M0 0L 0 265.70792357537226Q 192 325.22216839240366 384 308.09574833381487T 768 284.299085417025T 1152 151.69916492672928T 1536 143.23381353212494T 1920 173.4754185299112L 1920 0 Z"></animate></path><path d="" fill="url(%23lg-0.6414523159003382)" opacity="0.4"><animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" begin="-6s" values="M0 0L 0 286.3493905363014Q 192 342.28420876834826 384 314.8956215557967T 768 215.98284531743803T 1152 260.90811640334937T 1536 216.50072421424076T 1920 178.36056007245588L 1920 0 Z;M0 0L 0 356.8625319430233Q 192 355.9450988834828 384 322.88040687433835T 768 305.87326091898814T 1152 163.61380961400653T 1536 153.31345546376107T 1920 210.78092083370515L 1920 0 Z;M0 0L 0 314.1642929577042Q 192 296.2839880062296 384 275.74125569654603T 768 178.8165812149103T 1152 217.30665057415231T 1536 232.7583527371458T 1920 161.3447175282529L 1920 0 Z;M0 0L 0 286.3493905363014Q 192 342.28420876834826 384 314.8956215557967T 768 215.98284531743803T 1152 260.90811640334937T 1536 216.50072421424076T 1920 178.36056007245588L 1920 0 Z"></animate></path><path d="" fill="url(%23lg-0.6414523159003382)" opacity="0.4"><animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" begin="-8s" values="M0 0L 0 314.4635413808246Q 192 318.68786048494786 384 280.964277423555T 768 241.46074570631606T 1152 269.55787020074393T 1536 173.91253022947163T 1920 132.84624080679197L 1920 0 Z;M0 0L 0 364.7365876051235Q 192 331.5103366576035 384 293.6633783753306T 768 204.87922582630816T 1152 170.6802348569447T 1536 130.9372347072474T 1920 178.07010597963594L 1920 0 Z;M0 0L 0 337.40078620761733Q 192 290.73326277397297 384 266.7934235130969T 768 305.7026594666869T 1152 163.84949370980084T 1536 166.04794457687478T 1920 153.54521712495676L 1920 0 Z;M0 0L 0 314.4635413808246Q 192 318.68786048494786 384 280.964277423555T 768 241.46074570631606T 1152 269.55787020074393T 1536 173.91253022947163T 1920 132.84624080679197L 1920 0 Z"></animate></path></g></svg>');
@@ -1978,6 +2040,29 @@ main {
     &#piscinas,
     &#zona_gamer {
         background: linear-gradient(45deg, rgba($rgba-blanco, 0.9), rgba($rgba-blanco, 0.9)), url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Atracciones/jni1dtqt2oajft7o6osp);
+    }
+
+    &#concierto {
+        background: none;
+
+        .container {
+
+            .title {
+
+                h1 {
+                    color: $blanco;
+                }
+            }
+
+            .card {
+
+                height: auto;
+
+                &::after {
+                    background: linear-gradient(to top, $concierto_secundario, transparent);
+                }
+            }
+        }
     }
 
     .container {
