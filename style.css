@@ -1414,6 +1414,9 @@ main {
 .footer#concierto .container {
   background: #000000;
 }
+.footer#concierto .container li {
+  color: #fff;
+}
 .footer .container {
   background: #fff;
   width: 100%;
