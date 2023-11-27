@@ -2075,16 +2075,6 @@ main {
         }
     }
 
-    &#concierto {
-        background: linear-gradient(45deg, rgba($rgba-rojo, 0.9), rgba($rgba-rosado, 0.9)), url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Atracciones/jni1dtqt2oajft7o6osp);
-
-        .title {
-            h1 {
-                color: $blanco;
-            }
-        }
-    }
-
     &#paseos_y_reencuentros {
         .title {
             h1 {
@@ -2099,7 +2089,7 @@ main {
     }
 
     &#concierto {
-        background: none;
+        background: linear-gradient(45deg, rgba($rgba-rojo, 0.9), rgba($rgba-rosado, 0.9)), url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Atracciones/jni1dtqt2oajft7o6osp);
 
         .container {
 
