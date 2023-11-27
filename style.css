@@ -2139,7 +2139,7 @@ main {
   background: linear-gradient(45deg, rgba(43, 171, 226, 0.9), rgba(255, 210, 0, 0.9)), url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/Materials/Canchas%20Deportivas/DJI_0113-min_r7vuby.jpg);
 }
 .animales#concierto .card {
-  height: calc(auto - 5px);
+  height: auto;
 }
 .animales#concierto .card .text h1 {
   color: #2BABE2;
