@@ -1517,6 +1517,12 @@ main {
 
     &#concierto {
         background: none;
+
+        .title{
+            h1{
+                color: $blanco;
+            }
+        }
     }
 
     .container {
@@ -1680,6 +1686,14 @@ main {
     display: flex;
     justify-content: center;
 
+    &#concierto{
+        .title{
+            h1{
+                color: $blanco;
+            }
+        }
+    }
+
     .container {
         max-width: $tamaño_maximo;
         width: 100%;
@@ -1753,6 +1767,10 @@ main {
 
             li{
                 color: $blanco;
+
+                a{
+                    color: $blanco;
+                }
             }
         }
     }

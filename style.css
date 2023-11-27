@@ -1219,6 +1219,9 @@ main {
 .reseñas#concierto {
   background: none;
 }
+.reseñas#concierto .title h1 {
+  color: #fff;
+}
 .reseñas .container {
   max-width: 1000px;
   width: 100%;
@@ -1354,6 +1357,9 @@ main {
   display: flex;
   justify-content: center;
 }
+.ubicacion#concierto .title h1 {
+  color: #fff;
+}
 .ubicacion .container {
   max-width: 1000px;
   width: 100%;
@@ -1415,6 +1421,9 @@ main {
   background: #000000;
 }
 .footer#concierto .container li {
+  color: #fff;
+}
+.footer#concierto .container li a {
   color: #fff;
 }
 .footer .container {
