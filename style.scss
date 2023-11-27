@@ -1518,8 +1518,8 @@ main {
     &#concierto {
         background: none;
 
-        .title{
-            h1{
+        .title {
+            h1 {
                 color: $blanco;
             }
         }
@@ -1686,9 +1686,9 @@ main {
     display: flex;
     justify-content: center;
 
-    &#concierto{
-        .title{
-            h1{
+    &#concierto {
+        .title {
+            h1 {
                 color: $blanco;
             }
         }
@@ -1765,16 +1765,16 @@ main {
         .container {
             background: $concierto_secundario;
 
-            .col{
-                h1{
+            .col {
+                h1 {
                     color: $blanco;
                 }
             }
 
-            li{
+            li {
                 color: $blanco;
 
-                a{
+                a {
                     color: $blanco;
                 }
             }
@@ -2317,8 +2317,8 @@ main {
     padding: $espacio 0;
 
     &#concierto {
-        .title{
-            h1{
+        .title {
+            h1 {
                 color: $blanco;
             }
         }
@@ -2685,6 +2685,28 @@ main {
     padding: $espacio 0;
     display: flex;
     justify-content: center;
+
+    &#concierto {
+        background: linear-gradient(45deg, rgba($rgba-celeste, 0.9), rgba($rgba-amarillo, 0.9)), url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/Materials/Canchas%20Deportivas/DJI_0113-min_r7vuby.jpg);
+
+        .card{
+            height: auto;
+
+            .text {
+                h1 {
+                    color: $celeste;
+                }
+
+                p {
+                    margin: 5px 0;
+                    font-family: $fuente_secundaria;
+                    font-size: $texto_pequeña;
+                    color: $gris;
+                    padding: 0px 20px;
+                }
+            }
+        }
+    }
 
     .container {
         max-width: $tamaño_maximo;
