@@ -1420,6 +1420,9 @@ main {
 .footer#concierto .container {
   background: #000000;
 }
+.footer#concierto .container .col h1 {
+  color: #fff;
+}
 .footer#concierto .container li {
   color: #fff;
 }
@@ -1852,6 +1855,9 @@ main {
   display: flex;
   justify-content: center;
   padding: 35px 0;
+}
+.galeria#concierto .title h1 {
+  color: #fff;
 }
 .galeria .container {
   max-width: 1000px;

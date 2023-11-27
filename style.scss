@@ -1765,6 +1765,12 @@ main {
         .container {
             background: $concierto_secundario;
 
+            .col{
+                h1{
+                    color: $blanco;
+                }
+            }
+
             li{
                 color: $blanco;
 
@@ -2309,6 +2315,14 @@ main {
     display: flex;
     justify-content: center;
     padding: $espacio 0;
+
+    &#concierto {
+        .title{
+            h1{
+                color: $blanco;
+            }
+        }
+    }
 
     .container {
         max-width: $tamaño_maximo;
