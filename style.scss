@@ -3576,6 +3576,53 @@ main {
     }
 }
 
+/* 32 - SECCIÓN PARA HORARIOS */
+
+.horario{
+    padding-top: $espacio;
+
+    .container{
+        max-width: $tamaño_maximo;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+        overflow-x: auto;
+
+        .dia{
+            background: rgba($rgba-rojo, 0.8);
+            border-radius: 10px;
+            width: 100%;
+            padding: 15px 0;
+            box-shadow: $sombra;
+            color: $blanco;
+            text-transform: uppercase;
+            border: 2px solid $rojo;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &#abierto{
+                background: rgba($rgba-verde, 0.8);
+                color: $blanco;
+                border: 2px solid $verde;
+            }
+
+            h1{
+                font-family: $fuente_primaria;
+                font-size: $texto_mediana;
+            }
+
+            p{
+                font-family: $fuente_terciaria;
+                font-size: $texto_pequeña;
+            }
+        }
+    }
+}
+
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
