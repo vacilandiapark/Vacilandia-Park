@@ -3868,6 +3868,15 @@ main {
         }
     }
 
+    .horario{
+
+        padding: 20px 20px;
+
+        .container{
+            flex-direction: column;
+        }
+    }
+
     .ubicacion .container {
         .contenido {
             flex-direction: column;

@@ -3104,6 +3104,12 @@ main {
   .gastronomia .col-2 {
     width: 100% !important;
   }
+  .horario {
+    padding: 20px 20px;
+  }
+  .horario .container {
+    flex-direction: column;
+  }
   .ubicacion .container .contenido {
     flex-direction: column;
   }
