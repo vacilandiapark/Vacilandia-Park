@@ -1,0 +1,3174 @@
+@charset "UTF-8";
+/* VARIABLES */
+/* VARIABLES DEL CONCIERTO */
+/* GLOBALES */
+/* TÍTULO PERSONALIZADO GLOBAL */
+.title {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  text-align: center;
+  /* Establecemos posición relativa en el contenedor */
+}
+.title h1 {
+  font-size: 2rem;
+  font-family: "Lilita One", sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  width: auto;
+  color: #432A88;
+  z-index: 4;
+}
+.title p {
+  font-size: 1rem;
+  color: #777777;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+/* CONTAINER PARA EL TÍTULO */
+.title-3 {
+  padding: 35px 0 0 0;
+}
+
+/* BOTÓN PERSONALIZADO GLOBAL */
+button {
+  width: auto;
+  border: none;
+  height: 100%;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: #432A88;
+  color: #fff;
+  font-size: 0.75rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+button:hover {
+  filter: brightness(110%);
+}
+button#celeste {
+  background: #2BABE2;
+}
+button#amarillo {
+  background: #FFD200;
+}
+
+/* CUERPO DE LA PÁGINA WEB */
+body {
+  margin: 0;
+  padding: 0;
+  background: #EFEFEF;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body#concierto {
+  background: #191919;
+}
+
+/* IMG y VIDEO PERSONALIZABLE CON SATURACIÓN */
+img,
+video {
+  filter: saturate(150%);
+}
+
+/* SE RETIRA MARGIN Y PADDING DE LAS LISTAS DESORDENADAS */
+ul {
+  padding: 0 15px;
+  margin: 0;
+}
+
+/* QUITAMOS LA DECORACIÓN POR DEFECTO DE <a>*/
+a {
+  text-decoration: none;
+}
+
+/* SE PERSONALIZA LOS SELECTORES DE TEXTO */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+b {
+  font-weight: lighter;
+  margin: 0;
+  padding: 0;
+}
+
+/* MARGIN-LEFT DE ACORDE A LA BARRA VERTICAL */
+main {
+  overflow: hidden;
+  margin-left: 50px;
+}
+
+/* NAVEGACIÓN PRINCIPAL - NAVBAR */
+.navegacion_principal {
+  width: calc(100% - 50px);
+  position: fixed;
+  z-index: 5;
+}
+.navegacion_principal#concierto .row {
+  background: #000000;
+}
+.navegacion_principal#concierto .row li a {
+  color: #fff;
+}
+.navegacion_principal#concierto .row .submenu li a {
+  color: #000000;
+}
+.navegacion_principal#concierto .row .icons i {
+  color: #fff;
+}
+.navegacion_principal .row {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  justify-content: space-evenly;
+  width: 100%;
+  background: #fff;
+  z-index: 6;
+}
+.navegacion_principal .row-gradient {
+  height: 30px;
+  /* Altura de la barra de progreso */
+  width: 100%;
+  /* Ancho de la barra de progreso al 100% */
+  background: linear-gradient(to right, #EC2127, #EA0B8B, #F58220, #FFD200, #77C043, #2BABE2, #724C9F, #432A88);
+  /* Fija la barra de progreso en la ventana */
+  top: 0;
+  /* Ubica la barra de progreso en la parte superior */
+  left: 0;
+  transform-origin: left;
+  /* Establece el punto de transformación a la izquierda */
+  transform: scaleX(1);
+  /* Inicialmente, el ancho es 100% */
+  transition: transform 0.3s;
+  /* Animación de transformación */
+}
+.navegacion_principal .navigation {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: 0.75rem;
+  height: 100%;
+}
+.navegacion_principal .navigation li {
+  position: relative;
+  float: left;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  height: 100%;
+  padding: 0 10px;
+  transition: background 0.3s ease-in-out;
+  /* Agregamos una transición suave al fondo */
+}
+.navegacion_principal .navigation li:hover {
+  background: #d3d3d3;
+}
+.navegacion_principal .navigation .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  opacity: 0;
+  /* Inicialmente, el submenu es invisible */
+  transition: opacity 0.3s ease-in-out;
+  /* Agregamos una transición suave a la opacidad */
+  border-radius: 0 0 20px 20px;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+.navegacion_principal .navigation li:hover > .submenu {
+  display: block;
+  opacity: 1;
+  /* Hacemos el submenu visible al hacer hover */
+}
+.navegacion_principal .navigation .submenu li {
+  float: none;
+  width: 200px;
+}
+.navegacion_principal .navigation .submenu li a {
+  padding: 15px 0;
+}
+.navegacion_principal .navigation a {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #777777;
+  font-size: 0.75rem;
+}
+.navegacion_principal .buttons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.navegacion_principal .buttons .dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  min-width: 130px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+  overflow: hidden;
+}
+.navegacion_principal .buttons.open .dropdown-content {
+  display: block;
+}
+.navegacion_principal .buttons .dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  font-weight: bolder;
+}
+.navegacion_principal .buttons .dropdown-content #vaope {
+  background: linear-gradient(to right, #18B5D9, #E2346C, #F2A516);
+}
+.navegacion_principal .buttons .dropdown-content #joinnus {
+  background: linear-gradient(to right, #05F2AF, #000000);
+}
+.navegacion_principal .logo {
+  width: 70px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  padding: 10px;
+  text-align: center;
+}
+.navegacion_principal #venconcierto_logo {
+  width: 50px;
+}
+.navegacion_principal .icons {
+  display: flex;
+  gap: 10px;
+}
+.navegacion_principal .icons i {
+  color: #3b3b3b;
+}
+.navegacion_principal .logo img {
+  width: 100%;
+}
+.navegacion_principal .hamburguer {
+  display: none;
+  color: #432A88;
+  cursor: pointer;
+  font-size: 2rem;
+  padding-right: 20px;
+  z-index: 11;
+}
+
+/* BOTÓN DE MÚSICA */
+#boton_de_musica {
+  width: 100%;
+}
+#boton_de_musica #play-button {
+  /* Altura del botón de reproducción */
+  background: linear-gradient(to top right, #2BABE2, #EA0B8B);
+  font-weight: lighter;
+  cursor: pointer;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* PANTALLA DE CARGA */
+.pantalla_de_carga {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
+}
+.pantalla_de_carga .loading-screen {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  background-color: #2BABE2;
+  width: 0%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pantalla_de_carga .loading-screen .loading-image {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  opacity: 1;
+  /* Inicialmente, la imagen tiene opacidad 0 */
+}
+
+/* BOTÓN DE WHATSAPP */
+#boton_de_whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 5;
+}
+#boton_de_whatsapp #whatsapp-icon {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+}
+#boton_de_whatsapp #whatsapp-icon img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+#boton_de_whatsapp #whatsapp-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* Añade el box-shadow para la primera onda */
+  box-shadow: 0 0 0 0 rgba(0, 255, 51, 0.8);
+  /* Inicia la animación */
+  animation: colorWaveAnimation1 1.5s infinite;
+  /* Asegura que el pseudo-elemento esté detrás del icono */
+  z-index: -1;
+}
+#boton_de_whatsapp #whatsapp-icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* Añade el box-shadow para la segunda onda */
+  box-shadow: 0 0 0 0 rgba(0, 255, 51, 0.8);
+  /* Inicia la animación con un retraso para que no se sincronicen */
+  animation: colorWaveAnimation2 1.5s infinite;
+  animation-delay: 0.5s;
+  /* Asegura que el pseudo-elemento esté detrás del icono */
+  z-index: -1;
+}
+#boton_de_whatsapp #whatsapp-icon img:hover {
+  filter: brightness(150%);
+}
+
+/* ANIMACIONES PARA EL BOTÓN DE WHATSAPP */
+@keyframes colorWaveAnimation1 {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 51, 0.8);
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 0 50px rgba(0, 255, 51, 0);
+    opacity: 0;
+  }
+}
+@keyframes colorWaveAnimation2 {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 51, 0.8);
+    opacity: 0.7;
+  }
+  100% {
+    box-shadow: 0 0 0 50px rgba(0, 255, 51, 0);
+    opacity: 0;
+  }
+}
+@keyframes jellyAnimation {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* BARRA VERTICAL DE NAVEGACIÓN DERECHO*/
+.barra_vertical {
+  width: 50px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  z-index: 7;
+}
+.barra_vertical#concierto {
+  background: #000000;
+}
+.barra_vertical .container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  align-items: center;
+  gap: 10px;
+}
+.barra_vertical .item {
+  width: 85%;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  /* Muestra el título al hacer hover */
+}
+.barra_vertical .item svg {
+  width: 100%;
+  width: 25px;
+  color: #777777;
+}
+.barra_vertical .item img {
+  width: 100%;
+}
+.barra_vertical .item p {
+  color: #3b3b3b;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 0.75rem;
+}
+.barra_vertical .item:hover {
+  background: #d3d3d3;
+}
+.barra_vertical .item::after {
+  content: attr(title);
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(10px, -50%);
+  white-space: nowrap;
+  /* Evita que el título se desplace a la siguiente línea */
+  background: #d3d3d3;
+  /* Ajusta según tu diseño */
+  padding: 5px;
+  border-radius: 5px;
+  display: none;
+}
+.barra_vertical .item:hover::after {
+  display: block;
+}
+
+/* CONTENEDOR DE INFORMACIÓN DE LA BARRA VERTICAL DE NAVEGACIÓN */
+.contenedor_informacion {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  /* Inicialmente, fuera de la pantalla */
+  width: 400px;
+  /* Ancho personalizable */
+  height: 100%;
+  /* Alto personalizable */
+  padding-left: 50px;
+  background: #f6f5f5;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  transition: left 0.3s ease;
+  /* Agregar transición */
+  z-index: 6;
+  overflow-y: auto;
+}
+.contenedor_informacion .content {
+  padding: 40px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: start;
+}
+.contenedor_informacion .content .tickets {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  width: 100%;
+}
+.contenedor_informacion .content .tickets .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.contenedor_informacion .content .tickets .row #vaope {
+  background: linear-gradient(to right, #18B5D9, #E2346C, #F2A516);
+}
+.contenedor_informacion .content .tickets .row #joinnus {
+  background: linear-gradient(to right, #05F2AF, #010001);
+}
+.contenedor_informacion .content .tickets .row h5 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 1rem;
+  color: #3b3b3b;
+}
+.contenedor_informacion .content h1 {
+  color: #432A88;
+  font-family: "Lilita One", sans-serif;
+  font-size: 2rem;
+}
+.contenedor_informacion .content h2 {
+  width: auto;
+  color: #fff;
+  font-family: "Lilita One", sans-serif;
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 10px;
+}
+.contenedor_informacion .content p {
+  font-size: 0.75rem;
+  color: #3b3b3b;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.contenedor_informacion .content h2:nth-child(2) {
+  background: linear-gradient(to right, #77C043, #2BABE2);
+}
+.contenedor_informacion .content h2:nth-child(4) {
+  background: linear-gradient(to right, #2BABE2, #724C9F);
+}
+.contenedor_informacion .content h2:nth-child(6) {
+  background: linear-gradient(to right, #EC2127, #F58220);
+}
+.contenedor_informacion .content h2:nth-child(8) {
+  background: linear-gradient(to right, #F58220, #EA0B8B);
+}
+.contenedor_informacion .content h2:nth-child(10) {
+  background: linear-gradient(to right, #77C043, #FFD200);
+}
+.contenedor_informacion .content .image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+}
+.contenedor_informacion .content .image img {
+  width: 100%;
+}
+.contenedor_informacion .content button {
+  width: 100%;
+}
+.contenedor_informacion.active {
+  left: 0;
+  /* Mostrar el contenedor desde la izquierda */
+}
+.contenedor_informacion .close-button {
+  position: absolute;
+  top: 10px;
+  /* Ajusta la posición vertical según tu diseño */
+  right: 10px;
+  /* Ajusta la posición horizontal según tu diseño */
+  background-color: #432A88;
+  /* Cambia el color de fondo según tus preferencias */
+  color: #fff;
+  /* Cambia el color del texto según tus preferencias */
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  /* Ajusta el tamaño según tus preferencias */
+  height: 20px;
+  /* Ajusta el tamaño según tus preferencias */
+  font-size: 12px;
+  /* Ajusta el tamaño del texto según tus preferencias */
+  cursor: pointer;
+}
+
+/* PANEL DE RESPONSIVE DEL NAVBAR */
+#responsive_navegacion {
+  display: none;
+  background: #fff;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: -350px;
+  height: 100%;
+  width: 250px;
+  padding: 20px;
+  z-index: 5;
+  transition: right 0.3s ease;
+}
+#responsive_navegacion .close-button {
+  position: absolute;
+  background: #FFD200;
+  padding: 5px 10px;
+  border-radius: 5px;
+  top: 20px;
+  /* Ajusta la posición vertical según tus preferencias */
+  right: 20px;
+  /* Ajusta la posición horizontal según tus preferencias */
+  cursor: pointer;
+  font-size: 1rem;
+  color: #fff;
+  /* Color de la "x" */
+}
+#responsive_navegacion.open {
+  right: 0;
+}
+#responsive_navegacion .panel-navigation {
+  margin-top: 60px;
+  list-style: none;
+  padding: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+#responsive_navegacion .panel-navigation li {
+  margin: 10px 0;
+}
+#responsive_navegacion .panel-navigation li a {
+  color: #fff;
+}
+
+/* 01 - SECCIÓN DEL BANNER PRINCIPAL DE INICIO */
+.banner_principal {
+  display: flex;
+  height: 520px;
+  justify-content: center;
+}
+.banner_principal#concierto {
+  height: 450px !important;
+  padding: 0;
+}
+.banner_principal#concierto .articulo {
+  max-width: 1000px;
+}
+.banner_principal .articulo {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  margin-top: 115px;
+  cursor: grab;
+  overflow: hidden;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+}
+.banner_principal .articulo video,
+.banner_principal .articulo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 02 - SECCIÓN DE ATRACCIONES */
+.atracciones {
+  padding: 35px 0;
+  display: flex;
+  justify-content: center;
+}
+.atracciones .container {
+  max-width: 1000px;
+  width: 100%;
+}
+.atracciones .carrusel-atracciones {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  padding: 35px 0 0 0;
+}
+.atracciones .carrusel-atracciones .card {
+  border-radius: 20px;
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+}
+.atracciones .carrusel-atracciones .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.atracciones .carrusel-atracciones .text {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.2s ease-in-out;
+}
+.atracciones .carrusel-atracciones .text h1 {
+  margin: 0;
+  padding: 20px;
+  color: #fff;
+  font-family: "Lilita One", sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+}
+.atracciones .carrusel-atracciones swiper-slide:hover img {
+  transform: scale(1.1);
+}
+.atracciones .carrusel-atracciones swiper-slide:hover > .text {
+  padding-bottom: 5px;
+}
+.atracciones .carrusel-atracciones i {
+  position: absolute;
+  z-index: 5;
+  color: #432A88;
+  padding: 10px;
+  transform: translateX(50%);
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+}
+
+/* 03 - SECCIÓN DE PANEL DE NAVEGACIÓN */
+.panel_de_navegacion {
+  padding: 35px 0;
+  display: flex;
+  justify-content: center;
+}
+.panel_de_navegacion .container {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.panel_de_navegacion .container .box {
+  display: flex;
+  position: relative;
+  align-items: center;
+  background: #fff;
+  justify-content: center;
+  height: 100%;
+  padding: 10px 20px 10px 10px;
+  gap: 10px;
+  text-align: left;
+  width: 25%;
+  border-right: 1px solid #d3d3d3;
+  transition: all 0.3s ease-in-out;
+}
+.panel_de_navegacion .container .box:nth-child(1) {
+  border-left: 1px solid #d3d3d3;
+}
+.panel_de_navegacion .container .box::after {
+  content: "";
+  border-color: #fff;
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: calc(50% - 3.5px);
+  right: 6px;
+  transform: rotate(45deg);
+}
+.panel_de_navegacion .container .box:hover {
+  background: #d3d3d3;
+}
+.panel_de_navegacion .container .box i {
+  color: #432A88;
+  font-size: 1rem;
+}
+.panel_de_navegacion .container .box h1 {
+  font-size: 0.75rem;
+  font-family: "Lilita One", sans-serif;
+  font-weight: lighter;
+  color: #432A88;
+}
+.panel_de_navegacion .container .box p {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 0.75rem;
+  font-weight: lighter;
+  color: #777777;
+}
+
+/* 04 - SECCIÓN DE PRECIOS Y PROMOCIONES */
+.promociones_precios {
+  padding: 35px 0;
+}
+.promociones_precios .tab-content {
+  padding: 35px 0 0 0;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 5px;
+  display: flex;
+  opacity: 1;
+  cursor: grab;
+}
+.promociones_precios .tab-content .card {
+  width: 250px;
+  position: relative;
+}
+.promociones_precios .tab-content .card .overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0;
+  background: rgba(67, 47, 135, 0.95);
+  opacity: 0;
+  transition: opacity 0.3s ease, height 0.5s ease;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  font-weight: bolder;
+  color: #fff;
+  overflow-y: auto;
+  border-radius: 20px 20px 0 0;
+}
+.promociones_precios .tab-content .card .overlay .container {
+  padding: 15px;
+}
+.promociones_precios .tab-content .card .overlay .close-button {
+  position: absolute;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: #fff;
+  position: sticky;
+  top: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  line-height: 1;
+  text-align: right;
+  z-index: 2;
+}
+.promociones_precios .tab-content .card .overlay p {
+  margin: 5px 0;
+}
+.promociones_precios .tab-content .card .overlay a {
+  color: #FFD200;
+}
+.promociones_precios .tab-content .card .image {
+  height: auto;
+  width: 100%;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+.promociones_precios .tab-content .card .image:hover {
+  transform: scale(1.03);
+}
+.promociones_precios .tab-content .card .image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.promociones_precios .tab-content .card .text {
+  background: linear-gradient(25deg, #f0f0f0 50%, #fff 0%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 15px;
+}
+.promociones_precios .tab-content .card .text .name {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.promociones_precios .tab-content .card .text .name h1 {
+  font-size: 0.75rem;
+  color: #3b3b3b;
+  font-family: "Poppins", sans-serif;
+}
+.promociones_precios .tab-content .card .text .name p {
+  font-size: 0.75rem;
+  color: #3b3b3b;
+  font-weight: bolder;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+.promociones_precios .tab-content .card .text .name #underline {
+  text-decoration: line-through;
+  color: #EC2127;
+}
+.promociones_precios .tab-content .card .text button {
+  background: transparent;
+  color: #432A88;
+  border: 1px solid #432A88;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  width: auto;
+}
+.promociones_precios .tab-content .card .text button:hover {
+  background: #432A88;
+  color: #fff;
+}
+.promociones_precios .tab-content .card .text #comprar {
+  background: #EA0B8B;
+  color: #fff;
+  border: none;
+}
+
+/* 05 - SECCIÓN DE ENTRETENIMIENTO */
+.entretenimiento {
+  background: linear-gradient(45deg, rgba(67, 47, 135, 0.9), rgba(67, 47, 135, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 35px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+.entretenimiento .container {
+  max-width: 1000px;
+  width: 100%;
+}
+.entretenimiento .container .title h1 {
+  color: #fff;
+}
+.entretenimiento .container .group {
+  max-width: 1000px;
+  padding: 35px 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* Ajuste automático de columnas */
+  grid-gap: 20px;
+  /* Espacio entre las tarjetas */
+  justify-items: center;
+  /* Centramos las tarjetas horizontalmente */
+}
+.entretenimiento .container .group .card {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+.entretenimiento .container .group .card:hover {
+  transform: scale(1.04);
+}
+.entretenimiento .container .group .card .image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+.entretenimiento .container .group .card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.entretenimiento .container .group .card .image .text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(25deg, #f0f0f0 50%, #fff 0%);
+  z-index: 4;
+  padding: 20px;
+  height: auto;
+}
+.entretenimiento .container .group .card .image .text h1 {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #724C9F;
+  font-family: "Lilita One", sans-serif;
+  font-weight: lighter;
+  text-align: center;
+}
+.entretenimiento .container .group .card .image .text p {
+  font-size: 0.75rem;
+  color: #777777;
+  font-family: "Montserrat Alternates", sans-serif;
+  text-align: center;
+}
+
+/* 06 - SECCIÓN DE ENLACES A GASTRONOMÍA */
+.gastronomia {
+  display: flex;
+  justify-content: center;
+  padding: 35px 0;
+  background: linear-gradient(45deg, rgba(245, 130, 32, 0.9), rgba(245, 130, 32, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.gastronomia button {
+  width: 100%;
+  background: #fff;
+  color: #F58220;
+  border: 1px solid #F58220;
+}
+.gastronomia button:hover {
+  background: #F58220;
+  color: #fff;
+}
+.gastronomia .container {
+  max-width: 1000px;
+}
+.gastronomia .container .title h1 {
+  color: #fff;
+}
+.gastronomia .container .contenido {
+  display: flex;
+  gap: 20px;
+  padding: 35px 0 0 0;
+}
+.gastronomia .container .contenido .col-1 {
+  width: 50%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(25deg, #f0f0f0 50%, #fff 0%);
+}
+.gastronomia .container .contenido .col-1 .content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.gastronomia .container .contenido .col-1 .content h1 {
+  font-family: "Lilita One", sans-serif;
+  font-weight: lighter;
+  color: #EA0B8B;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.gastronomia .container .contenido .col-1 .content p {
+  font-family: "Montserrat Alternates", sans-serif;
+  color: #777777;
+  font-size: 0.75rem;
+}
+.gastronomia .container .contenido .col-1 .content h3 {
+  font-family: "Lilita One", sans-serif;
+  color: #F58220;
+  font-weight: lighter;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.gastronomia .container .contenido .col-2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.gastronomia .container .contenido .col-2 .card .image {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.gastronomia .container .contenido .col-2 .card .image img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.gastronomia .container .contenido .col-2 .card .image:hover img {
+  transform: scale(1.1);
+}
+.gastronomia .container .contenido .col-2 .card .text {
+  position: absolute;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+}
+.gastronomia .container .contenido .col-2 .card .text h1 {
+  margin: 0;
+  padding: 20px;
+  color: #fff;
+  font-family: "Lilita One", sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+/* 07 - SECCIÓN DE SERVICIOS */
+.servicios {
+  padding: 35px 0;
+  background: linear-gradient(45deg, rgba(234, 11, 139, 0.9), rgba(234, 11, 139, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.servicios .title h1 {
+  color: #fff;
+}
+.servicios .container {
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.servicios .container button {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #EA0B8B;
+  color: #EA0B8B;
+}
+.servicios .container button:hover {
+  background: #EA0B8B;
+  color: #fff;
+}
+.servicios .container .contenido {
+  padding: 35px 0;
+  display: flex;
+  height: auto;
+}
+.servicios .container .contenido a {
+  width: 100%;
+}
+.servicios .container .contenido .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.servicios .container .contenido .card .image {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.servicios .container .contenido .card .image img {
+  width: 120%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.servicios .container .contenido .card .image:hover img {
+  transform: scale(1.1);
+}
+.servicios .container .contenido .card .text {
+  position: relative;
+  margin: 5px 5px 0 0;
+  padding: 10px;
+  text-align: center;
+  z-index: 4;
+  background: linear-gradient(25deg, #f0f0f0 50%, #fff 0%);
+}
+.servicios .container .contenido .card .text i {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #432A88;
+  padding: 10px 12px;
+  border-radius: 50%;
+  font-size: 1rem;
+  z-index: 5;
+}
+.servicios .container .contenido .card .text h1 {
+  padding-top: 15px;
+  color: #432A88;
+  font-family: "Lilita One", sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+.servicios .container .contenido .card .text p {
+  color: #777777;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 0.75rem;
+  padding: 10px 0;
+}
+
+/* 08 - SECCIÓN DE RESEÑAS */
+.reseñas {
+  background: linear-gradient(45deg, rgba(236, 33, 39, 0.9), rgba(236, 33, 39, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding: 35px 0;
+}
+.reseñas#concierto {
+  background: none;
+}
+.reseñas#concierto .title h1 {
+  color: #fff;
+}
+.reseñas .container {
+  max-width: 1000px;
+  width: 100%;
+}
+.reseñas .container .title h1 {
+  color: #fff;
+}
+.reseñas .container .reseña-carrusel {
+  display: flex;
+  padding: 35px 0 0 0;
+}
+.reseñas .container .reseña-carrusel .card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: #fff;
+  z-index: 4;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(25deg, #f0f0f0 50%, #fff 0%);
+}
+.reseñas .container .reseña-carrusel .card button {
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgb(236, 33, 39);
+  color: rgb(236, 33, 39);
+}
+.reseñas .container .reseña-carrusel .card button:hover {
+  background: rgb(236, 33, 39);
+  color: #fff;
+}
+.reseñas .container .reseña-carrusel .card .punt {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 30px;
+}
+.reseñas .container .reseña-carrusel .card .punt img {
+  height: 20px;
+}
+.reseñas .container .reseña-carrusel .card h1 {
+  color: #432A88;
+  font-family: "Lilita One", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.reseñas .container .reseña-carrusel .card p {
+  font-size: 0.75rem;
+  color: #777777;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+/* 09 - SECCIÓN DE ENLACE A MAPA INTERACTIVO */
+.enlace_a_mapa {
+  background: linear-gradient(45deg, rgba(119, 192, 67, 0.9), rgba(119, 192, 67, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding: 35px 0;
+  transition: all 0.3s ease-in-out;
+}
+.enlace_a_mapa .container {
+  max-width: 1000px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.enlace_a_mapa .container .title h1 {
+  color: #fff;
+}
+.enlace_a_mapa .container .content {
+  display: flex;
+  padding: 35px 0;
+  height: auto;
+}
+.enlace_a_mapa .container .content .text {
+  background: #fff;
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(25deg, #f0f0f0 50%, #fff 0%);
+  border-radius: 20px 0 0 20px;
+  overflow: hidden;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+}
+.enlace_a_mapa .container .content .text h1 {
+  color: #77C043;
+  font-family: "Lilita One", sans-serif;
+  font-weight: lighter;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.enlace_a_mapa .container .content .text p {
+  color: #777777;
+  font-size: 0.75rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: lighter;
+}
+.enlace_a_mapa .container .content .text button {
+  background: #fff;
+  color: #77C043;
+  width: 100%;
+  border: 1px solid #77C043;
+}
+.enlace_a_mapa .container .content .text button:hover {
+  background: #77C043;
+  color: #fff;
+}
+.enlace_a_mapa .container .content .image {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0px 20px 20px 0px;
+}
+.enlace_a_mapa .container .content .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 10 - SECCIÓN DE UBICACIÓN GMAPS */
+.ubicacion {
+  display: flex;
+  justify-content: center;
+}
+.ubicacion#concierto .title h1 {
+  color: #fff;
+}
+.ubicacion .container {
+  max-width: 1000px;
+  width: 100%;
+  padding: 35px 0;
+}
+.ubicacion .container .contenido {
+  border-radius: 20px;
+  display: flex;
+  height: 300px;
+  padding: 35px 0 0 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.ubicacion .container .contenido .frame {
+  width: 70%;
+}
+.ubicacion .container .content {
+  background: #fff;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  gap: 15px;
+  background: linear-gradient(25deg, #f0f0f0 50%, #fff 0%);
+  overflow: hidden;
+}
+.ubicacion .container .content h1 {
+  color: #724C9F;
+  font-family: "Lilita One", sans-serif;
+  font-weight: lighter;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+}
+.ubicacion .container .content p {
+  color: #777777;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 0.75rem;
+}
+.ubicacion .container .content button {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #EA0B8B;
+  color: #EA0B8B;
+}
+.ubicacion .container .content button:hover {
+  background: #EA0B8B;
+  color: #fff;
+}
+
+/* FOOTER - PIE DE PÁGINA */
+.footer {
+  display: flex;
+  justify-content: center;
+}
+.footer#concierto .container {
+  background: #000000;
+}
+.footer#concierto .container .col h1 {
+  color: #fff;
+}
+.footer#concierto .container li {
+  color: #fff;
+}
+.footer#concierto .container li a {
+  color: #fff;
+}
+.footer .container {
+  background: #fff;
+  width: 100%;
+  padding: 35px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.footer .container a {
+  color: #3b3b3b;
+}
+.footer .container .row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 50px;
+}
+.footer .container .row img {
+  width: 140px;
+}
+.footer .container .row h1 {
+  color: #3b3b3b;
+  font-family: "Lilita One", sans-serif;
+  font-weight: lighter;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+.footer .container .row ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footer .container .row ul li {
+  color: #3b3b3b;
+  font-size: 0.75rem;
+  font-family: "Poppins", sans-serif;
+}
+.footer .container .terms {
+  max-width: 1000px;
+  background: #fff;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+  border-radius: 10px;
+}
+.footer .container .terms a {
+  color: #3b3b3b;
+  font-weight: bolder !important;
+}
+.footer .container .terms h1 {
+  color: #3b3b3b;
+  font-size: 0.75rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 11 - SECCIÓN DE PREGUNTAS Y RESPUESTAS*/
+.preguntas_y_respuestas {
+  padding: 35px 0;
+  display: flex;
+  justify-content: center;
+}
+.preguntas_y_respuestas .container {
+  max-width: 1000px;
+  width: 100%;
+}
+.preguntas_y_respuestas .container .faq-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 35px 0 0 0;
+}
+.preguntas_y_respuestas .container .faq-list .faq-item {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+.preguntas_y_respuestas .container .faq-list .faq-item.active {
+  /* Color de fondo cuando la pregunta está abierta */
+}
+.preguntas_y_respuestas .container .faq-list .faq-item .question {
+  font-size: 0.75rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bolder;
+  color: #432A88;
+  padding: 20px;
+  background: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.preguntas_y_respuestas .container .faq-list .faq-item.active .question {
+  color: #fff;
+  background: #432A88;
+  /* Color de texto cuando la pregunta está abierta */
+}
+.preguntas_y_respuestas .container .faq-list .faq-item .answer-wrapper {
+  overflow: hidden;
+  max-height: 0;
+  /* Agregamos esta propiedad aquí */
+  transition: max-height 0.3s ease;
+}
+.preguntas_y_respuestas .container .faq-list .faq-item .answer-wrapper .answer {
+  font-size: 0.75rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bolder;
+  padding: 20px;
+  /* Fondo blanco del answer */
+}
+.preguntas_y_respuestas .container .faq-list .faq-item.active .answer-wrapper {
+  max-height: 500px;
+  /* Ajusta la altura máxima deseada para el answer abierto */
+}
+
+/* 11.1 - SE REUTILIZA LA SECCIÓN 11 PARA EL MENUPANEL*/
+#contenido_nav_responsive .container {
+  overflow-x: auto;
+}
+#contenido_nav_responsive .container .faq-item {
+  box-shadow: none;
+}
+#contenido_nav_responsive .container .faq-item .answer {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+}
+#contenido_nav_responsive .container .faq-item .answer button {
+  width: 100%;
+  text-align: left;
+  border-radius: 0;
+  background: #fff;
+  color: #3b3b3b;
+}
+#contenido_nav_responsive .container .faq-item .question {
+  color: #432A88;
+  padding: 10px;
+  background: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+}
+#contenido_nav_responsive .container .faq-item.active .question {
+  color: #fff;
+  background: #777777;
+  /* Color de texto cuando la pregunta está abierta */
+}
+
+/* 12 - SECCIÓN BANNER SECUNDARIO CON TEXTO Y BOTÓN A LA ACCIÓN */
+.promociones {
+  max-width: 1200px;
+  width: 100%;
+  height: 400px;
+  margin-top: 115px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.promociones .overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.promociones .overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoom 18s infinite alternate;
+}
+.promociones .overlay .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.promociones .overlay .content .text {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.promociones .overlay .content .text h1 {
+  /* Fondo oscuro con 50% de transparencia */
+  color: #fff;
+  font-size: 2rem;
+  font-family: "Lilita One", sans-serif;
+  font-weight: lighter;
+}
+.promociones .overlay .content .text p {
+  /* Fondo oscuro con 50% de transparencia */
+  color: #fff;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+}
+.promociones .overlay .content .text button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: #25D366;
+}
+
+/* 12.1 - ANIMACIONES DE LA SECCIÓN 12*/
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+/* 13 - SECCIÓN DE TARJETAS PARA PRESENTACIÓN DE IMAGEN Y TEXTO */
+.tarjetas {
+  padding: 35px 0;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(45deg, rgba(236, 33, 39, 0.9), rgba(245, 130, 32, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.tarjetas#campeonatos {
+  background: linear-gradient(45deg, rgba(119, 192, 67, 0.9), rgba(43, 171, 226, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+}
+.tarjetas#campeonatos .title h1 {
+  color: #fff;
+}
+.tarjetas#paseos_y_reencuentros .title h1 {
+  color: #fff;
+}
+.tarjetas#piscinas, .tarjetas#zona_gamer {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+}
+.tarjetas#concierto {
+  background: linear-gradient(45deg, rgba(236, 33, 39, 0.9), rgba(234, 11, 139, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+}
+.tarjetas#concierto .container .title h1 {
+  color: #fff;
+}
+.tarjetas#concierto .container .card {
+  height: auto;
+}
+.tarjetas#concierto .container .card::after {
+  background: linear-gradient(to top, #000000, transparent);
+}
+.tarjetas .container {
+  max-width: 1000px;
+  width: 100%;
+}
+.tarjetas .container .carrusel-atracciones {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  padding: 35px 0 0 0;
+}
+.tarjetas .container .carrusel-atracciones #marca {
+  position: absolute;
+  z-index: 5;
+  width: 60px;
+  padding: 10px;
+  border-radius: 20px;
+  transition: all 0.3s ease-out;
+}
+.tarjetas .container .carrusel-atracciones .card {
+  border-radius: 20px;
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  cursor: grab;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+}
+.tarjetas .container .carrusel-atracciones .card::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+.tarjetas .container .carrusel-atracciones .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.tarjetas .container .carrusel-atracciones .text {
+  position: absolute;
+  width: 90%;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 20px 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease-in-out;
+}
+.tarjetas .container .carrusel-atracciones .text h1 {
+  margin: 0;
+  color: #fff;
+  font-family: "Lilita One", sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+.tarjetas .container .carrusel-atracciones .text p {
+  margin: 0;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  font-weight: lighter;
+}
+.tarjetas .container .carrusel-atracciones swiper-slide:hover img {
+  transform: scale(1.1);
+}
+.tarjetas .container .carrusel-atracciones swiper-slide:hover > .text {
+  padding-bottom: 5px;
+}
+
+/* 14 - SECCIÓN DE INFORMACIÓN DE LAS PISCINAS */
+.piscinas {
+  background: linear-gradient(45deg, rgba(114, 76, 159, 0.9), rgba(43, 171, 226, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+.piscinas .container {
+  max-width: 1000px;
+  width: 100%;
+  padding: 35px 0;
+}
+.piscinas .container .title h1 {
+  color: #fff;
+}
+.piscinas .container .carrusel {
+  cursor: grab;
+}
+.piscinas .container .carrusel .row {
+  display: flex;
+  justify-content: center;
+  padding: 35px 0 0 0;
+  gap: 20px;
+}
+.piscinas .container .carrusel .row .text {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.piscinas .container .carrusel .row .text h1 {
+  color: #fff;
+  font-family: "Lilita One", sans-serif;
+  font-size: 2rem;
+}
+.piscinas .container .carrusel .row .text p {
+  color: #fff;
+  font-size: 0.75rem;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.piscinas .container .carrusel .row .carrusel-image {
+  width: 50%;
+}
+.piscinas .container .carrusel .row .carrusel-image .image {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 300px;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+}
+.piscinas .container .carrusel .row .carrusel-image .image:hover {
+  transform: scale(0.97);
+}
+.piscinas .container .carrusel .row .carrusel-image .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.piscinas .container .carrusel .row .text-interno {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 35px 0 0 0;
+  gap: 30px;
+}
+.piscinas .container .carrusel .row .text-interno .ct {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.piscinas .container .carrusel .row .text-interno .ct i {
+  color: #fff;
+  font-size: 2rem;
+}
+.piscinas .container .carrusel .row .text-interno .ct h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  color: #fff;
+  margin: 0;
+}
+.piscinas .container .carrusel .row .text-interno .ct h1 {
+  font-family: "Lilita One", sans-serif;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* 15 - SECCIÓN DE GALERÍA */
+.galeria {
+  display: flex;
+  justify-content: center;
+  padding: 35px 0;
+}
+.galeria#concierto .title h1 {
+  color: #fff;
+}
+.galeria .container {
+  max-width: 1000px;
+  width: 100%;
+}
+.galeria .container .group {
+  width: 100%;
+  padding: 35px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  grid-auto-flow: dense;
+  /* Permite que las imágenes se coloquen en forma de masonry */
+  overflow: hidden;
+}
+.galeria .container .group .image {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  grid-row-end: span auto;
+  /* Altura automática según el contenido */
+}
+.galeria .container .group .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.galeria .container .group .image:hover {
+  opacity: 0.7;
+}
+
+/* 15.1 - MODAL PARA LA SECCIÓN 15 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+  /* Añadir transición */
+  opacity: 0;
+  /* Ocultar la modal inicialmente */
+  pointer-events: none;
+  /* Evitar clics en la modal oculta */
+}
+.modal .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.modal .container .close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+  opacity: 0;
+  /* Ocultar la "X" inicialmente */
+  transition: opacity 0.2s ease-in-out;
+  /* Añadir transición de opacidad */
+}
+.modal .container .modal-content {
+  margin: 0 auto;
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  transform: scale(0.8);
+  /* Añadir escala inicial */
+  transition: transform 0.4s ease-in-out;
+  /* Añadir transición de escala */
+}
+.modal.active {
+  opacity: 1;
+  /* Mostrar la modal activa */
+  pointer-events: auto;
+  /* Permitir interacción en la modal activa */
+}
+.modal.active .modal-content {
+  transform: scale(0.7);
+  /* Escala completa en la modal activa */
+}
+.modal.active .close-modal {
+  opacity: 1;
+  /* Mostrar la "X" en la modal activa */
+}
+
+/* 16 - SECCIÓN DE TARJETAS SECUNDARIAS */
+.carrusel_texto_imagen {
+  padding: 35px 0;
+  display: flex;
+  justify-content: center;
+}
+.carrusel_texto_imagen#barcilon {
+  background: linear-gradient(45deg, rgba(67, 47, 135, 0.9), rgba(236, 33, 39, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.carrusel_texto_imagen#barcilon .title h1 {
+  color: #fff;
+}
+.carrusel_texto_imagen#zona_gamer {
+  background: linear-gradient(45deg, rgba(236, 33, 39, 0.9), rgba(245, 130, 32, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.carrusel_texto_imagen#zona_gamer .title h1 {
+  color: #fff;
+}
+.carrusel_texto_imagen#zona_gamer .text h1 {
+  color: #EC2127 !important;
+}
+.carrusel_texto_imagen#recorrido_vacilon .text {
+  background: linear-gradient(25deg, #f0f0f0 50%, #fff 0%);
+}
+.carrusel_texto_imagen#recorrido_vacilon .text h1,
+.carrusel_texto_imagen#recorrido_vacilon .text p {
+  color: #3b3b3b;
+}
+.carrusel_texto_imagen#rincon_chelero .text h1 {
+  color: #432A88;
+}
+.carrusel_texto_imagen swiper-slide:hover img {
+  transform: scale(1.1);
+}
+.carrusel_texto_imagen swiper-slide:hover > .text {
+  padding-bottom: 5px;
+}
+.carrusel_texto_imagen .container {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 35px;
+  overflow: hidden;
+}
+.carrusel_texto_imagen .container .carrusel-atracciones {
+  display: flex;
+  padding: 35px 0 0 0;
+}
+.carrusel_texto_imagen .container .carrusel-atracciones i {
+  position: absolute;
+  z-index: 5;
+  color: #432A88;
+  padding: 10px;
+  transform: translateX(50%);
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+}
+.carrusel_texto_imagen .container .carrusel-atracciones .card {
+  border-radius: 20px;
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  cursor: grab;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+}
+.carrusel_texto_imagen .container .carrusel-atracciones .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.carrusel_texto_imagen .container .carrusel-atracciones .text {
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  gap: 10px;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease-in-out;
+}
+.carrusel_texto_imagen .container .carrusel-atracciones .text h1 {
+  margin: 0;
+  color: #fff;
+  font-family: "Lilita One", sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  padding: 10px 0 0px 20px;
+  text-transform: uppercase;
+}
+.carrusel_texto_imagen .container .carrusel-atracciones .text p {
+  color: #3b3b3b;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  padding: 0 0 20px 20px;
+}
+
+/* 19 - SECCIÓN DE INFORMACIÓN BREVE E IMAGEN */
+.introduccion {
+  padding: 35px 0;
+  display: flex;
+  justify-content: center;
+}
+.introduccion#rincon_chelero .title h1 {
+  color: #432A88;
+}
+.introduccion#rincon_chelero .text h1 {
+  color: #432A88;
+}
+.introduccion#recorrido_vacilon .title h1 {
+  color: #432A88;
+}
+.introduccion#barcilon .text h1 {
+  color: #EA0B8B;
+}
+.introduccion .container {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.introduccion .container .text,
+.introduccion .container .image {
+  width: 50%;
+}
+.introduccion .container .text {
+  background: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 20px 0 0 20px;
+  z-index: 4;
+}
+.introduccion .container .text h1 {
+  color: #683A10;
+  font-size: 2rem;
+  font-family: "Lilita One", sans-serif;
+  padding: 0 20px;
+}
+.introduccion .container .text p {
+  color: #777777;
+  font-size: 1rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  padding: 0 20px;
+}
+.introduccion .container .image {
+  overflow: hidden;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+  height: 300px;
+}
+.introduccion .container .image:hover {
+  transform: scale(0.95);
+}
+.introduccion .container .image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* 20 - SECCIÓN DE ANIMALES O DETALLE EN COLUMNA CON IMAGEN */
+.animales {
+  background: linear-gradient(45deg, rgba(104, 58, 16, 0.9), rgba(119, 192, 67, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 35px 0;
+  display: flex;
+  justify-content: center;
+}
+.animales#concierto {
+  background: linear-gradient(45deg, rgba(43, 171, 226, 0.9), rgba(255, 210, 0, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+}
+.animales#concierto .card {
+  height: calc(100% - 10px);
+}
+.animales#concierto .card .text h1 {
+  color: #2BABE2;
+}
+.animales#concierto .card .text p {
+  margin: 5px 0;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 0.75rem;
+  color: #777777;
+  padding: 0px 20px;
+}
+.animales .container {
+  max-width: 1000px;
+  width: 100%;
+}
+.animales .container .title h1 {
+  color: #fff;
+}
+.animales .container .contenido {
+  padding: 35px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 15px;
+}
+.animales .container .contenido .card {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  background: #fff;
+  overflow: hidden;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(25deg, #f0f0f0 50%, #fff 0%);
+  transition: all 0.3s ease-in-out;
+}
+.animales .container .contenido .card:hover {
+  transform: scale(0.97);
+}
+.animales .container .contenido .card .text,
+.animales .container .contenido .card .image {
+  width: 50%;
+  overflow: hidden;
+}
+.animales .container .contenido .card .text h1 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 1rem;
+  color: #683A10;
+  padding: 0px 20px;
+}
+.animales .container .contenido .card .text p {
+  margin: 5px 0;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 0.75rem;
+  color: #777777;
+  padding: 0px 20px;
+}
+.animales .container .contenido .card .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 21 - SECCIÓN DE INFORMACIÓN Y CARACTERÍSTICAS DE CANCHAS */
+.canchas {
+  padding: 35px;
+  display: flex;
+  justify-content: center;
+}
+.canchas#voley {
+  background: linear-gradient(45deg, rgba(119, 192, 67, 0.9), rgba(43, 171, 226, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.canchas#futbol {
+  background: linear-gradient(45deg, rgba(43, 171, 226, 0.9), rgba(119, 192, 67, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.canchas#futbol .contenido {
+  padding: 0;
+}
+.canchas .container {
+  max-width: 1000px;
+  width: 100%;
+}
+.canchas .container .title h1 {
+  color: #fff;
+}
+.canchas .container .contenido {
+  display: flex;
+  padding: 35px 0 0 0;
+  align-items: center;
+  gap: 35px;
+}
+.canchas .container .contenido .col-image {
+  width: 60%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+}
+.canchas .container .contenido .col-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.canchas .container .contenido .col-text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.canchas .container .contenido .col-text h5 {
+  color: #3b3b3b;
+  font-size: 0.75rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+.canchas .container .contenido .col-text p {
+  color: #3b3b3b;
+  font-size: 0.75rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
+}
+.canchas .container .contenido .col-text .content {
+  background: linear-gradient(25deg, #f0f0f0 50%, #fff 0%);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+}
+.canchas .container .contenido .col-text .content:hover {
+  transform: scale(1.03);
+}
+.canchas .container .contenido .col-text button {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.canchas .container .contenido .col-text button:hover {
+  background: #fff;
+  color: #3b3b3b;
+}
+
+/* 22 - SECCIÓN PARA LOS PLATOS O CARTA GASTRONÓMICA*/
+.carta_gastronomica {
+  justify-content: center;
+  padding: 35px 0;
+}
+.carta_gastronomica .container {
+  padding: 0 35px;
+}
+.carta_gastronomica .container .tabs {
+  display: flex;
+  border-radius: 20px;
+  width: 100%;
+  gap: 15px;
+  justify-content: center;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  background: #fff;
+}
+.carta_gastronomica .container .tabs .tab {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.75rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-direction: column;
+}
+.carta_gastronomica .container .tabs .tab.active {
+  border-bottom: 5px solid #F58220;
+  color: #F58220;
+}
+.carta_gastronomica .container .content {
+  padding: 35px 0 0;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+.carta_gastronomica .container .content .tab-content {
+  display: none;
+}
+.carta_gastronomica .container .content .tab-content.active {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 15px;
+}
+.carta_gastronomica .container .content .tab-content .card {
+  display: flex;
+  overflow: hidden;
+  border-radius: 20px;
+  height: 100px;
+  background: #fff;
+}
+.carta_gastronomica .container .content .tab-content .card img {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+}
+.carta_gastronomica .container .content .tab-content .card .text {
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+}
+.carta_gastronomica .container .content .tab-content .card .text h1 {
+  color: #3b3b3b;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  font-weight: bolder;
+  line-height: 1.3;
+}
+.carta_gastronomica .container .content .tab-content .card .text p {
+  color: #777777;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* 23 - SECCIÓN DE INFORMACIÓN DE PDF CON QR */
+.seccion_pdf {
+  background: linear-gradient(45deg, rgba(245, 130, 32, 0.9), rgba(236, 33, 39, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 35px 0;
+  display: flex;
+  justify-content: center;
+}
+.seccion_pdf .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+}
+.seccion_pdf .container .promociones_precios-pdf {
+  width: 40%;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+}
+.seccion_pdf .container .promociones_precios-pdf img {
+  width: 100%;
+}
+.seccion_pdf .container .content {
+  width: 60%;
+  padding: 30px;
+  height: auto;
+}
+.seccion_pdf .container .content img {
+  width: 100px;
+}
+.seccion_pdf .container .content h1 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 2rem;
+  color: #fff;
+}
+.seccion_pdf .container .content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  margin: 10px 0;
+}
+.seccion_pdf .container .content button {
+  background: #fff;
+  color: #F58220;
+}
+.seccion_pdf .container .content button:hover {
+  background: #F58220;
+  color: #fff;
+}
+.seccion_pdf .container .carta-pdf {
+  width: 30%;
+}
+.seccion_pdf .container .carta-pdf img {
+  width: 100%;
+}
+
+/* 24 - SECCIÓN DE IMAGENES ESTILO CARRUSEL VERTICAL */
+.carrusel_imagenes {
+  padding: 35px;
+}
+.carrusel_imagenes .container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+.carrusel_imagenes .container .content {
+  display: flex;
+  height: 400px;
+  gap: 10px;
+}
+.carrusel_imagenes .container .content .mySwiper,
+.carrusel_imagenes .container .content .mySwiper2 {
+  height: 100%;
+}
+.carrusel_imagenes .container .content .mySwiper {
+  width: 70%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+}
+.carrusel_imagenes .container .content .mySwiper swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.2s ease-in-out;
+}
+.carrusel_imagenes .container .content .mySwiper2 {
+  width: 30%;
+}
+.carrusel_imagenes .container .content .mySwiper2 swiper-slide {
+  width: 100%;
+  height: 100%;
+  filter: brightness(70%);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.carrusel_imagenes .container .content .mySwiper2 .swiper-slide-thumb-active {
+  filter: brightness(100%);
+}
+.carrusel_imagenes .container .content .mySwiper2 swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 25 - SECCIÓN DE IMAGENES ESTILO CARRUSEL HORIZONTAL */
+#carrusel_caracteristicas {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(45deg, rgba(67, 47, 135, 0.9), rgba(43, 171, 226, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#carrusel_caracteristicas .container {
+  max-width: 1000px;
+  padding: 35px 0;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  z-index: 4;
+  align-items: center;
+  position: relative;
+}
+#carrusel_caracteristicas .container .text {
+  font-size: 2rem;
+  color: #fff;
+  font-family: "Lilita One", sans-serif;
+  padding: 20px;
+}
+#carrusel_caracteristicas .container .carrusel-fotos {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* Agregar posición relativa */
+  z-index: 3;
+  /* Asegurarse de que el carrusel esté adelante del gradiente */
+}
+#carrusel_caracteristicas .container .carrusel-fotos .image {
+  width: 280px;
+  height: 200px;
+  margin: 0 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+#carrusel_caracteristicas .container .carrusel-fotos .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#carrusel_caracteristicas .container .carrusel-fotos .image .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  display: flex;
+  background: linear-gradient(to bottom, rgba(59, 59, 59, 0.7), transparent 50%);
+}
+
+/* 26 - SECCIÓN DE FORMULARIO DE CONTACTO */
+.formulario_de_contacto {
+  padding: 35px 0;
+  display: flex;
+  justify-content: center;
+}
+.formulario_de_contacto .container {
+  max-width: 1000px;
+  width: 100%;
+}
+.formulario_de_contacto .container .contenido {
+  padding: 35px 0 0 0;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  align-items: center;
+}
+.formulario_de_contacto .container .col-form,
+.formulario_de_contacto .container .content {
+  width: 50%;
+}
+.formulario_de_contacto .container .col-form {
+  height: 100%;
+}
+.formulario_de_contacto .container .col-form iframe {
+  height: 100%;
+  width: 100%;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+}
+.formulario_de_contacto .container .content {
+  height: 80%;
+  overflow: hidden;
+  border-radius: 0px 20px 20px 0px;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+}
+.formulario_de_contacto .container .content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 27 - SECCIÓN PARA INFORMACIÓN DE PAQUETES EN CARRUSEL */
+.paquetes_informacion {
+  padding: 35px 0;
+  display: flex;
+  justify-content: center;
+}
+.paquetes_informacion .container {
+  display: flex;
+  padding: 0 35px;
+  max-width: 1000px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  height: auto;
+}
+.paquetes_informacion .container .card {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+}
+.paquetes_informacion .container .card .image {
+  width: 40%;
+  height: 100%;
+}
+.paquetes_informacion .container .card .image img {
+  width: 100%;
+  height: 100%;
+}
+.paquetes_informacion .container .card .text {
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(25deg, #f0f0f0 50%, #fff 0%);
+  height: 100%;
+}
+.paquetes_informacion .container .card .text .content {
+  gap: 10px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: 20px;
+}
+.paquetes_informacion .container .card .text .content h1 {
+  color: #432A88;
+  font-size: 2rem;
+  font-family: "Lilita One", sans-serif;
+}
+.paquetes_informacion .container .card .text .content p {
+  color: #3b3b3b;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.paquetes_informacion .container .card .text .content li {
+  color: #3b3b3b;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+}
+.paquetes_informacion .container .card .text .content button {
+  width: 100%;
+  background: #fff;
+  color: #724C9F;
+  border: 1px solid #724C9F;
+}
+.paquetes_informacion .container .card .text .content button:hover {
+  background: #724C9F;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* 28 - SECCIÓN DE FILAS PARA LA PÁGINA NOSOTROS */
+.informacion_empresa {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 35px;
+}
+.informacion_empresa .col-text {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+.informacion_empresa .col-text .content {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 95px;
+}
+.informacion_empresa .col-text .content .row {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: #fff;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+}
+.informacion_empresa .col-text .content .row h1 {
+  color: #3b3b3b;
+  font-size: 1rem;
+  font-family: "Lilita One", sans-serif;
+}
+.informacion_empresa .col-text .content .row p {
+  color: #3b3b3b;
+  font-size: 0.75rem;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.informacion_empresa .col-text .content button {
+  width: 100%;
+  background: none;
+  color: #432A88;
+  border: 1px solid #432A88;
+}
+.informacion_empresa .col-text .content button:hover {
+  background: #432A88;
+  color: #fff;
+}
+
+/* 29 - SECCIÓN PARA POSTULAR - TRABAJO */
+.trabajo {
+  padding: 35px 0;
+}
+.trabajo .container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+.trabajo .container .content {
+  display: flex;
+  gap: 10px;
+  padding: 35px 0 0 0;
+}
+.trabajo .container .content .col-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 60%;
+}
+.trabajo .container .content .col-wrapper .card {
+  background: #fff;
+  display: flex;
+  height: auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+}
+.trabajo .container .content .col-wrapper .card img {
+  width: 160px;
+  height: 160px;
+  border-radius: 20px;
+  padding: 10px;
+}
+.trabajo .container .content .col-wrapper .card .text {
+  padding: 20px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+.trabajo .container .content .col-wrapper .card .text li {
+  color: #3b3b3b;
+  font-size: 0.75rem;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.trabajo .container .content .col-wrapper .card .text h1 {
+  color: #3b3b3b;
+  font-size: 1rem;
+  font-family: "Lilita One", sans-serif;
+}
+.trabajo .container .content .col-wrapper .card .text .buttons {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+}
+.trabajo .container .content .col-wrapper .card .text .buttons button {
+  width: 100%;
+  background: #432A88;
+  color: #fff;
+}
+.trabajo .container .content .col-wrapper .card .text .buttons #whatsapp {
+  background: #25D366;
+  color: #fff;
+  border: none;
+}
+.trabajo .container .content .col-wrapper .card p {
+  color: #3b3b3b;
+  font-size: 0.75rem;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.trabajo .container .col-form {
+  width: 40%;
+  background: #fff;
+  padding: 20px;
+  height: 700px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.trabajo .container .col-form .text h1 {
+  color: #3b3b3b;
+  font-size: 1rem;
+  font-family: "Lilita One", sans-serif;
+  text-transform: uppercase;
+}
+.trabajo .container .col-form .text p {
+  margin: 10px 0;
+  color: #3b3b3b;
+  font-size: 0.75rem;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.trabajo .container .col-form .fram {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.trabajo .container .col-form .fram iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* 30 - SECCIÓN PARA EL MAPA DEL PARQUE */
+.mapa_del_parque {
+  display: flex;
+  justify-content: center;
+  padding: 35px 0;
+}
+.mapa_del_parque .container {
+  max-width: 1000px;
+  width: 100%;
+}
+.mapa_del_parque .container .content {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.mapa_del_parque .container .content .map {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.mapa_del_parque .container .content .map img {
+  width: 100%;
+}
+.mapa_del_parque .container .content .filtros {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.mapa_del_parque .container .content .filtros button {
+  background: #724C9F;
+  color: #fff;
+}
+
+/* 31 - SECCIÓN PARA BANNER DEL CONCIERTO */
+.banner {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+}
+.banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, #191919, rgba(25, 25, 25, 0));
+}
+.banner .overlay h1 {
+  color: #fff;
+  font-family: "Lilita One", sans-serif;
+  font-size: 1rem;
+}
+.banner .overlay .logo-banner {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+.banner .overlay .logo-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 32 - SECCIÓN PARA HORARIOS */
+.horario {
+  padding-top: 35px;
+}
+.horario .container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  overflow-x: auto;
+}
+.horario .container .dia {
+  background: rgba(236, 33, 39, 0.8);
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px 0;
+  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  color: #fff;
+  text-transform: uppercase;
+  border: 2px solid #EC2127;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.horario .container .dia#abierto {
+  background: rgba(119, 192, 67, 0.8);
+  color: #fff;
+  border: 2px solid #77C043;
+}
+.horario .container .dia h1 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 1rem;
+}
+.horario .container .dia p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75rem;
+}
+
+/* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
+/* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
+/* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
+@media (max-width: 1100px) {
+  #boton_de_whatsapp {
+    bottom: 60px;
+  }
+  .footer {
+    padding-bottom: 50px;
+  }
+  .footer .terms {
+    padding: 10px;
+    text-align: center;
+  }
+  .animales .contenido .card {
+    width: calc(100% - 25px);
+  }
+  .informacion_empresa .col-text {
+    width: calc(100% - 35px);
+  }
+  main {
+    margin: 0;
+  }
+  .barra_vertical {
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+  }
+  .barra_vertical .container {
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+  }
+  /* INFO CONTAINER */
+  .contenedor_informacion {
+    left: -200%;
+    padding: 0;
+    width: 100%;
+    overflow-y: auto;
+  }
+  .banner_principal .articulo,
+  .promociones {
+    border-radius: 0;
+  }
+  .carta_gastronomica .container,
+  .carrusel_texto_imagen .container {
+    padding: 0;
+  }
+  .introduccion .text {
+    background: none;
+  }
+  .introduccion .text h1,
+  .introduccion .text p {
+    padding: 0;
+  }
+  .canchas,
+  .introduccion,
+  .carrusel_imagenes,
+  .carta_gastronomica,
+  .seccion_pdf,
+  .promociones_precios,
+  .atracciones,
+  .entretenimiento,
+  .servicios,
+  .ubicacion,
+  .enlace_a_mapa,
+  .gastronomia,
+  .panel_de_navegacion,
+  .reseñas,
+  .preguntas_y_respuestas,
+  .piscinas,
+  .tarjetas,
+  .galeria,
+  .carrusel_texto_imagen,
+  .paquetes_informacion,
+  .title-3,
+  .mapa_del_parque,
+  .trabajo,
+  .formulario_de_contacto,
+  .animales,
+  .promociones .text {
+    padding: 20px;
+    overflow: hidden;
+  }
+  .formulario_de_contacto .contenido {
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .formulario_de_contacto .col-form,
+  .formulario_de_contacto .content {
+    width: 100% !important;
+    border-radius: 0;
+  }
+  .trabajo .col-wrapper,
+  .trabajo .col-form {
+    width: 100%;
+  }
+  .trabajo .col-wrapper .card {
+    flex-direction: column;
+  }
+  .trabajo .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  /* NAVBAR */
+  .navegacion_principal {
+    width: 100%;
+  }
+  .navegacion_principal .hamburguer {
+    display: block;
+  }
+  .navegacion_principal .row {
+    justify-content: space-between;
+  }
+  .navegacion_principal .navigation,
+  .navegacion_principal .icons {
+    display: none;
+  }
+  .navegacion_principal .buttons {
+    display: flex;
+  }
+  #responsive_navegacion {
+    display: block;
+  }
+}
+/* MEDIA QUERY PARA PANTALLAS INFERIORES A 900PX */
+/* MEDIA QUERY PARA PANTALLAS INFERIORES A 900PX */
+/* MEDIA QUERY PARA PANTALLAS INFERIORES A 900PX */
+@media (max-width: 900px) {
+  .footer {
+    height: calc(100% - 50px);
+  }
+  .footer .container .row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .footer .container .col {
+    padding: 0;
+    padding: 20px;
+    border-bottom: 1px solid #fff;
+  }
+  /* promos */
+  .banner_principal .contenido {
+    width: 100%;
+    order: 2;
+  }
+  .banner_principal .articulo {
+    width: 100%;
+  }
+  .paquetes_informacion .card {
+    flex-direction: column;
+  }
+  .paquetes_informacion .container {
+    padding: 0;
+  }
+  .paquetes_informacion .image,
+  .paquetes_informacion .text {
+    width: 100% !important;
+  }
+}
+/* MEDIA QUERY PARA PANTALLAS INFERIORES A 600PX */
+/* MEDIA QUERY PARA PANTALLAS INFERIORES A 600PX */
+/* MEDIA QUERY PARA PANTALLAS INFERIORES A 600PX */
+@media (max-width: 600px) {
+  .panel_de_navegacion .container {
+    flex-direction: column;
+  }
+  .panel_de_navegacion .container .box {
+    width: 90%;
+    display: block;
+  }
+  .title h1 {
+    width: 100%;
+  }
+  /* GASTRONOMÍA */
+  .gastronomia .contenido {
+    flex-direction: column;
+  }
+  .gastronomia .col-1,
+  .gastronomia .col-2 {
+    width: 100% !important;
+  }
+  .horario {
+    padding: 20px 20px;
+  }
+  .horario .container {
+    flex-direction: column;
+  }
+  .ubicacion .container .contenido {
+    flex-direction: column;
+  }
+  .ubicacion .container .frame,
+  .ubicacion .container .content {
+    width: 100%;
+  }
+  /* PISCINAS */
+  .piscinas .row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+  }
+  .piscinas .row .text,
+  .piscinas .row .carrusel-image {
+    width: 100% !important;
+  }
+  .seccion_pdf .container {
+    flex-direction: column;
+  }
+  .seccion_pdf .container .content {
+    width: 100% !important;
+  }
+  .seccion_pdf .promociones_precios-pdf {
+    width: 100%;
+  }
+  .seccion_pdf .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .introduccion .container {
+    flex-direction: column;
+  }
+  .introduccion .text,
+  .introduccion .image {
+    width: 100% !important;
+    text-align: center;
+  }
+  .canchas .contenido {
+    flex-direction: column;
+  }
+  .canchas .col-image {
+    order: 1;
+  }
+  .canchas .col-text {
+    order: 2;
+  }
+  .canchas .col-image,
+  .canchas .col-text {
+    width: 100% !important;
+  }
+  .animales .card {
+    width: calc(100% - 25px) !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
