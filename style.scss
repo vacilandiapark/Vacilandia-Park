@@ -365,7 +365,7 @@ main {
     }
 
     .logo {
-        width: 70px;
+        width: 55px;
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
         display: flex;
@@ -849,7 +849,7 @@ main {
 
 .banner_principal {
     display: flex;
-    height: 520px;
+    height: auto;
     justify-content: center;
 
     &#concierto {
@@ -3592,22 +3592,20 @@ main {
         overflow-x: auto;
 
         .dia{
-            background: rgba($rgba-rojo, 0.8);
+            background: rgba($rgba-rojo, 1);
             border-radius: 10px;
             width: 100%;
             padding: 15px 0;
             box-shadow: $sombra;
             color: $blanco;
             text-transform: uppercase;
-            border: 2px solid $rojo;
             display: flex;
             flex-direction: column;
             justify-content: center;
 
             &#abierto{
-                background: rgba($rgba-verde, 0.8);
+                background: rgba($rgba-verde, 1);
                 color: $blanco;
-                border: 2px solid $verde;
             }
 
             h1{

@@ -106,7 +106,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Función para obtener un color aleatorio de una lista de colores
 
   function getRandomColor() {
-    const colors = ["#EC2127", "#EA0B8B", "#F58220", "#FFD200", "#77C043", "#2BABE2", "#724C9F", "#432F87"];
+
+    /* const colors = ["#EC2127", "#EA0B8B", "#F58220", "#FFD200", "#77C043", "#2BABE2", "#724C9F", "#432F87"]; */
+
+    const colors = ["#B3000C", "#0D5901"];
     const randomIndex = Math.floor(Math.random() * colors.length);
     return colors[randomIndex];
   }
