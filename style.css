@@ -64,7 +64,7 @@ button#amarillo {
 body {
   margin: 0;
   padding: 0;
-  background: #EFEFEF;
+  background: #f4e1ff;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -192,7 +192,7 @@ main {
   transition: opacity 0.3s ease-in-out;
   /* Agregamos una transición suave a la opacidad */
   border-radius: 0 0 20px 20px;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 .navegacion_principal .navigation li:hover > .submenu {
@@ -229,7 +229,7 @@ main {
   background: #fff;
   min-width: 130px;
   border-radius: 10px;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   z-index: 1;
   overflow: hidden;
 }
@@ -428,7 +428,7 @@ main {
   width: 50px;
   height: 100%;
   background: #fff;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   z-index: 7;
 }
@@ -495,7 +495,7 @@ main {
   /* Alto personalizable */
   padding-left: 50px;
   background: #f6f5f5;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   transition: left 0.3s ease;
   /* Agregar transición */
   z-index: 6;
@@ -568,7 +568,7 @@ main {
   width: 100%;
   overflow: hidden;
   border-radius: 20px;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
 }
 .contenedor_informacion .content .image img {
   width: 100%;
@@ -668,7 +668,7 @@ main {
   margin-top: 115px;
   cursor: grab;
   overflow: hidden;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
 .banner_principal .articulo video,
@@ -701,7 +701,7 @@ main {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
 }
 .atracciones .carrusel-atracciones .card img {
   width: 100%;
@@ -872,7 +872,7 @@ main {
   width: 100%;
   border-radius: 20px;
   transition: all 0.2s ease-in-out;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 .promociones_precios .tab-content .card .image:hover {
@@ -964,7 +964,7 @@ main {
   width: 100%;
   height: auto;
   border-radius: 20px;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
 }
 .entretenimiento .container .group .card:hover {
@@ -1038,7 +1038,7 @@ main {
   width: 50%;
   background: #fff;
   border-radius: 20px;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1153,7 +1153,7 @@ main {
   margin: 0 auto;
   border-radius: 10px;
   cursor: pointer;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -1242,7 +1242,7 @@ main {
   z-index: 4;
   overflow: hidden;
   border-radius: 20px;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   background: linear-gradient(25deg, #f0f0f0 50%, #fff 0%);
 }
 .reseñas .container .reseña-carrusel .card button {
@@ -1314,7 +1314,7 @@ main {
   background: linear-gradient(25deg, #f0f0f0 50%, #fff 0%);
   border-radius: 20px 0 0 20px;
   overflow: hidden;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
 }
 .enlace_a_mapa .container .content .text h1 {
   color: #77C043;
@@ -1365,6 +1365,9 @@ main {
   width: 100%;
   padding: 35px 0;
 }
+.ubicacion .container .title h1 {
+  color: #432A88 !important;
+}
 .ubicacion .container .contenido {
   border-radius: 20px;
   display: flex;
@@ -1383,7 +1386,7 @@ main {
   flex-direction: column;
   justify-content: center;
   padding: 20px;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   gap: 15px;
   background: linear-gradient(25deg, #f0f0f0 50%, #fff 0%);
   overflow: hidden;
@@ -1510,7 +1513,7 @@ main {
 .preguntas_y_respuestas .container .faq-list .faq-item {
   width: 100%;
   border-radius: 15px;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   background: #fff;
   overflow: hidden;
   transition: background-color 0.3s ease;
@@ -1710,7 +1713,7 @@ main {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   cursor: grab;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
 }
 .tarjetas .container .carrusel-atracciones .card::after {
   position: absolute;
@@ -1810,7 +1813,7 @@ main {
   border-radius: 20px;
   overflow: hidden;
   height: 300px;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
 }
 .piscinas .container .carrusel .row .carrusel-image .image:hover {
@@ -1878,7 +1881,7 @@ main {
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   grid-row-end: span auto;
   /* Altura automática según el contenido */
@@ -2022,7 +2025,7 @@ main {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   cursor: grab;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
 }
 .carrusel_texto_imagen .container .carrusel-atracciones .card img {
   width: 100%;
@@ -2096,7 +2099,7 @@ main {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   border-radius: 20px 0 0 20px;
   z-index: 4;
 }
@@ -2114,7 +2117,7 @@ main {
 }
 .introduccion .container .image {
   overflow: hidden;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
   height: 300px;
 }
@@ -2172,7 +2175,7 @@ main {
   overflow: hidden;
   align-items: center;
   border-radius: 20px;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   background: linear-gradient(25deg, #f0f0f0 50%, #fff 0%);
   transition: all 0.3s ease-in-out;
 }
@@ -2239,7 +2242,7 @@ main {
   width: 60%;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
 }
 .canchas .container .contenido .col-image img {
   width: 100%;
@@ -2269,7 +2272,7 @@ main {
   background: linear-gradient(25deg, #f0f0f0 50%, #fff 0%);
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
 }
 .canchas .container .contenido .col-text .content:hover {
@@ -2301,7 +2304,7 @@ main {
   width: 100%;
   gap: 15px;
   justify-content: center;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   background: #fff;
 }
 .carta_gastronomica .container .tabs .tab {
@@ -2388,7 +2391,7 @@ main {
   height: auto;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
 }
 .seccion_pdf .container .promociones_precios-pdf img {
   width: 100%;
@@ -2449,7 +2452,7 @@ main {
   width: 70%;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
 }
 .carrusel_imagenes .container .content .mySwiper swiper-slide img {
   width: 100%;
@@ -2519,7 +2522,7 @@ main {
   margin: 0 10px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   position: relative;
 }
 #carrusel_caracteristicas .container .carrusel-fotos .image img {
@@ -2567,14 +2570,14 @@ main {
 .formulario_de_contacto .container .col-form iframe {
   height: 100%;
   width: 100%;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
 .formulario_de_contacto .container .content {
   height: 80%;
   overflow: hidden;
   border-radius: 0px 20px 20px 0px;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
 }
 .formulario_de_contacto .container .content img {
   width: 100%;
@@ -2604,7 +2607,7 @@ main {
   align-items: center;
   overflow: hidden;
   border-radius: 20px;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
 }
 .paquetes_informacion .container .card .image {
   width: 40%;
@@ -2683,7 +2686,7 @@ main {
   flex-direction: column;
   gap: 5px;
   background: #fff;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
 .informacion_empresa .col-text .content .row h1 {
@@ -2733,7 +2736,7 @@ main {
   height: auto;
   overflow: hidden;
   border-radius: 20px;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
 }
 .trabajo .container .content .col-wrapper .card img {
   width: 160px;
@@ -2877,45 +2880,6 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* 32 - SECCIÓN PARA HORARIOS */
-.horario {
-  padding-top: 35px;
-}
-.horario .container {
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  text-align: center;
-  overflow-x: auto;
-}
-.horario .container .dia {
-  background: #ec2127;
-  border-radius: 10px;
-  width: 100%;
-  padding: 15px 0;
-  box-shadow: 1px 1px 14px 6px rgba(0, 0, 0, 0.05);
-  color: #fff;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.horario .container .dia#abierto {
-  background: #77c043;
-  color: #fff;
-}
-.horario .container .dia h1 {
-  font-family: "Lilita One", sans-serif;
-  font-size: 1rem;
-}
-.horario .container .dia p {
-  font-family: "Poppins", sans-serif;
-  font-size: 0.75rem;
 }
 
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
@@ -3101,12 +3065,6 @@ main {
   .gastronomia .col-1,
   .gastronomia .col-2 {
     width: 100% !important;
-  }
-  .horario {
-    padding: 20px 20px;
-  }
-  .horario .container {
-    flex-direction: column;
   }
   .ubicacion .container .contenido {
     flex-direction: column;

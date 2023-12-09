@@ -33,7 +33,7 @@ $texto_color: #fff;
 $fuente_primaria: 'Lilita One', sans-serif;
 $fuente_secundaria: 'Montserrat Alternates', sans-serif;
 $fuente_terciaria: 'Poppins', sans-serif;
-$sombra: 1px 1px 14px 6px rgba(0, 0, 0, .05);
+$sombra: 8px 0 24px 0 rgba(0,0,0,0.1);
 $tamaño_maximo: 1000px;
 $sombra-color: #f0f0f0;
 $sombra-global: linear-gradient(25deg, $sombra-color 50%, $blanco 0%);
@@ -119,7 +119,7 @@ button {
 body {
     margin: 0;
     padding: 0;
-    background: #EFEFEF;
+    background: #f4e1ff;
     box-sizing: border-box;
     scroll-behavior: smooth;
 
@@ -1698,6 +1698,12 @@ main {
         max-width: $tamaño_maximo;
         width: 100%;
         padding: $espacio 0;
+
+        .title {
+            h1 {
+                color: $purpura !important;
+            }
+        }
 
         .contenido {
             border-radius: 20px;
@@ -3576,51 +3582,6 @@ main {
     }
 }
 
-/* 32 - SECCIÓN PARA HORARIOS */
-
-.horario{
-    padding-top: $espacio;
-
-    .container{
-        max-width: $tamaño_maximo;
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        text-align: center;
-        overflow-x: auto;
-
-        .dia{
-            background: rgba($rgba-rojo, 1);
-            border-radius: 10px;
-            width: 100%;
-            padding: 15px 0;
-            box-shadow: $sombra;
-            color: $blanco;
-            text-transform: uppercase;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            &#abierto{
-                background: rgba($rgba-verde, 1);
-                color: $blanco;
-            }
-
-            h1{
-                font-family: $fuente_primaria;
-                font-size: $texto_mediana;
-            }
-
-            p{
-                font-family: $fuente_terciaria;
-                font-size: $texto_pequeña;
-            }
-        }
-    }
-}
-
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
@@ -3863,15 +3824,6 @@ main {
         .col-1,
         .col-2 {
             width: 100% !important;
-        }
-    }
-
-    .horario{
-
-        padding: 20px 20px;
-
-        .container{
-            flex-direction: column;
         }
     }
 
