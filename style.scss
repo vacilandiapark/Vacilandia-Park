@@ -33,7 +33,7 @@ $texto_color: #fff;
 $fuente_primaria: 'Lilita One', sans-serif;
 $fuente_secundaria: 'Montserrat Alternates', sans-serif;
 $fuente_terciaria: 'Poppins', sans-serif;
-$sombra: 8px 0 24px 0 rgba(0,0,0,0.1);
+$sombra: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
 $tamaño_maximo: 1000px;
 $sombra-color: #f0f0f0;
 $sombra-global: linear-gradient(25deg, $sombra-color 50%, $blanco 0%);
@@ -2697,7 +2697,7 @@ main {
     &#concierto {
         background: linear-gradient(45deg, rgba($rgba-celeste, 0.9), rgba($rgba-amarillo, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/v1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
 
-        .card{
+        .card {
             height: calc(100% - 10px);
 
             .text {
@@ -3580,6 +3580,40 @@ main {
                 height: 100%;
                 object-fit: cover;
             }
+        }
+    }
+}
+
+.popup {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 99;
+
+    .popup-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        img {
+            max-width: 400px;
+            width: 100%;
+            max-height: auto;
+            margin: 0 auto;
+        }
+
+        button {
+            background: $rojo;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
         }
     }
 }

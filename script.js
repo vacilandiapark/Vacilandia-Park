@@ -363,3 +363,20 @@ window.addEventListener("click", function (event) {
     closeModal();
   }
 });
+
+
+/* POP UP */
+
+document.addEventListener("DOMContentLoaded", function () {
+  mostrarPopup();
+});
+
+function mostrarPopup() {
+  var popup = document.getElementById('popup');
+  popup.style.display = 'block';
+}
+
+function cerrarPopup() {
+  var popup = document.getElementById('popup');
+  popup.style.display = 'none';
+}
