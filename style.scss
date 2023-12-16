@@ -3618,6 +3618,23 @@ main {
     }
 }
 
+.aviso{
+    padding: $espacio 0;
+    max-width: $tamaño_maximo;
+    width: 100%;
+    margin: 0 auto;
+
+    h3{
+        background: $morado;
+        border-radius: 10px;
+        box-shadow: $sombra;
+        font-family: $fuente_terciaria;
+        color: $blanco;
+        padding: 10px;
+        font-size: $texto_pequeña;
+    }
+}
+
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */

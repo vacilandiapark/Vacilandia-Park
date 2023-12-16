@@ -2915,6 +2915,22 @@ main {
   cursor: pointer;
 }
 
+.aviso {
+  padding: 35px 0;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+.aviso h3 {
+  background: #724C9F;
+  border-radius: 10px;
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  padding: 10px;
+  font-size: 0.75rem;
+}
+
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
