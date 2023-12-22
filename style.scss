@@ -2097,7 +2097,7 @@ main {
     }
 
     &#concierto {
-        background: linear-gradient(45deg, rgba($rgba-rojo, 0.9), rgba($rgba-rosado, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/v1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+        background: linear-gradient(45deg, rgba($rgba-rojo, 0.8), rgba($rgba-rosado, 0.8)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_800/q_auto/f_auto/Concierto/VCLNDIA_IMG_2959_nlxlnh.jpg);
 
         .container {
 
@@ -3618,13 +3618,13 @@ main {
     }
 }
 
-.aviso{
+.aviso {
     padding: $espacio 0;
     max-width: $tamaño_maximo;
     width: 100%;
     margin: 0 auto;
 
-    h3{
+    h3 {
         background: $morado;
         border-radius: 10px;
         box-shadow: $sombra;
@@ -3632,6 +3632,127 @@ main {
         color: $blanco;
         padding: 10px;
         font-size: $texto_pequeña;
+    }
+}
+
+.cartelera {
+    padding-top: $espacio;
+    padding-bottom: calc($espacio + 50px);
+    background: linear-gradient(45deg, rgba($rgba-rojo, 0.9), rgba($rgba-rosado, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_800/q_auto/f_auto/Concierto/VCLNDIA_IMG_2959_nlxlnh.jpg);
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .title {
+
+        h1 {
+            color: $blanco;
+        }
+    }
+
+    .container {
+        max-width: $tamaño_maximo;
+        width: 100%;
+        padding-top: $espacio;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .video {
+            width: 40%;
+        }
+
+        .eventos {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+
+            .bloque {
+                display: flex;
+                width: 109%;
+                height: 100%;
+                border-radius: 20px;
+
+                .image {
+                    width: 100%;
+                    height: auto;
+
+                    img {
+                        transform: scale(1.04);
+                        width: 100%;
+                        cursor: pointer;
+                    }
+                }
+
+                .text {
+                    transform: translate(-50px, 40px);
+                    border-radius: 20px;
+                    width: 100%;
+                    height: auto;
+                    padding: 20px;
+                    background: $blanco;
+                    position: relative;
+                    box-shadow: $sombra;
+
+                    .fecha {
+                        transform: translate(-10px, -40px);
+                        position: absolute;
+                        background: $celeste;
+                        padding: 10px 15px;
+                        border-radius: 10px;
+
+                        p {
+                            color: $blanco;
+                            font-family: $fuente_primaria;
+                            font-size: $texto_mediana;
+                            text-align: center;
+                            text-transform: uppercase;
+                        }
+                    }
+
+                    .content {
+                        height: 100%;
+                        display: flex;
+                        padding-top: 25px;
+                        flex-direction: column;
+                        gap: 5px;
+
+                        h1 {
+                            font-family: $fuente_primaria;
+                            color: $negro;
+                            font-size: $texto_mediana;
+                        }
+
+                        h2 {
+                            color: $concierto_primario;
+                            font-size: $texto_pequeña;
+                            font-family: $fuente_terciaria;
+                        }
+
+                        p {
+                            color: $concierto_primario;
+                            font-size: $texto_pequeña;
+                            font-family: $fuente_terciaria;
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+
+                            i {
+                                color: $rosado;
+                                font-size: 7px;
+                            }
+                        }
+
+                        button {
+                            margin-top: 10px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -3705,6 +3826,7 @@ main {
         }
     }
 
+    .cartelera,
     .canchas,
     .introduccion,
     .carrusel_imagenes,
@@ -3792,6 +3914,25 @@ main {
 
     #responsive_navegacion {
         display: block;
+    }
+
+    .cartelera {
+
+        padding-bottom: calc($espacio + 80px);
+
+        .container {
+
+            justify-content: center;
+            flex-direction: column;
+
+            .video {
+                width: 100%;
+            }
+
+            .eventos {
+                width: 100%;
+            }
+        }
     }
 }
 

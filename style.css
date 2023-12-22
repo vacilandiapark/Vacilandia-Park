@@ -1679,7 +1679,7 @@ main {
   background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/v1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
 }
 .tarjetas#concierto {
-  background: linear-gradient(45deg, rgba(236, 33, 39, 0.9), rgba(234, 11, 139, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/v1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(236, 33, 39, 0.8), rgba(234, 11, 139, 0.8)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_800/q_auto/f_auto/Concierto/VCLNDIA_IMG_2959_nlxlnh.jpg);
 }
 .tarjetas#concierto .container .title h1 {
   color: #fff;
@@ -2931,6 +2931,108 @@ main {
   font-size: 0.75rem;
 }
 
+.cartelera {
+  padding-top: 35px;
+  padding-bottom: 85px;
+  background: linear-gradient(45deg, rgba(236, 33, 39, 0.9), rgba(234, 11, 139, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_800/q_auto/f_auto/Concierto/VCLNDIA_IMG_2959_nlxlnh.jpg);
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cartelera .title h1 {
+  color: #fff;
+}
+.cartelera .container {
+  max-width: 1000px;
+  width: 100%;
+  padding-top: 35px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.cartelera .container .video {
+  width: 40%;
+}
+.cartelera .container .eventos {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.cartelera .container .eventos .bloque {
+  display: flex;
+  width: 109%;
+  height: 100%;
+  border-radius: 20px;
+}
+.cartelera .container .eventos .bloque .image {
+  width: 100%;
+  height: auto;
+}
+.cartelera .container .eventos .bloque .image img {
+  transform: scale(1.04);
+  width: 100%;
+  cursor: pointer;
+}
+.cartelera .container .eventos .bloque .text {
+  transform: translate(-50px, 40px);
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background: #fff;
+  position: relative;
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
+}
+.cartelera .container .eventos .bloque .text .fecha {
+  transform: translate(-10px, -40px);
+  position: absolute;
+  background: #2BABE2;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.cartelera .container .eventos .bloque .text .fecha p {
+  color: #fff;
+  font-family: "Lilita One", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.cartelera .container .eventos .bloque .text .content {
+  height: 100%;
+  display: flex;
+  padding-top: 25px;
+  flex-direction: column;
+  gap: 5px;
+}
+.cartelera .container .eventos .bloque .text .content h1 {
+  font-family: "Lilita One", sans-serif;
+  color: #3b3b3b;
+  font-size: 1rem;
+}
+.cartelera .container .eventos .bloque .text .content h2 {
+  color: #191919;
+  font-size: 0.75rem;
+  font-family: "Poppins", sans-serif;
+}
+.cartelera .container .eventos .bloque .text .content p {
+  color: #191919;
+  font-size: 0.75rem;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.cartelera .container .eventos .bloque .text .content p i {
+  color: #EA0B8B;
+  font-size: 7px;
+}
+.cartelera .container .eventos .bloque .text .content button {
+  margin-top: 10px;
+  width: 100%;
+}
+
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
@@ -2986,6 +3088,7 @@ main {
   .introduccion .text p {
     padding: 0;
   }
+  .cartelera,
   .canchas,
   .introduccion,
   .carrusel_imagenes,
@@ -3056,6 +3159,19 @@ main {
   }
   #responsive_navegacion {
     display: block;
+  }
+  .cartelera {
+    padding-bottom: 115px;
+  }
+  .cartelera .container {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .cartelera .container .video {
+    width: 100%;
+  }
+  .cartelera .container .eventos {
+    width: 100%;
   }
 }
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 900PX */
