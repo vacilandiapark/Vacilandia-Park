@@ -852,6 +852,7 @@ main {
 
 .banner_principal {
     display: flex;
+    flex-direction: column;
     height: auto;
     justify-content: center;
 
@@ -879,6 +880,29 @@ main {
             object-fit: contain;
             transition: all 0.5s ease-in-out;
         }
+    }
+
+    .banner_thumbnail {
+        margin-top: calc($espacio - 20px);
+
+        swiper-slide {
+            width: 100%;
+            height: 100%;
+            filter: brightness(60%);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.1s ease-in-out;
+            cursor: pointer;
+
+            img:hover{
+                transform: scale(1.05);
+            }
+        }
+
+        .swiper-slide-thumb-active {
+            filter: brightness(100%);
+        }
+
     }
 }
 
