@@ -3053,6 +3053,23 @@ main {
   width: 100%;
 }
 
+.fullday {
+  display: flex;
+  justify-content: center;
+}
+.fullday .container {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+}
+.fullday .container .col {
+  width: 50%;
+}
+.fullday .container .col video {
+  width: 300px;
+  height: auto;
+}
+
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */

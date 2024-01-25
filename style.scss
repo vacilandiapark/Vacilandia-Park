@@ -3781,6 +3781,26 @@ main {
     }
 }
 
+.fullday{
+    display: flex;
+    justify-content: center;
+
+    .container{
+        max-width: $tamaño_maximo;
+        width: 100%;
+        display: flex;
+
+        .col{
+            width: 50%;
+
+            video{
+                width: 300px;
+                height: auto;
+            }
+        }
+    }
+}
+
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
