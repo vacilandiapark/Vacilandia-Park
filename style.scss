@@ -3813,47 +3813,37 @@ main {
         width: 100%;
 
         .row {
-            display: flex;
-            justify-content: center;
-            box-shadow: $sombra;
             width: 100%;
             height: auto;
             margin-bottom: 30px;
-            border-radius: 20px;
 
-            &:nth-child(1) {
+            h1 {
                 background: $morado;
-            }
-
-            &:nth-child(2) {
-                background: $rojo;
-            }
-
-            &:nth-child(3) {
-                background: $verde;
+                font-family: $fuente_primaria;
+                font-weight: lighter;
+                font-size: 25px;
+                padding: 10px;
+                color: $blanco;
+                font-weight: lighter;
+                text-transform: uppercase;
             }
 
             .col {
                 color: $blanco;
                 font-family: $fuente_terciaria;
-                line-height: 1.1;
+                line-height: 1.5;
                 width: auto;
-                padding: 40px;
-                font-size: 15px;
+                padding: 20px;
+                background: $blanco;
+                box-shadow: $sombra;
 
                 ul {
-                    padding: 10px 0;
 
                     li {
-                        font-size: 0.7rem;
+                        color: $negro;
+                        font-size: 0.8rem;
                         font-family: $fuente_terciaria;
                     }
-                }
-
-                h1 {
-                    font-family: $fuente_primaria;
-                    font-weight: lighter;
-                    font-size: 25px;
                 }
 
                 .recom {
@@ -4243,22 +4233,6 @@ main {
     .animales {
         .card {
             width: calc(100% - 25px) !important;
-        }
-    }
-
-    .terminos {
-
-        .row {
-            flex-direction: column;
-            padding: 30px 0;
-
-            .col{
-                padding: 0px 40px !important;
-
-                img{
-                    width: 100% !important;
-                }
-            }
         }
     }
 }
