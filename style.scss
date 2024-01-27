@@ -894,7 +894,7 @@ main {
             transition: all 0.1s ease-in-out;
             cursor: pointer;
 
-            img:hover{
+            img:hover {
                 transform: scale(1.05);
             }
         }
@@ -3203,7 +3203,7 @@ main {
                     height: 100%;
                     font-size: $texto_mediana;
                     display: flex;
-                    background: linear-gradient(to bottom, rgba(0,0,0, 0.6), transparent 50%);
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent 50%);
                 }
             }
         }
@@ -3781,24 +3781,112 @@ main {
     }
 }
 
-.fullday{
+.fullday {
     display: flex;
     justify-content: center;
 
-    .container{
+    .container {
         max-width: $tamaño_maximo;
         width: 100%;
         display: flex;
 
-        .col{
+        .col {
             width: 50%;
 
-            video{
+            video {
                 width: 300px;
                 height: auto;
             }
         }
     }
+}
+
+/* TÉRMINOS Y CONDICIONES */
+
+.terminos {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+.terminos .container {
+    max-width: $tamaño_maximo;
+}
+
+.terminos .container .row {
+    display: flex;
+    justify-content: center;
+
+
+    box-shadow: $sombra;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.terminos .container .row:nth-child(1) {
+    background: #432F87;
+}
+
+.terminos .container .row:nth-child(2) {
+    background: #EC2127;
+}
+
+.terminos .container .row:nth-child(3) {
+    background: #18401E;
+}
+
+.terminos .container .row .col {
+    color: $blanco;
+    font-family: $fuente_terciaria;
+    line-height: 1.1;
+    width: 500px;
+    padding: 40px;
+    font-size: 15px;
+}
+
+.terminos .container .row .col ul {
+    padding: 10px 0;
+}
+
+.terminos li{
+    font-size: 0.7rem;
+    font-family: $fuente_terciaria;
+}
+
+.terminos .container .row .col h1 {
+    font-family: $fuente_primaria;
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+.terminos .recom {
+    display: flex;
+    padding: 10px 0px;
+    align-items: center;
+}
+
+.terminos .col img {
+    width: 100%;
+    height: auto;
+}
+
+.terminos .image img {
+    width: 300px;
+    height: auto;
+}
+
+.terminos .container .row .col i {
+    background: #D2D90B;
+    color: #18401E;
+    padding: 15px;
+    margin-right: 20px;
+    font-size: 25px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
 }
 
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
