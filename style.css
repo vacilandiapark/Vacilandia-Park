@@ -3074,13 +3074,12 @@ main {
 .terminos {
   display: flex;
   justify-content: center;
-  padding: 100px 0;
+  margin-top: 115px;
 }
-
 .terminos .container {
   max-width: 1000px;
+  width: 100%;
 }
-
 .terminos .container .row {
   display: flex;
   justify-content: center;
@@ -3088,61 +3087,43 @@ main {
   width: 100%;
   height: auto;
   margin-bottom: 30px;
+  border-radius: 20px;
 }
-
 .terminos .container .row:nth-child(1) {
-  background: #432F87;
+  background: #724C9F;
 }
-
 .terminos .container .row:nth-child(2) {
   background: #EC2127;
 }
-
 .terminos .container .row:nth-child(3) {
-  background: #18401E;
+  background: #77C043;
 }
-
 .terminos .container .row .col {
   color: #fff;
   font-family: "Poppins", sans-serif;
   line-height: 1.1;
-  width: 500px;
+  width: auto;
   padding: 40px;
   font-size: 15px;
 }
-
 .terminos .container .row .col ul {
   padding: 10px 0;
 }
-
-.terminos li {
+.terminos .container .row .col ul li {
   font-size: 0.7rem;
   font-family: "Poppins", sans-serif;
 }
-
 .terminos .container .row .col h1 {
   font-family: "Lilita One", sans-serif;
   font-weight: lighter;
   font-size: 25px;
 }
-
-.terminos .recom {
+.terminos .container .row .col .recom {
   display: flex;
   padding: 10px 0px;
   align-items: center;
 }
-
-.terminos .col img {
-  width: 100%;
-  height: auto;
-}
-
-.terminos .image img {
-  width: 300px;
-  height: auto;
-}
-
-.terminos .container .row .col i {
+.terminos .container .row .col .recom i {
   background: #D2D90B;
   color: #18401E;
   padding: 15px;
@@ -3153,6 +3134,17 @@ main {
   display: flex;
   justify-content: center;
   border-radius: 50%;
+}
+.terminos .container .row .col .recom p {
+  font-size: 0.7rem;
+  font-family: "Poppins", sans-serif;
+}
+.terminos .container .row .col .image {
+  width: auto;
+}
+.terminos .container .row .col .image img {
+  width: 300px;
+  height: auto;
 }
 
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
@@ -3210,6 +3202,7 @@ main {
   .introduccion .text p {
     padding: 0;
   }
+  .terminos,
   .cartelera,
   .canchas,
   .introduccion,
@@ -3411,6 +3404,16 @@ main {
   }
   .animales .card {
     width: calc(100% - 25px) !important;
+  }
+  .terminos .row {
+    flex-direction: column;
+    padding: 30px 0;
+  }
+  .terminos .row .col {
+    padding: 0px 40px !important;
+  }
+  .terminos .row .col img {
+    width: 100% !important;
   }
 }
 

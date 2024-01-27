@@ -3806,87 +3806,93 @@ main {
 .terminos {
     display: flex;
     justify-content: center;
-    padding: 100px 0;
-}
+    margin-top: calc($espacio + 80px);
 
-.terminos .container {
-    max-width: $tamaño_maximo;
-}
+    .container {
+        max-width: $tamaño_maximo;
+        width: 100%;
 
-.terminos .container .row {
-    display: flex;
-    justify-content: center;
+        .row {
+            display: flex;
+            justify-content: center;
+            box-shadow: $sombra;
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+            border-radius: 20px;
 
+            &:nth-child(1) {
+                background: $morado;
+            }
 
-    box-shadow: $sombra;
-    width: 100%;
-    height: auto;
-    margin-bottom: 30px;
-}
+            &:nth-child(2) {
+                background: $rojo;
+            }
 
-.terminos .container .row:nth-child(1) {
-    background: #432F87;
-}
+            &:nth-child(3) {
+                background: $verde;
+            }
 
-.terminos .container .row:nth-child(2) {
-    background: #EC2127;
-}
+            .col {
+                color: $blanco;
+                font-family: $fuente_terciaria;
+                line-height: 1.1;
+                width: auto;
+                padding: 40px;
+                font-size: 15px;
 
-.terminos .container .row:nth-child(3) {
-    background: #18401E;
-}
+                ul {
+                    padding: 10px 0;
 
-.terminos .container .row .col {
-    color: $blanco;
-    font-family: $fuente_terciaria;
-    line-height: 1.1;
-    width: 500px;
-    padding: 40px;
-    font-size: 15px;
-}
+                    li {
+                        font-size: 0.7rem;
+                        font-family: $fuente_terciaria;
+                    }
+                }
 
-.terminos .container .row .col ul {
-    padding: 10px 0;
-}
+                h1 {
+                    font-family: $fuente_primaria;
+                    font-weight: lighter;
+                    font-size: 25px;
+                }
 
-.terminos li{
-    font-size: 0.7rem;
-    font-family: $fuente_terciaria;
-}
+                .recom {
+                    display: flex;
+                    padding: 10px 0px;
+                    align-items: center;
 
-.terminos .container .row .col h1 {
-    font-family: $fuente_primaria;
-    font-weight: lighter;
-    font-size: 25px;
-}
+                    i {
+                        background: #D2D90B;
+                        color: #18401E;
+                        padding: 15px;
+                        margin-right: 20px;
+                        font-size: 25px;
+                        width: 20px;
+                        height: 20px;
+                        display: flex;
+                        justify-content: center;
+                        border-radius: 50%;
+                    }
 
-.terminos .recom {
-    display: flex;
-    padding: 10px 0px;
-    align-items: center;
-}
+                    p {
+                        font-size: 0.7rem;
+                        font-family: $fuente_terciaria;
+                    }
+                }
 
-.terminos .col img {
-    width: 100%;
-    height: auto;
-}
+                .image {
 
-.terminos .image img {
-    width: 300px;
-    height: auto;
-}
+                    width: auto;
 
-.terminos .container .row .col i {
-    background: #D2D90B;
-    color: #18401E;
-    padding: 15px;
-    margin-right: 20px;
-    font-size: 25px;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    border-radius: 50%;
+                    img {
+                        width: 300px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
@@ -3959,6 +3965,7 @@ main {
         }
     }
 
+    .terminos,
     .cartelera,
     .canchas,
     .introduccion,
@@ -4236,6 +4243,22 @@ main {
     .animales {
         .card {
             width: calc(100% - 25px) !important;
+        }
+    }
+
+    .terminos {
+
+        .row {
+            flex-direction: column;
+            padding: 30px 0;
+
+            .col{
+                padding: 0px 40px !important;
+
+                img{
+                    width: 100% !important;
+                }
+            }
         }
     }
 }
