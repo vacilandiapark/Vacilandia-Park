@@ -3081,40 +3081,59 @@ main {
   width: 100%;
 }
 .terminos .container .row {
+  display: flex;
+  justify-content: center;
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   width: 100%;
   height: auto;
   margin-bottom: 30px;
+  border-radius: 10px;
 }
-.terminos .container .row h1 {
-  background: #724C9F;
-  font-family: "Lilita One", sans-serif;
-  font-weight: lighter;
-  font-size: 25px;
-  padding: 10px;
-  color: #fff;
-  font-weight: lighter;
-  text-transform: uppercase;
+.terminos .container .row:nth-child(1) {
+  background: rgba(67, 47, 135, 0.9);
+}
+.terminos .container .row:nth-child(2) {
+  background: rgba(236, 33, 39, 0.9);
+}
+.terminos .container .row:nth-child(3) {
+  background: rgba(24, 64, 30, 0.9);
 }
 .terminos .container .row .col {
   color: #fff;
   font-family: "Poppins", sans-serif;
-  line-height: 1.5;
-  width: auto;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
+  line-height: 1.3;
+  width: 500px;
+  padding: 40px;
+  font-size: 15px;
+}
+.terminos .container .row .col h1 {
+  text-transform: uppercase;
+  font-family: "Lilita One", sans-serif;
+  font-weight: lighter;
+  font-size: 25px;
+}
+.terminos .container .row .col ul {
+  padding: 10px 0;
 }
 .terminos .container .row .col ul li {
-  color: #3b3b3b;
   font-size: 0.8rem;
   font-family: "Poppins", sans-serif;
+  margin-bottom: 5px;
 }
 .terminos .container .row .col .recom {
   display: flex;
   padding: 10px 0px;
   align-items: center;
 }
-.terminos .container .row .col .recom i {
+.terminos .container .row .col .recom p {
+  font-size: 0.8rem;
+  font-family: "Poppins", sans-serif;
+}
+.terminos .container .row .col img {
+  width: 300px;
+  height: auto;
+}
+.terminos .container .row .col i {
   background: #D2D90B;
   color: #18401E;
   padding: 15px;
@@ -3125,17 +3144,6 @@ main {
   display: flex;
   justify-content: center;
   border-radius: 50%;
-}
-.terminos .container .row .col .recom p {
-  font-size: 0.7rem;
-  font-family: "Poppins", sans-serif;
-}
-.terminos .container .row .col .image {
-  width: auto;
-}
-.terminos .container .row .col .image img {
-  width: 300px;
-  height: auto;
 }
 
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
@@ -3395,6 +3403,23 @@ main {
   }
   .animales .card {
     width: calc(100% - 25px) !important;
+  }
+  .terminos .container .row {
+    flex-direction: column;
+    padding: 40px;
+    width: auto;
+  }
+  .terminos .container .row .col {
+    padding: 0px;
+    width: 100%;
+  }
+  .terminos .container .row .col ul {
+    margin: 0;
+    padding: 0;
+  }
+  .terminos .container .row .col h1 {
+    padding-bottom: 20px;
+    width: 100%;
   }
 }
 

@@ -3813,36 +3813,48 @@ main {
         width: 100%;
 
         .row {
+            display: flex;
+            justify-content: center;
+            box-shadow: $sombra;
             width: 100%;
             height: auto;
             margin-bottom: 30px;
+            border-radius: 10px;
 
-            h1 {
-                background: $morado;
-                font-family: $fuente_primaria;
-                font-weight: lighter;
-                font-size: 25px;
-                padding: 10px;
-                color: $blanco;
-                font-weight: lighter;
-                text-transform: uppercase;
+            &:nth-child(1) {
+                background: rgba(#432F87, 0.9);
+            }
+
+            &:nth-child(2) {
+                background: rgba(#EC2127, 0.9);
+            }
+
+            &:nth-child(3) {
+                background: rgba(#18401E, 0.9);
             }
 
             .col {
                 color: $blanco;
                 font-family: $fuente_terciaria;
-                line-height: 1.5;
-                width: auto;
-                padding: 20px;
-                background: $blanco;
-                box-shadow: $sombra;
+                line-height: 1.3;
+                width: 500px;
+                padding: 40px;
+                font-size: 15px;
+
+                h1 {
+                    text-transform: uppercase;
+                    font-family: $fuente_primaria;
+                    font-weight: lighter;
+                    font-size: 25px;
+                }
 
                 ul {
+                    padding: 10px 0;
 
                     li {
-                        color: $negro;
                         font-size: 0.8rem;
                         font-family: $fuente_terciaria;
+                        margin-bottom: 5px;
                     }
                 }
 
@@ -3851,38 +3863,33 @@ main {
                     padding: 10px 0px;
                     align-items: center;
 
-                    i {
-                        background: #D2D90B;
-                        color: #18401E;
-                        padding: 15px;
-                        margin-right: 20px;
-                        font-size: 25px;
-                        width: 20px;
-                        height: 20px;
-                        display: flex;
-                        justify-content: center;
-                        border-radius: 50%;
-                    }
-
-                    p {
-                        font-size: 0.7rem;
+                    p{
+                        font-size: 0.8rem;
                         font-family: $fuente_terciaria;
+                        
                     }
                 }
 
-                .image {
+                img {
+                    width: 300px;
+                    height: auto;
+                }
 
-                    width: auto;
-
-                    img {
-                        width: 300px;
-                        height: auto;
-                    }
+                i {
+                    background: #D2D90B;
+                    color: #18401E;
+                    padding: 15px;
+                    margin-right: 20px;
+                    font-size: 25px;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    justify-content: center;
+                    border-radius: 50%;
                 }
             }
         }
     }
-
 }
 
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
@@ -4233,6 +4240,33 @@ main {
     .animales {
         .card {
             width: calc(100% - 25px) !important;
+        }
+    }
+
+    .terminos {
+
+        .container {
+
+            .row {
+                flex-direction: column;
+                padding: 40px;
+                width: auto;
+
+                .col{
+                    padding: 0px;
+                    width: 100%;
+
+                    ul{
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    h1{
+                        padding-bottom: 20px;
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
