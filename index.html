@@ -38,81 +38,1574 @@
     <!-- ESTILOS PROPIOS -->
 
     <link rel="icon"
-        href="https://res.cloudinary.com/dlvqvbok1/image/upload/w_100/q_auto/f_auto/v1/Materials/Logos/s7bdcd2tqqmlceg1t5fj">
+        href="https://res.cloudinary.com/dddlebwyr/image/upload/w_50/q_auto/f_auto/Logos%20y%20marcas/LOGO-VACILANDIA-FINAL_wavc3f.png">
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        body {
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:%23ffffff;display:block;z-index:1;position:relative" width="1920" height="1084" preserveAspectRatio="xMidYMid" viewBox="0 0 1920 1084"><g transform="translate(960,542) scale(1,1) translate(-960,-542)"><linearGradient id="ldbk-7nhjge1xkg" x1="-0.1" y1="0" x2="1.1" y2="1"><animate attributeName="y2" repeatCount="indefinite" dur="9.090909090909092s" keyTimes="0;0.5;1" values="-0.5;0.5;-0.5" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" calcMode="spline"></animate><stop stop-color="%23ea0b8b" offset="0"></stop><stop stop-color="%23432f87" offset="1"></stop></linearGradient><rect x="0" y="0" width="1920" height="1084" fill="url(%23ldbk-7nhjge1xkg)"></rect></g></svg>');
-            height: 100vh;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container {
-            text-align: center;
-        }
-
-        .logo img {
-            max-width: 100px;
-            border-radius: 10px;
-            height: auto;
-            /* Ajusta el tamaño de tu logo según sea necesario */
-            display: block;
-            margin: 0 auto;
-            padding-bottom: 20px;
-        }
-
-        .social-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
-            /* Espacio entre el logo y los botones */
-        }
-
-        h1 {
-            color: white;
-            font-family: "Lilita One", sans-serif;
-            font-size: 15px;
-            font-weight: lighter;
-        }
-
-        i {
-            color: white;
-        }
-    </style>
 
 </head>
 
 <!-- CONTENIDO DE LA PÁGINA WEB -->
 <!-- SE CARGA BARBA.JS PARA LA ANIMACIÓN ENTRE PÁGINAS WEBS -->
 
-<body>
-    <div class="container">
-        <div class="logo">
-            <!-- Aquí coloca tu imagen de logo -->
-            <img src="https://static.vaope.com/public/artists/7870-vacilandia.jpg" alt="Logo">
-        </div>
-        <div class="text">
-            <h1>WEB EN MANTENIMIENTO, SIGUENOS EN:</h1>
-        </div>
-        <div class="social-buttons">
-            <a href="https://www.facebook.com/vacilandiapark"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://api.whatsapp.com/send/?phone=%2B51913479416&text&type=phone_number&app_absent=0"><i
-                    class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://www.instagram.com/vacilandiapark/?hl=es"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@vacilandiapark"><i class="fa-brands fa-tiktok"></i></a>
+<body data-barba="wrapper">
+
+    <!-- DIV DE LA ANIMACIÓN, POSTERIORMENTE SE ESTILIZA -->
+
+    <div class="pantalla_de_carga">
+        <div class="loading-screen">
+            <img src="https://res.cloudinary.com/dddlebwyr/image/upload/w_150/q_auto/f_auto/Logos%20y%20marcas/LOGO-VACILANDIA-FINAL_wavc3f.png"
+                alt="Imagen de carga" class="loading-image">
         </div>
     </div>
 
+    <!-- SE COLOCA EL NOMBRE DE LA PÁGINA PARA LA CARGA DE BARBA.JS -->
 
+    <div class="all" data-barba="container" data-barba-namespace="inicio-section">
+
+        <!-- DIV DEL BOTÓN DEL WHATSAPP FLOTANTE -->
+
+        <a href="https://api.whatsapp.com/send/?phone=%2B51913479416&text&type=phone_number&app_absent=0">
+            <div id="boton_de_whatsapp">
+                <div id="whatsapp-icon">
+                    <img decoding="async"
+                        src="https://static-00.iconduck.com/assets.00/whatsapp-icon-512x512-8q344er8.png"
+                        alt="WhatsApp">
+                </div>
+            </div>
+        </a>
+
+        <!-- SEGUNDO NAVBAR QUE VA EN VERTICAL AL LADO IZQUIERDO -->
+
+        <nav class="barra_vertical">
+            <div class="container">
+                <div class="item" title="Inicio">
+                    <a href="/">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="36"
+                            height="36" viewBox="0 0 24 24" stroke-width="0.7" stroke="#000000" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+                            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+                            <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- SE COLOCA TOGGLEINFO("NÚMERO DEL INFO-CONTAINER QUE VA MÁS ABAJO PARA PODER ABRIRLO POSTERIORMENTE DE ACORDE LO QUE SELECCIONE EL USUARIO") -->
+
+                <div class="item" onclick="toggleInfo(1)" title="Calendario">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar" width="36"
+                        height="36" viewBox="0 0 24 24" stroke-width="0.7" stroke="#000000" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" />
+                        <path d="M16 3v4" />
+                        <path d="M8 3v4" />
+                        <path d="M4 11h16" />
+                        <path d="M11 15h1" />
+                        <path d="M12 15v3" />
+                    </svg>
+                </div>
+                <div class="item" onclick="toggleInfo(2)" title="Mapa">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" width="36"
+                        height="36" viewBox="0 0 24 24" stroke-width="0.7" stroke="#000000" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7.5" />
+                        <path d="M9 4v13" />
+                        <path d="M15 7v5.5" />
+                        <path
+                            d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z" />
+                        <path d="M19 18v.01" />
+                    </svg>
+                </div>
+                <div class="item" onclick="toggleInfo(4)" title="Comprar ticket">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ticket" width="36"
+                        height="36" viewBox="0 0 24 24" stroke-width="0.7" stroke="#000000" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M15 5l0 2" />
+                        <path d="M15 11l0 2" />
+                        <path d="M15 17l0 2" />
+                        <path
+                            d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" />
+                    </svg>
+                </div>
+                <div class="item" onclick="toggleInfo(3)" title="Preguntas frecuentes">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-help-hexagon" width="36"
+                        height="36" viewBox="0 0 24 24" stroke-width="0.7" stroke="#000000" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M19.875 6.27c.7 .398 1.13 1.143 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" />
+                        <path d="M12 16v.01" />
+                        <path d="M12 13a2 2 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" />
+                    </svg>
+                </div>
+                <div class="item">
+
+                    <!-- CONTENEDOR DE LA TARJETA DE MÚSICA -->
+
+                    <div id="boton_de_musica">
+
+                        <!-- BOTÓN DE REPRODUCCIÓN -->
+
+                        <div id="play-button" onclick="playMusic()">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-headphones"
+                                width="36" height="36" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M4 13m0 2a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2z" />
+                                <path
+                                    d="M15 13m0 2a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2z" />
+                                <path d="M4 15v-3a8 8 0 0 1 16 0v3" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-headphones-off"
+                                width="36" height="36" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M3 3l18 18" />
+                                <path
+                                    d="M4 13m0 2a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2z" />
+                                <path
+                                    d="M17 13h1a2 2 0 0 1 2 2v1m-.589 3.417c-.361 .36 -.86 .583 -1.411 .583h-1a2 2 0 0 1 -2 -2v-3" />
+                                <path
+                                    d="M4 15v-3c0 -2.21 .896 -4.21 2.344 -5.658m2.369 -1.638a8 8 0 0 1 11.287 7.296v3" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- COLOCAMOS EL NÚMERO QUE MÁS ARRIBA COLOCAMOS PARA PODER HACER REFERENCIA A SU CONTAINER, EN ESTE CASO INFO-"NÚMERO DEL TOGGLEINFO("#")" -->
+
+        <div class="contenedor_informacion info-1">
+
+            <!-- CLOSEINFO("NÚMERO A CERRAR DE INFO-"#") -->
+
+            <button class="close-button" onclick="closeInfo(1)">X</button>
+            <div class="content">
+                <h1>HORARIOS DISPONIBLES</h1>
+
+                <h2>PARQUE GENERAL</h2>
+                <p>9:00am hasta las 06:00pm de Todos los días</p>
+
+                <h2>PISCINAS Y TOBOGANES</h2>
+                <p>9:00am hasta las 05:00pm de Todos los días</p>
+
+                <h2>RESTAURANTE</h2>
+                <p>11:00am hasta las 04:00pm de Todos los días</p>
+
+                <h2>CANCHAS</h2>
+                <p>07:00am hasta las 12:00am Todos los días</p>
+            </div>
+        </div>
+
+        <div class="contenedor_informacion info-2">
+            <button class="close-button" onclick="closeInfo(2)">X</button>
+            <div class="content">
+                <h1>INTERACTÚA CON NUESTRO MAPA</h1>
+                <p>Interactúa con el mapa de Vacilandia y conoce todos los atractivos que tenemos para ti. </p>
+                <div class="image">
+                    <img decoding="async" loading="lazy"
+                        src="https://res.cloudinary.com/dddlebwyr/image/upload/w_400/q_auto/f_auto/Complementos%20inicio/k1woujpafqqml8gq7ofr_kczayx.jpg"
+                        alt="">
+                </div>
+                <a href="Mapa-del-Parque"><button>¡VÁMOS ALLA!</button></a>
+            </div>
+        </div>
+
+        <div class="contenedor_informacion info-3">
+            <button class="close-button" onclick="closeInfo(3)">X</button>
+            <div class="content">
+                <h1>PREGUNTAS Y RESPUESTAS</h1>
+
+                <!-- SECCIÓN DE PREGUNTAS Y RESPUESTAS - TOGGLE INFO -->
+
+                <section class="preguntas_y_respuestas" style="padding: 0;">
+                    <div class="container" style="padding: 0;">
+                        <div class="faq-list" style="padding: 0;">
+
+                            <!-- ESTILOS DE LA PREGUNTA -->
+
+                            <div class="faq-item closed">
+                                <div class="question">¿Cuál es el horario de apertura del parque?
+                                </div>
+
+                                <!-- ESTILOS DE LA RESPUESTA -->
+
+                                <div class="answer-wrapper">
+                                    <div class="answer">Lo puedes ver en el siguiente enlace: <a href="#"
+                                            onclick="toggleInfo(1)" title="Calendario y Horarios">Ver
+                                            Horarios</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item closed">
+                                <div class="question">¿Cuentan con estacionamiento? ¿Tiene algún costo?
+                                </div>
+                                <div class="answer-wrapper">
+                                    <div class="answer">
+                                        Si contamos con estacionamiento amplio y es gratis.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item closed">
+                                <div class="question">¿Se puede llevar comida al parque?
+                                </div>
+                                <div class="answer-wrapper">
+                                    <div class="answer">
+                                        No está permitido el ingreso de comida al parque a excepción de alimentos para
+                                        bebes, como papillas, leche y tortas de cumpleaños.
+                                        Dentro del parque tenemos una variedad de productos de market y una amplia carta
+                                        gastronómica.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item closed">
+                                <div class="question">¿Las piscinas están abiertas?
+                                </div>
+                                <div class="answer-wrapper">
+                                    <div class="answer">
+                                        Todas las piscinas se encuentran abiertas para el público.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item closed">
+                                <div class="question">¿A qué edad no se paga la entrada?
+                                </div>
+                                <div class="answer-wrapper">
+                                    <div class="answer">
+                                        Niños menores o igual a 3 años y adultos mayores o igual a 65 años ingresan
+                                        gratis.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item closed">
+                                <div class="question">¿Si salgo del parque puedo ingresar?
+                                </div>
+                                <div class="answer-wrapper">
+                                    <div class="answer">
+                                        No está permitido el ingreso una vez se sale del parque.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item closed">
+                                <div class="question">¿Puedo ingresar con mi mascota?
+                                </div>
+                                <div class="answer-wrapper">
+                                    <div class="answer">
+                                        No está permitido el ingreso de mascotas al parque.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item closed">
+                                <div class="question">¿Puedo llevar flotadores, sillas y carpas?
+                                </div>
+                                <div class="answer-wrapper">
+                                    <div class="answer">
+                                        No está permitido el ingreso de sillas y carpas, a excepción de los flotadores
+                                        donde
+                                        solo se puede ingresar si son pequeños para los brazos.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item closed">
+                                <div class="question">¿Solo puedo ingresar con ropa de baño a las
+                                    piscinas?
+                                </div>
+                                <div class="answer-wrapper">
+                                    <div class="answer">
+                                        Si, solo se puede ingresar con ropa de baño, no está permitido el uso de prendas
+                                        no
+                                        aptas para el agua.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item closed">
+                                <div class="question">¿Cuál es el precio de entrada?
+                                </div>
+                                <div class="answer-wrapper">
+                                    <div class="answer">
+                                        Los precios lo puedes revisar en la página de VAOpe desde el siguiente botón: <a
+                                            href="https://vaope.com/parque-acuatico/vacilandia-park"
+                                            target="_blank">Comprar
+                                            Tickets</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item closed">
+                                <div class="question">¿Dónde puedo canjear mi cupón de descuento?
+                                </div>
+                                <div class="answer-wrapper">
+                                    <div class="answer">
+                                        Solo puedes canjear tu cupón de descuento en el restaurante y solo es aplicable
+                                        a
+                                        los
+                                        platos de fondo, no está permitido canjearlo en productos de minimarket.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SE AGREGA MAS PREGUNTAS Y RESPUESTAS DEL MISMO MÉTODO -->
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="contenedor_informacion info-4">
+            <button class="close-button" onclick="closeInfo(4)">X</button>
+            <div class="content">
+                <h1>COMPRAR TICKETS</h1>
+                <div class="tickets">
+                    <div class="row">
+                        <h5>JOINNUS:</h5>
+                        <a target="_blank"
+                            href="https://www.joinnus.com/events/entertainment/lima-full-day-vacilandia-park-58225"><button
+                                id="joinnus">JOINNUS</button></a>
+                    </div>
+                    <div class="row">
+                        <h5>VAOPE:</h5>
+                        <a target="_blank" href="https://vaope.com/parque-acuatico/vacilandia-park"><button
+                                id="vaope">VAOPE</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SE AGREGA MÁS INFO-CONTAINER DE ACORDE A LA LÓGICA DADA MÁS ARRIBA -->
+
+        <!-- MAIN - CONTENEDOR DE LA PÁGINA AL COSTADO DEL SUBNAVBAR -->
+
+        <main>
+
+            <!-- SECCIÓN DEL NAVBAR -->
+
+            <nav class="navegacion_principal">
+                <div class="row-gradient"></div>
+                <div class="row">
+
+                    <!-- LOGO -->
+
+                    <div class="logo">
+                        <a href="/"><img decoding="async" loading="lazy"
+                                src="https://res.cloudinary.com/dddlebwyr/image/upload/w_150/q_auto/f_auto/Logos%20y%20marcas/LOGO-VACILANDIA-FINAL_wavc3f.png"
+                                alt=""></a>
+                    </div>
+
+                    <!-- BOTONES DE NAVEGACIÓN -->
+
+                    <ul class="navigation">
+                        <li><a href="Nosotros">NOSOTROS</a></li>
+
+                        <li><a href="#">ATRACCIONES<i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="Piscinas-y-Toboganes">PISCINAS Y TOBOGANES</a></li>
+                                <li><a href="Zona-Gamer">ZONA GAMER</a></li>
+                                <li><a href="Vacigranja">VACIGRANJA</a></li>
+                                <li><a href="Canchas-Deportivas">CANCHAS DEPORTIVAS</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">ENTRETENIMIENTO<i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="Recorrido-Ecológico">RECORRIDO ECOLÓGICO</a></li>
+                                <li><a href="La-Hora-Vacilona">LA HORA VACILONA</a></li>
+                                <li><a href="Gynkana-Vacilona">GYNKANA VACILONA</a></li>
+                                <li><a href="Recorrido-Corazones">RECORRIDO CORAZONES</a></li>
+                                <li><a href="Shows-en-Vivo">SHOWS EN VIVO</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">GASTRONOMÍA<i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="Restaurante">RESTAURANTE</a></li>
+                                <li><a href="Barcilón">BARCILÓN</a></li>
+                                <li><a href="Rincón-Chelero">RINCÓN CHELERO</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">SERVICIOS<i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="Eventos-Corporativos">EVENTOS CORPORATIVOS</a></li>
+                                <li><a href="Celebra-tu-cumpleaños">CELEBRA TU CUMPLEAÑOS</a></li>
+                                <li><a href="Paseos-y-Reencuentros">PASEOS Y REENCUENTROS</a></li>
+                                <li><a href="Campeonatos-Deportivos">CAMPEONATOS DEPORTIVOS</a></li>
+                                <li><a href="Espacios-Publicitarios">ESPACIOS PUBLICITARIOS</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="https://vacilandia-park.odoo.com/contactus">CONTÁCTENOS</a></li>
+                    </ul>
+
+                    <!-- ICONOS DE NAVEGACIÓN -->
+
+                    <div class="icons">
+                        <a target="_blank" href="https://www.facebook.com/vacilandiapark"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/vacilandiapark/?hl=es"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.tiktok.com/@vacilandiapark"><i
+                                class="fa-brands fa-tiktok"></i></a>
+                        <a target="_blank" href="https://www.youtube.com/@vacilandiapark8512/videos"><i
+                                class="fa-brands fa-youtube"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/company/vacilandia-park/mycompany/"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                    </div>
+
+                    <!-- BOTONES DE COMPRA E INGRESO -->
+
+                    <div class="buttons">
+                        <div class="dropdown">
+                            <button id="comprar" onclick="toggleDropdown()">COMPRAR TICKETS</button>
+                            <div class="dropdown-content">
+                                <a target="_blank" id="joinnus"
+                                    href="https://www.joinnus.com/events/entertainment/lima-full-day-vacilandia-park-58225">JOINNUS</a>
+                                <a target="_blank" id="vaope"
+                                    href="https://vaope.com/parque-acuatico/vacilandia-park">VAOPE</a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="https://vacilandia-park.odoo.com/web/login"><button
+                                id="celeste">INGRESAR</button></a>
+                    </div>
+
+                    <!-- HAMBURGUESA PARA EL RESPONSIVE-->
+
+                    <div class="hamburguer">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- NAVBAR DEL RESPONSIVE-->
+
+            <div id="responsive_navegacion">
+                <div class="close-button"><i class="fa-solid fa-x"></i></div>
+                <ul class="panel-navigation">
+                    <section class="preguntas_y_respuestas" id="contenido_nav_responsive" style="padding: 0;">
+                        <div class="container" style="padding: 0;">
+                            <div class="faq-list" style="padding: 0;">
+
+                                <!-- ESTILO DEL PRIMER  BOTÓN -->
+
+                                <div class="faq-item closed">
+                                    <a href="Nosotros">
+                                        <div class="question">
+                                            NOSOTROS
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- ESTILO DEL PRIMER  BOTÓN -->
+
+                                <div class="faq-item closed">
+                                    <div class="question">
+                                        ATRACCIONES
+                                    </div>
+
+                                    <!-- ESTILOS DE LOS SUBBOTONES-->
+
+                                    <div class="answer-wrapper">
+                                        <div class="answer">
+                                            <a href="Piscinas-y-Toboganes"><button>PISCINAS Y
+                                                    TOBOGANES</button></a>
+                                            <a href="Zona-Gamer"><button>ZONA GAMER</button></a>
+                                            <a href="Vacigranja"><button>VACIGRANJA</button></a>
+                                            <a href="Canchas-Deportivas"><button>CANCHAS DEPORTIVAS</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item closed">
+                                    <div class="question">
+                                        ENTRETENIMIENTO
+                                    </div>
+                                    <div class="answer-wrapper">
+                                        <div class="answer">
+                                            <a href="Recorrido-Ecológico"><button>RECORRIDO ECOLÓGICO</button></a>
+                                            <a href="La-Hora-Vacilona"><button>LA HORA VACILONA</button></a>
+                                            <a href="Gynkana-Vacilona"><button>GYNKANA VACILONA</button></a>
+                                            <a href="Recorrido-Corazones"><button>RECORRIDO CORAZONES</button></a>
+                                            <a href="Shows-en-Vivo"><button>SHOWS EN VIVO</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item closed">
+                                    <div class="question">
+                                        GASTRONOMÍA
+                                    </div>
+                                    <div class="answer-wrapper">
+                                        <div class="answer">
+                                            <a href="Restaurante"><button>RESTAURANTE</button></a>
+                                            <a href="Barcilón"><button>BARCILÓN</button></a>
+                                            <a href="Rincón-Chelero"><button>RINCÓN CHELERO</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item closed">
+                                    <div class="question">
+                                        SERVICIOS
+                                    </div>
+                                    <div class="answer-wrapper">
+                                        <div class="answer">
+                                            <a href="Eventos-Corporativos"><button>EVENTOS
+                                                    CORPORATIVOS</button></a>
+                                            <a href="Celebra-tu-cumpleaños"><button>CELEBRA TU
+                                                    CUMPLEAÑOS</button></a>
+                                            <a href="Paseos-y-Reencuentros"><button>PASEOS Y
+                                                    REENCUENTROS</button></a>
+                                            <a href="Campeonatos-Deportivos"><button>CAMPEONATOS
+                                                    DEPORTIVOS</button></a>
+                                            <a href="Espacios-Publicitarios"><button>ESPACIOS
+                                                    PUBLICITARIOS</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item closed">
+                                    <a target="_blank" href="https://vacilandia-park.odoo.com/contactus">
+                                        <div class="question">
+                                            CONTÁCTENOS
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <!-- AGREGAR MÁS BOTONES DE NAVEGACIÓN -->
+
+                            </div>
+                        </div>
+                    </section>
+                </ul>
+            </div>
+
+
+            <!--PROMOS-->
+            <section class="banner_principal">
+                <swiper-container class="articulo carrusel_banner" thumbs-swiper=".banner_thumbnail" space-between="15"
+                    pagination-clickable="true" navigation="true" autoplay-delay="3000"
+                    autoplay-disable-on-interaction="true" keyboard="true">
+                    <swiper-slide>
+                        <a
+                            href="#"><img
+                                decoding="async"
+                                src="https://res.cloudinary.com/dddlebwyr/image/upload/w_auto/f_auto/q_auto/Banners/web---03---febrero_w5huc8.jpg"
+                                alt=""></a>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <a
+                            href="#"><img
+                                decoding="async"
+                                src="https://res.cloudinary.com/dddlebwyr/image/upload/w_auto/f_auto/q_auto/Banners/web---04---febrero_hbpuuq.jpg"
+                                alt=""></a>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <a href="#"><img decoding="async"
+                                src="https://res.cloudinary.com/dddlebwyr/image/upload/w_1000/f_auto/q_auto/Banners/CABECERA---22_lpanuz.jpg"
+                                alt=""></a>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <a href="#"><img decoding="async"
+                                src="https://res.cloudinary.com/dddlebwyr/image/upload/w_1000/f_auto/q_auto/Banners/CABECERA_nbtjqw.jpg"
+                                alt=""></a>
+                    </swiper-slide>
+                </swiper-container>
+
+                <!--
+
+
+                <swiper-container class="articulo banner_thumbnail" space-between="15" slides-per-view="4"
+                    watch-slides-progress="true" autoplay-delay="3000" autoplay-disable-on-interaction="true">
+                    <swiper-slide>
+                        <a
+                            href="#"><img
+                                decoding="async"
+                                src="https://res.cloudinary.com/dddlebwyr/image/upload/w_300/f_auto/q_auto/Banners/web---03---febrero_w5huc8.jpg"
+                                alt=""></a>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <a
+                            href="#"><img
+                                decoding="async"
+                                src="https://res.cloudinary.com/dddlebwyr/image/upload/w_300/f_auto/q_auto/Banners/web---04---febrero_hbpuuq.jpg"
+                                alt=""></a>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img decoding="async"
+                            src="https://res.cloudinary.com/dddlebwyr/image/upload/w_300/f_auto/q_auto/Banners/CABECERA---22_lpanuz.jpg"
+                            alt="">
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img decoding="async"
+                            src="https://res.cloudinary.com/dddlebwyr/image/upload/w_300/f_auto/q_auto/Banners/CABECERA_nbtjqw.jpg"
+                            alt="">
+                    </swiper-slide>
+                </swiper-container>
+            </section> -->
+
+            <!-- CONTENIDO TERCERO DE LA PÁGINA DEBAJO DEL BANNER PRINCIPAL -->
+
+            <div class="main-content">
+
+                <!--PROMOCIONES-->
+
+                <section class="promociones_precios">
+
+                    <!-- TÍTULO GLOBAL EN TODAS LAS PÁGINAS -->
+
+                    <div class="title">
+                        <h1>PROMOCIONES</h1>
+                    </div>
+                    <swiper-container class="tab-content active" class="carrusel-atracciones" space-between="15"
+                        pagination-clickable="true" navigation="true" pagination="true" slides-per-view="1.5"
+                        free-mode="true" breakpoints='{"900": {"slidesPerView": 3.5}}' keyboard="true">
+
+                        <!-- AGREGAR TARJETA DE PRECIO O PROMOCIÓN -->
+
+                        <swiper-slide class="card">
+                            <a href="https://www.vaope.com/parque-acuatico/vacilandia-park">
+                                <div class="image">
+                                    <img decoding="async" loading="lazy"
+                                        src="https://res.cloudinary.com/dddlebwyr/image/upload/w_400/f_auto/q_auto/Promociones%20y%20Productos/6716-POST_GRILLA_DESCUENTOVACILANDIA20_lejv0d.jpg"
+                                        alt="">
+                                    <div class="overlay">
+                                        <div class="container">
+                                            <button class="close-button" onclick="closeOverlay(this)"><i
+                                                    class="fa-solid fa-xmark"></i></button>
+                                            <p>¡¡Full Day TODO INCLUIDO hasta con el 20% dsct.!! 🌞🥳</p>
+                                            <p>
+                                                ✅ Full day Vacilón a s/63.2 (P.regular s/79)
+                                                ✅ Full day Kids a s/55.2 (P.regular s/69) hasta 11 años presentando DNI
+
+                                                Incluye👇🏼</p>
+                                            <ul class="list">
+                                                <li>1 Ticket de ingreso al parque</li>
+                                                <li>1 Plato de fondo a elección</li>
+                                                <li>1 Gaseosa de 1/2 Litro</li>
+                                                <li>1 Paleta postre</li>
+                                                <li>1 Cupón de descuento</li>
+                                            </ul>
+                                            <p>Términos y condiciones:</p>
+                                            <p>*Precios están sujetos a recargos por venta online
+                                                *Horario de atención sábados, domingo y feriados de
+                                                10a.m. - 5p.m. o sujeto a horario disponible del parque
+                                                *Horario de piscinas. Sábados, una piscina familiar con
+                                                toboganes. Domingos, dos piscinas con toboganes, una de
+                                                niños y una familiar
+                                                *Aplica para platos de fondo seleccionados
+                                                *Sujeto a horario y stock de restaurante
+                                                *No válido para delivery
+                                                *No acumulable con otras promociones
+                                                *No válido para devolución de dinero en efectivo
+                                                *Precios no válido para conciertos
+
+                                                *Cupón de descuento válido para productos seleccionados</p>
+                                            <p>Separa tu full day en el siguiente link:</p>
+                                            <a target="_blank"
+                                                href="https://www.vaope.com/parque-acuatico/vacilandia-park">Comprar</a>
+                                        </div>
+                                    </div>
+                                    <div class="text">
+                                        <div class="name">
+                                            <h1>Full Day Adultos (Todo incluido) Domingos y Feriados</h1>
+                                            <div class="precio">
+                                                <p>S/63.20 Adultos</p>
+                                                <p id="underline">S/79.00 Adultos</p>
+                                            </div>
+                                        </div>
+                                        <div class="buttons">
+                                            <button onclick="showOverlay(event)"
+                                                onmousedown="event.preventDefault()">Más
+                                                información</button>
+                                            <a target="_blank"
+                                                href="https://www.vaope.com/parque-acuatico/vacilandia-park"><button
+                                                    id="comprar">Comprar</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </swiper-slide>
+
+                        <swiper-slide class="card">
+                            <a href="https://www.vaope.com/parque-acuatico/vacilandia-park">
+                                <div class="image">
+                                    <img decoding="async" loading="lazy"
+                                        src="https://res.cloudinary.com/dddlebwyr/image/upload/w_400/f_auto/q_auto/Promociones%20y%20Productos/414-POST_GRILLA_DESCUENTOVACILANDIA35_aydfzw.jpg"
+                                        alt="">
+                                    <div class="overlay">
+                                        <div class="container">
+                                            <button class="close-button" onclick="closeOverlay(this)"><i
+                                                    class="fa-solid fa-xmark"></i></button>
+                                            <p>¡¡Full Day TODO INCLUIDO hasta con el 35% dsct.!! 🌞🥳</p>
+                                            <p>
+                                                ✅ Full day Vacilón a s/51.35 (P.regular s/79)
+                                                ✅ Full day Kids a s/44.9 (P.regular s/69) hasta 11 años presentando DNI
+
+                                                Incluye👇🏼</p>
+                                            <ul class="list">
+                                                <li>1 Ticket de ingreso al parque</li>
+                                                <li>1 Plato de fondo a elección</li>
+                                                <li>1 Gaseosa de 1/2 Litro</li>
+                                                <li>1 Paleta postre</li>
+                                                <li>1 Cupón de descuento</li>
+                                            </ul>
+                                            <p>Términos y condiciones:</p>
+                                            <p>*Precios están sujetos a recargos por venta online
+                                                *Horario de atención sábados, domingo y feriados de
+                                                10a.m. - 5p.m. o sujeto a horario disponible del parque
+                                                *Horario de piscinas. Sábados, una piscina familiar con
+                                                toboganes. Domingos, dos piscinas con toboganes, una de
+                                                niños y una familiar
+                                                *Aplica para platos de fondo seleccionados
+                                                *Sujeto a horario y stock de restaurante
+                                                *No válido para delivery
+                                                *No acumulable con otras promociones
+                                                *No válido para devolución de dinero en efectivo
+                                                *Precios no válido para conciertos
+
+                                                *Cupón de descuento válido para productos seleccionados</p>
+                                            <p>Separa tu full day en el siguiente link:</p>
+                                            <a target="_blank"
+                                                href="https://www.vaope.com/parque-acuatico/vacilandia-park">Comprar</a>
+                                        </div>
+                                    </div>
+                                    <div class="text">
+                                        <div class="name">
+                                            <h1>Full Day Adultos (Todo incluido) de Lunes a Sábados</h1>
+                                            <div class="precio">
+                                                <p>S/51.35 Adultos</p>
+                                                <p id="underline">S/79.00 Adultos</p>
+                                            </div>
+                                        </div>
+                                        <div class="buttons">
+                                            <button onclick="showOverlay(event)"
+                                                onmousedown="event.preventDefault()">Más
+                                                información</button>
+                                            <a target="_blank"
+                                                href="https://www.vaope.com/parque-acuatico/vacilandia-park"><button
+                                                    id="comprar">Comprar</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </swiper-slide>
+
+
+
+                        <swiper-slide class="card">
+                            <a
+                                href="https://www.joinnus.com/events/entertainment/lima-paquete-cumpleanero-en-vacilandia-park-59371">
+                                <div class="image">
+                                    <img decoding="async" loading="lazy"
+                                        src="https://res.cloudinary.com/dddlebwyr/image/upload/v1706293966/Banners/420150947_365089009457122_9138667876174300540_n_y9uqjb.jpg"
+                                        alt="">
+                                    <div class="overlay">
+                                        <div class="container">
+                                            <button class="close-button" onclick="closeOverlay(this)"><i
+                                                    class="fa-solid fa-xmark"></i></button>
+                                            <p>🎊🥳🚨 FELIZ CUMPLE GRATIS TODO EL MES 🚨🎊🥳</p>
+                                            <p>Términos y condiciones:</p>
+                                            <p>Queremos que disfrutes al máximo de tu día rodeado de diversión, risas y
+                                                emociones inolvidables.
+                                                Solo necesitas presentar tu DNI y venir con tus amigos o familia para
+                                                celebrar tu día 💜
+                                            </p>
+                                            <p>‼️ Aplica T&C
+                                                *Beneficio cumpleañero es válido con 4 acompañantes pagantes Fullday
+                                                *No incluye alimentación</p>
+                                        </div>
+                                    </div>
+                                    <div class="text">
+                                        <div class="name">
+                                            <h1>Entrada Gratuita</h1>
+                                            <div class="precio">
+                                                <p>Gratis</p>
+                                            </div>
+                                        </div>
+                                        <div class="buttons">
+                                            <button onclick="showOverlay(event)"
+                                                onmousedown="event.preventDefault()">Más
+                                                información</button>
+                                            <a
+                                                href="https://www.facebook.com/photo/?fbid=365089016123788&set=a.121238603842165"><button
+                                                    id="comprar">Contactar</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </swiper-slide>
+
+
+                        <swiper-slide class="card">
+                            <a
+                                href="https://www.joinnus.com/events/entertainment/lima-paquete-cumpleanero-en-vacilandia-park-59371">
+                                <div class="image">
+                                    <img decoding="async" loading="lazy"
+                                        src="https://res.cloudinary.com/dddlebwyr/image/upload/w_400/q_auto/f_auto/Servicios/Cumplea%C3%B1os/41704c2a-a250-4bb5-82af-7a0cf8a0a293_ptmtap.jpg"
+                                        alt="">
+                                    <div class="overlay">
+                                        <div class="container">
+                                            <button class="close-button" onclick="closeOverlay(this)"><i
+                                                    class="fa-solid fa-xmark"></i></button>
+                                            <p>🌳💚 PROMOCIÓN NOVIEMBRE ¡¡TU FULL DAY CON EL 25% DSCT!! 🌸🥳💚</p>
+                                            <p>Incluye lo siguiente</p>
+                                            <ul class="list">
+                                                <li>10 Tickets de ingreso al parque</li>
+                                                <li>Toldo + mesas + sillas</li>
+                                                <li>2 + 1/2 pollo a la leña con papas</li>
+                                                <li>3 Gaseosas de 1.5 Lt</li>
+                                                <li>10 Helados</li>
+                                                <li>5 Cupones de descuento</li>
+                                            </ul>
+                                            <p>Términos y condiciones:</p>
+                                            <p>*Precios están sujetos a recargos por venta online
+                                                *Aplica para platos de fondo seleccionados
+                                                *Sujeto a horario y stock de restaurante
+                                                *No válido para delivery
+                                                *No acumulable con otras promociones
+                                                *No válido para devolución de dinero en efectivo
+                                                *Precios no válido para conciertos
+
+                                                *Cupón de descuento válido para productos seleccionados</p>
+                                            <p>Separa tu full day en el siguiente link:</p>
+                                            <a
+                                                href="https://www.joinnus.com/events/entertainment/lima-paquete-cumpleanero-en-vacilandia-park-59371">Comprar</a>
+                                        </div>
+                                    </div>
+                                    <div class="text">
+                                        <div class="name">
+                                            <h1>Paquete cumpleañero</h1>
+                                            <div class="precio">
+                                                <p>S/974.02</p>
+                                                <p id="underline">S/1093.00</p>
+                                            </div>
+                                        </div>
+                                        <div class="buttons">
+                                            <button onclick="showOverlay(event)"
+                                                onmousedown="event.preventDefault()">Más
+                                                información</button>
+                                            <a
+                                                href="https://www.joinnus.com/events/entertainment/lima-paquete-cumpleanero-en-vacilandia-park-59371"><button
+                                                    id="comprar">Comprar</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </swiper-slide>
+                    </swiper-container>
+                </section>
+
+                <!-- NAVEGACION -->
+
+                <section class="panel_de_navegacion">
+                    <div class="container">
+                        <a target="_blank"
+                            href="https://www.joinnus.com/events/entertainment/lima-full-day-vacilandia-park-58225"
+                            class="box">
+                            <i class="fa-solid fa-ticket"></i>
+                            <div class="text">
+                                <h1>COMPRAR TICKETS</h1>
+                                <p>Compra en linea</p>
+                            </div>
+                        </a>
+                        <a href="Bolsa-Laboral" class="box">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <div class="text">
+                                <h1>BOLSA LABORAL</h1>
+                                <p>Trabaja con nosotros.</p>
+                            </div>
+                        </a>
+                        <a href="Mapa-del-Parque" class="box">
+                            <i class="fa-solid fa-map"></i>
+                            <div class="text">
+                                <h1>MAPA DEL PARQUE</h1>
+                                <p>Interactúa con nuestro mapa</p>
+                            </div>
+                        </a>
+                        <a href="Preguntas-Frecuentes" class="box">
+                            <i class="fa-solid fa-circle-question"></i>
+                            <div class="text">
+                                <h1>PREGUNTAS FRECUENTES</h1>
+                                <p>Resolvemos tus dudas</p>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- COMO COMPRAR TU FULL DAY -
+
+                <section class="fullday">
+                    <div class="container">
+                        <div class="col">
+                            <h1>¿QUE TRAE MI FULL DAY?</h1>
+                        </div>
+                        <div class="col">
+                            <video loop muted autoplay controls src="https://res.cloudinary.com/dddlebwyr/video/upload/v1706041729/WhatsApp_Video_2024-01-23_at_11.19.42_AM_pejk0p.mp4"></video>
+                        </div>
+                    </div>
+                </section> -->
+
+                <!-- ATRACCIONES -->
+
+                <section class="atracciones">
+                    <div class="container">
+
+                        <!-- TÍTULO GLOBAL EN TODAS LAS PÁGINAS -->
+
+                        <div class="title">
+                            <h1>NUESTRAS ATRACCIONES</h1>
+                        </div>
+                        <swiper-container class="carrusel-atracciones" space-between="15" pagination-clickable="true"
+                            navigation="true" pagination="true" slides-per-view="1.5" free-mode="true"
+                            autoplay-delay="2000" autoplay-disable-on-interaction="true"
+                            breakpoints='{"900": {"slidesPerView": 3.5}}' keyboard="true">
+                            <swiper-slide>
+                                <i class="fa-solid fa-water-ladder"></i>
+                                <a href="Piscinas-y-Toboganes">
+                                    <div class="card">
+                                        <img decoding="async" loading="lazy"
+                                            src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/VCLNDIA_IMG_2606_ndcd93.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="text">
+                                        <h1>PISCINAS Y TOBOGANES</h1>
+                                    </div>
+                                </a>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <i class="fa-solid fa-cow"></i>
+                                <a href="Vacigranja">
+                                    <div class="card">
+                                        <a href="Vacigranja"><img decoding="async" loading="lazy"
+                                                src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/IMG_1542_6_lougkl.jpg"
+                                                alt="">
+                                    </div>
+                                    <div class="text">
+                                        <h1>VACIGRANJA</h1>
+                                    </div>
+                                </a>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <i class="fa-solid fa-gamepad"></i>
+                                <a href="Zona-Gamer">
+                                    <div class="card">
+                                        <img decoding="async" loading="lazy"
+                                            src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/atrfi1tkjxo04iakjlmm.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="text">
+                                        <h1>ZONA GAMER</h1>
+                                    </div>
+                                </a>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <i class="fa-solid fa-futbol"></i>
+                                <a href="Canchas-Deportivas">
+                                    <div class="card">
+                                        <img decoding="async" loading="lazy"
+                                            src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/img_2_jcc6ui.jpg"
+                                            alt="">
+                                    </div>
+                                    <div class="text">
+                                        <h1>CANCHAS DEPORTIVAS</h1>
+                                    </div>
+                                </a>
+                            </swiper-slide>
+                        </swiper-container>
+                    </div>
+                </section>
+
+                <!-- ENTRETENIMIENTO -->
+
+                <section class="entretenimiento">
+                    <div class="container">
+
+                        <!-- TÍTULO GLOBAL EN TODAS LAS PÁGINAS -->
+
+                        <div class="title">
+                            <h1>ENTRETENIMIENTO</h1>
+                        </div>
+                        <div class="group">
+                            <a href="Recorrido-Ecológico" class="card">
+                                <div class="image">
+                                    <img decoding="async" loading="lazy"
+                                        src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/4._RECORRIDO_ECOL%C3%93GICO_eofkhc.jpg"
+                                        alt="">
+                                    <div class="text">
+                                        <h1>RECORRIDO ECOLÓGICO</h1>
+                                        <p>Junto a Taulichusco conocerás sobre la importancia del cuidado del medio
+                                            ambiente
+                                            de
+                                            una manera divertida.</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="La-Hora-Vacilona" class="card">
+                                <div class="image">
+                                    <img decoding="async" loading="lazy"
+                                        src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/5._LA_HORA_VACILONA_fs9dbq.jpg"
+                                        alt="">
+                                    <div class="text">
+                                        <h1>LA HORA VACILONA</h1>
+                                        <p>Nuestras actividades y juegos son la clave para mostrar tu talento,
+                                            divertirte y
+                                            desafiarte entre amigos.</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="Gynkana-Vacilona" class="card">
+                                <div class="image">
+                                    <img decoding="async" loading="lazy"
+                                        src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/6._GYNKANA_lecxyg.jpg"
+                                        alt="Gynkana-Vacilona">
+                                    <div class="text">
+                                        <h1>GYNKANA VACILONA</h1>
+                                        <p>Disfrutarás de una serie de circuitos dónde demostrarás tus habilidades y
+                                            trabajo
+                                            en
+                                            equipo junto con tus amigos o familia.</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="Recorrido-Corazones" class="card">
+                                <div class="image">
+                                    <img decoding="async" loading="lazy"
+                                        src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/CORAZONES_rytmqu.png"
+                                        alt="">
+                                    <div class="text">
+                                        <h1>RECORRIDO DE LOS CORAZONES</h1>
+                                        <p>Los papás corazones, junto a sus hijos Mora, Lima y Limón se reúnen para
+                                            brindarte un
+                                            espectáculo de baile que llenará tu día de alegría y amor.</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="Shows-en-Vivo" class="card">
+                                <div class="image">
+                                    <img decoding="async" loading="lazy"
+                                        src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/8._SHOWS_EN_VIVO_tfbm7w.jpg"
+                                        alt="">
+                                    <div class="text">
+                                        <h1>SHOWS EN VIVO</h1>
+                                        <p>En diversas fechas festivas, podrás vivir experiencia encantadora con
+                                            nuestras
+                                            presentaciones artísticas, infantiles y más.</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://vecarena.com.pe/" class="card">
+                                <div class="image">
+                                    <img decoding="async" loading="lazy"
+                                        src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/_DSC7287_kxgq65.jpg"
+                                        alt="">
+                                    <div class="text">
+                                        <h1>CONCIERTOS GRANDES</h1>
+                                        <p>Celebra con la música en vivo de tus artistas y grupos favoritos en
+                                            Vacilandia en Concierto, ¡La nueva arena de Lima!</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!--GASTRONOMIA -->
+
+                <section class="gastronomia">
+                    <div class="container">
+
+                        <!-- TÍTULO GLOBAL EN TODAS LAS PÁGINAS -->
+
+                        <div class="title">
+                            <h1>OFERTA GASTRONÓMICA</h1>
+                        </div>
+                        <div class="contenido">
+                            <div class="col-1">
+                                <div class="content">
+                                    <h1>RESTAURANTE "EL POLLO VACILÓN"</h1>
+                                    <p>Disfruta de una amplia selección de platos, bebidas, snacks y postres que harán
+                                        que
+                                        tu experiencia sea verdaderamente deliciosa.</p>
+                                </div>
+                                <div class="content">
+                                    <h3>Descarga nuestra carta gastronómica</h3>
+                                    <p>Revisa la variedad de productos que te ofrecemos.
+                                    </p>
+                                    <a target="_blank"
+                                        href="https://drive.google.com/file/d/1K0zuDFjvJMYmu6XVNrruYp5EYipGomd-/view?usp=drive_link"><button>DESCARGAR
+                                            CARTA</button></a>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <a href="Restaurante" class="card">
+                                    <div class="image">
+                                        <img decoding="async" loading="lazy"
+                                            src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/P1060655_ofeyqv.jpg"
+                                            alt="">
+                                        <div class="text">
+                                            <h1>EL POLLO VACILÓN</h1>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="Barcilón" class="card">
+                                    <div class="image">
+                                        <img decoding="async" loading="lazy"
+                                            src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/WhatsApp_Image_2022-07-09_at_3.26.22_PM_tgcy7e.jpg"
+                                            alt="">
+                                        <div class="text">
+                                            <h1>BARCILÓN</h1>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="Rincón-Chelero" class="card">
+                                    <div class="image">
+                                        <img decoding="async" loading="lazy"
+                                            src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/IMG_20230414_141407_mswm8p.jpg"
+                                            alt="">
+                                        <div class="text">
+                                            <h1>RINCÓN CHELERO</h1>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SERVICIOS -->
+
+                <section class="servicios">
+                    <div class="container">
+
+                        <!-- TÍTULO GLOBAL EN TODAS LAS PÁGINAS -->
+
+                        <div class="title">
+                            <h1>SERVICIOS</h1>
+                        </div>
+                        <swiper-container class="contenido carrusel" space-between="15" pagination-clickable="true"
+                            navigation="true" pagination="true" slides-per-view="1.5" free-mode="true"
+                            autoplay-delay="2000" autoplay-disable-on-interaction="true"
+                            breakpoints='{"900": {"slidesPerView": 3.5}}' keyboard="true">
+                            <swiper-slide>
+                                <a href="Eventos-Corporativos">
+                                    <div class="card">
+                                        <div class="image">
+                                            <img decoding="async" loading="lazy"
+                                                src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/1._EVENTO_CORPORATIVO_z60eeb.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="text">
+                                            <i class="fa-solid fa-building"></i>
+                                            <h1>EVENTOS CORPORATIVOS</h1>
+                                            <p>90mil m2 un espacio ideal con emocionantes atractivos para fortalecer los
+                                                lazos
+                                                laborales y lo mejor de todo, sin salir de Lima.</p>
+                                            <a href="Eventos-Corporativos"><button>Ver más</button></a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <a href="Celebra-tu-cumpleaños">
+                                    <div class="card">
+                                        <div class="image">
+                                            <img decoding="async" loading="lazy"
+                                                src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/WhatsApp_Image_2023-08-09_at_10.04.10_AM_esexaz.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="text">
+                                            <i class="fa-solid fa-cake-candles"></i>
+                                            <h1>CELEBRA TU CUMPLEAÑOS</h1>
+                                            <p>Haz de tu cumpleaños un día de full diversión con tus seres queridos.</p>
+                                            <a href="Celebra-tu-cumpleaños"><button>Ver más</button></a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <a href="Paseos-y-Reencuentros">
+                                    <div class="card">
+                                        <div class="image">
+                                            <img decoding="async" loading="lazy"
+                                                src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/DSC_4841_tfsih9.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="text">
+                                            <i class="fa-solid fa-school"></i>
+                                            <h1>PASEOS Y REENCUENTROS</h1>
+                                            <p>Tenemos espacios pensados para todo tipo de actividades recreativas
+                                                incluyendo un
+                                                recorrido ecológico junto a Taulichusco.</p>
+                                            <a href="Paseos-y-Reencuentros"><button>Ver más</button></a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <a href="Campeonatos-Deportivos">
+                                    <div class="card">
+                                        <div class="image">
+                                            <img decoding="async" loading="lazy"
+                                                src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/img_2_jcc6ui.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="text">
+                                            <i class="fa-solid fa-futbol"></i>
+                                            <h1>CAMPEONATOS DEPORTIVOS</h1>
+                                            <p>Organiza y vive la pasión por el deporte en nuestras modernas y amplias
+                                                canchas
+                                                de vóley y fútbol.</p>
+                                            <a href="Campeonatos-Deportivos"><button>Ver más</button></a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <a href="Espacios-Publicitarios">
+                                    <div class="card">
+                                        <div class="image">
+                                            <img decoding="async" loading="lazy"
+                                                src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/3._ESPACIOS_PUBLICITARIOS_slm7ea.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="text">
+                                            <i class="fa-solid fa-user-check"></i>
+                                            <h1>ESPACIOS PUBLICITARIOS</h1>
+                                            <p>Con más de 230mil visitantes por temporada, podrás visibilizar y
+                                                fortalecer
+                                                la
+                                                presencia de tu marca en nuestras instalaciones.</p>
+                                            <a href="Espacios-Publicitarios"><button>Ver más</button></a>
+                                        </div>
+                                    </div>
+                                </a>
+                            </swiper-slide>
+                        </swiper-container>
+                    </div>
+                </section>
+
+                <!--RESEÑAS-->
+
+                <section class="reseñas">
+                    <div class="container">
+
+                        <!-- TÍTULO GLOBAL EN TODAS LAS PÁGINAS -->
+
+                        <div class="title">
+                            <h1>CLIENTES SATISFECHOS</h1>
+                        </div>
+                        <swiper-container class="reseña-carrusel carrusel" space-between="15"
+                            pagination-clickable="true" navigation="true" pagination="true" slides-per-view="1.5"
+                            free-mode="true" autoplay-delay="2000" autoplay-disable-on-interaction="true"
+                            breakpoints='{"900": {"slidesPerView": 3.5}}' keyboard="true">
+                            <swiper-slide>
+                                <div class="card">
+                                    <div class="punt">
+                                        <img decoding="async" loading="lazy"
+                                            src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt=""
+                                            class="icon">
+                                        <h3 class="star">⭐⭐⭐⭐⭐</h3>
+                                    </div>
+                                    <h1>Juan Segura</h1>
+                                    <p>Establecimiento limpio, con seguridad y cochera, 3 piscinas (1 para niños y 2
+                                        para
+                                        adultos). En la entrada incluye el almuerzo con un amplio comedor. En líneas
+                                        generales es un buen lugar para pasarlo en familia...</p>
+                                    <a target="_blank" href="https://g.co/kgs/wxxKhH"><button>Ver reseña</button></a>
+                                </div>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <div class="card">
+                                    <div class="punt">
+                                        <img decoding="async" loading="lazy"
+                                            src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt=""
+                                            class="icon">
+                                        <h3 class="star">⭐⭐⭐⭐⭐</h3>
+                                    </div>
+                                    <h1>Fernando Castro</h1>
+                                    <p>Un lugar bastante amplio, ideal para ir con la familia, preferible ir día de
+                                        semana
+                                        ya que hay bastante gente. La entrada incluye el uso de todas las piscinas,
+                                        almuerzo
+                                        y un helado.</p>
+                                    <a target="_blank" href="https://g.co/kgs/mCqNAz"><button>Ver reseña</button></a>
+                                </div>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <div class="card">
+                                    <div class="punt">
+                                        <img decoding="async" loading="lazy"
+                                            src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt=""
+                                            class="icon">
+                                        <h3 class="star">⭐⭐⭐⭐</h3>
+                                    </div>
+                                    <h1>Wolf Posters</h1>
+                                    <p>Espectacular el parque nos encantó, del 1 al 10 le doy un 9, solo agregaria
+                                        lokers
+                                        para guardar las cosas de valor, no disfrute del todo el parque por qué no me
+                                        sentía
+                                        tranquilo con mis cosas en las sillas, pero si resuelven ese tema sería genial,
+                                        igual no dudare en regresar.</p>
+                                    <a target="_blank" href="https://g.co/kgs/q2cZkA"><button>Ver reseña</button></a>
+                                </div>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <div class="card">
+                                    <div class="punt">
+                                        <img decoding="async" loading="lazy"
+                                            src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt=""
+                                            class="icon">
+                                        <h3 class="star">⭐⭐⭐⭐⭐</h3>
+                                    </div>
+                                    <h1>Luz Angelica Flores</h1>
+                                    <p>Lugar bien bonito, lleven repelente noma, el pollo con papas está buenísimo a mi
+                                        parecer, también hay otras opciones, bello lugar gente muy amable.</p>
+                                    <a target="_blank" href="https://g.co/kgs/LYE4DK"><button>Ver reseña</button></a>
+                                </div>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <div class="card">
+                                    <div class="punt">
+                                        <img decoding="async" loading="lazy"
+                                            src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt=""
+                                            class="icon">
+                                        <h3 class="star">⭐⭐⭐⭐⭐</h3>
+                                    </div>
+                                    <h1>Richard Hernandez</h1>
+                                    <p>Fue una divertida experiencia les felicito. Está recién abierto, tiene un muy
+                                        buen
+                                        potencial para convertirse en un fantástico parque... Espero volver pronto y que
+                                        puedan agregar más atracciones</p>
+                                    <a target="_blank" href="https://g.co/kgs/RDKfub"><button>Ver reseña</button></a>
+                                </div>
+                            </swiper-slide>
+                            <swiper-slide>
+                                <div class="card">
+                                    <div class="punt">
+                                        <img decoding="async" loading="lazy"
+                                            src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt=""
+                                            class="icon">
+                                        <h3 class="star">⭐⭐⭐⭐</h3>
+                                    </div>
+                                    <h1>Ruth Carbajal</h1>
+                                    <p>Buen lugar para pasar en familia, hay variedad de piscinas y toboganes de acuerdo
+                                        a
+                                        las edades de tus pequeños.
+                                        Lo que se debería mejorar es la variedad del almuerzo a elegir por el precio. Y
+                                        en
+                                        esta Temporada sacar promociones para poder ir con toda la familia.</p>
+                                    <a target="_blank" href="https://g.co/kgs/h7FQEP"><button>Ver reseña</button></a>
+                                </div>
+                            </swiper-slide>
+                        </swiper-container>
+                    </div>
+                </section>
+
+                <!-- TOP ANCHO -->
+
+                <section class="enlace_a_mapa">
+                    <div class="container">
+
+                        <!-- TÍTULO GLOBAL EN TODAS LAS PÁGINAS -->
+
+                        <div class="title">
+                            <h1>MAPA INTERACTIVO</h1>
+                        </div>
+                        <div class="content">
+                            <div class="text">
+                                <h1>Explora nuestro mapa</h1>
+                                <p>Interactúa con el mapa de Vacilandia y conoce todos los atractivos que tenemos para
+                                    ti. </p>
+                                <a href="Mapa-del-Parque"><button>¡IR ALLÁ!</button></a>
+                            </div>
+                            <a href="Mapa-del-Parque" class="image">
+                                <img src="https://res.cloudinary.com/dddlebwyr/image/upload/w_500/q_auto/f_auto/Complementos%20inicio/k1woujpafqqml8gq7ofr_kczayx.jpg"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- MAPA -->
+
+                <section class="ubicacion" id="concierto">
+                    <div class="container">
+
+                        <!-- TÍTULO GLOBAL EN TODAS LAS PÁGINAS -->
+
+                        <div class="title">
+                            <h1>NUESTRA UBICACIÓN</h1>
+                        </div>
+                        <div class="contenido">
+                            <div class="frame">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15609.023507793587!2d-76.95277234999999!3d-12.0258973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c53e19fb34df%3A0x1ce4a11a75be7f3c!2sVacilandia%20Park!5e0!3m2!1ses-419!2spe!4v1695242672001!5m2!1ses-419!2spe"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <div class="content">
+                                <h1>VISÍTANOS EN:</h1>
+                                <p>Av. Las Gaviotas con Av. El R osal, Urb. Las Gardenias Ref - A 5 min del CC. Real
+                                    Plaza
+                                    Puruchuco</p>
+                                <a target="_blank"
+                                    href="https://maps.google.com/maps/dir//Vacilandia+Park+El+rosal+de+Sta+Anita+con+Ate+27015/@-12.0234108,-76.9451765,14z/data=!4m5!4m4!1m0!1m2!1m1!1s0x9105c53e19fb34df:0x1ce4a11a75be7f3c"><button>CÓMO
+                                        LLEGAR</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!--FOOTER-->
+
+            <footer class="footer">
+                <div class="container">
+
+                    <!-- PRIMERA FILA DEL FOOTER LOGO / BOTONES DE NAVEGACIÓN -->
+
+                    <div class="row">
+
+                        <!-- LOGO DEL FOOTER  -->
+
+                        <div class="col">
+                            <img decoding="async" loading="lazy"
+                                src="https://res.cloudinary.com/dddlebwyr/image/upload/w_150/q_auto/f_auto/Logos%20y%20marcas/LOGO-VACILANDIA-FINAL_wavc3f.png"
+                                alt="">
+                        </div>
+
+                        <!-- ATRACCIONES -->
+
+                        <div class="col">
+                            <h1>ATRACCIONES</h1>
+                            <ul>
+                                <li><a href="Piscinas-y-Toboganes">PISCINAS Y TOBOGANES</a></li>
+                                <li><a href="Zona-Gamer">ZONA GAMER</a></li>
+                                <li><a href="Vacigranja">VACIGRANJA</a></li>
+                                <li><a href="Canchas-Deportivas">CANCHAS DEPORTIVAS</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- GASTRONOMÍA -->
+
+                        <div class="col">
+                            <h1>GASTRONOMÍA</h1>
+                            <ul>
+                                <li><a href="Restaurante">RESTAURANTE</a></li>
+                                <li><a href="Barcilón">BARCILÓN</a></li>
+                                <li><a href="Rincón-Chelero">RINCÓN CHELERO</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- SERVICIOS -->
+
+                        <div class="col">
+                            <h1>SERVICIOS</h1>
+                            <ul>
+                                <li><a href="Eventos-Corporativos">EVENTOS CORPORATIVOS</a></li>
+                                <li><a href="Celebra-tu-cumpleaños">CELEBRA TU CUMPLEAÑOS</a></li>
+                                <li><a href="Paseos-y-Reencuentros">PASEOS Y REENCUENTROS</a></li>
+                                <li><a href="Campeonatos-Deportivos">CAMPEONATOS DEPORTIVOS</a></li>
+                                <li><a href="Espacios-Publicitarios">ESPACIOS PUBLICITARIOS</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- ENTRETENIMIENTO -->
+
+                        <div class="col">
+                            <h1>ENTRETENIMIENTO</h1>
+                            <ul>
+                                <li><a href="Recorrido-Ecológico">RECORRIDO ECOLÓGICO</a></li>
+                                <li><a href="La-Hora-Vacilona">LA HORA VACILONA</a></li>
+                                <li><a href="Gynkana-Vacilona">GYNKANA VACILONA</a></li>
+                                <li><a href="Recorrido-Corazones">RECORRIDO CORAZONES</a></li>
+                                <li><a href="Shows-en-Vivo">SHOWS EN VIVO</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- MÁS INFORMACIÓN -->
+
+                        <div class="col">
+                            <h1>MÁS</h1>
+                            <ul>
+                                <li><a href="Nosotros">NOSOTROS</a></li>
+                                <li><a href="Libro-de-Reclamaciones">LIBRO DE RECLAMACIONES</a></li>
+                                <li><a href="Reglamento-Interno">REGLAMENTO INTERNO</a></li>
+                                <li><a href="Bolsa-Laboral">BOLSA LABORAL</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- BOTONES DE SALIDA -->
+
+                    <div class="buttons">
+                        <a href="https://vacilandia-park.odoo.com/contactus"><button>CONTACTÁNOS</button></a>
+                        <a href="/"><button>VOLVER AL INICIO</button></a>
+                    </div>
+
+                    <!-- COPYRIGHT Y DERECHOS DE AUTOR -->
+
+                    <div class="terms">
+                        <h1>Desarrollado por <a target="_blank"
+                                href="https://www.linkedin.com/in/michael-omar-de-la-cruz-ingaruca-2784951a9/">ZeyN</a>
+                            | Vacilandia
+                            Park 2024 Todos los derechos reservados.</h1>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- SE CARGA JQUERY -->
+
+    <script async src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- SE CARGA LAS LIBRERÍAS JS DE SWIPER CARRUSEL -->
+
+    <script async src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <!-- SE CARGA LA LIBRERÍA DE ICONOS DE FONT AWESOME -->
 
     <script async src="https://kit.fontawesome.com/f8eb9b1ffa.js" crossorigin="anonymous"></script>
+
+    <!-- SE CARGA LA LIBRERÍA DE BARBA.JS PARA LA ANIMACIÓN ENTRE PÁGINAS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+
+    <!-- SE CARGA LA LIBRERÍA DE GSAP PARA LA ANIMACIÓN SUAVE DE LA PÁGINA WEB -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBGSZKJ2VC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MBGSZKJ2VC');
+    </script>
+
+    <!-- ESTILOS PROPIOS DE JAVASCRIPT -->
+
+    <script src="script.js"></script>
 </body>
 
 </html>
