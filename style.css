@@ -3146,6 +3146,16 @@ main {
   border-radius: 50%;
 }
 
+.swiper-button-next svg,
+.swiper-button-prev svg {
+  background: red !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background: red !important;
+}
+
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */

@@ -3863,10 +3863,10 @@ main {
                     padding: 10px 0px;
                     align-items: center;
 
-                    p{
+                    p {
                         font-size: 0.8rem;
                         font-family: $fuente_terciaria;
-                        
+
                     }
                 }
 
@@ -3890,6 +3890,16 @@ main {
             }
         }
     }
+}
+
+.swiper-button-next svg,
+.swiper-button-prev svg {
+    background: red !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    background: red !important;
 }
 
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
@@ -4252,16 +4262,16 @@ main {
                 padding: 40px;
                 width: auto;
 
-                .col{
+                .col {
                     padding: 0px;
                     width: 100%;
 
-                    ul{
+                    ul {
                         margin: 0;
                         padding: 0;
                     }
 
-                    h1{
+                    h1 {
                         padding-bottom: 20px;
                         width: 100%;
                     }
