@@ -873,6 +873,11 @@ main {
         overflow: hidden;
         border-radius: 20px;
 
+        swiper-wrapper{
+            display: flex;
+            width: 100%;
+        }
+
         video,
         img {
             width: 100%;
@@ -3781,26 +3786,6 @@ main {
     }
 }
 
-.fullday {
-    display: flex;
-    justify-content: center;
-
-    .container {
-        max-width: $tamaño_maximo;
-        width: 100%;
-        display: flex;
-
-        .col {
-            width: 50%;
-
-            video {
-                width: 300px;
-                height: auto;
-            }
-        }
-    }
-}
-
 /* TÉRMINOS Y CONDICIONES */
 
 .terminos {
@@ -3892,14 +3877,9 @@ main {
     }
 }
 
-.swiper-button-next svg,
-.swiper-button-prev svg {
-    background: red !important;
-}
-
-.swiper-button-next,
-.swiper-button-prev{
-    background: red !important;
+.swiper-button-prev,
+.swiper-button-next{
+    background-color: red;
 }
 
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
