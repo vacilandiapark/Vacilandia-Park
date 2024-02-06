@@ -254,7 +254,7 @@ function showOverlay(event) {
   overlay.classList.add("active");
 
   // Establecer la altura y la opacidad deseada
-  overlay.style.height = "220px";
+  overlay.style.height = "calc(100% - 125px)";
   overlay.style.opacity = 1;
 
   // Obtener el botón de cierre (X) dentro del overlay

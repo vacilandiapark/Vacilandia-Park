@@ -873,7 +873,7 @@ main {
         overflow: hidden;
         border-radius: 20px;
 
-        swiper-wrapper{
+        swiper-wrapper {
             display: flex;
             width: 100%;
         }
@@ -1067,7 +1067,6 @@ main {
     .tab-content {
         padding: $espacio 0 0 0;
         max-width: $tamaño_maximo;
-        width: 100%;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
@@ -1086,7 +1085,7 @@ main {
                 top: 0;
                 width: 100%;
                 height: 0;
-                background: rgba($rgba-purpura, 0.95);
+                background: rgba($rgba-purpura, 0.98);
                 opacity: 0;
                 transition: opacity 0.3s ease, height 0.5s ease;
                 font-family: $fuente_terciaria;
@@ -1135,24 +1134,21 @@ main {
                 box-shadow: $sombra;
                 overflow: hidden;
 
-                &:hover {
-                    transform: scale(1.03);
-                }
-
                 img {
                     width: 100%;
-                    height: 220px;
+                    height: auto;
                     object-fit: cover;
                 }
             }
 
             .text {
-                background: $sombra-global;
+                background: $blanco;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 padding: 20px;
                 gap: 15px;
+                height: 100%;
 
                 .name {
                     width: 100%;
@@ -1180,18 +1176,25 @@ main {
                     }
                 }
 
-                button {
-                    background: transparent;
-                    color: $purpura;
-                    border: 1px solid $purpura;
-                    width: 100%;
-                    transition: all 0.3s ease-in-out;
-                    width: auto;
+                .buttons{
+                    display: flex;
+                    gap: 5px;
 
-                    &:hover {
-                        background: $purpura;
-                        color: $blanco;
+                    button {
+                        background: transparent;
+                        color: $purpura;
+                        font-size: $texto_pequeña;
+                        border: 1px solid $purpura;
+                        width: 100%;
+                        transition: all 0.3s ease-in-out;
+                        width: auto;
+    
+                        &:hover {
+                            background: $purpura;
+                            color: $blanco;
+                        }
                     }
+
                 }
 
                 #comprar {
@@ -3878,7 +3881,7 @@ main {
 }
 
 .swiper-button-prev,
-.swiper-button-next{
+.swiper-button-next {
     background-color: red;
 }
 
