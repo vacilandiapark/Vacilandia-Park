@@ -137,7 +137,7 @@ main {
   z-index: 6;
 }
 .navegacion_principal .row-gradient {
-  height: 30px;
+  height: 15px;
   /* Altura de la barra de progreso */
   width: 100%;
   /* Ancho de la barra de progreso al 100% */
@@ -665,13 +665,11 @@ main {
   max-width: 1000px;
 }
 .banner_principal .articulo {
-  max-width: 1200px;
   width: 100%;
   display: flex;
-  margin-top: 115px;
+  margin-top: 65px;
   cursor: grab;
   overflow: hidden;
-  border-radius: 20px;
 }
 .banner_principal .articulo swiper-wrapper {
   display: flex;

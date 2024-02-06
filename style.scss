@@ -222,7 +222,7 @@ main {
     }
 
     .row-gradient {
-        height: 30px;
+        height: 15px;
 
         /* Altura de la barra de progreso */
         width: 100%;
@@ -865,13 +865,11 @@ main {
     }
 
     .articulo {
-        max-width: 1200px;
         width: 100%;
         display: flex;
-        margin-top: calc(80px + $espacio);
+        margin-top: 65px;
         cursor: grab;
         overflow: hidden;
-        border-radius: 20px;
 
         swiper-wrapper {
             display: flex;
