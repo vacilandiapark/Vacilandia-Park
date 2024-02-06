@@ -1,3 +1,35 @@
+/**/
+
+const swiperEl = document.querySelector('swiper-container')
+
+const params = {
+  injectStyles: [`
+      .swiper-button-next,
+      .swiper-button-prev{
+        background: white;
+        padding: 2px 10px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 15px 0px gray;
+      }
+
+      
+      .swiper-button-next svg,
+      .swiper-button-prev svg{
+        color: black;
+        width: 10px;
+        text-align: center;
+      }
+      `],
+
+}
+
+Object.assign(swiperEl, params)
+
+swiperEl.initialize();
+
+
+
+
 /* CÓDIGO PARA SCRIPTS QUE INTERFIEREN CON LA ANIMACIÓN DE BARBA.JS SE UNIFICA TODO*/
 
 document.addEventListener("DOMContentLoaded", function () {
