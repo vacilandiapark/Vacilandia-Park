@@ -665,7 +665,7 @@ main {
   max-width: 1000px;
 }
 .banner_principal .articulo {
-  max-width: 1300px;
+  max-width: 1200px;
   width: 100%;
   display: flex;
   margin-top: 100px;
@@ -898,6 +898,9 @@ main {
   transition: all 0.2s ease-in-out;
   box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
+}
+.promociones_precios .tab-content .card .image#premium {
+  border: 4px solid #FFD200;
 }
 .promociones_precios .tab-content .card .image img {
   width: 100%;

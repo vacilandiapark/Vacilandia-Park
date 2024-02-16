@@ -865,7 +865,7 @@ main {
     }
 
     .articulo {
-        max-width: 1300px;
+        max-width: 1200px;
         width: 100%;
         display: flex;
         margin-top: calc(65px + $espacio);
@@ -1133,6 +1133,10 @@ main {
                 transition: all 0.2s ease-in-out;
                 box-shadow: $sombra;
                 overflow: hidden;
+
+                &#premium{
+                    border: 4px solid $amarillo;
+                }
 
                 img {
                     width: 100%;
