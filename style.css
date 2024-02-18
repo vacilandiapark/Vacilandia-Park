@@ -114,6 +114,7 @@ main {
   width: calc(100% - 50px);
   position: fixed;
   z-index: 5;
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
 }
 .navegacion_principal#concierto .row {
   background: #000000;
@@ -656,6 +657,7 @@ main {
   display: flex;
   flex-direction: column;
   height: auto;
+  align-items: center;
   justify-content: center;
 }
 .banner_principal#concierto {
@@ -664,10 +666,25 @@ main {
 .banner_principal#concierto .articulo {
   max-width: 1000px;
 }
+.banner_principal .video {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 0 0 25% 25%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/v1708287060/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+  box-shadow: inset 8px 0 24px 0 rgba(0, 0, 0, 0.1);
+}
 .banner_principal .articulo {
   max-width: 1200px;
   width: 100%;
   display: flex;
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
   margin-top: 100px;
   cursor: grab;
   overflow: hidden;
@@ -3302,6 +3319,9 @@ main {
     border-bottom: 1px solid #fff;
   }
   /* promos */
+  .banner_principal .video {
+    background: none;
+  }
   .banner_principal .contenido {
     width: 100%;
     order: 2;

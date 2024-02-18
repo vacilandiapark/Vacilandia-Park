@@ -178,6 +178,7 @@ main {
     width: calc(100% - 50px);
     position: fixed;
     z-index: 5;
+    box-shadow: $sombra;
 
     &#concierto {
         .row {
@@ -855,6 +856,7 @@ main {
     display: flex;
     flex-direction: column;
     height: auto;
+    align-items: center;
     justify-content: center;
 
     &#concierto {
@@ -865,11 +867,27 @@ main {
         }
     }
 
+    .video{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 400px;
+        overflow: hidden;
+        border-radius: 0 0 25% 25%;
+        background: linear-gradient(to right, rgba($rgba-blanco, 0.9), rgba($rgba-blanco, 0.9)),  url(https://res.cloudinary.com/ditdiedxb/image/upload/v1708287060/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-attachment: fixed;
+        box-shadow: inset $sombra;
+    }
+
     .articulo {
         max-width: 1200px;
         width: 100%;
         display: flex;
-        margin-top: calc(65px + $espacio);
+        box-shadow: $sombra;
+        margin-top: calc(65px + $espacio); // aca son 65 px//
         cursor: grab;
         overflow: hidden;
         border-radius: 20px;
@@ -1135,7 +1153,7 @@ main {
                 box-shadow: $sombra;
                 overflow: hidden;
 
-                &#premium{
+                &#premium {
                     border: 4px solid $amarillo;
                 }
 
@@ -1181,7 +1199,7 @@ main {
                     }
                 }
 
-                .buttons{
+                .buttons {
                     display: flex;
                     gap: 5px;
 
@@ -1193,7 +1211,7 @@ main {
                         width: 100%;
                         transition: all 0.3s ease-in-out;
                         width: auto;
-    
+
                         &:hover {
                             background: $purpura;
                             color: $blanco;
@@ -4099,6 +4117,11 @@ main {
     /* promos */
 
     .banner_principal {
+
+        .video{
+            background: none;
+        }
+
         .contenido {
             width: 100%;
             order: 2;
