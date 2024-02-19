@@ -869,7 +869,7 @@ main {
 
     .video{
         position: absolute;
-        width: 100%;
+        width: calc(100% - 50px);
         top: 0;
         height: 400px;
         overflow: hidden;
@@ -1820,6 +1820,7 @@ main {
 /* FOOTER - PIE DE PÁGINA */
 
 .footer {
+    background: url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
     display: flex;
     justify-content: center;
 
@@ -1845,7 +1846,7 @@ main {
     }
 
     .container {
-        background: $blanco;
+        background: linear-gradient(45deg, rgba($rgba-celeste, 0.8), rgba($rgba-purpura, 0.8));
         width: 100%;
         padding: $espacio 20px 20px;
         display: flex;
@@ -1854,7 +1855,7 @@ main {
         gap: 40px;
 
         a {
-            color: $negro;
+            color: $blanco;
         }
 
         .row {
@@ -1868,7 +1869,7 @@ main {
             }
 
             h1 {
-                color: $negro;
+                color: $blanco;
                 font-family: $fuente_primaria;
                 font-weight: lighter;
                 font-size: $texto_mediana;
@@ -1885,7 +1886,7 @@ main {
 
 
                 li {
-                    color: $negro;
+                    color: $blanco;
                     font-size: $texto_pequeña;
                     font-family: $fuente_terciaria;
                 }
@@ -1901,16 +1902,19 @@ main {
             padding: 10px 0;
             justify-content: center;
             border-radius: 10px;
+            box-shadow: $sombra;
 
             a {
                 color: $negro;
                 font-weight: bolder !important;
+                text-transform: uppercase;
             }
 
             h1 {
                 color: $negro;
                 font-size: $texto_pequeña;
                 font-family: $fuente_terciaria;
+                font-weight: bolder !important;
             }
         }
     }

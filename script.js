@@ -28,6 +28,20 @@ Object.assign(swiperEl, params)
 swiperEl.initialize();
 
 
+
+/* RIPPLES */
+
+$(document).ready(function (ripples) {
+  $('footer').ripples({
+    resolution: 400,
+
+    dropRadius: 20, //px
+
+    perturbance: 0.03,
+  });
+})
+
+
 /* CÓDIGO PARA SCRIPTS QUE INTERFIEREN CON LA ANIMACIÓN DE BARBA.JS SE UNIFICA TODO*/
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -186,6 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
         initializeHamburguer();
         initializeFAQ();
         initializeModal();
+        initializeripples();
       }
     });
   }

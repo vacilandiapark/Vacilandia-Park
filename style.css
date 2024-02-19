@@ -668,7 +668,7 @@ main {
 }
 .banner_principal .video {
   position: absolute;
-  width: 100%;
+  width: calc(100% - 50px);
   top: 0;
   height: 400px;
   overflow: hidden;
@@ -1464,6 +1464,7 @@ main {
 
 /* FOOTER - PIE DE PÁGINA */
 .footer {
+  background: url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
   display: flex;
   justify-content: center;
 }
@@ -1480,7 +1481,7 @@ main {
   color: #fff;
 }
 .footer .container {
-  background: #fff;
+  background: linear-gradient(45deg, rgba(43, 171, 226, 0.8), rgba(67, 47, 135, 0.8));
   width: 100%;
   padding: 35px 20px 20px;
   display: flex;
@@ -1489,7 +1490,7 @@ main {
   gap: 40px;
 }
 .footer .container a {
-  color: #3b3b3b;
+  color: #fff;
 }
 .footer .container .row {
   display: flex;
@@ -1501,7 +1502,7 @@ main {
   width: 140px;
 }
 .footer .container .row h1 {
-  color: #3b3b3b;
+  color: #fff;
   font-family: "Lilita One", sans-serif;
   font-weight: lighter;
   font-size: 1rem;
@@ -1516,7 +1517,7 @@ main {
   gap: 5px;
 }
 .footer .container .row ul li {
-  color: #3b3b3b;
+  color: #fff;
   font-size: 0.75rem;
   font-family: "Poppins", sans-serif;
 }
@@ -1529,15 +1530,18 @@ main {
   padding: 10px 0;
   justify-content: center;
   border-radius: 10px;
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
 }
 .footer .container .terms a {
   color: #3b3b3b;
   font-weight: bolder !important;
+  text-transform: uppercase;
 }
 .footer .container .terms h1 {
   color: #3b3b3b;
   font-size: 0.75rem;
   font-family: "Poppins", sans-serif;
+  font-weight: bolder !important;
 }
 
 /* 11 - SECCIÓN DE PREGUNTAS Y RESPUESTAS*/
