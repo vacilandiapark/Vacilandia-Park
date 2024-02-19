@@ -25,9 +25,7 @@ const params = {
 
 Object.assign(swiperEl, params)
 
-swiperEl.initialize();
-
-
+swiperEl.initialize();z
 
 
 /* CÓDIGO PARA SCRIPTS QUE INTERFIEREN CON LA ANIMACIÓN DE BARBA.JS SE UNIFICA TODO*/
