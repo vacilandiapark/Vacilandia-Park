@@ -666,20 +666,6 @@ main {
 .banner_principal#concierto .articulo {
   max-width: 1000px;
 }
-.banner_principal .video {
-  position: absolute;
-  width: calc(100% - 50px);
-  top: 0;
-  height: 400px;
-  overflow: hidden;
-  border-radius: 0 0 25% 25%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_1280/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-attachment: fixed;
-  box-shadow: inset 8px 0 24px 0 rgba(0, 0, 0, 0.1);
-}
 .banner_principal .articulo {
   max-width: 1100px;
   width: 100%;
@@ -980,7 +966,7 @@ main {
 
 /* 05 - SECCIÓN DE ENTRETENIMIENTO */
 .entretenimiento {
-  background: linear-gradient(45deg, rgba(67, 47, 135, 0.9), rgba(67, 47, 135, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(67, 47, 135, 0.9), rgba(67, 47, 135, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 35px 0 0 0;
@@ -1056,7 +1042,7 @@ main {
   display: flex;
   justify-content: center;
   padding: 35px 0;
-  background: linear-gradient(45deg, rgba(245, 130, 32, 0.9), rgba(245, 130, 32, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(245, 130, 32, 0.9), rgba(245, 130, 32, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1161,7 +1147,7 @@ main {
 /* 07 - SECCIÓN DE SERVICIOS */
 .servicios {
   padding: 35px 0;
-  background: linear-gradient(45deg, rgba(234, 11, 139, 0.9), rgba(234, 11, 139, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(234, 11, 139, 0.9), rgba(234, 11, 139, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1256,7 +1242,7 @@ main {
 
 /* 08 - SECCIÓN DE RESEÑAS */
 .reseñas {
-  background: linear-gradient(45deg, rgba(236, 33, 39, 0.9), rgba(236, 33, 39, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(236, 33, 39, 0.9), rgba(236, 33, 39, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -1328,7 +1314,7 @@ main {
 
 /* 09 - SECCIÓN DE ENLACE A MAPA INTERACTIVO */
 .enlace_a_mapa {
-  background: linear-gradient(45deg, rgba(119, 192, 67, 0.9), rgba(119, 192, 67, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(119, 192, 67, 0.9), rgba(119, 192, 67, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -1464,7 +1450,7 @@ main {
 
 /* FOOTER - PIE DE PÁGINA */
 .footer {
-  background: url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
   display: flex;
   justify-content: center;
 }
@@ -1711,12 +1697,12 @@ main {
   padding: 35px 0;
   display: flex;
   justify-content: center;
-  background: linear-gradient(45deg, rgba(236, 33, 39, 0.9), rgba(245, 130, 32, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(236, 33, 39, 0.9), rgba(245, 130, 32, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .tarjetas#campeonatos {
-  background: linear-gradient(45deg, rgba(119, 192, 67, 0.9), rgba(43, 171, 226, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(119, 192, 67, 0.9), rgba(43, 171, 226, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
 }
 .tarjetas#campeonatos .title h1 {
   color: #fff;
@@ -1725,10 +1711,10 @@ main {
   color: #fff;
 }
 .tarjetas#piscinas, .tarjetas#zona_gamer {
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/v1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
 }
 .tarjetas#concierto {
-  background: linear-gradient(45deg, rgba(236, 33, 39, 0.8), rgba(234, 11, 139, 0.8)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_800/q_auto/f_auto/Concierto/VCLNDIA_IMG_2959_nlxlnh.jpg);
+  background: linear-gradient(45deg, rgba(236, 33, 39, 0.8), rgba(234, 11, 139, 0.8)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
 }
 .tarjetas#concierto .container .title h1 {
   color: #fff;
@@ -1816,7 +1802,7 @@ main {
 
 /* 14 - SECCIÓN DE INFORMACIÓN DE LAS PISCINAS */
 .piscinas {
-  background: linear-gradient(45deg, rgba(114, 76, 159, 0.9), rgba(43, 171, 226, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(114, 76, 159, 0.9), rgba(43, 171, 226, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -2016,7 +2002,7 @@ main {
   justify-content: center;
 }
 .carrusel_texto_imagen#barcilon {
-  background: linear-gradient(45deg, rgba(67, 47, 135, 0.9), rgba(236, 33, 39, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(67, 47, 135, 0.9), rgba(236, 33, 39, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -2024,7 +2010,7 @@ main {
   color: #fff;
 }
 .carrusel_texto_imagen#zona_gamer {
-  background: linear-gradient(45deg, rgba(236, 33, 39, 0.9), rgba(245, 130, 32, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/v1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(236, 33, 39, 0.9), rgba(245, 130, 32, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -2182,7 +2168,7 @@ main {
 
 /* 20 - SECCIÓN DE ANIMALES O DETALLE EN COLUMNA CON IMAGEN */
 .animales {
-  background: linear-gradient(45deg, rgba(104, 58, 16, 0.9), rgba(119, 192, 67, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(104, 58, 16, 0.9), rgba(119, 192, 67, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 35px 0;
@@ -2190,7 +2176,7 @@ main {
   justify-content: center;
 }
 .animales#concierto {
-  background: linear-gradient(45deg, rgba(43, 171, 226, 0.9), rgba(255, 210, 0, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(43, 171, 226, 0.9), rgba(255, 210, 0, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
 }
 .animales#concierto .card {
   height: calc(100% - 10px);
@@ -2264,12 +2250,12 @@ main {
   justify-content: center;
 }
 .canchas#voley {
-  background: linear-gradient(45deg, rgba(119, 192, 67, 0.9), rgba(43, 171, 226, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(119, 192, 67, 0.9), rgba(43, 171, 226, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .canchas#futbol {
-  background: linear-gradient(45deg, rgba(43, 171, 226, 0.9), rgba(119, 192, 67, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(43, 171, 226, 0.9), rgba(119, 192, 67, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -2423,7 +2409,7 @@ main {
 
 /* 23 - SECCIÓN DE INFORMACIÓN DE PDF CON QR */
 .seccion_pdf {
-  background: linear-gradient(45deg, rgba(245, 130, 32, 0.9), rgba(236, 33, 39, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/v1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(245, 130, 32, 0.9), rgba(236, 33, 39, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 35px 0;
@@ -2536,7 +2522,7 @@ main {
 #carrusel_caracteristicas {
   width: 100%;
   height: auto;
-  background: linear-gradient(45deg, rgba(67, 47, 135, 0.9), rgba(236, 33, 39, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_1500/f_auto/q_auto/MicrosoftTeams-image_4_thsiny.jpg);
+  background: linear-gradient(45deg, rgba(67, 47, 135, 0.9), rgba(236, 33, 39, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -2984,7 +2970,7 @@ main {
 .cartelera {
   padding-top: 35px;
   padding-bottom: 85px;
-  background: linear-gradient(45deg, rgba(236, 33, 39, 0.9), rgba(234, 11, 139, 0.9)), url(https://res.cloudinary.com/dddlebwyr/image/upload/w_800/q_auto/f_auto/Concierto/VCLNDIA_IMG_2959_nlxlnh.jpg);
+  background: linear-gradient(45deg, rgba(236, 33, 39, 0.9), rgba(234, 11, 139, 0.9)), url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
   height: auto;
   background-repeat: no-repeat;
   background-size: cover;
