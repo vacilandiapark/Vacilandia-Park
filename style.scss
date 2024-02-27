@@ -3892,6 +3892,86 @@ main {
     }
 }
 
+.aniversario {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        background: linear-gradient(45deg, rgba($rgba-purpura, 0.4), rgba($rgba-rosado, 1)), url(https://res.cloudinary.com/ditdiedxb/image/upload/v1708697462/Vacilandia%20Park/01-DE-MARZO-BANNER_rrpyz0.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        max-width: $tamaño_maximo;
+        width: 100%;
+        height: 100px;
+        box-shadow: $sombra;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        .text {
+            width: 70%;
+            padding: 20px;
+
+            h1 {
+                color: $blanco;
+                font-size: $texto_mediana;
+                font-family: $fuente_primaria;
+            }
+        }
+
+        .button {
+            width: 30%;
+
+            button {
+                background: $celeste;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+/* Aquí tus estilos para la modal y el botón de cerrar */
+
+.modalv {
+    display: none;
+    /* Oculta la modal por defecto */
+    position: fixed;
+    z-index: 15;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+
+
+    .modal-content {
+        margin: 15% auto;
+        padding: 20px;
+        width: fit-content;
+
+        .close {
+            background: black;
+            color: #ffffff;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 0px 20px;
+
+            &:hover,
+            &:focus{
+                color: white;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
 .swiper-button-prev,
 .swiper-button-next {
     background-color: red;
@@ -4107,7 +4187,7 @@ main {
 
     .banner_principal {
 
-        .video{
+        .video {
             background: none;
         }
 
