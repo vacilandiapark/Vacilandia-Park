@@ -1,26 +1,4 @@
 
-// Obtener elementos necesarios
-var modal = document.getElementById("video-modal");
-var btn = document.getElementById("ver-video-btn");
-var span = document.getElementsByClassName("close")[0];
-
-// Cuando se haga clic en el botón, mostrar la modal
-btn.onclick = function () {
-  modal.style.display = "block";
-}
-
-// Cuando se haga clic en la 'x', cerrar la modal
-span.onclick = function () {
-  modal.style.display = "none";
-}
-
-// Cuando se haga clic fuera de la modal, cerrarla
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
 
 /**/
 
