@@ -874,7 +874,6 @@ main {
         max-width: 1100px;
         width: 100%;
         display: flex;
-        box-shadow: $sombra;
         margin-top: calc(65px + $espacio); // aca son 65 px//
         cursor: grab;
         overflow: hidden;
@@ -3891,6 +3890,24 @@ main {
                     border-radius: 50%;
                 }
             }
+        }
+    }
+}
+
+
+.video-promo{
+    display: flex;
+    justify-content: center;
+
+    .container{
+        max-width: $tamaño_maximo;
+        width: 100%;
+        box-shadow: $sombra;
+
+        video{
+            width: 100%;
+            border-radius: 20px;
+            height: auto;
         }
     }
 }
