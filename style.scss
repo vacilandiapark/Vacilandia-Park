@@ -1807,7 +1807,6 @@ main {
 /* FOOTER - PIE DE PÁGINA */
 
 .footer {
-    background: url(https://res.cloudinary.com/ditdiedxb/image/upload/w_800/f_auto/q_auto/Vacilandia%20Park/VCLNDIA_IMG_2597_jvp3nm.jpg);
     display: flex;
     justify-content: center;
 
@@ -1833,13 +1832,18 @@ main {
     }
 
     .container {
-        background: linear-gradient(45deg, rgba($rgba-celeste, 0.8), rgba($rgba-purpura, 0.8));
+        background: linear-gradient(to bottom right, $amarillo, $rosado);
         width: 100%;
         padding: $espacio 20px 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 40px;
+
+        button{
+            background: none;
+            border: 1px solid white;
+        }
 
         a {
             color: $blanco;
@@ -1882,7 +1886,7 @@ main {
 
         .terms {
             max-width: $tamaño_maximo;
-            background: $blanco;
+            background: none;
             max-width: 800px;
             width: 100%;
             display: flex;
@@ -1892,13 +1896,13 @@ main {
             box-shadow: $sombra;
 
             a {
-                color: $negro;
+                color: $blanco;
                 font-weight: bolder !important;
                 text-transform: uppercase;
             }
 
             h1 {
-                color: $negro;
+                color: $blanco;
                 font-size: $texto_pequeña;
                 font-family: $fuente_terciaria;
                 font-weight: bolder !important;
