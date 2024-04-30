@@ -1832,7 +1832,7 @@ main {
     }
 
     .container {
-        background: linear-gradient(to bottom right, $amarillo, $rosado);
+        background: linear-gradient(45deg ,$rosado, $amarillo );
         width: 100%;
         padding: $espacio 20px 20px;
         display: flex;

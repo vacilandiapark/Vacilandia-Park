@@ -1468,7 +1468,7 @@ main {
   color: #fff;
 }
 .footer .container {
-  background: linear-gradient(to bottom right, #FFD200, #EA0B8B);
+  background: linear-gradient(45deg, #EA0B8B, #FFD200);
   width: 100%;
   padding: 35px 20px 20px;
   display: flex;
