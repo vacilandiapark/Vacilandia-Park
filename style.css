@@ -3162,6 +3162,85 @@ main {
   height: auto;
 }
 
+.productos {
+  padding: 120px 0px 60px 0px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 35px;
+}
+.productos .informacion {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.productos .informacion h1 {
+  text-wrap: balance;
+  line-height: 1.3;
+  color: #3b3b3b;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+.productos .informacion ul {
+  padding: 0px 20px;
+}
+.productos .informacion li,
+.productos .informacion p {
+  text-wrap: balance;
+  color: #3b3b3b;
+  gap: 5px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+}
+.productos .sidebar {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.productos .sidebar .image {
+  width: 100%;
+}
+.productos .sidebar .image img {
+  width: 100%;
+  height: 300px;
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
+}
+.productos .sidebar .text {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.productos .sidebar .text a {
+  text-wrap: balance;
+  padding: 10px 0;
+  background: #EA0B8B;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+}
+.productos .sidebar .text p {
+  text-wrap: balance;
+  text-align: center;
+  color: #3b3b3b;
+  gap: 5px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+}
+
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
@@ -3244,7 +3323,8 @@ main {
   .trabajo,
   .formulario_de_contacto,
   .animales,
-  .promociones .text {
+  .promociones .text,
+  .productos {
     padding: 20px;
     overflow: hidden;
   }
@@ -3340,6 +3420,23 @@ main {
   .paquetes_informacion .image,
   .paquetes_informacion .text {
     width: 100% !important;
+  }
+  .productos {
+    flex-direction: column;
+  }
+  .productos .informacion {
+    order: 2;
+    width: 100%;
+  }
+  .productos .sidebar {
+    width: calc(100% - 40px);
+  }
+  .productos .sidebar .image {
+    height: auto;
+  }
+  .productos .sidebar .image img {
+    height: auto;
+    object-fit: cover;
   }
 }
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 600PX */

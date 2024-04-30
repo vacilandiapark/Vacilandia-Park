@@ -8,10 +8,10 @@ const params = {
   injectStyles: [`
       .swiper-button-next,
       .swiper-button-prev{
-        background: white;
-        padding: 2px 10px;
-        border-radius: 50%;
-        box-shadow: 0px 0px 15px 0px gray;
+      background: rgba(255,255,255,0.8);
+      padding: 2px 10px;
+      border-radius: 50%;
+      z-index: 2;
       }
 
       

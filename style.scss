@@ -2139,7 +2139,7 @@ main {
 
     &#piscinas,
     &#zona_gamer {
-       background: none;
+        background: none;
     }
 
     &#concierto {
@@ -3895,19 +3895,110 @@ main {
 }
 
 
-.video-promo{
+.video-promo {
     display: flex;
     justify-content: center;
 
-    .container{
+    .container {
         max-width: $tamaño_maximo;
         width: 100%;
         box-shadow: $sombra;
 
-        video{
+        video {
             width: 100%;
             border-radius: 20px;
             height: auto;
+        }
+    }
+}
+
+
+.productos {
+    padding: 120px 0px 60px 0px;
+    max-width: $tamaño_maximo;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: $espacio;
+
+    .informacion {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h1 {
+            text-wrap: balance;
+            line-height: 1.3;
+            color: $negro;
+            font-weight: bolder;
+            font-size: 1.5rem;
+            font-family: $fuente_terciaria;
+        }
+
+        ul {
+            padding: 0px 20px;
+        }
+
+        li,
+        p {
+            text-wrap: balance;
+            color: $negro;
+            gap: 5px 0;
+            font-family: $fuente_terciaria;
+            font-size: 0.85rem;
+        }
+    }
+
+    .sidebar {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        .image {
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 300px;
+                box-shadow: $sombra;
+            }
+        }
+
+        .text {
+
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+
+            a {
+                text-wrap: balance;
+                padding: 10px 0;
+                background: $rosado;
+                color: $blanco;
+                font-family: $fuente_terciaria;
+                font-weight: bolder;
+                font-size: $texto_pequeña;
+                text-transform: uppercase;
+                width: 100%;
+                text-align: center;
+                border-radius: 5px;
+            }
+
+            p {
+                text-wrap: balance;
+                text-align: center;
+                color: $negro;
+                gap: 5px 0;
+                font-family: $fuente_terciaria;
+                font-size: 0.85rem;
+            }
         }
     }
 }
@@ -4009,7 +4100,8 @@ main {
     .trabajo,
     .formulario_de_contacto,
     .animales,
-    .promociones .text {
+    .promociones .text,
+    .productos {
         padding: 20px;
         overflow: hidden;
     }
@@ -4148,6 +4240,28 @@ main {
         .image,
         .text {
             width: 100% !important;
+        }
+    }
+
+    .productos {
+        flex-direction: column;
+
+        .informacion {
+            order: 2;
+            width: 100%;
+        }
+
+        .sidebar {
+            width: calc(100% - 40px);
+
+            .image {
+                height: auto;
+
+                img {
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
         }
     }
 }
