@@ -3252,6 +3252,100 @@ main {
   font-size: 0.85rem;
 }
 
+.horarios {
+  display: flex;
+  justify-content: center;
+  padding: 35px 0;
+}
+.horarios .container {
+  background: linear-gradient(to top right, #25194e, #6551a5);
+  background-size: cover;
+  background-position: center;
+  max-width: 1000px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+}
+.horarios .container h1 {
+  color: #fff;
+  padding: 0 30px;
+  font-family: "Lilita One", sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+.horarios .container h1 svg {
+  color: #fff;
+}
+.horarios .container a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #fff;
+  padding: 0 30px;
+  background: #EA0B8B;
+  padding: 10px 30px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  transition: all 0.3s;
+}
+.horarios .container a:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 25px 0px #EA0B8B;
+}
+
+.infor {
+  display: flex;
+  justify-content: center;
+  padding: 35px 0;
+}
+.infor .container {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  padding-top: 80px;
+  justify-content: center;
+  gap: 35px;
+  align-items: center;
+}
+.infor .container .text {
+  width: 50%;
+}
+.infor .container .text h1 {
+  font-size: 2rem;
+  color: #3b3b3b;
+  padding: 0 0 35px 0;
+  font-family: "Lilita One", sans-serif;
+  text-wrap: balance;
+}
+.infor .container .text p {
+  color: #3b3b3b;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: normal;
+  text-wrap: balance;
+}
+.infor .container .text p span {
+  font-weight: bold;
+}
+.infor .image {
+  width: 50%;
+}
+.infor .image img {
+  width: 100%;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+.infor .image img:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 0 24px 0 rgba(0, 0, 0, 0.1);
+}
+
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
@@ -3335,7 +3429,8 @@ main {
   .formulario_de_contacto,
   .animales,
   .promociones .text,
-  .productos {
+  .productos,
+  .horarios {
     padding: 20px;
     overflow: hidden;
   }
@@ -3490,6 +3585,16 @@ main {
   .piscinas .row .text,
   .piscinas .row .carrusel-image {
     width: 100% !important;
+  }
+  .infor {
+    padding: 30px 30px 30px 30px;
+  }
+  .infor .container {
+    flex-direction: column;
+  }
+  .infor .container .text,
+  .infor .container .image {
+    width: 100%;
   }
   .seccion_pdf .container {
     flex-direction: column;

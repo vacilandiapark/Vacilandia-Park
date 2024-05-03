@@ -4016,6 +4016,113 @@ main {
     }
 }
 
+.horarios{
+    display: flex;
+    justify-content: center;
+    padding: $espacio 0;
+
+    .container{
+        background: linear-gradient(to top right, #25194e, #6551a5);
+        background-size: cover;
+        background-position: center;
+        max-width: $tamaño_maximo;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 10px;
+
+        h1{
+            color: $blanco;
+            padding: 0 30px;
+            font-family: $fuente_primaria;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: lighter;
+
+            svg{
+                color: $blanco;
+            }
+        }
+
+        a{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            color: $blanco;
+            padding: 0 30px;
+            background: $rosado;
+            padding: 10px 30px;
+            font-family: $fuente_secundaria;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 10px;
+            font-size: $texto_pequeña;
+            transition: all 0.3s;
+
+            &:hover{
+                transform: scale(1.02);
+                box-shadow: 0px 0px 25px 0px $rosado;
+            }
+        }
+    }
+}
+
+.infor{
+    display: flex;
+    justify-content: center;
+    padding: $espacio 0;
+
+    .container{
+        max-width: $tamaño_maximo;
+        width: 100%;
+        display: flex;
+        padding-top: 80px ;
+        justify-content: center;
+        gap: $espacio;
+        align-items: center;
+
+        .text{
+            width: 50%;
+
+            h1{
+                font-size: $texto_grande;
+                color: $negro;
+                padding: 0 0 $espacio 0;
+                font-family: $fuente_primaria;
+                text-wrap: balance;
+            }
+    
+            p{
+                color: $negro;
+                font-family: $fuente_secundaria;
+                font-weight: normal;
+                text-wrap: balance;
+
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .image{
+        width: 50%;
+
+        img{
+            width: 100%;
+            border-radius: 10px;
+            transition: all 0.3s;
+
+            &:hover{
+                transform: scale(1.05);
+                box-shadow: $sombra;
+            }
+        }
+    }
+}
+
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
@@ -4114,7 +4221,8 @@ main {
     .formulario_de_contacto,
     .animales,
     .promociones .text,
-    .productos {
+    .productos,
+    .horarios {
         padding: 20px;
         overflow: hidden;
     }
@@ -4333,6 +4441,20 @@ main {
         .text,
         .carrusel-image {
             width: 100% !important;
+        }
+    }
+
+    .infor{
+
+        padding: 30px 30px 30px 30px;
+
+        .container{
+            flex-direction: column;
+
+            .text,
+            .image{
+                width: 100%;
+            }
         }
     }
 
