@@ -3185,8 +3185,16 @@ main {
   text-wrap: balance;
   line-height: 1.3;
   color: #3b3b3b;
-  font-weight: bolder;
+  font-weight: normal;
   font-size: 1.5rem;
+  font-family: "Lilita One", sans-serif;
+}
+.productos .informacion h2 {
+  text-wrap: balance;
+  line-height: 1.5;
+  color: #3b3b3b;
+  font-weight: bolder;
+  font-size: 1rem;
   font-family: "Poppins", sans-serif;
 }
 .productos .informacion ul {
