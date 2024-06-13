@@ -890,6 +890,30 @@ main {
             height: 100%;
             object-fit: contain;
             transition: all 0.5s ease-in-out;
+            position: relative;
+        }
+
+        #contacto{
+            position: absolute;
+            bottom: 0;
+            color: $blanco;
+            font-family: $fuente_terciaria;
+            font-size: $texto_pequeña;
+            font-weight: bold;
+            border-radius: 10px;
+            margin: 30px;
+            padding: 15px 20px;
+            left: 0;
+            background: $rosado;
+            box-shadow: $sombra;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s;
+
+            &:hover{
+                transform: scale(1.03);
+            }
         }
     }
 
