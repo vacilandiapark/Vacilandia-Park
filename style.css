@@ -5,6 +5,7 @@ body {
     --primary-font: "Montserrat Alternates";
     --secondary-font: "Poppins", sans-serif;
     font-family: var(--primary-font);
+    box-sizing: border-box;
 }
 
 .background {
@@ -73,13 +74,15 @@ body {
 }
 
 .all {
-    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: calc(100vw - 22px);
     backdrop-filter: blur(40px);
     position: relative;
-    height: 120vh;
     display: flex;
     align-items: center;
-    padding: 0px 20px;
+    padding: 40px 20px;
+    margin: 30px 5px;
 }
 
 section .container {
@@ -213,6 +216,10 @@ section .image {
     .image{
         display: flex;
         justify-content: center;
+    }
+
+    .image img{
+        width: 300px;
     }
 }
 
